@@ -1,0 +1,82 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "id" : null,
+  "description" : null,
+  "name" : "scoring.offermerchant",
+  "table" : {
+    "type" : {
+      "kind" : "TABLE",
+      "fields" : [ {
+        "name" : "id",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "long"
+        }
+      }, {
+        "name" : "merchant",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "location",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "offerexpression",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      } ],
+      "primaryKey" : [ "id" ]
+    },
+    "rows" : [ {
+      "id" : "1",
+      "merchant" : "Paris XL",
+      "location" : "Boston",
+      "offerexpression" : "(floor((dna.propParisXL *  dna.eligibleParisXL * dna.InVicinityOfBoston)*100)/100)"
+    }, {
+      "id" : "2",
+      "merchant" : "McDonalds",
+      "location" : "Boston",
+      "offerexpression" : "(floor((dna.propMcDo * dna.eligibleMcDonalds * dna.InVicinityOfBoston)*100)/100)"
+    }, {
+      "id" : "3",
+      "merchant" : "SportHouse",
+      "location" : "Boston",
+      "offerexpression" : "(floor((dna.propSportHouse * dna.eligibleSportHouse * dna.InVicinityOfBoston)*100)/100)"
+    }, {
+      "id" : "4",
+      "merchant" : "CarMerchant",
+      "location" : "Boston",
+      "offerexpression" : "(floor(((dna.propensityCarLoanModel*100) * dna.eligibleForCarLoanOffer * dna.InVicinityOfBoston)*100)/100)"
+    }, {
+      "id" : "5",
+      "merchant" : "Paris XL",
+      "location" : "New York",
+      "offerexpression" : "(floor((dna.propParisXL *  dna.eligibleParisXL * dna.InVicinityOfNY)*100)/100)"
+    }, {
+      "id" : "6",
+      "merchant" : "McDonalds",
+      "location" : "New York",
+      "offerexpression" : "(floor((dna.propMcDo * dna.eligibleMcDonalds * dna.InVicinityOfNY)*100)/100)"
+    }, {
+      "id" : "7",
+      "merchant" : "SportHouse",
+      "location" : "New York",
+      "offerexpression" : "(floor((dna.propSportHouse * dna.eligibleSportHouse * dna.InVicinityOfNY)*100)/100)"
+    }, {
+      "id" : "8",
+      "merchant" : "CarMerchant",
+      "location" : "New York",
+      "offerexpression" : "(floor(((dna.propensityCarLoanModel*100) * dna.eligibleForCarLoanOffer * dna.InVicinityOfNY)*100)/100)"
+    } ]
+  },
+  "attributes" : { }
+}

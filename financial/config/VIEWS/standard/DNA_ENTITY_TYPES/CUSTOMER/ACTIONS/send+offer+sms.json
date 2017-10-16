@@ -1,0 +1,31 @@
+{
+  "name" : "send offer sms",
+  "description" : "Send SMS when customer is in the vicinity of an offer",
+  "scenario" : "TRIGGER",
+  "outputSystem" : "sms",
+  "parameters" : [ {
+    "name" : "message",
+    "type" : {
+      "kind" : "SCALAR",
+      "scalarType" : "STRING"
+    },
+    "expression" : "'default'",
+    "mandatory" : false
+  }, {
+    "name" : "subject",
+    "type" : {
+      "kind" : "SCALAR",
+      "scalarType" : "STRING"
+    },
+    "expression" : "'default'",
+    "mandatory" : false
+  }, {
+    "name" : "customerId",
+    "type" : {
+      "kind" : "SCALAR",
+      "scalarType" : "STRING"
+    },
+    "expression" : "dna.crmId",
+    "mandatory" : true
+  } ]
+}

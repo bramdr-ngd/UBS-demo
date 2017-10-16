@@ -1,0 +1,9 @@
+{
+  "name" : "Secondary Bank",
+  "description" : "Customers who only have a current account with the bank (1 product, no income)",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "flagPFSP=0 AND totalActiveProducts > 0"
+}

@@ -1,0 +1,12 @@
+{
+  "name" : "metric_all",
+  "description" : null,
+  "acl" : [ {
+    "owner" : false,
+    "subject" : "EVERYONE"
+  }, {
+    "owner" : true,
+    "subject" : "GROUP:LILY_SYSTEM_GROUP"
+  } ],
+  "conditions" : "true"
+}

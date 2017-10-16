@@ -1,0 +1,10 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "attributes" : { },
+  "description" : "Investment Account Cross Sell",
+  "dnaVariables" : [ "age", "segnr", "totalActiveProducts", "totalActiveDeposits", "shareOfWalletSize", "totalActiveLoans", "flagLandlord", "totalAccountTransactions", "totalCashWithdrawalPer60Days", "eligibleForInvestmentAccount", "propensityInvestmentAccount", "lorAcquisition", "flagCheckingAccount", "flagInvestmentAccount" ],
+  "name" : "Investment Account"
+}

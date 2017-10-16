@@ -1,0 +1,10 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "attributes" : { },
+  "description" : "Dormant Mobile App",
+  "dnaVariables" : [ "age", "segnr", "downloadDateMobileApp", "regDateMobileApp", "hasMobileApp", "regMobileApp", "lastMobileAppUsage", "recencyMobileAppUsage", "recencyMobileAppReg", "daysBetweenMobileAppReg" ],
+  "name" : "Dormant Mobile App"
+}

@@ -1,0 +1,19 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "USER:lisadw"
+  } ],
+  "alertType" : "SET_MEMBER",
+  "alwaysFireOnActive" : true,
+  "conditions" : "(dna.cashWithdrawalAmountLast > 600)",
+  "description" : "Really large cash withdrawal amount Lisa",
+  "enabled" : true,
+  "metricName" : "cashWithdrawalAmountLast",
+  "name" : "Really large cash withdrawal amount Lisa",
+  "notificationParameters" : {
+    "rulesengine.trigger" : "false"
+  },
+  "setReference" : "customer_all",
+  "attributes" : { },
+  "structuredConditions" : null
+}

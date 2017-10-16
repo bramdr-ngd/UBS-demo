@@ -1,0 +1,10 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "USER:ganeshr"
+  } ],
+  "attributes" : { },
+  "description" : "Customer Engagement-GK",
+  "dnaVariables" : [ "totalComplaints", "likes", "negativeTweets" ],
+  "name" : "Customer Engagement-GK"
+}

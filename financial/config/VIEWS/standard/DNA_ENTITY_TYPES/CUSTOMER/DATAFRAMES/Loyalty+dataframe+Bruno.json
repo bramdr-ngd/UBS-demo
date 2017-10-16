@@ -1,0 +1,34 @@
+{
+  "name" : "Loyalty dataframe Bruno",
+  "description" : "Loyalty dataframe Bruno",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "USER:brunod"
+  } ],
+  "dnaEntityFilter" : {
+    "type" : "SET_FILTER",
+    "name" : "New Clients"
+  },
+  "timeSeriesExpression" : "addDays(df.executionTime,-30)",
+  "metricReferenceTimeExpression" : "df.sampleTime",
+  "filterReferenceTimeExpression" : "df.sampleTime",
+  "variables" : [ {
+    "dnaVariableName" : "closeToParisXL"
+  }, {
+    "dnaVariableName" : "contactFacebookActive"
+  }, {
+    "dnaVariableName" : "flagActive",
+    "timeOffset" : "P30D"
+  } ],
+  "outputFormat" : {
+    "type" : "csv",
+    "separator" : "|",
+    "quoteChar" : "\u0000",
+    "escapeChar" : "\"",
+    "includeHeaders" : true
+  },
+  "groupedValueMode" : "COLUMN_EXPLOSION",
+  "groupedValueLimit" : 100,
+  "exportOriginalSourceIds" : true,
+  "referenceTimeSamplingEnabled" : true
+}

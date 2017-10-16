@@ -1,0 +1,40 @@
+{
+  "name" : "Loyalty Valuable Ivana",
+  "description" : "Loyalty Valuable Ivana",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "USER:ivanan"
+  } ],
+  "dnaEntityFilter" : {
+    "type" : "SET_FILTER",
+    "name" : "Elites"
+  },
+  "timeSeriesExpression" : "df.executionTime",
+  "metricReferenceTimeExpression" : "addDays(df.executionTime,-30)",
+  "filterReferenceTimeExpression" : "addDays(df.executionTime,-30)",
+  "variables" : [ {
+    "dnaVariableName" : "scoreLoyalty"
+  }, {
+    "dnaVariableName" : "contactFrequencyPer30Days"
+  }, {
+    "dnaVariableName" : "scoreLoyalty01"
+  }, {
+    "dnaVariableName" : "contactFrequencyPerMonth"
+  }, {
+    "dnaVariableName" : "flagActive"
+  }, {
+    "dnaVariableName" : "flagActive",
+    "timeOffset" : "P30D"
+  } ],
+  "outputFormat" : {
+    "type" : "csv",
+    "separator" : "|",
+    "quoteChar" : "\u0000",
+    "escapeChar" : "\"",
+    "includeHeaders" : true
+  },
+  "groupedValueMode" : "COLUMN_EXPLOSION",
+  "groupedValueLimit" : 100,
+  "exportOriginalSourceIds" : true,
+  "referenceTimeSamplingEnabled" : true
+}

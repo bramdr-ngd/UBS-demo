@@ -1,0 +1,50 @@
+{
+  "name" : "show product banner",
+  "description" : null,
+  "scenario" : "RESPONSE",
+  "outputSystem" : "browser",
+  "parameters" : [ {
+    "name" : "actionType",
+    "type" : {
+      "kind" : "SCALAR",
+      "scalarType" : "string"
+    },
+    "expression" : "'product banner'",
+    "mandatory" : false
+  }, {
+    "name" : "action_format_size_parameter",
+    "type" : {
+      "kind" : "SCALAR",
+      "scalarType" : "string"
+    },
+    "expression" : "switch(ctx.device='ipad','320*480',ctx.device='laptop','320*480', ctx.device='smartphone','320*50','320*50')",
+    "mandatory" : false
+  }, {
+    "name" : "recommendedActions",
+    "type" : {
+      "kind" : "TABLE",
+      "fields" : [ {
+        "name" : "action_id_parameter",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "action_name_parameter",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "product_id_parameter",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      } ],
+      "primaryKey" : [ ]
+    },
+    "expression" : "''",
+    "mandatory" : false
+  } ]
+}

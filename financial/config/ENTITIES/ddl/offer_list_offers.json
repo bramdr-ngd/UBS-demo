@@ -1,0 +1,33 @@
+{
+  "columns" : [ {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "dummy_field",
+    "nullable" : true,
+    "type" : "string"
+  } ],
+  "multiTenant" : true,
+  "name" : "offer_list_offers",
+  "primaryKey" : {
+    "columns" : [ {
+      "jdbcType" : "CHAR",
+      "maxLength" : 1,
+      "name" : "tenant_id",
+      "nullable" : false,
+      "type" : null
+    }, {
+      "jdbcType" : "VARCHAR",
+      "maxLength" : null,
+      "name" : "offer_list_id",
+      "nullable" : false,
+      "type" : "string"
+    }, {
+      "jdbcType" : "VARCHAR",
+      "maxLength" : null,
+      "name" : "offer_id",
+      "nullable" : false,
+      "type" : "string"
+    } ]
+  },
+  "saltBuckets" : 1
+}

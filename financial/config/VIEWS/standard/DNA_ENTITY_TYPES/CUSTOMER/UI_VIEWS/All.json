@@ -1,0 +1,10 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "USER:sophiedb"
+  } ],
+  "attributes" : { },
+  "description" : "all",
+  "dnaVariables" : [ "avgCashWithdrawalAmountPer30Days", "numberCarLoanSimulations", "numberCarLoanSimulationsToday", "numberPageVisitsCarLoanToday" ],
+  "name" : "All"
+}

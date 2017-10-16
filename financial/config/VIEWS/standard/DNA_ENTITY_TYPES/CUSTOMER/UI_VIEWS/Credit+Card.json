@@ -1,0 +1,10 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "attributes" : { },
+  "description" : "Credit Card Cross Sell",
+  "dnaVariables" : [ "age", "totalCreditPurchaseAmountPer60Days", "totalCreditPurchasesPer60Days", "totalMobileAppPurchasesPerPrev60Days", "totalWebPurchasesPer60Days", "segnr", "totalActiveProducts", "balanceMoneyTransactionsPer60Days", "totalAccountConsultationsPer60Days", "totalDebitPurchasesPer90Days", "eligibleForCreditCardCrossSell", "propensityCreditCardCrossSell", "lorAcquisition", "flagCheckingAccount", "flagCreditCard" ],
+  "name" : "Credit Card"
+}

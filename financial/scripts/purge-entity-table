@@ -1,0 +1,24 @@
+#!/bin/bash
+set -e
+conf_dir="$(dirname "$0")"
+
+tables=$@
+
+die() {
+  local message="$1"
+  local code="${2:-1}"
+  if [[ -n "$message" ]] ; then
+    echo "ERROR: ${message}"
+  else
+    echo "ERROR: Execution failed"
+  fi
+  exit "${code}"
+}
+
+if [ -z "$tables" ]; then
+    die "Usage: $(basename "$0") tables..."
+fi
+
+hbase shell -n "$conf_dir"/purge-entity-table.rb "$tables"
+lily script "$conf_dir"/purge-entity-table.groovy "$tables"
+hbase shell -n "$conf_dir"/update-system-catalog.rb

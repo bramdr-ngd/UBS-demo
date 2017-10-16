@@ -1,0 +1,9 @@
+{
+  "name" : "Dormant Clients",
+  "description" : "Customers who stopped interacting with the bank > 30 days",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "totalAccountTransactionsPer30Days = 0"
+}

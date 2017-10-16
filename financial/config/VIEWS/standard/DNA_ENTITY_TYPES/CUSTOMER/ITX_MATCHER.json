@@ -1,0 +1,9 @@
+{
+  "matchesToLearn" : [ {
+    "type1" : "CUSTOMER_UTS",
+    "type2" : "CUSTOMER_CRM"
+  }, {
+    "type1" : "CUSTOMER_COOKIE",
+    "type2" : "CUSTOMER_CRM"
+  } ]
+}

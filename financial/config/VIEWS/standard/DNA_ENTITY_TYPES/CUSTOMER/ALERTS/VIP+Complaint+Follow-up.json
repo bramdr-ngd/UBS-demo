@@ -1,0 +1,17 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "alertType" : "DNA_ENTITY",
+  "alwaysFireOnActive" : false,
+  "conditions" : "totalComplaintsPer180Days > 0",
+  "description" : "Follow up in case a VIP has raised a complaint recently",
+  "enabled" : true,
+  "entityId" : "3346",
+  "metricName" : "totalComplaintsPer180Days",
+  "name" : "VIP Complaint Follow-up",
+  "notificationParameters" : { },
+  "attributes" : { },
+  "structuredConditions" : null
+}

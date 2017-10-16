@@ -1,0 +1,9 @@
+{
+  "name" : "Total Complaints Greater than or equal to 4 - GK",
+  "description" : "Total Complaints Greater than or equal to 4 - GK",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "USER:ganeshr"
+  } ],
+  "conditions" : "(dna.totalComplaints >= 4)"
+}

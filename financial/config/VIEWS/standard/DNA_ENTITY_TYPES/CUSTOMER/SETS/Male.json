@@ -1,0 +1,9 @@
+{
+  "name" : "Male",
+  "description" : "Male customers",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "gender = 'male'"
+}

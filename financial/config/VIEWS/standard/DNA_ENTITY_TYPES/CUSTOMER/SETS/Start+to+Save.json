@@ -1,0 +1,9 @@
+{
+  "name" : "Start to Save",
+  "description" : "Customers with stagnating assets under 5000 euro on their current account",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "totalAssets < 5000 AND flagActiveUsage = 1"
+}

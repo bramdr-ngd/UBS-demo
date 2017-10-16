@@ -1,0 +1,9 @@
+{
+  "name" : "New Car Loan Customers Past 7 Days",
+  "description" : "Customers who acquired a new car loan in the past 7 days",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "recencyLastAcqByProduct[name='Car Loan']<8"
+}

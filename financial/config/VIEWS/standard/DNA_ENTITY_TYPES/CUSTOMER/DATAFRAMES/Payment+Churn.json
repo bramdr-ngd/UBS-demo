@@ -1,0 +1,71 @@
+{
+  "name" : "Payment Churn",
+  "description" : "Dataframe to build default payment churn model for all customers",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "dnaEntityFilter" : {
+    "type" : "SET_FILTER",
+    "name" : "All Profiles"
+  },
+  "timeSeriesExpression" : "df.executionTime",
+  "metricReferenceTimeExpression" : "df.executionTime",
+  "filterReferenceTimeExpression" : "df.executionTime",
+  "variables" : [ {
+    "dnaVariableName" : "totalDebitPurchasesPer60Days"
+  }, {
+    "dnaVariableName" : "totalCreditPurchasesPer60Days"
+  }, {
+    "dnaVariableName" : "balanceMoneyTransactionsPer60Days"
+  }, {
+    "dnaVariableName" : "trendMobileAppActivitiesPer60Days"
+  }, {
+    "dnaVariableName" : "totalPurchaseAmountPer60Days"
+  }, {
+    "dnaVariableName" : "trendCreditPurchasesPer60Days"
+  }, {
+    "dnaVariableName" : "trendDebitPurchasesPer60Days"
+  }, {
+    "dnaVariableName" : "trendWebActivitiesPer60Days"
+  }, {
+    "dnaVariableName" : "trendPurchaseAmountPer60Days"
+  }, {
+    "dnaVariableName" : "totalComplaintsPer90Days"
+  }, {
+    "dnaVariableName" : "trendRequestsPer90Days"
+  }, {
+    "dnaVariableName" : "trendComplaintsPer90Days"
+  }, {
+    "dnaVariableName" : "totalRequestsPer90Days"
+  }, {
+    "dnaVariableName" : "shareOfWallet"
+  }, {
+    "dnaVariableName" : "totalActiveProducts"
+  }, {
+    "dnaVariableName" : "totalActiveRetirementAccount"
+  }, {
+    "dnaVariableName" : "flagPFSP"
+  }, {
+    "dnaVariableName" : "segnr"
+  }, {
+    "dnaVariableName" : "segment"
+  }, {
+    "dnaVariableName" : "satisfaction"
+  }, {
+    "dnaVariableName" : "lorAcquisition"
+  }, {
+    "dnaVariableName" : "contactFrequency"
+  } ],
+  "outputFormat" : {
+    "type" : "csv",
+    "separator" : ",",
+    "quoteChar" : "\"",
+    "escapeChar" : "\"",
+    "includeHeaders" : true
+  },
+  "groupedValueMode" : "COLUMN_EXPLOSION",
+  "groupedValueLimit" : 100,
+  "exportOriginalSourceIds" : true,
+  "referenceTimeSamplingEnabled" : true
+}

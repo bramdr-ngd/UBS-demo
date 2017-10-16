@@ -1,0 +1,17 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "alertType" : "SET_MEMBER",
+  "alwaysFireOnActive" : true,
+  "conditions" : "CashWithdrawalAmountAnomaly = 35",
+  "description" : "High ATM withdrawal",
+  "enabled" : true,
+  "metricName" : "CashWithdrawalAmountAnomaly",
+  "name" : "High ATM Withdrawal",
+  "notificationParameters" : { },
+  "setReference" : "All Profiles",
+  "attributes" : { },
+  "structuredConditions" : null
+}

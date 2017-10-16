@@ -1,0 +1,17 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "alertType" : "SET_MEMBER",
+  "alwaysFireOnActive" : true,
+  "conditions" : "numberLoanSimulations > 8",
+  "description" : "Loan simulation alert",
+  "enabled" : true,
+  "metricName" : "numberLoanSimulations",
+  "name" : "Loan Simulation Alert",
+  "notificationParameters" : { },
+  "setReference" : "All Profiles",
+  "attributes" : { },
+  "structuredConditions" : null
+}

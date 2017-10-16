@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PMML 
+	 version="4.1"
+	 xmlns="http://www.dmg.org/PMML-4_1"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://www.dmg.org/PMML-4_1 pmml-4-1.xsd">
+	<Header 
+		 copyright="Copyright (c) IBM Corp. 1989, 2013.">
+		<Application  name="IBM SPSS Statistics"  version="23.0.0.0" />
+	</Header>
+	<DataDictionary 
+		 numberOfFields="20">
+		<DataField 
+			 name="TargetCrossSellCreditCard"
+			 optype="categorical"
+			 dataType="double">
+			<Extension  extender="spss.com"  name="format"  value="5" />
+			<Extension  extender="spss.com"  name="width"  value="8" />
+			<Extension  extender="spss.com"  name="decimals"  value="2" />
+			<Value  value="0"  displayValue=".00"  property="valid" />
+			<Value  value="1"  displayValue="1.00"  property="valid" />
+		</DataField>
+		<DataField 
+			 name="flagMobilePayment"
+			 optype="categorical"
+			 dataType="string">
+			<Extension  extender="spss.com"  name="format"  value="5" />
+			<Extension  extender="spss.com"  name="width"  value="5" />
+			<Extension  extender="spss.com"  name="decimals"  value="0" />
+			<Value  value="0.0"  displayValue="false"  property="valid" />
+			<Value  value="1.0"  displayValue="true"  property="valid" />
+		</DataField>
+		<DataField 
+			 name="segnr"
+			 optype="categorical"
+			 dataType="string">
+			<Extension  extender="spss.com"  name="format"  value="5" />
+			<Extension  extender="spss.com"  name="width"  value="1" />
+			<Extension  extender="spss.com"  name="decimals"  value="0" />
+			<Value  value="1"  displayValue="1"  property="valid" />
+			<Value  value="2"  displayValue="2"  property="valid" />
+			<Value  value="3"  displayValue="3"  property="valid" />
+			<Value  value="5"  displayValue="5"  property="valid" />
+			<Value  value="6"  displayValue="6"  property="valid" />
+			<Value  value="7"  displayValue="7"  property="valid" />
+		</DataField>
+		<DataField 
+			 name="affLuxuryShopper"
+			 optype="continuous"
+			 dataType="double">
+			<Extension  extender="spss.com"  name="format"  value="5" />
+			<Extension  extender="spss.com"  name="width"  value="2" />
+			<Extension  extender="spss.com"  name="decimals"  value="0" />
+		</DataField>
+		<DataField 
+			 name="age"
+			 optype="continuous"
+			 dataType="double">
+			<Extension  extender="spss.com"  name="format"  value="5" />
+			<Extension  extender="spss.com"  name="width"  value="2" />
+			<Extension  extender="spss.com"  name="decimals"  value="0" />
+		</DataField>
+		<DataField 
+			 name="monthlyIncomeReal"
+			 optype="continuous"
+			 dataType="double">
+			<Extension  extender="spss.com"  name="format"  value="5" />
+			<Extension  extender="spss.com"  name="width"  value="7" />
+			<Extension  extender="spss.com"  name="decimals"  value="2" />
+		</DataField>
+		<DataField 
+			 name="totalCreditPurchaseAmountPer60Days"
+			 optype="continuous"
+			 dataType="double">
+			<Extension  extender="spss.com"  name="format"  value="5" />
+			<Extension  extender="spss.com"  name="width"  value="7" />
+			<Extension  extender="spss.com"  name="decimals"  value="2" />
+		</DataField>
+		<DataField 
+			 name="totalCreditPurchasesPer60Days"
+			 optype="continuous"
+			 dataType="double">
+			<Extension  extender="spss.com"  name="format"  value="5" />
+			<Extension  extender="spss.com"  name="width"  value="2" />
+			<Extension  extender="spss.com"  name="decimals"  value="0" />
+		</DataField>
+		<DataField 
+			 name="totalMobileAppPurchasesPer60Days"
+			 optype="continuous"
+			 dataType="double">
+			<Extension  extender="spss.com"  name="format"  value="5" />
+			<Extension  extender="spss.com"  name="width"  value="1" />
+			<Extension  extender="spss.com"  name="decimals"  value="0" />
+		</DataField>
+		<DataField 
+			 name="totalMobileAppPurchasesPerPrev60Days"
+			 optype="continuous"
+			 dataType="double">
+			<Extension  extender="spss.com"  name="format"  value="5" />
+			<Extension  extender="spss.com"  name="width"  value="1" />
+			<Extension  extender="spss.com"  name="decimals"  value="0" />
+		</DataField>
+		<DataField 
+			 name="totalWebPurchasesPer60Days"
+			 optype="continuous"
+			 dataType="double">
+			<Extension  extender="spss.com"  name="format"  value="5" />
+			<Extension  extender="spss.com"  name="width"  value="1" />
+			<Extension  extender="spss.com"  name="decimals"  value="0" />
+		</DataField>
+		<DataField 
+			 name="totalActiveProducts"
+			 optype="continuous"
+			 dataType="double">
+			<Extension  extender="spss.com"  name="format"  value="5" />
+			<Extension  extender="spss.com"  name="width"  value="2" />
+			<Extension  extender="spss.com"  name="decimals"  value="0" />
+		</DataField>
+		<DataField 
+			 name="affFastFood"
+			 optype="continuous"
+			 dataType="double">
+			<Extension  extender="spss.com"  name="format"  value="5" />
+			<Extension  extender="spss.com"  name="width"  value="2" />
+			<Extension  extender="spss.com"  name="decimals"  value="0" />
+		</DataField>
+		<DataField 
+			 name="affGreenLiving"
+			 optype="continuous"
+			 dataType="double">
+			<Extension  extender="spss.com"  name="format"  value="5" />
+			<Extension  extender="spss.com"  name="width"  value="2" />
+			<Extension  extender="spss.com"  name="decimals"  value="0" />
+		</DataField>
+		<DataField 
+			 name="affHealthFitness"
+			 optype="continuous"
+			 dataType="double">
+			<Extension  extender="spss.com"  name="format"  value="5" />
+			<Extension  extender="spss.com"  name="width"  value="2" />
+			<Extension  extender="spss.com"  name="decimals"  value="0" />
+		</DataField>
+		<DataField 
+			 name="affMusic"
+			 optype="continuous"
+			 dataType="double">
+			<Extension  extender="spss.com"  name="format"  value="5" />
+			<Extension  extender="spss.com"  name="width"  value="2" />
+			<Extension  extender="spss.com"  name="decimals"  value="0" />
+		</DataField>
+		<DataField 
+			 name="affSport"
+			 optype="continuous"
+			 dataType="double">
+			<Extension  extender="spss.com"  name="format"  value="5" />
+			<Extension  extender="spss.com"  name="width"  value="2" />
+			<Extension  extender="spss.com"  name="decimals"  value="0" />
+		</DataField>
+		<DataField 
+			 name="balanceMoneyTransactionsPer60Days"
+			 optype="continuous"
+			 dataType="double">
+			<Extension  extender="spss.com"  name="format"  value="5" />
+			<Extension  extender="spss.com"  name="width"  value="8" />
+			<Extension  extender="spss.com"  name="decimals"  value="2" />
+		</DataField>
+		<DataField 
+			 name="totalAccountConsultationsPer60Days"
+			 optype="continuous"
+			 dataType="double">
+			<Extension  extender="spss.com"  name="format"  value="5" />
+			<Extension  extender="spss.com"  name="width"  value="2" />
+			<Extension  extender="spss.com"  name="decimals"  value="0" />
+		</DataField>
+		<DataField 
+			 name="totalDebitPurchasesPer90Days"
+			 optype="continuous"
+			 dataType="double">
+			<Extension  extender="spss.com"  name="format"  value="5" />
+			<Extension  extender="spss.com"  name="width"  value="2" />
+			<Extension  extender="spss.com"  name="decimals"  value="0" />
+		</DataField>
+	</DataDictionary>
+	<GeneralRegressionModel 
+         modelName="CreditCardCrossSellModel"
+		 targetVariableName="TargetCrossSellCreditCard"
+		 modelType="multinomialLogistic"
+		 algorithmName="x-contrastLogistic"
+		 functionName="classification">
+		<Extension  extender="spss.com"  name="numberParameters"  value="15" />
+		<Extension  extender="spss.com"  name="cutoff"  value="0.5" />
+		<MiningSchema >
+			<MiningField  name="TargetCrossSellCreditCard"  usageType="predicted"  missingValueTreatment="asIs" />
+			<MiningField  name="age"  usageType="active"  missingValueTreatment="asIs" />
+			<MiningField  name="totalCreditPurchaseAmountPer60Days"  usageType="active"  missingValueTreatment="asIs" />
+			<MiningField  name="totalCreditPurchasesPer60Days"  usageType="active"  missingValueTreatment="asIs" />
+			<MiningField  name="totalMobileAppPurchasesPerPrev60Days"  usageType="active"  missingValueTreatment="asIs" />
+			<MiningField  name="totalWebPurchasesPer60Days"  usageType="active"  missingValueTreatment="asIs" />
+			<MiningField  name="segnr"  usageType="active"  missingValueTreatment="asIs" />
+			<MiningField  name="totalActiveProducts"  usageType="active"  missingValueTreatment="asIs" />
+			<MiningField  name="balanceMoneyTransactionsPer60Days"  usageType="active"  missingValueTreatment="asIs" />
+			<MiningField  name="totalAccountConsultationsPer60Days"  usageType="active"  missingValueTreatment="asIs" />
+			<MiningField  name="totalDebitPurchasesPer90Days"  usageType="active"  missingValueTreatment="asIs" />
+		</MiningSchema>
+    <Output>
+    <OutputField name="Probability_1" targetField="TargetCrossSellCreditCard" feature="probability" value="1"/>
+    </Output>
+		<ParameterList >
+			<Parameter  name="P0000001"  label="Constant" />
+			<Parameter  name="P0000002"  label="age" />
+			<Parameter  name="P0000003"  label="totalCreditPurchaseAmountPer60Days" />
+			<Parameter  name="P0000004"  label="totalCreditPurchasesPer60Days" />
+			<Parameter  name="P0000005"  label="totalMobileAppPurchasesPerPrev60Days" />
+			<Parameter  name="P0000006"  label="totalWebPurchasesPer60Days" />
+			<Parameter  name="P0000007"  label="segnr(1)" />
+			<Parameter  name="P0000008"  label="segnr(2)" />
+			<Parameter  name="P0000009"  label="segnr(3)" />
+			<Parameter  name="P0000010"  label="segnr(4)" />
+			<Parameter  name="P0000011"  label="segnr(5)" />
+			<Parameter  name="P0000012"  label="totalActiveProducts" />
+			<Parameter  name="P0000013"  label="balanceMoneyTransactionsPer60Days" />
+			<Parameter  name="P0000014"  label="totalAccountConsultationsPer60Days" />
+			<Parameter  name="P0000015"  label="totalDebitPurchasesPer90Days" />
+		</ParameterList>
+		<FactorList >
+			<Predictor 
+				 name="segnr">
+				<Extension 
+					 extender="spss.com"
+					 name="contrastMatrix"
+					 value="Indicator">
+					<X-Basis 
+						 nRow="6"
+						 nCol="5">
+						<X-BasisRow 
+							 value="1"> 0 0 0 0 0</X-BasisRow>
+						<X-BasisRow 
+							 value="2"> 1 0 0 0 0</X-BasisRow>
+						<X-BasisRow 
+							 value="3"> 0 1 0 0 0</X-BasisRow>
+						<X-BasisRow 
+							 value="5"> 0 0 1 0 0</X-BasisRow>
+						<X-BasisRow 
+							 value="6"> 0 0 0 1 0</X-BasisRow>
+						<X-BasisRow 
+							 value="7"> 0 0 0 0 1</X-BasisRow>
+					</X-Basis>
+				</Extension>
+			</Predictor>
+		</FactorList>
+		<CovariateList >
+			<Predictor  name="age" />
+			<Predictor  name="totalCreditPurchaseAmountPer60Days" />
+			<Predictor  name="totalCreditPurchasesPer60Days" />
+			<Predictor  name="totalMobileAppPurchasesPerPrev60Days" />
+			<Predictor  name="totalWebPurchasesPer60Days" />
+			<Predictor  name="totalActiveProducts" />
+			<Predictor  name="balanceMoneyTransactionsPer60Days" />
+			<Predictor  name="totalAccountConsultationsPer60Days" />
+			<Predictor  name="totalDebitPurchasesPer90Days" />
+		</CovariateList>
+		<PPMatrix >
+			<PPCell  value="1"  predictorName="age"  parameterName="P0000002" />
+			<PPCell  value="1"  predictorName="totalCreditPurchaseAmountPer60Days"  parameterName="P0000003" />
+			<PPCell  value="1"  predictorName="totalCreditPurchasesPer60Days"  parameterName="P0000004" />
+			<PPCell  value="1"  predictorName="totalMobileAppPurchasesPerPrev60Days"  parameterName="P0000005" />
+			<PPCell  value="1"  predictorName="totalWebPurchasesPer60Days"  parameterName="P0000006" />
+			<PPCell  value="1"  predictorName="segnr"  parameterName="P0000007" />
+			<PPCell  value="2"  predictorName="segnr"  parameterName="P0000008" />
+			<PPCell  value="3"  predictorName="segnr"  parameterName="P0000009" />
+			<PPCell  value="5"  predictorName="segnr"  parameterName="P0000010" />
+			<PPCell  value="6"  predictorName="segnr"  parameterName="P0000011" />
+			<PPCell  value="1"  predictorName="totalActiveProducts"  parameterName="P0000012" />
+			<PPCell  value="1"  predictorName="balanceMoneyTransactionsPer60Days"  parameterName="P0000013" />
+			<PPCell  value="1"  predictorName="totalAccountConsultationsPer60Days"  parameterName="P0000014" />
+			<PPCell  value="1"  predictorName="totalDebitPurchasesPer90Days"  parameterName="P0000015" />
+		</PPMatrix>
+		<PCovMatrix >
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000001"  pCol="P0000001"  value="0.0118317622297728" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000002"  pCol="P0000001"  value="-1.60734485416353E-005" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000002"  pCol="P0000002"  value="3.05632892822095E-007" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000003"  pCol="P0000001"  value="1.77285073893723E-007" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000003"  pCol="P0000002"  value="-4.06175627435659E-010" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000003"  pCol="P0000003"  value="9.3509247504347E-008" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000004"  pCol="P0000001"  value="9.18569080673572E-005" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000004"  pCol="P0000002"  value="4.56090517660475E-008" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000004"  pCol="P0000003"  value="-8.94209553877301E-006" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000004"  pCol="P0000004"  value="0.000901667366895195" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000005"  pCol="P0000001"  value="-5.26755050981481E-005" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000005"  pCol="P0000002"  value="3.70600164224765E-008" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000005"  pCol="P0000003"  value="-2.75301175746661E-007" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000005"  pCol="P0000004"  value="2.96235572200585E-005" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000005"  pCol="P0000005"  value="0.000109665998558038" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000006"  pCol="P0000001"  value="-5.87925728026316E-005" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000006"  pCol="P0000002"  value="3.3709351927984E-009" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000006"  pCol="P0000003"  value="-4.8301238760486E-007" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000006"  pCol="P0000004"  value="2.85009304509802E-005" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000006"  pCol="P0000005"  value="-3.39508034677017E-005" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000006"  pCol="P0000006"  value="0.00014984110722543" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000007"  pCol="P0000001"  value="-0.0048475541090078" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000007"  pCol="P0000002"  value="-1.69432852539643E-006" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000007"  pCol="P0000003"  value="-5.72806833293114E-006" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000007"  pCol="P0000004"  value="0.000380929491996994" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000007"  pCol="P0000005"  value="0.000161096600240366" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000007"  pCol="P0000006"  value="0.000113043057277399" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000007"  pCol="P0000007"  value="0.00533346876450783" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000008"  pCol="P0000001"  value="-0.00675431026745124" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000008"  pCol="P0000002"  value="1.41961510548507E-006" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000008"  pCol="P0000003"  value="-5.83733213722768E-007" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000008"  pCol="P0000004"  value="-5.0486593077584E-005" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000008"  pCol="P0000005"  value="3.72377130972386E-005" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000008"  pCol="P0000006"  value="4.97565314115538E-005" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000008"  pCol="P0000007"  value="0.00383824528235473" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000008"  pCol="P0000008"  value="0.00566522302126881" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000009"  pCol="P0000001"  value="-0.00873621091263064" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000009"  pCol="P0000002"  value="1.28823712584519E-006" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000009"  pCol="P0000003"  value="6.28863430090035E-007" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000009"  pCol="P0000004"  value="-0.000164567561117145" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000009"  pCol="P0000005"  value="6.24802848754071E-005" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000009"  pCol="P0000006"  value="5.99463119336948E-005" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000009"  pCol="P0000007"  value="0.0043288225300846" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000009"  pCol="P0000008"  value="0.00568350737355426" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000009"  pCol="P0000009"  value="0.00749136730715351" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000010"  pCol="P0000001"  value="-0.00817395062816843" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000010"  pCol="P0000002"  value="9.15671762111195E-007" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000010"  pCol="P0000003"  value="9.53472135678131E-008" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000010"  pCol="P0000004"  value="-0.000103789191108407" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000010"  pCol="P0000005"  value="1.95586745568975E-005" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000010"  pCol="P0000006"  value="4.73627071817474E-005" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000010"  pCol="P0000007"  value="0.00416211713401198" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000010"  pCol="P0000008"  value="0.00560028246558295" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000010"  pCol="P0000009"  value="0.00670208443905066" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000010"  pCol="P0000010"  value="0.00725511172781842" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000011"  pCol="P0000001"  value="-0.00844482352153086" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000011"  pCol="P0000002"  value="2.29923999491104E-007" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000011"  pCol="P0000003"  value="1.49035083684538E-006" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000011"  pCol="P0000004"  value="-0.000259771752050104" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000011"  pCol="P0000005"  value="8.49527307572997E-005" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000011"  pCol="P0000006"  value="0.000107271691901163" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000011"  pCol="P0000007"  value="0.00435726753056483" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000011"  pCol="P0000008"  value="0.00551731394513429" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000011"  pCol="P0000009"  value="0.00690475529132317" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000011"  pCol="P0000010"  value="0.00650670614315928" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000011"  pCol="P0000011"  value="0.00750196732795578" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000012"  pCol="P0000001"  value="-0.000503013842220461" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000012"  pCol="P0000002"  value="2.29902219162401E-007" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000012"  pCol="P0000003"  value="5.10042947986548E-008" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000012"  pCol="P0000004"  value="-5.2976723106172E-006" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000012"  pCol="P0000005"  value="-1.72382052550197E-006" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000012"  pCol="P0000006"  value="-1.16747457067517E-006" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000012"  pCol="P0000007"  value="0.000140767225637795" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000012"  pCol="P0000008"  value="0.000250234587409951" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000012"  pCol="P0000009"  value="0.000359354571355141" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000012"  pCol="P0000010"  value="0.000338044979420259" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000012"  pCol="P0000011"  value="0.000341574397790362" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000012"  pCol="P0000012"  value="3.0886221718813E-005" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000013"  pCol="P0000001"  value="3.52423925554009E-007" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000013"  pCol="P0000002"  value="-1.02605055802653E-010" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000013"  pCol="P0000003"  value="8.19785209744652E-011" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000013"  pCol="P0000004"  value="-1.51118131545457E-008" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000013"  pCol="P0000005"  value="3.53307272962897E-009" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000013"  pCol="P0000006"  value="3.12355681581116E-009" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000013"  pCol="P0000007"  value="-2.14131278620616E-007" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000013"  pCol="P0000008"  value="-2.32091223065403E-007" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000013"  pCol="P0000009"  value="-3.23947399366757E-007" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000013"  pCol="P0000010"  value="-3.0663893360629E-007" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000013"  pCol="P0000011"  value="-3.48243056276029E-007" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000013"  pCol="P0000012"  value="-1.58596837425803E-008" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000013"  pCol="P0000013"  value="2.88109884087271E-010" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000014"  pCol="P0000001"  value="-5.39022162036927E-005" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000014"  pCol="P0000002"  value="4.02367174679157E-009" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000014"  pCol="P0000003"  value="-2.64073970852812E-008" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000014"  pCol="P0000004"  value="1.66778016628953E-006" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000014"  pCol="P0000005"  value="1.02452614777985E-006" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000014"  pCol="P0000006"  value="7.81285278128535E-007" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000014"  pCol="P0000007"  value="2.66672484474762E-006" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000014"  pCol="P0000008"  value="-2.77345897997048E-005" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000014"  pCol="P0000009"  value="2.18021450813022E-005" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000014"  pCol="P0000010"  value="-9.99405370369458E-006" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000014"  pCol="P0000011"  value="2.75423720343612E-005" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000014"  pCol="P0000012"  value="5.3644764550304E-007" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000014"  pCol="P0000013"  value="-1.17479404015013E-009" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000014"  pCol="P0000014"  value="8.51065457503814E-006" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000015"  pCol="P0000001"  value="-8.63123708087223E-006" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000015"  pCol="P0000002"  value="-2.01742531701255E-008" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000015"  pCol="P0000003"  value="1.31647315707404E-007" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000015"  pCol="P0000004"  value="-2.1866236096553E-005" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000015"  pCol="P0000005"  value="-8.53326112634565E-006" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000015"  pCol="P0000006"  value="-8.77567382173061E-006" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000015"  pCol="P0000007"  value="-7.39660896934205E-006" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000015"  pCol="P0000008"  value="2.29153414105301E-005" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000015"  pCol="P0000009"  value="1.04138015535545E-005" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000015"  pCol="P0000010"  value="1.71267561640629E-005" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000015"  pCol="P0000011"  value="2.69486781844187E-006" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000015"  pCol="P0000012"  value="-7.17656114345507E-007" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000015"  pCol="P0000013"  value="6.80932870428161E-009" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000015"  pCol="P0000014"  value="-5.74328545536805E-007" />
+			<PCovCell  tRow="1"  tCol="1"  pRow="P0000015"  pCol="P0000015"  value="5.14139826828809E-006" />
+		</PCovMatrix>
+		<ParamMatrix >
+			<PCell  targetCategory="1"  parameterName="P0000001"  beta="-7.78193440401769"  df="1" />
+			<PCell  targetCategory="1"  parameterName="P0000002"  beta="0.00392548013927414"  df="1" />
+			<PCell  targetCategory="1"  parameterName="P0000003"  beta="-0.00432201834546585"  df="1" />
+			<PCell  targetCategory="1"  parameterName="P0000004"  beta="0.444529816694279"  df="1" />
+			<PCell  targetCategory="1"  parameterName="P0000005"  beta="-0.0201623922837523"  df="1" />
+			<PCell  targetCategory="1"  parameterName="P0000006"  beta="-0.0482097369452216"  df="1" />
+			<PCell  targetCategory="1"  parameterName="P0000007"  beta="2.29637816326858"  df="1" />
+			<PCell  targetCategory="1"  parameterName="P0000008"  beta="4.05287581356151"  df="1" />
+			<PCell  targetCategory="1"  parameterName="P0000009"  beta="4.75448380316632"  df="1" />
+			<PCell  targetCategory="1"  parameterName="P0000010"  beta="4.2656039197604"  df="1" />
+			<PCell  targetCategory="1"  parameterName="P0000011"  beta="4.68416468376136"  df="1" />
+			<PCell  targetCategory="1"  parameterName="P0000012"  beta="0.467950186617322"  df="1" />
+			<PCell  targetCategory="1"  parameterName="P0000013"  beta="-0.000510749282427091"  df="1" />
+			<PCell  targetCategory="1"  parameterName="P0000014"  beta="-0.00707391506782006"  df="1" />
+			<PCell  targetCategory="1"  parameterName="P0000015"  beta="0.00504069060914861"  df="1" />
+		</ParamMatrix>
+	</GeneralRegressionModel>
+</PMML>

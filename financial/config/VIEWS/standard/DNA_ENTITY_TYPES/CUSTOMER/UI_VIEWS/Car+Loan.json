@@ -1,0 +1,10 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "attributes" : { },
+  "description" : "Car Loan",
+  "dnaVariables" : [ "nbrChildren", "totalAssets", "age", "totalBalanceCarLoans", "flagCarLoan", "numberPageVisitsCarLoan", "numberPageVisitsCarLoanToday", "numberCarLoanSimulations", "numberCarLoanSimulationsToday", "maxCarLoanSimulationAmountToday", "lastCarLoanSimulationAmountToday", "lastCarLoanSimulationTimeString", "recencyCarLoanSimulation", "giveCarLoanReduction", "propensityCarLoanModel", "eligibleForCarLoanOffer", "carLoanOfferScore" ],
+  "name" : "Car Loan"
+}

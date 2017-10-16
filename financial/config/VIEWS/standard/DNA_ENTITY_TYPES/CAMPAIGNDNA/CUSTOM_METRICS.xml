@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dna xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:noNamespaceSchemaLocation="http://www.ngdata.com/lily/xsd/dna_1_0.xsd">
+  <variables>
+      <formula name="RatEmailsDeliveredvsClicked">
+         <expr>((nbrOfEmailsDelivered / nbrOfEmailsDelivered)*100).intValue() </expr>
+         <type value="int"/>
+         <defaultSamplingFrequency>1 day</defaultSamplingFrequency>
+         <defaultQueryWindow>1 month</defaultQueryWindow>
+         <setOperation>average</setOperation>
+         <enableVelocityMetrics>true</enableVelocityMetrics>
+         <defaultValue>0</defaultValue>
+         <attributes>
+            <attribute name="rangeMax">100</attribute>
+            <attribute name="nature">positive</attribute>
+            <attribute name="rangeMin">0</attribute>
+            <attribute name="longlabel">Ratio Emails Clicked vs Delivered</attribute>
+            <attribute name="description">Ratio emails clicked vs delivered</attribute>
+            <attribute name="label">Ratio Emails Clicked vs Delivered</attribute>
+            <attribute name="timeLine">true</attribute>
+            <attribute name="category">Campaign DNA</attribute>
+            <attribute name="subcategory">Email Campaigns</attribute>
+         </attributes>
+      </formula>
+      <field name="category">
+         <type value="string"/>
+         <attributes>
+            <attribute name="DNAid">X.X.XX</attribute>
+            <attribute name="longlabel">Category</attribute>
+            <attribute name="description">Category</attribute>
+            <attribute name="index">true</attribute>
+            <attribute name="label">Category</attribute>
+            <attribute name="category">Campaign DNA</attribute>
+            <attribute name="subcategory">Campaign</attribute>
+         </attributes>
+      </field>
+      <field name="creationDate">
+         <type value="date"/>
+         <attributes>
+            <attribute name="DNAid">X.X.XX</attribute>
+            <attribute name="longlabel">Creation date</attribute>
+            <attribute name="description">Creation date</attribute>
+            <attribute name="index">false</attribute>
+            <attribute name="label">Creation Date</attribute>
+            <attribute name="category">Campaign DNA</attribute>
+            <attribute name="subcategory">Campaign</attribute>
+         </attributes>
+      </field>
+      <field name="description">
+         <type value="string"/>
+         <attributes>
+            <attribute name="DNAid">X.X.XX</attribute>
+            <attribute name="longlabel">Description</attribute>
+            <attribute name="description">Description</attribute>
+            <attribute name="index">true</attribute>
+            <attribute name="label">Description</attribute>
+            <attribute name="category">Campaign DNA</attribute>
+            <attribute name="subcategory">Campaign</attribute>
+         </attributes>
+      </field>
+      <field name="endDate">
+         <type value="date"/>
+         <attributes>
+            <attribute name="DNAid">X.X.XX</attribute>
+            <attribute name="longlabel">End date</attribute>
+            <attribute name="description">End date</attribute>
+            <attribute name="index">false</attribute>
+            <attribute name="label">End Date</attribute>
+            <attribute name="category">Campaign DNA</attribute>
+            <attribute name="subcategory">Campaign</attribute>
+         </attributes>
+      </field>
+      <field name="goal">
+         <type value="string"/>
+         <attributes>
+            <attribute name="DNAid">X.X.XX</attribute>
+            <attribute name="longlabel">Goal</attribute>
+            <attribute name="description">Goal</attribute>
+            <attribute name="index">true</attribute>
+            <attribute name="label">Goal</attribute>
+            <attribute name="category">Campaign DNA</attribute>
+            <attribute name="subcategory">Campaign</attribute>
+         </attributes>
+      </field>
+      <formula name="nbrOfEmailsClicked">
+         <expr>(nbrOfEmailsDelivered*0.75).intValue() </expr>
+         <type value="int"/>
+         <defaultSamplingFrequency>1 day</defaultSamplingFrequency>
+         <defaultQueryWindow>1 month</defaultQueryWindow>
+         <setOperation>average</setOperation>
+         <enableVelocityMetrics>true</enableVelocityMetrics>
+         <defaultValue>0</defaultValue>
+         <attributes>
+            <attribute name="rangeMax">100</attribute>
+            <attribute name="nature">positive</attribute>
+            <attribute name="rangeMin">0</attribute>
+            <attribute name="longlabel">Number of Emails Delivered</attribute>
+            <attribute name="description">Number of emails delivered</attribute>
+            <attribute name="label">Number of Emails Delivered</attribute>
+            <attribute name="timeLine">true</attribute>
+            <attribute name="category">Campaign DNA</attribute>
+            <attribute name="subcategory">Email Campaigns</attribute>
+         </attributes>
+      </formula>
+      <formula name="nbrOfEmailsDelivered">
+         <expr>(nbrOfEmailsSend*0.95).intValue() </expr>
+         <type value="int"/>
+         <defaultSamplingFrequency>1 day</defaultSamplingFrequency>
+         <defaultQueryWindow>1 month</defaultQueryWindow>
+         <setOperation>average</setOperation>
+         <enableVelocityMetrics>true</enableVelocityMetrics>
+         <defaultValue>0</defaultValue>
+         <attributes>
+            <attribute name="rangeMax">100</attribute>
+            <attribute name="nature">positive</attribute>
+            <attribute name="rangeMin">0</attribute>
+            <attribute name="longlabel">Number of Emails Delivered</attribute>
+            <attribute name="description">Number of emails delivered</attribute>
+            <attribute name="label">Number of Emails Delivered</attribute>
+            <attribute name="timeLine">true</attribute>
+            <attribute name="category">Campaign DNA</attribute>
+            <attribute name="subcategory">Email Campaigns</attribute>
+         </attributes>
+      </formula>
+      <formula name="nbrOfEmailsSend">
+         <expr>java.lang.Double.valueOf(67.0 * (Math.random()*(1.05 - 0.95) + 0.95)).intValue() </expr>
+         <type value="int"/>
+         <defaultSamplingFrequency>1 day</defaultSamplingFrequency>
+         <defaultQueryWindow>1 month</defaultQueryWindow>
+         <setOperation>average</setOperation>
+         <enableVelocityMetrics>true</enableVelocityMetrics>
+         <defaultValue>0</defaultValue>
+         <attributes>
+            <attribute name="rangeMax">100</attribute>
+            <attribute name="nature">positive</attribute>
+            <attribute name="rangeMin">0</attribute>
+            <attribute name="longlabel">Number of Emails Sent</attribute>
+            <attribute name="description">Number of sent emails</attribute>
+            <attribute name="label">Number of Emails Sent</attribute>
+            <attribute name="timeLine">true</attribute>
+            <attribute name="category">Campaign DNA</attribute>
+            <attribute name="subcategory">Email Campaigns</attribute>
+         </attributes>
+      </formula>
+      <field name="startDate">
+         <type value="date"/>
+         <attributes>
+            <attribute name="DNAid">X.X.XX</attribute>
+            <attribute name="longlabel">Start date</attribute>
+            <attribute name="description">Start date</attribute>
+            <attribute name="index">false</attribute>
+            <attribute name="label">Start Date</attribute>
+            <attribute name="category">Campaign DNA</attribute>
+            <attribute name="subcategory">Campaign</attribute>
+         </attributes>
+      </field>
+      <field name="status">
+         <type value="string"/>
+         <attributes>
+            <attribute name="DNAid">X.X.XX</attribute>
+            <attribute name="longlabel">Status</attribute>
+            <attribute name="description">Status</attribute>
+            <attribute name="index">true</attribute>
+            <attribute name="label">Status</attribute>
+            <attribute name="category">Campaign DNA</attribute>
+            <attribute name="subcategory">Campaign</attribute>
+         </attributes>
+      </field>
+  </variables>
+</dna>

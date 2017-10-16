@@ -1,0 +1,9 @@
+{
+  "name" : "Formula Metrics",
+  "description" : "Formula metrics",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "metricType='FORMULA'"
+}

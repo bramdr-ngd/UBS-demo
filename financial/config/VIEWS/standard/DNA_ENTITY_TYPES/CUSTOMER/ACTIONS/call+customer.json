@@ -1,0 +1,38 @@
+{
+  "name" : "call customer",
+  "scenario" : "RESPONSE",
+  "outputSystem" : "callcenter",
+  "parameters" : [ {
+    "name" : "scriptId",
+    "type" : {
+      "kind" : "SCALAR",
+      "scalarType" : "string"
+    },
+    "expression" : "''",
+    "mandatory" : true
+  }, {
+    "name" : "telephoneNumber",
+    "type" : {
+      "kind" : "SCALAR",
+      "scalarType" : "string"
+    },
+    "expression" : "'dna.phoneNumber'",
+    "mandatory" : true
+  }, {
+    "name" : "metricName",
+    "type" : {
+      "kind" : "SCALAR",
+      "scalarType" : "string"
+    },
+    "expression" : "''",
+    "mandatory" : false
+  }, {
+    "name" : "metricValue",
+    "type" : {
+      "kind" : "SCALAR",
+      "scalarType" : "string"
+    },
+    "expression" : "''",
+    "mandatory" : false
+  } ]
+}

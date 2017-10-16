@@ -1,0 +1,16 @@
+#!/bin/bash
+set -e
+conf_dir="$(dirname "$0")"/../conf
+
+die() {
+  local message="$1"
+  local code="${2:-1}"
+  if [[ -n "$message" ]] ; then
+    echo "ERROR: ${message}"
+  else
+    echo "ERROR: Execution failed"
+  fi
+  exit "${code}"
+}
+
+lily script {{target.ansible.dir}}/scripts/purge-rules-catalogs.groovy

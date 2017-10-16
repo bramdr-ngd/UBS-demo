@@ -1,0 +1,76 @@
+{
+  "name" : "Show Notification",
+  "description" : null,
+  "scenario" : "TRIGGER",
+  "outputSystem" : "website",
+  "parameters" : [ {
+    "name" : "customerId",
+    "type" : {
+      "kind" : "SCALAR",
+      "scalarType" : "string"
+    },
+    "expression" : "dna.crmId",
+    "mandatory" : true
+  }, {
+    "name" : "firstName",
+    "type" : {
+      "kind" : "SCALAR",
+      "scalarType" : "string"
+    },
+    "expression" : "dna.firstName",
+    "mandatory" : true
+  }, {
+    "name" : "lastName",
+    "type" : {
+      "kind" : "SCALAR",
+      "scalarType" : "string"
+    },
+    "expression" : "dna.lastName",
+    "mandatory" : false
+  }, {
+    "name" : "pops",
+    "type" : {
+      "kind" : "TABLE",
+      "fields" : [ {
+        "name" : "id",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "long"
+        }
+      }, {
+        "name" : "name",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "street_address",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "latitude",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "double"
+        }
+      }, {
+        "name" : "longitude",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "double"
+        }
+      }, {
+        "name" : "value",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "double"
+        }
+      } ],
+      "primaryKey" : [ ]
+    },
+    "expression" : "rankedScores(dna.proximityScore, tables.scoring.pop, 1, ctx.scoringIdFilter, 'id', 'name', 'street_address', 'latitude', 'longitude', 'value')",
+    "mandatory" : true
+  } ]
+}

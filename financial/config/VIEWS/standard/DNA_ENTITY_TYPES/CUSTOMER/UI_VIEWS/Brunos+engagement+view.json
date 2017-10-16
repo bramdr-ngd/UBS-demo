@@ -1,0 +1,10 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "USER:brunod"
+  } ],
+  "attributes" : { },
+  "description" : "Bruno's engagement view",
+  "dnaVariables" : [ "likes", "negativeTweets", "positiveTweets", "totalComplaints", "totalSupportCalls" ],
+  "name" : "Brunos engagement view"
+}

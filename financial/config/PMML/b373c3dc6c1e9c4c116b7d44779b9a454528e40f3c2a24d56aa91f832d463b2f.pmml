@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<PMML version="4.2" xmlns="http://www.dmg.org/PMML-4_2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_2 http://www.dmg.org/v4-2/pmml-4-2.xsd">
+ <Header copyright="Copyright (c) 2016 llvergey" description="Generalized Linear Regression Model">
+  <Extension name="user" value="llvergey" extender="Rattle/PMML"/>
+  <Application name="Rattle/PMML" version="1.4"/>
+  <Timestamp>2016-10-06 22:19:00</Timestamp>
+ </Header>
+ <DataDictionary numberOfFields="11">
+  <DataField name="targetInit" optype="continuous" dataType="double"/>
+  <DataField name="segment" optype="categorical" dataType="string">
+   <Value value="Elites"/>
+   <Value value="New World Adopters"/>
+   <Value value="Safety Seekers"/>
+   <Value value="Self-Sufficients"/>
+   <Value value="Traditionalists"/>
+   <Value value="Upwardly Mobiles"/>
+  </DataField>
+  <DataField name="totalBankProducts" optype="continuous" dataType="double"/>
+  <DataField name="totalComplaintsPer180Days" optype="continuous" dataType="double"/>
+  <DataField name="totalPortfolioAdjustmentsPer120Days" optype="continuous" dataType="double"/>
+  <DataField name="flagActive" optype="categorical" dataType="double">
+   <Value value="0"/>
+   <Value value="1"/>
+  </DataField>
+  <DataField name="totalActiveProducts" optype="continuous" dataType="double"/>
+  <DataField name="shareOfWallet" optype="continuous" dataType="double"/>
+  <DataField name="likes" optype="continuous" dataType="double"/>
+  <DataField name="positiveTweets" optype="continuous" dataType="double"/>
+  <DataField name="shares" optype="continuous" dataType="double"/>
+ </DataDictionary>
+ <GeneralRegressionModel modelName="LoyaltyModel" modelType="generalizedLinear" functionName="regression" algorithmName="glm" distribution="binomial" linkFunction="logit">
+  <MiningSchema>
+   <MiningField name="targetInit" usageType="predicted"/>
+   <MiningField name="segment" usageType="active"/>
+   <MiningField name="totalBankProducts" usageType="active"/>
+   <MiningField name="totalComplaintsPer180Days" usageType="active"/>
+   <MiningField name="totalPortfolioAdjustmentsPer120Days" usageType="active"/>
+   <MiningField name="flagActive" usageType="active"/>
+   <MiningField name="totalActiveProducts" usageType="active"/>
+   <MiningField name="shareOfWallet" usageType="active"/>
+   <MiningField name="likes" usageType="active"/>
+   <MiningField name="positiveTweets" usageType="active"/>
+   <MiningField name="shares" usageType="active"/>
+  </MiningSchema>
+  <Output>
+   <OutputField name="Predicted_targetInit" dataType="double" feature="predictedValue"/>
+   <OutputField name="Predicted_Final" dataType="double" feature="transformedValue" >
+      <Apply function="*">
+             <FieldRef field="Predicted_targetInit"/>
+             <Constant>100</Constant>
+      </Apply>
+  </OutputField> 
+  </Output>
+  <ParameterList>
+   <Parameter name="p0" label="(Intercept)"/>
+   <Parameter name="p1" label="segmentNew World Adopters"/>
+   <Parameter name="p2" label="segmentSafety Seekers"/>
+   <Parameter name="p3" label="segmentSelf-Sufficients"/>
+   <Parameter name="p4" label="segmentTraditionalists"/>
+   <Parameter name="p5" label="segmentUpwardly Mobiles"/>
+   <Parameter name="p6" label="totalBankProducts"/>
+   <Parameter name="p7" label="totalComplaintsPer180Days"/>
+   <Parameter name="p8" label="totalPortfolioAdjustmentsPer120Days"/>
+   <Parameter name="p9" label="flagActivetrue"/>
+   <Parameter name="p10" label="totalActiveProducts"/>
+   <Parameter name="p11" label="shareOfWallet"/>
+   <Parameter name="p12" label="likes"/>
+   <Parameter name="p13" label="positiveTweets"/>
+   <Parameter name="p14" label="shares"/>
+  </ParameterList>
+  <FactorList>
+   <Predictor name="segment"/>
+   <Predictor name="flagActive"/>
+  </FactorList>
+  <CovariateList>
+   <Predictor name="totalBankProducts"/>
+   <Predictor name="totalComplaintsPer180Days"/>
+   <Predictor name="totalPortfolioAdjustmentsPer120Days"/>
+   <Predictor name="totalActiveProducts"/>
+   <Predictor name="shareOfWallet"/>
+   <Predictor name="likes"/>
+   <Predictor name="positiveTweets"/>
+   <Predictor name="shares"/>
+  </CovariateList>
+  <PPMatrix>
+   <PPCell value="New World Adopters" predictorName="segment" parameterName="p1"/>
+   <PPCell value="Safety Seekers" predictorName="segment" parameterName="p2"/>
+   <PPCell value="Self-Sufficients" predictorName="segment" parameterName="p3"/>
+   <PPCell value="Traditionalists" predictorName="segment" parameterName="p4"/>
+   <PPCell value="Upwardly Mobiles" predictorName="segment" parameterName="p5"/>
+   <PPCell value="1" predictorName="totalBankProducts" parameterName="p6"/>
+   <PPCell value="1" predictorName="totalComplaintsPer180Days" parameterName="p7"/>
+   <PPCell value="1" predictorName="totalPortfolioAdjustmentsPer120Days" parameterName="p8"/>
+   <PPCell value="1" predictorName="flagActive" parameterName="p9"/>
+   <PPCell value="1" predictorName="totalActiveProducts" parameterName="p10"/>
+   <PPCell value="1" predictorName="shareOfWallet" parameterName="p11"/>
+   <PPCell value="1" predictorName="likes" parameterName="p12"/>
+   <PPCell value="1" predictorName="positiveTweets" parameterName="p13"/>
+   <PPCell value="1" predictorName="shares" parameterName="p14"/>
+  </PPMatrix>
+  <ParamMatrix>
+   <PCell parameterName="p0" df="1" beta="-4.08752839193966"/>
+   <PCell parameterName="p1" df="1" beta="0.278517891332223"/>
+   <PCell parameterName="p2" df="1" beta="0.12595252264531"/>
+   <PCell parameterName="p3" df="1" beta="0.157878391922524"/>
+   <PCell parameterName="p4" df="1" beta="0.142082599902863"/>
+   <PCell parameterName="p5" df="1" beta="0.04945900058869"/>
+   <PCell parameterName="p6" df="1" beta="0.0710571688018258"/>
+   <PCell parameterName="p7" df="1" beta="-0.0396820429337069"/>
+   <PCell parameterName="p8" df="1" beta="0.00597621825164316"/>
+   <PCell parameterName="p9" df="1" beta="1.27526536081457"/>
+   <PCell parameterName="p10" df="1" beta="0.187447009431317"/>
+   <PCell parameterName="p11" df="1" beta="0.002457327826552"/>
+  </ParamMatrix>
+ </GeneralRegressionModel>
+</PMML>

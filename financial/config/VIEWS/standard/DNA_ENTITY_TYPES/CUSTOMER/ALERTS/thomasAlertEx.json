@@ -1,0 +1,19 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "USER:thomasvs"
+  } ],
+  "alertType" : "SET_MEMBER",
+  "alwaysFireOnActive" : false,
+  "conditions" : "(dna.scoreChurnAmp > 0.85)",
+  "description" : "thomasAlertEx",
+  "enabled" : true,
+  "metricName" : "scoreChurnAmp",
+  "name" : "thomasAlertEx",
+  "notificationParameters" : {
+    "rulesengine.trigger" : "false"
+  },
+  "setReference" : "Elites",
+  "attributes" : { },
+  "structuredConditions" : null
+}

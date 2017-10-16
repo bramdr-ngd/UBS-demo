@@ -1,0 +1,39 @@
+{
+  "columns" : [ ],
+  "multiTenant" : true,
+  "name" : "customer_id_cooccurrence",
+  "primaryKey" : {
+    "columns" : [ {
+      "jdbcType" : "CHAR",
+      "maxLength" : 1,
+      "name" : "tenant_id",
+      "nullable" : false,
+      "type" : null
+    }, {
+      "jdbcType" : "VARCHAR",
+      "maxLength" : null,
+      "name" : "left_source_type",
+      "nullable" : false,
+      "type" : "string"
+    }, {
+      "jdbcType" : "BIGINT",
+      "maxLength" : null,
+      "name" : "left_id",
+      "nullable" : false,
+      "type" : "long"
+    }, {
+      "jdbcType" : "VARCHAR",
+      "maxLength" : null,
+      "name" : "right_source_type",
+      "nullable" : false,
+      "type" : "string"
+    }, {
+      "jdbcType" : "BIGINT",
+      "maxLength" : null,
+      "name" : "right_id",
+      "nullable" : false,
+      "type" : "long"
+    } ]
+  },
+  "saltBuckets" : 4
+}

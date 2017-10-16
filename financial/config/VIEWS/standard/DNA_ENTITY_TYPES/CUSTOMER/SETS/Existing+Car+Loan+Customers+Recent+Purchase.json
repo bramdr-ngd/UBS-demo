@@ -1,0 +1,9 @@
+{
+  "name" : "Existing Car Loan Customers Recent Purchase",
+  "description" : "Existing customers who recently purchased a car loan",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "productPrioritySC2[products_id=1]=0.7"
+}

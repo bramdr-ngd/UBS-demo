@@ -1,0 +1,10 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "USER:sebastienc"
+  } ],
+  "attributes" : { },
+  "description" : "The view that was used during the training exercise",
+  "dnaVariables" : [ "cashWithdrawalAmountLast", "negativeTweets", "scoreChurn", "scoreChurnAmp", "totalComplaintsPer180Days", "totalCreditPurchaseAmountPer60Days", "totalCreditPurchasesPer60Days" ],
+  "name" : "Example view SC"
+}

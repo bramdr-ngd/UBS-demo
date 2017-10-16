@@ -1,0 +1,10 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "GROUP:application_admin"
+  } ],
+  "attributes" : { },
+  "description" : null,
+  "dnaVariables" : [ "lifestage", "flagLeavingNest", "flagContactAbilityLandline", "affValueShopper", "totalComplaints", "shareOfWalletSize", "totalActiveProducts", "totalDebitPurchaseAmountPerPrev60Days", "totalCreditPurchaseAmountPer120Days", "totalCreditPurchaseAmountPerPrev60Days", "satisfaction", "age", "positiveTweets", "negativeTweets", "numberPageVisitsCarLoan", "numberCarLoanSimulations" ],
+  "name" : "Cross sell"
+}

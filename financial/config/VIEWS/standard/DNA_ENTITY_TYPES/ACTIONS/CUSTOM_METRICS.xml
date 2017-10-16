@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dna xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:noNamespaceSchemaLocation="http://www.ngdata.com/lily/xsd/dna_1_0.xsd">
+  <interactionFilters>
+      <interactionFilter name="bannerClicked"
+                         expr="itx.goal == 'process offer' &amp;&amp; itx.subgoal == 'open offer' &amp;&amp; itx.ACTION_TYPE == 'banner' "/>
+      <interactionFilter name="bannerShown"
+                         expr="itx.goal == 'process offer' &amp;&amp; itx.subgoal == 'view offer' &amp;&amp; itx.ACTION_TYPE == 'banner' "/>
+  </interactionFilters>
+  <variables>
+      <field name="CTA">
+         <type value="string"/>
+         <attributes>
+            <attribute name="label">CTA</attribute>
+            <attribute name="category">Descriptives</attribute>
+            <attribute name="subcategory">CTA</attribute>
+         </attributes>
+      </field>
+      <field name="CTA_id">
+         <type value="long"/>
+         <attributes>
+            <attribute name="label">CTA ID</attribute>
+            <attribute name="category">Descriptives</attribute>
+            <attribute name="subcategory">CTA</attribute>
+         </attributes>
+      </field>
+      <field name="Objective">
+         <type value="string"/>
+         <attributes>
+            <attribute name="label">Objective</attribute>
+            <attribute name="category">Tactics</attribute>
+         </attributes>
+      </field>
+      <field name="actionDescription">
+         <type value="string"/>
+         <attributes>
+            <attribute name="label">Action Description</attribute>
+            <attribute name="category">Descriptives</attribute>
+         </attributes>
+      </field>
+      <field name="actionFormatSize">
+         <type value="string"/>
+         <attributes>
+            <attribute name="label">Action Format Size</attribute>
+            <attribute name="category">Descriptives</attribute>
+         </attributes>
+      </field>
+      <field name="actionName">
+         <type value="string"/>
+         <attributes>
+            <attribute name="index">true</attribute>
+            <attribute name="label">Action Name</attribute>
+            <attribute name="category">Descriptives</attribute>
+         </attributes>
+      </field>
+      <field name="actionSubType">
+         <type value="string"/>
+         <attributes>
+            <attribute name="label">Action Sub Type</attribute>
+            <attribute name="category">Descriptives</attribute>
+         </attributes>
+      </field>
+      <field name="actionType">
+         <type value="string"/>
+         <attributes>
+            <attribute name="label">Action Type</attribute>
+            <attribute name="category">Descriptives</attribute>
+         </attributes>
+      </field>
+      <field name="actionValidFrom">
+         <type value="datetime"/>
+         <attributes>
+            <attribute name="label">Action Valid From</attribute>
+            <attribute name="category">Eligibility</attribute>
+            <attribute name="subcategory">Context</attribute>
+         </attributes>
+      </field>
+      <field name="actionValidTo">
+         <type value="datetime"/>
+         <attributes>
+            <attribute name="label">Valid To</attribute>
+            <attribute name="category">Eligibility</attribute>
+            <attribute name="subcategory">Context</attribute>
+         </attributes>
+      </field>
+      <itxAggregate name="bannerClickReachPer7D" on="bannerClicked">
+         <operation inputType="string">countDistinct</operation>
+         <expr>itx.customerCRMId</expr>
+         <aggregationWindow>7 days</aggregationWindow>
+         <aggregationGranularity>day</aggregationGranularity>
+         <type value="long"/>
+         <defaultSamplingFrequency>1 day</defaultSamplingFrequency>
+         <defaultQueryWindow>30 days</defaultQueryWindow>
+         <setOperation>average</setOperation>
+         <enableVelocityMetrics>true</enableVelocityMetrics>
+         <defaultValue>0</defaultValue>
+         <attributes>
+            <attribute name="DNAid">BANNER.4</attribute>
+            <attribute name="rangeMax">100</attribute>
+            <attribute name="nature">positive</attribute>
+            <attribute name="rangeMin">0</attribute>
+            <attribute name="description">Number of distinct customers that have clicked on the banner at least once over the past 7 days
+        </attribute>
+            <attribute name="label">Banner Click Reach Per 7D</attribute>
+            <attribute name="category">Response</attribute>
+            <attribute name="subcategory">Offers</attribute>
+         </attributes>
+      </itxAggregate>
+      <itxAggregate name="bannerReachPer7D" on="bannerShown">
+         <operation inputType="string">countDistinct</operation>
+         <expr>itx.customerCRMId</expr>
+         <aggregationWindow>7 days</aggregationWindow>
+         <aggregationGranularity>day</aggregationGranularity>
+         <type value="long"/>
+         <defaultSamplingFrequency>1 day</defaultSamplingFrequency>
+         <defaultQueryWindow>30 days</defaultQueryWindow>
+         <setOperation>average</setOperation>
+         <enableVelocityMetrics>true</enableVelocityMetrics>
+         <defaultValue>0</defaultValue>
+         <attributes>
+            <attribute name="DNAid">BANNER.2</attribute>
+            <attribute name="rangeMax">100</attribute>
+            <attribute name="nature">positive</attribute>
+            <attribute name="rangeMin">0</attribute>
+            <attribute name="description">Number of distinct customers the banner has been shown to at least once over the past 7 days
+        </attribute>
+            <attribute name="label">Banner Reach Per 7D</attribute>
+            <attribute name="category">Response</attribute>
+            <attribute name="subcategory">Offers</attribute>
+         </attributes>
+      </itxAggregate>
+      <field name="colorScheme">
+         <type value="string"/>
+         <attributes>
+            <attribute name="label">Color Scheme</attribute>
+            <attribute name="category">Descriptives</attribute>
+            <attribute name="subcategory">Design</attribute>
+         </attributes>
+      </field>
+      <field name="design_id">
+         <type value="long"/>
+         <attributes>
+            <attribute name="label">Design ID</attribute>
+            <attribute name="category">Descriptives</attribute>
+            <attribute name="subcategory">Design</attribute>
+         </attributes>
+      </field>
+      <field name="design_name">
+         <type value="string"/>
+         <attributes>
+            <attribute name="label">Design Name</attribute>
+            <attribute name="category">Descriptives</attribute>
+            <attribute name="subcategory">Design</attribute>
+         </attributes>
+      </field>
+      <field name="exclusionCriteria">
+         <type value="string"/>
+         <attributes>
+            <attribute name="label">Exclusion Criteria</attribute>
+            <attribute name="category">Eligibility</attribute>
+            <attribute name="subcategory">Exclusion</attribute>
+         </attributes>
+      </field>
+      <field name="font">
+         <type value="string"/>
+         <attributes>
+            <attribute name="label">Font</attribute>
+            <attribute name="category">Descriptives</attribute>
+            <attribute name="subcategory">Design</attribute>
+         </attributes>
+      </field>
+      <field name="fontColor">
+         <type value="string"/>
+         <attributes>
+            <attribute name="label">Font Color</attribute>
+            <attribute name="category">Descriptives</attribute>
+            <attribute name="subcategory">Design</attribute>
+         </attributes>
+      </field>
+      <field name="fontStyle">
+         <type value="string"/>
+         <attributes>
+            <attribute name="label">Font Style</attribute>
+            <attribute name="category">Descriptives</attribute>
+            <attribute name="subcategory">Design</attribute>
+         </attributes>
+      </field>
+      <field name="format">
+         <type value="string"/>
+         <attributes>
+            <attribute name="label">Format</attribute>
+            <attribute name="category">Descriptives</attribute>
+            <attribute name="subcategory">Design</attribute>
+         </attributes>
+      </field>
+      <field name="inclusionCriteria">
+         <type value="string"/>
+         <attributes>
+            <attribute name="label">Inclusion Criteria</attribute>
+            <attribute name="category">Eligibility</attribute>
+            <attribute name="subcategory">Inclusion</attribute>
+         </attributes>
+      </field>
+      <itxAggregate name="nbrTimesBannerClickedPer7D" on="bannerClicked">
+         <operation>sum</operation>
+         <expr>1</expr>
+         <aggregationWindow>7 days</aggregationWindow>
+         <aggregationGranularity>day</aggregationGranularity>
+         <type value="long"/>
+         <defaultSamplingFrequency>1 day</defaultSamplingFrequency>
+         <defaultQueryWindow>30 days</defaultQueryWindow>
+         <setOperation>average</setOperation>
+         <enableVelocityMetrics>true</enableVelocityMetrics>
+         <defaultValue>0</defaultValue>
+         <attributes>
+            <attribute name="DNAid">BANNER.3</attribute>
+            <attribute name="rangeMax">100</attribute>
+            <attribute name="nature">positive</attribute>
+            <attribute name="rangeMin">0</attribute>
+            <attribute name="description">Number of distinct times the banner was clicked over the past 7 days
+        </attribute>
+            <attribute name="label">Banner Click Frequency Per 7D</attribute>
+            <attribute name="category">Response</attribute>
+            <attribute name="subcategory">Offers</attribute>
+         </attributes>
+      </itxAggregate>
+      <itxAggregate name="nbrTimesBannerShownPer7D" on="bannerShown">
+         <operation>sum</operation>
+         <expr>1</expr>
+         <aggregationWindow>7 days</aggregationWindow>
+         <aggregationGranularity>day</aggregationGranularity>
+         <type value="long"/>
+         <defaultSamplingFrequency>1 day</defaultSamplingFrequency>
+         <defaultQueryWindow>30 days</defaultQueryWindow>
+         <setOperation>average</setOperation>
+         <enableVelocityMetrics>true</enableVelocityMetrics>
+         <defaultValue>0</defaultValue>
+         <attributes>
+            <attribute name="DNAid">BANNER.1</attribute>
+            <attribute name="rangeMax">100</attribute>
+            <attribute name="nature">positive</attribute>
+            <attribute name="rangeMin">0</attribute>
+            <attribute name="description">Number of times the banner has been shown over the past 7 days
+        </attribute>
+            <attribute name="label">Banner Shown Frequency Per 7D</attribute>
+            <attribute name="category">Response</attribute>
+            <attribute name="subcategory">Offers</attribute>
+         </attributes>
+      </itxAggregate>
+      <field name="offerCategory">
+         <type value="string"/>
+         <attributes>
+            <attribute name="label">Offer Category</attribute>
+            <attribute name="category">Descriptives</attribute>
+            <attribute name="subcategory">Offer</attribute>
+         </attributes>
+      </field>
+      <field name="offerDescription">
+         <type value="string"/>
+         <attributes>
+            <attribute name="label">Offer Description</attribute>
+            <attribute name="category">Descriptives</attribute>
+            <attribute name="subcategory">Offer</attribute>
+         </attributes>
+      </field>
+      <field name="offerName">
+         <type value="string"/>
+         <attributes>
+            <attribute name="label">Offer Name</attribute>
+            <attribute name="category">Descriptives</attribute>
+            <attribute name="subcategory">Offer</attribute>
+         </attributes>
+      </field>
+      <field name="offerSubCategory">
+         <type value="string"/>
+         <attributes>
+            <attribute name="label">Offer Sub Category</attribute>
+            <attribute name="category">Descriptives</attribute>
+            <attribute name="subcategory">Offer</attribute>
+         </attributes>
+      </field>
+      <field name="offer_id">
+         <type value="string"/>
+         <attributes>
+            <attribute name="label">Offer ID</attribute>
+            <attribute name="category">Descriptives</attribute>
+            <attribute name="subcategory">Offer</attribute>
+         </attributes>
+      </field>
+      <field name="productCategory">
+         <type value="string"/>
+         <attributes>
+            <attribute name="label">Product Category</attribute>
+            <attribute name="category">Descriptives</attribute>
+            <attribute name="subcategory">Product</attribute>
+         </attributes>
+      </field>
+      <field name="productName">
+         <type value="string"/>
+         <attributes>
+            <attribute name="label">Product Name</attribute>
+            <attribute name="category">Descriptives</attribute>
+            <attribute name="subcategory">Product</attribute>
+         </attributes>
+      </field>
+      <field name="productSubCategory">
+         <type value="string"/>
+         <attributes>
+            <attribute name="label">Product Sub Category</attribute>
+            <attribute name="category">Descriptives</attribute>
+            <attribute name="subcategory">Product</attribute>
+         </attributes>
+      </field>
+      <field name="products_id">
+         <type value="string"/>
+         <attributes>
+            <attribute name="label">Products ID</attribute>
+            <attribute name="category">Descriptives</attribute>
+            <attribute name="subcategory">Product</attribute>
+         </attributes>
+      </field>
+      <field name="validChannel">
+         <type value="string"/>
+         <attributes>
+            <attribute name="label">Valid Channel</attribute>
+            <attribute name="category">Eligibility</attribute>
+            <attribute name="subcategory">Context</attribute>
+         </attributes>
+      </field>
+      <field name="validFormatSizes">
+         <type value="string"/>
+         <attributes>
+            <attribute name="description">Lists per action format size the validity expression</attribute>
+            <attribute name="label">Valid Format Sizes</attribute>
+            <attribute name="category">Eligibility</attribute>
+            <attribute name="subcategory">Context</attribute>
+         </attributes>
+      </field>
+      <field name="validIdentification">
+         <type value="string"/>
+         <attributes>
+            <attribute name="label">Valid Ident.</attribute>
+            <attribute name="category">Eligibility</attribute>
+            <attribute name="subcategory">Identification</attribute>
+         </attributes>
+      </field>
+      <field name="validJourneyPhase">
+         <type value="string"/>
+         <attributes>
+            <attribute name="label">Valid Journey Phase</attribute>
+            <attribute name="category">Eligibility</attribute>
+            <attribute name="subcategory">Journeys</attribute>
+         </attributes>
+      </field>
+      <field name="validLocation">
+         <type value="string"/>
+         <attributes>
+            <attribute name="label">Valid Location</attribute>
+            <attribute name="category">Eligibility</attribute>
+            <attribute name="subcategory">Context</attribute>
+         </attributes>
+      </field>
+  </variables>
+</dna>

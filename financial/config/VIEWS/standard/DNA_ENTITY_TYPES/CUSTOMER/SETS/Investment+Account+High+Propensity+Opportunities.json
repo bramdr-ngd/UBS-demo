@@ -1,0 +1,9 @@
+{
+  "name" : "Investment Account High Propensity Opportunities",
+  "description" : "Customers with a high propensity for an investment account",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "propensityInvestmentAccount > 0.5"
+}

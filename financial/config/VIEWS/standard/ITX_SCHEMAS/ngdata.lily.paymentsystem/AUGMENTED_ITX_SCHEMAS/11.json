@@ -1,0 +1,177 @@
+{
+  "type" : "record",
+  "name" : "paymentsystem",
+  "namespace" : "ngdata.lily",
+  "fields" : [ {
+    "name" : "timestamp",
+    "type" : "long",
+    "doc" : "When did this interaction happen, in Java milliseconds, at client side. For log-based interactions the channel-specific time stamp indicating the start of the interaction should be mapped to the generic timestamp."
+  }, {
+    "name" : "tenantId",
+    "type" : [ "null", "string" ],
+    "doc" : "The tenantId to which this interaction belongs to",
+    "default" : null
+  }, {
+    "name" : "customerId",
+    "type" : [ "null", "string" ],
+    "doc" : "ID of the CRM customer . This is a nullable ExternalID",
+    "default" : null,
+    "lilySourceId" : "true",
+    "lilyDnaEntityType" : "customer_CRM"
+  }, {
+    "name" : "timezone",
+    "type" : [ "null", "long" ],
+    "doc" : "The time zone at client side when the interaction happened.",
+    "default" : null
+  }, {
+    "name" : "sequenceId",
+    "type" : [ "null", "string" ],
+    "doc" : "Sequence number of the interaction in a conversation",
+    "default" : null
+  }, {
+    "name" : "medium",
+    "type" : [ "null", "string" ],
+    "doc" : "The medium of the interaction (e.g. written, oral).",
+    "default" : null
+  }, {
+    "name" : "channel",
+    "type" : [ "null", "string" ],
+    "doc" : "Channel that captured the interaction (UTS, CALL, EMAIL, PAYMENT_SYSTEM, ...)",
+    "default" : null
+  }, {
+    "name" : "source",
+    "type" : [ "null", "string" ],
+    "doc" : "Specific source the interaction stems from (e.g. messagent for channel email)",
+    "default" : null
+  }, {
+    "name" : "goal",
+    "type" : "string",
+    "doc" : "Main goal (goal) of the interaction (complaint, ...)"
+  }, {
+    "name" : "subgoal",
+    "type" : "string",
+    "doc" : "More specific goal (subgoal) of the interaction (product complaint, ...)"
+  }, {
+    "name" : "reason",
+    "type" : [ "null", "string" ],
+    "doc" : "Interaction reason that further clarifies the sub goal (e.g. sub goal= product complaint, reason: malfunctioning of product)",
+    "default" : null
+  }, {
+    "name" : "brand",
+    "type" : [ "null", "string" ],
+    "doc" : "Brand of the item the interaction is associated to.",
+    "default" : null
+  }, {
+    "name" : "inboundFlag",
+    "type" : [ "null", "boolean" ],
+    "doc" : "The interaction is customer initiated (inbound)",
+    "default" : null
+  }, {
+    "name" : "successFlag",
+    "type" : [ "null", "boolean" ],
+    "doc" : "A successful interaction.",
+    "default" : null
+  }, {
+    "name" : "failureReason",
+    "type" : [ "null", "string" ],
+    "doc" : "Reason the interaction failed.",
+    "default" : null
+  }, {
+    "name" : "device",
+    "type" : [ "null", "string" ],
+    "doc" : "Device used by the customer for the interaction: pc, laptop, smartphone, tablet, mobile phone but not smartphone, fixed line, tablet",
+    "default" : null
+  }, {
+    "name" : "geocoordinates",
+    "type" : [ "null", "string" ],
+    "doc" : "Location of customer at the time of the interaction using geocordinates",
+    "default" : null
+  }, {
+    "name" : "latitude",
+    "type" : [ "null", "string" ],
+    "doc" : "Latitude of location of customer at time of the interaction",
+    "default" : null
+  }, {
+    "name" : "longitude",
+    "type" : [ "null", "string" ],
+    "doc" : "Longitude of location of customer at time of the interaction",
+    "default" : null
+  }, {
+    "name" : "paymentNumber",
+    "type" : [ "null", "long" ],
+    "doc" : "Identifier for the payment transaction",
+    "default" : null
+  }, {
+    "name" : "subscriberId",
+    "type" : [ "null", "string" ],
+    "doc" : "Subscriber identification number. This is a nullable External ID.",
+    "default" : null
+  }, {
+    "name" : "accountNumberCustomer",
+    "type" : [ "null", "string" ],
+    "doc" : "Account number associated to the card used during transaction. This is a nullable External ID.",
+    "default" : null
+  }, {
+    "name" : "cardNumber",
+    "type" : [ "null", "string" ],
+    "doc" : "Unique identifier for the payment card used if applicable. This is a  nullable External ID.",
+    "default" : null
+  }, {
+    "name" : "paymentType",
+    "type" : [ "null", "string" ],
+    "doc" : "Type of payment (credit, debit, …)",
+    "default" : null
+  }, {
+    "name" : "paymentMethod",
+    "type" : [ "null", "string" ],
+    "doc" : "Specific type of payment",
+    "default" : null
+  }, {
+    "name" : "transactionType",
+    "type" : [ "null", "string" ],
+    "doc" : "Type of the transaction (wire transfer, deposit, card recharge, …)",
+    "default" : null
+  }, {
+    "name" : "completionFlag",
+    "type" : [ "null", "boolean" ],
+    "doc" : "The transaction was completed successfully",
+    "default" : null
+  }, {
+    "name" : "amount",
+    "type" : [ "null", "double" ],
+    "doc" : "amount of the transaction",
+    "default" : null
+  }, {
+    "name" : "value",
+    "type" : [ "null", "double" ],
+    "doc" : "monetary value of the transaction. Preferably use amount instead of value.",
+    "default" : null
+  }, {
+    "name" : "currency",
+    "type" : [ "null", "string" ],
+    "doc" : "Currency used to express monetary value",
+    "default" : null
+  }, {
+    "name" : "surcharge",
+    "type" : [ "null", "double" ],
+    "doc" : "Additional charge applied to the transaction",
+    "default" : null
+  }, {
+    "name" : "foreignFee",
+    "type" : [ "null", "double" ],
+    "doc" : "Fee charged by other parties involved in carying out the transaction",
+    "default" : null
+  }, {
+    "name" : "customerDnaEntityId",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "customerDnaEntityType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "customerResolvedOriginalSourceId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ]
+}

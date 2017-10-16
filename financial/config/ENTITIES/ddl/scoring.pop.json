@@ -1,0 +1,39 @@
+{
+  "columns" : [ {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "name",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "street_address",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "DOUBLE",
+    "maxLength" : null,
+    "name" : "latitude",
+    "nullable" : true,
+    "type" : "double"
+  }, {
+    "jdbcType" : "DOUBLE",
+    "maxLength" : null,
+    "name" : "longitude",
+    "nullable" : true,
+    "type" : "double"
+  } ],
+  "multiTenant" : false,
+  "name" : "scoring.pop",
+  "primaryKey" : {
+    "columns" : [ {
+      "jdbcType" : "BIGINT",
+      "maxLength" : null,
+      "name" : "id",
+      "nullable" : false,
+      "type" : "long"
+    } ]
+  },
+  "saltBuckets" : 1
+}

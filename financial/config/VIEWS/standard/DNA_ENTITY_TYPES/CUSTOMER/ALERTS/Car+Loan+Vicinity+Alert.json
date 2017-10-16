@@ -1,0 +1,17 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "alertType" : "SET_MEMBER",
+  "alwaysFireOnActive" : false,
+  "conditions" : "offerCarLoanVicinity = 1",
+  "description" : "Customer is in Car Loan Set and is in the vicinity of a car dealer",
+  "enabled" : true,
+  "metricName" : "offerCarLoanVicinity",
+  "name" : "Car Loan Vicinity Alert",
+  "notificationParameters" : { },
+  "setReference" : "Car Loan Opportunities",
+  "attributes" : { },
+  "structuredConditions" : null
+}

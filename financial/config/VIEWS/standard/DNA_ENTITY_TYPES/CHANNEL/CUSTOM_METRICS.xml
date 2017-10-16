@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dna xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:noNamespaceSchemaLocation="http://www.ngdata.com/lily/xsd/dna_1_0.xsd">
+  <interactionFilters>
+      <interactionFilter name="catch_all"
+                         expr="itx.typeName=='ngdata.lily.consultAccount' || itx.typeName=='ngdata.lily.customerExperience' || itx.typeName=='ngdata.lily.executePaymentTransaction' || itx.typeName=='ngdata.lily.makePurchase' || itx.typeName=='ngdata.lily.managePersonalFinances' || itx.typeName=='ngdata.lily.portfolioManagement' || itx.typeName=='ngdata.lily.simulation' "/>
+      <interactionFilter name="complaints_made"
+                         expr="(itx.goal=='contact' &amp;&amp; itx.subgoal =='make complaint')"/>
+      <interactionFilter name="online_activity" expr="(itx.device == 'web') "/>
+  </interactionFilters>
+  <groups>
+      <group name="device_group">
+         <valueType>string</valueType>
+         <expr for="catch_all">itx.device</expr>
+      </group>
+  </groups>
+  <variables>
+      <itxAggregate name="ActivityPerHour" on="online_activity">
+         <operation>sum</operation>
+         <expr>1</expr>
+         <type value="long"/>
+      </itxAggregate>
+      <field name="Description">
+         <type value="string"/>
+      </field>
+      <field name="Name">
+         <type value="string"/>
+      </field>
+      <itxAggregate name="complaintsPerChannelPerDay" on="complaints_made">
+         <operation>sum</operation>
+         <expr>1</expr>
+         <aggregationWindow>1 week</aggregationWindow>
+         <type value="long"/>
+      </itxAggregate>
+      <itxAggregate name="totalInteractionsPer7DaysByDevice" on="catch_all">
+         <operation>sum</operation>
+         <expr>1</expr>
+         <type value="long" groups="device_group"/>
+      </itxAggregate>
+  </variables>
+</dna>

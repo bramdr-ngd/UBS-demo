@@ -1,0 +1,9 @@
+{
+  "name" : "Field Metrics",
+  "description" : "Field metrics",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "metricType='FIELD'"
+}

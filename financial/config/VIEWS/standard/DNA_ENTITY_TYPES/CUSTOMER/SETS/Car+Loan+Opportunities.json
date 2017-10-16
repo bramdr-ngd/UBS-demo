@@ -1,0 +1,9 @@
+{
+  "name" : "Car Loan Opportunities",
+  "description" : "Eligible customers with a high propensity for car loans",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "propensityCarLoanModel > 0.6 AND eligibleForCarLoanOffer = 1"
+}

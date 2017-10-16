@@ -1,0 +1,17 @@
+#!/bin/bash
+set -e
+
+die() {
+	echo >&2 "$1"
+	exit 1
+}
+
+if [ -z "$1" ]; then
+  dnaEntityTypes=(CUSTOMER)
+else
+  dnaEntityTypes=( "$@" )
+fi
+
+for dnaEntityType in "${dnaEntityTypes[@]}"; do
+    find "{{target.ansible.dir}}"/dna/"$dnaEntityType"/definition -type f -iname '*.xml'  -print0  | xargs -I {} -0 echo '-c' {} | sort | xargs lily dna-upload-conf --dna-entity-type "$dnaEntityType"
+done

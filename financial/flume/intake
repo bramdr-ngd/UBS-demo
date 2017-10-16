@@ -1,0 +1,37 @@
+# agent config: intake
+
+
+# Agent
+intake.sources = lilysource
+intake.channels = intakechannel
+intake.sinks = lilysink
+
+# lily http source
+intake.sources.lilysource.type = http
+intake.sources.lilysource.port = 8080
+intake.sources.lilysource.bind = localhost
+intake.sources.lilysource.handler = org.apache.flume.source.http.JSONHandler
+#intake.sources.lilysource.handler.baseUrl = /itx
+intake.sources.lilysource.channels = intakechannel
+intake.sources.lilysource.interceptors = my_timestamp logging
+intake.sources.lilysource.interceptors.my_timestamp.type = timestamp
+intake.sources.lilysource.interceptors.logging.type = com.ngdata.demo.flume.LoggingInterceptor$Builder
+
+# sinks
+intake.sinks.lilysink.type = com.ngdata.lily.flume.sink.LilyInteractionStoreSink
+intake.sinks.lilysink.channel = intakechannel
+intake.sinks.lilysink.hostname = localhost
+intake.sinks.lilysink.port = 2181
+
+intake.sinks.lilysink.tenantName = default
+
+intake.sinks.lilysink.mapExternalIds = false
+intake.sinks.lilysink.sendToSpeedLayer = true
+intake.sinks.lilysink.sendToPreferencerSpeedLayer = false
+intake.sinks.lilysink.disableMasterCreationSpeedLayer = false
+intake.sinks.lilysink.lily.interaction.kite.uri = repo:hdfs:/lily/interactions
+
+# channels
+intake.channels.intakechannel.type = memory
+intake.channels.intakechannel.capacity = 50000
+intake.channels.intakechannel.transactionCapacity = 10000

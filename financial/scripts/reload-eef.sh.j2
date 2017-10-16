@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+
+die() {
+	echo >&2 "$1"
+	exit 1
+}
+
+lily fs -rm -r -skipTrash /lily/ext/functionlibs
+lily fs -mkdir -p  /lily/ext/functionlibs
+lily fs -copyFromLocal -f {{target.ansible.dir}}/eef/* /lily/ext/functionlibs

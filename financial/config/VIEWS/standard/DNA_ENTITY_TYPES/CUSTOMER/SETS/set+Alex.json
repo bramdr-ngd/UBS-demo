@@ -1,0 +1,9 @@
+{
+  "name" : "set Alex",
+  "description" : "set Alex",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "USER:alexv"
+  } ],
+  "conditions" : "((dna.propensityCarLoanModel > 0.6) AND (dna.eligibleForCarLoanOffer = 1))"
+}

@@ -1,0 +1,9 @@
+{
+  "name" : "Car Loans",
+  "description" : "Customers who have a car loan with the bank",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "flagCarLoan = 1"
+}

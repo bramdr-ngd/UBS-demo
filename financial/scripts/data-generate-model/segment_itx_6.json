@@ -1,0 +1,202 @@
+{
+  "segnr": 6,
+  "NbrItx_FlagPSP":[40,70],
+  "NbrItx_NoFlagPSP":[20,35],
+  "Goal_categories": [
+    {"name": "consult account",             "pct":0.24,"pct_min":0,   "pct_max":0.24,
+        "Subgoal_categories" : [
+          {"name" : "check balances",          "pct":0.54,   "pct_min" : 0,    "pct_max":0.54,
+                  "Channel_categories" : [
+                            {"name" : "Web",                     "pct":0.40,   "pct_min" : 0,    "pct_max":0.40},
+                            {"name" : "Mobile App",              "pct":0.30,   "pct_min" : 0.40, "pct_max":0.70},
+                            {"name" : "ATM",                     "pct":0.10,   "pct_min" : 0.70, "pct_max":0.80},
+                            {"name" : "Branch",                  "pct":0.10,   "pct_min" : 0.80, "pct_max":0.90},
+                            {"name" : "Call Center",             "pct":0.10,   "pct_min" : 0.90, "pct_max":1}],
+                  "Amount" : [1]
+          },
+          {"name" : "view statements",         "pct":0.46,   "pct_min" : 0.54, "pct_max":1,
+                  "Channel_categories" : [
+                            {"name" : "Web",                     "pct":0.40,   "pct_min" : 0,    "pct_max":0.40},
+                            {"name" : "Mobile App",              "pct":0.30,   "pct_min" : 0.40, "pct_max":0.70},
+                            {"name" : "ATM",                     "pct":0.10,   "pct_min" : 0.70, "pct_max":0.80},
+                            {"name" : "Branch",                  "pct":0.10,   "pct_min" : 0.80, "pct_max":0.90},
+                            {"name" : "Call Center",             "pct":0.10,   "pct_min" : 0.90, "pct_max":1}],
+                  "Amount" : [1]
+          }
+        ]
+    },
+    {"name": "process offer",               "pct":0.01,"pct_min":0.24, "pct_max":0.25,
+        "Subgoal_categories" : [
+          {"name" : "view offer",          "pct":0.10,   "pct_min" : 0,    "pct_max":0.10,
+                            "Channel_categories" : [
+                                      {"name" : "Web",                     "pct":0.09,   "pct_min" : 0,    "pct_max":0.09},
+                                      {"name" : "Call Center",             "pct":0.16,   "pct_min" : 0.09, "pct_max":0.25},
+                                      {"name" : "Mobile App",              "pct":0.20,   "pct_min" : 0.25, "pct_max":0.45},
+                                      {"name" : "Email",                   "pct":0.10,   "pct_min" : 0.45, "pct_max":0.55},
+                                      {"name" : "Branch",                  "pct":0.45,   "pct_min" : 0.55, "pct_max":1}],
+                            "Offer_categories" : [
+                                      {"name" : "auto",                    "pct":0.50,   "pct_min" : 0,    "pct_max":0.50},
+                                      {"name" : "mortgage",                "pct":0.50,   "pct_min" : 0.50, "pct_max":1}],
+                            "Amount" : [1]          
+          
+          },
+          {"name" : "reject offer",        "pct":0.40,   "pct_min" : 0.10, "pct_max":0.50,
+                            "Channel_categories" : [
+                                      {"name" : "Web",                     "pct":0.07,   "pct_min" : 0,    "pct_max":0.07},
+                                      {"name" : "Call Center",             "pct":0.13,   "pct_min" : 0.07, "pct_max":0.20},
+                                      {"name" : "Mobile App",              "pct":0.45,   "pct_min" : 0.20, "pct_max":0.65},
+                                      {"name" : "Email",                   "pct":0.20,   "pct_min" : 0.65, "pct_max":0.85},
+                                      {"name" : "Branch",                  "pct":0.15,   "pct_min" : 0.85, "pct_max":1}],
+                            "Offer_categories" : [
+                                      {"name" : "auto",                    "pct":0.50,   "pct_min" : 0,    "pct_max":0.50},
+                                      {"name" : "mortgage",                "pct":0.50,   "pct_min" : 0.50, "pct_max":1}],
+                            "Amount" : [1]          
+          
+          },
+          {"name" : "accept offer",        "pct":0.50,   "pct_min" : 0.50, "pct_max":1,
+                            "Channel_categories" : [
+                                      {"name" : "Web",                     "pct":0.07,   "pct_min" : 0,    "pct_max":0.07},
+                                      {"name" : "Call Center",             "pct":0.13,   "pct_min" : 0.07, "pct_max":0.20},
+                                      {"name" : "Mobile App",              "pct":0.45,   "pct_min" : 0.20, "pct_max":0.65},
+                                      {"name" : "Email",                   "pct":0.20,   "pct_min" : 0.65, "pct_max":0.85},
+                                      {"name" : "Branch",                  "pct":0.15,   "pct_min" : 0.85, "pct_max":1}],
+                            "Offer_categories" : [
+                                      {"name" : "auto",                    "pct":0.50,   "pct_min" : 0,    "pct_max":0.50},
+                                      {"name" : "mortgage",                "pct":0.50,   "pct_min" : 0.50, "pct_max":1}],
+                            "Amount" : [1]          
+          }
+        ]
+    },
+    {"name": "make purchase",               "pct":0.44,"pct_min":0.25, "pct_max":0.69,
+        "Subgoal_categories" : [
+                  {"name" : "procure goods",           "pct":1,   "pct_min" : 0,    "pct_max":1,
+                    "Channel_categories" : [
+                              {"name" : "Pos",                     "pct":0.62,   "pct_min" : 0,    "pct_max":0.62},
+                              {"name" : "Web",                     "pct":0.24,   "pct_min" : 0.62, "pct_max":0.86},
+                              {"name" : "Mobile App",              "pct":0.14,   "pct_min" : 0.86, "pct_max":1}],
+                    "Payment_categories" : [
+                              {"name" : "debit",                   "pct":0.69,   "pct_min" : 0,    "pct_max":0.69},
+                              {"name" : "credit",                  "pct":0.31,   "pct_min" : 0.69, "pct_max":1}],
+                    "AmountDebit" : [40,15],
+                    "AmountCredit" : [90,15]
+                  }
+        ]
+    },
+    {"name": "manage personal finances",    "pct":0.16,"pct_min":0.69, "pct_max":0.85,
+        "Subgoal_categories" : [
+          {"name" : "withdraw cash",           "pct":1,   "pct_min" : 0,    "pct_max":1,
+                    "Channel_categories" : [
+                              {"name" : "ATM",                     "pct":0.50,   "pct_min" : 0,    "pct_max":0.50},
+                              {"name" : "Branch",                  "pct":0.50,   "pct_min" : 0.50, "pct_max":1}],
+                    "Payment_categories" : [
+                              {"name" : "debit",                   "pct":0.98,   "pct_min" : 0,    "pct_max":0.98},
+                              {"name" : "credit",                  "pct":0.02,   "pct_min" : 0.98, "pct_max":1}],
+                    "AmountDebit" : [5,10],
+                    "AmountCredit" : [10,15]
+          }
+        ]
+    },
+    {"name": "execute payment transaction", "pct":0.00,"pct_min":0.85, "pct_max":0.85,
+        "Subgoal_categories" : [
+                  {"name" : "submit wire transfer",     "pct":1,   "pct_min" : 0,    "pct_max":1,
+                          "Channel_categories" : [
+                                    {"name" : "Web",                     "pct":0.27,   "pct_min" : 0,    "pct_max":0.27},
+                                    {"name" : "Mobile App",              "pct":0.08,   "pct_min" : 0.27, "pct_max":0.35},
+                                    {"name" : "Branch",                  "pct":0.13,   "pct_min" : 0.35, "pct_max":0.48},
+                                    {"name" : "Call Center",             "pct":0.52,   "pct_min" : 0.48, "pct_max":1}],
+                          "Amount" : [0.05,0.15]
+                  }
+        ]
+    },
+    {"name": "manage personal finances",    "pct":0.07,"pct_min":0.85, "pct_max":0.92,
+        "Subgoal_categories" : [
+                  {"name" : "make deposit",            "pct":0.50,   "pct_min" : 0,    "pct_max":0.50,
+                          "Channel_categories" : [
+                                    {"name" : "Mobile App",         "pct":0.30,   "pct_min" : 0,    "pct_max":0.30},
+                                    {"name" : "ATM",                "pct":0.08,   "pct_min" : 0.30, "pct_max":0.38},
+                                    {"name" : "Branch",             "pct":0.62,   "pct_min" : 0.38, "pct_max":1}],
+                          "Amount" : [0.10,0.40],
+                          "Memo_categories" : [
+                                    {"name" : "salary",             "pct":0.33,   "pct_min" : 0   , "pct_max":0.33},
+                                    {"name" : "payment",            "pct":0.33,   "pct_min" : 0.33, "pct_max":0.66},
+                                    {"name" : "gift",               "pct":0.34,   "pct_min" : 0.66, "pct_max":1}]
+                  },
+                  {"name" : "account transfer",        "pct":0.50,   "pct_min" : 0.50, "pct_max":1,
+                          "Channel_categories" : [
+                                    {"name" : "Mobile App",         "pct":0.30,   "pct_min" : 0   , "pct_max":0.30},
+                                    {"name" : "ATM",                "pct":0.08,   "pct_min" : 0.30, "pct_max":0.38},
+                                    {"name" : "Branch",             "pct":0.07,   "pct_min" : 0.38, "pct_max":0.45},
+                                    {"name" : "Call Center",        "pct":0.10,   "pct_min" : 0.45, "pct_max":0.55},
+                                    {"name" : "Web",                "pct":0.45,   "pct_min" : 0.55, "pct_max":1}],
+                          "Amount" : [0.70,1.10]
+                  }
+        ]
+    },
+    {"name": "manage product portfolio",    "pct":0.01,"pct_min":0.92, "pct_max":0.93,
+        "Subgoal_categories" : [
+                  {"name" : "close an existing account",          "pct":0.80,   "pct_min" : 0,    "pct_max":0.80,
+                          "Channel_categories" : [
+                                    {"name" : "Branch",                  "pct":0.27,   "pct_min" : 0,    "pct_max":0.27},
+                                    {"name" : "Call Center",             "pct":0.73,   "pct_min" : 0.27, "pct_max":1}],
+                          "Amount" : [1],
+                          "AccountTypes" : [
+                                    {"name" : "Checking",                "pct":0.33,   "pct_min" : 0,    "pct_max":0.33},
+                                    {"name" : "savings",                 "pct":0.33,   "pct_min" : 0.33, "pct_max":0.66},
+                                    {"name" : "money market",            "pct":0.34,   "pct_min" : 0.66, "pct_max":1}]
+                  },
+                  {"name" : "open a new account",                 "pct":0.08,   "pct_min" : 0.80, "pct_max":0.88,
+                          "Channel_categories" : [
+                                    {"name" : "Branch",                  "pct":0.27,   "pct_min" : 0,    "pct_max":0.27},
+                                    {"name" : "Call Center",             "pct":0.73,   "pct_min" : 0.27, "pct_max":1}],
+                          "Amount" : [1],
+                          "AccountTypes" : [
+                                    {"name" : "Checking",                "pct":0.33,   "pct_min" : 0,    "pct_max":0.33},
+                                    {"name" : "savings",                 "pct":0.33,   "pct_min" : 0.33, "pct_max":0.66},
+                                    {"name" : "money market",            "pct":0.34,   "pct_min" : 0.66, "pct_max":1}]
+                  },
+                  {"name" : "apply for a new account",            "pct":0.12,   "pct_min" : 0.88, "pct_max":1,
+                          "Channel_categories" : [
+                                    {"name" : "Branch",                  "pct":0.27,   "pct_min" : 0,    "pct_max":0.27},
+                                    {"name" : "Web",                     "pct":0.08,   "pct_min" : 0.27, "pct_max":0.35},
+                                    {"name" : "Call Center",             "pct":0.65,   "pct_min" : 0.35, "pct_max":1}],
+                          "Amount" : [1],
+                          "AccountTypes" : [
+                                    {"name" : "credit",                  "pct":0.33,   "pct_min" : 0,    "pct_max":0.33},
+                                    {"name" : "auto",                    "pct":0.33,   "pct_min" : 0.33, "pct_max":0.66},
+                                    {"name" : "mortgage",                "pct":0.34,   "pct_min" : 0.66, "pct_max":1}]
+                  }
+        ]
+    },
+    {"name": "contact",                     "pct":0.07,"pct_min":0.93, "pct_max":1,
+        "Subgoal_categories" : [
+                  {"name" : "raise complaint",          "pct":0.10,   "pct_min" : 0,    "pct_max":0.10,
+                            "Channel_categories" : [
+                                      {"name" : "Web",                     "pct":0.09,   "pct_min" : 0,    "pct_max":0.09},
+                                      {"name" : "Mobile App",              "pct":0.27,   "pct_min" : 0.09, "pct_max":0.36},
+                                      {"name" : "Email",                     "pct":0.39,   "pct_min" : 0.36, "pct_max":0.75},
+                                      {"name" : "Branch",                  "pct":0.10,   "pct_min" : 0.75, "pct_max":0.85},
+                                      {"name" : "Call Center",             "pct":0.15,   "pct_min" : 0.85, "pct_max":1}],
+                            "Amount" : [1]          
+                  },
+                  {"name" : "request support",          "pct":0.40,   "pct_min" : 0.10, "pct_max":0.50,
+                            "Channel_categories" : [
+                                      {"name" : "Web",                     "pct":0.07,   "pct_min" : 0,    "pct_max":0.07},
+                                      {"name" : "Mobile App",              "pct":0.23,   "pct_min" : 0.07, "pct_max":0.30},
+                                      {"name" : "Email",                     "pct":0.45,   "pct_min" : 0.30, "pct_max":0.75},
+                                      {"name" : "Branch",                  "pct":0.10,   "pct_min" : 0.75, "pct_max":0.85},
+                                      {"name" : "Call Center",             "pct":0.15,   "pct_min" : 0.85, "pct_max":1}],
+                            "Amount" : [1]          
+                  },
+                  {"name" : "request information",       "pct":0.50,   "pct_min" : 0.50, "pct_max":1,
+                            "Channel_categories" : [
+                                      {"name" : "Web",                     "pct":0.07,   "pct_min" : 0,    "pct_max":0.07},
+                                      {"name" : "Mobile App",              "pct":0.23,   "pct_min" : 0.07, "pct_max":0.30},
+                                      {"name" : "Email",                     "pct":0.45,   "pct_min" : 0.30, "pct_max":0.75},
+                                      {"name" : "Branch",                  "pct":0.10,   "pct_min" : 0.75, "pct_max":0.85},
+                                      {"name" : "Call Center",             "pct":0.15,   "pct_min" : 0.85, "pct_max":1}],
+                            "Amount" : [1]          
+                  }
+        ]
+    }
+  ]
+}

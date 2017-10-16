@@ -1,0 +1,9 @@
+{
+  "name" : "ChurnProneTrupti",
+  "description" : "ChurnProneTrupti",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "USER:truptip"
+  } ],
+  "conditions" : "(dna.scoreChurnAmp > 0.9)"
+}

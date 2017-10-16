@@ -1,0 +1,9 @@
+{
+  "name" : "Foodies with Credit Card",
+  "description" : "Customers with a credit card and belonging to the group of foodies",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "affFoodies > 0.5 AND flagCreditCard = 1"
+}

@@ -1,0 +1,19 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "USER:brunod"
+  } ],
+  "alertType" : "SET_MEMBER",
+  "alwaysFireOnActive" : false,
+  "conditions" : "(dna.cashWithdrawalAmountLast > 500)",
+  "description" : "Cash withdrawal alert",
+  "enabled" : true,
+  "metricName" : "cashWithdrawalAmountLast",
+  "name" : "Cash withdrawal alert",
+  "notificationParameters" : {
+    "rulesengine.trigger" : "false"
+  },
+  "setReference" : "customer_all",
+  "attributes" : { },
+  "structuredConditions" : null
+}

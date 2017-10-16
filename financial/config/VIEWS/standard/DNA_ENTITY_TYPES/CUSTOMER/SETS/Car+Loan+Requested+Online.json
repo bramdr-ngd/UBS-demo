@@ -1,0 +1,9 @@
+{
+  "name" : "Car Loan Requested Online",
+  "description" : "Existing customers having a high car loan priority",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "((dna.flagExistingCustomer = 1) AND (dna.productPriority[products_id = 1] > 829))"
+}

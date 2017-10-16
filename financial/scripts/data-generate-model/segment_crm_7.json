@@ -1,0 +1,979 @@
+{
+  "segnr": 7,
+  "name": "Self-Sufficients",
+  "age_categories": [
+    {"name": "18-34",      "pct":0.32,"pct_min":0,   "pct_max":0.32,"random_age": [18,34]},
+    {"name": "35-49",      "pct":0.26,"pct_min":0.32,"pct_max":0.58, "random_age": [35,49]},
+    {"name": "50 or older","pct":0.42,"pct_min":0.58, "pct_max":1,   "random_age": [50,90]}
+  ],
+  "occupation_categories" :[
+    {"name":"Management Occupations","pct":0,"pct_min":0,"pct_max":0},
+    {"name":"Business and Financial Operations Occupations","pct":0,"pct_min":0,"pct_max":0},
+    {"name":"Computer and Mathematical Occupations","pct":0,"pct_min":0,"pct_max":0},
+    {"name":"Architecture and Engineering Occupations","pct":0,"pct_min":0,"pct_max":0},
+    {"name":"Community and Social Service Occupations","pct":0.12,"pct_min":0,"pct_max":0.12},
+    {"name":"Legal Occupations","pct":0,"pct_min":0.12,"pct_max":0.12},
+    {"name":"Education,Training and Library Occupations","pct":0,"pct_min":0.12,"pct_max":0.12},
+    {"name":"Healthcare Practitioners and Technical Occupations","pct":0,"pct_min":0.12,"pct_max":0.12},
+    {"name":"Healthcare Support Occupations","pct":0.14,"pct_min":0.12,"pct_max":0.26},
+    {"name":"Protective Service Occupations","pct":0.07,"pct_min":0.26,"pct_max":0.33},
+    {"name":"Food Preparation and Serving Related Occupations","pct":0.09,"pct_min":0.33,"pct_max":0.42},
+    {"name":"Building and Grounds Cleaning and Maintenace Occupations","pct":0.11,"pct_min":0.42,"pct_max":0.53},
+    {"name":"Personal Care and Service Occupations","pct":0.07,"pct_min":0.53,"pct_max":0.6},
+    {"name":"Sales and Related Occupations","pct":0.1,"pct_min":0.6,"pct_max":0.7},
+    {"name":"Farming,Fishing and Forestry Occupations","pct":0.11,"pct_min":0.7,"pct_max":0.81},
+    {"name":"Installation,Maintenance and Repair Occupations","pct":0.12,"pct_min":0.81,"pct_max":0.93},
+    {"name":"Production Occupations","pct":0.07,"pct_min":0.93,"pct_max":1}
+  ],
+  "lifestage_categories" :[
+    {"name":"Younger Years","pct":0,"pct_min":0,"pct_max":0},
+    {"name":"Mature Years","pct":1,"pct_min":0,"pct_max":1},
+    {"name":"Younger Years Fiscal Fledlings","pct":0,"pct_min":1,"pct_max":1},
+    {"name":"Family Life","pct":0,"pct_min":1,"pct_max":1}
+  ],
+  "isStudent_categories" :[
+    {"name":"0","pct":0.5,"pct_min":0,"pct_max":0.5},
+    {"name":"1","pct":0.5,"pct_min":0.5,"pct_max":1}
+  ],
+  "isRetired_categories" :[
+    {"name":"0","pct":0.5,"pct_min":0,"pct_max":0.5},
+    {"name":"1","pct":0.5,"pct_min":0.5,"pct_max":1}
+  ],
+  "education_categories" :[
+    {"name":"elementary","pct":0.11,"pct_min":0,"pct_max":0.11},
+    {"name":"secondary","pct":0.18,"pct_min":0.11,"pct_max":0.29},
+    {"name":"associate","pct":0.2,"pct_min":0.29,"pct_max":0.49},
+    {"name":"bachelor","pct":0.28,"pct_min":0.49,"pct_max":0.77},
+    {"name":"master","pct":0.23,"pct_min":0.77,"pct_max":1},
+    {"name":"doctoral","pct":0,"pct_min":1,"pct_max":1},
+    {"name":"first-professional degree","pct":0,"pct_min":1,"pct_max":1}
+  ],
+  "maritalStatus_categories" :[
+    {"name":"Single (never in legal unions)","pct":0.03,"pct_min":0,"pct_max":0.03},
+    {"name":"Married","pct":0.71,"pct_min":0.03,"pct_max":0.74},
+    {"name":"In registered partnership","pct":0,"pct_min":0.74,"pct_max":0.74},
+    {"name":"Divorced","pct":0.175,"pct_min":0.74,"pct_max":0.915},
+    {"name":"Widowed","pct":0.085,"pct_min":0.915,"pct_max":1}
+  ],
+  "Random_monthlyIncome":[2244,2742],
+  "nbrChildren_categories" :[
+    {"name":"0","pct":0.76,"pct_min":0,"pct_max":0.76},
+    {"name":"1","pct":0.24,"pct_min":0.76,"pct_max":1},
+    {"name":"2","pct":0,"pct_min":1,"pct_max":1}
+  ],
+  "houseOwner_categories" :[
+    {"name":"0","pct":0.08,"pct_min":0,"pct_max":0.08},
+    {"name":"1","pct":0.92,"pct_min":0.08,"pct_max":1}
+  ],
+  "homeTenant_categories" :[
+    {"name":"0","pct":1,"pct_min":0,"pct_max":1},
+    {"name":"1","pct":1,"pct_min":0,"pct_max":1}
+  ],
+  "valueProperty_categories" :[
+    {"name":"0","pct":1,"pct_min":0,"pct_max":1},
+    {"name":"1","pct":0,"pct_min":1,"pct_max":1}
+  ],
+  "nbrPropertiesOwned_categories" :[
+    {"name":"0","pct":0.08,"pct_min":0,"pct_max":0.08},
+    {"name":"1","pct":0.92,"pct_min":0.08,"pct_max":1},
+    {"name":"2","pct":0,"pct_min":1,"pct_max":1},
+    {"name":"3","pct":0,"pct_min":1,"pct_max":1},
+    {"name":"4","pct":0,"pct_min":1,"pct_max":1},
+    {"name":"5","pct":0,"pct_min":1,"pct_max":1},
+    {"name":"6","pct":0,"pct_min":1,"pct_max":1},
+    {"name":"7","pct":0,"pct_min":1,"pct_max":1},
+    {"name":"8","pct":0,"pct_min":1,"pct_max":1},
+    {"name":"9","pct":0,"pct_min":1,"pct_max":1},
+    {"name":"10","pct":0,"pct_min":1,"pct_max":1}
+  ],
+  "landLord_categories" :[
+    {"name":"0","pct":1,"pct_min":0,"pct_max":1},
+    {"name":"1","pct":0,"pct_min":1,"pct_max":1}
+  ],
+  "wealthyRegion_categories" :[
+    {"name":"0","pct":1,"pct_min":0,"pct_max":1},
+    {"name":"1","pct":0,"pct_min":1,"pct_max":1}
+  ],
+  "Random_shareOfWallet":[5,7],
+  "Random_shareOfWalletHoldings":[1463,1979],
+  "Random_shareOfWalletSize":[51,69],
+  "Random_totalBankProducts":[7,9],
+  "flagPFSP_categories" :[
+    {"name":"0","pct":0.93,"pct_min":0,"pct_max":0.93},
+    {"name":"1","pct":0.07,"pct_min":0.93,"pct_max":1}
+  ],
+  "flagCheckingsAccount_categories" :[
+    {"name":"0","pct":0.32,"pct_min":0,"pct_max":0.32},
+    {"name":"1","pct":0.68,"pct_min":0.32,"pct_max":1}
+  ],
+  "flagCreditCard_categories" :[
+    {"name":"0","pct":0.43,"pct_min":0,"pct_max":0.43},
+    {"name":"1","pct":0.57,"pct_min":0.43,"pct_max":1}
+  ],
+  "flagPayment_categories" :[
+    {"name":"0","pct":0.37,"pct_min":0,"pct_max":0.37},
+    {"name":"1","pct":0.63,"pct_min":0.37,"pct_max":1}
+  ],
+  "flagSavingsAccount_categories" :[
+    {"name":"0","pct":0.35,"pct_min":0,"pct_max":0.35},
+    {"name":"1","pct":0.65,"pct_min":0.35,"pct_max":1}
+  ],
+  "flagInvestmentAccount_categories" :[
+    {"name":"0","pct":0.88,"pct_min":0,"pct_max":0.88},
+    {"name":"1","pct":0.12,"pct_min":0.88,"pct_max":1}
+  ],
+  "flagMutualFunds_categories" :[
+    {"name":"0","pct":1,"pct_min":0,"pct_max":1},
+    {"name":"1","pct":0,"pct_min":1,"pct_max":1}
+  ],
+  "flagBonds_categories" :[
+    {"name":"0","pct":0.89,"pct_min":0,"pct_max":0.89},
+    {"name":"1","pct":0.11,"pct_min":0.89,"pct_max":1}
+  ],
+  "flagAnnuities_categories" :[
+    {"name":"0","pct":0.88,"pct_min":0,"pct_max":0.88},
+    {"name":"1","pct":0.12,"pct_min":0.88,"pct_max":1}
+  ],
+  "flagStocks_categories" :[
+    {"name":"0","pct":1,"pct_min":0,"pct_max":1},
+    {"name":"1","pct":0,"pct_min":1,"pct_max":1}
+  ],
+  "flagOptions_categories" :[
+    {"name":"0","pct":1,"pct_min":0,"pct_max":1},
+    {"name":"1","pct":0,"pct_min":1,"pct_max":1}
+  ],
+  "flagRetirementAccount_categories" :[
+    {"name":"0","pct":0.86,"pct_min":0,"pct_max":0.86},
+    {"name":"1","pct":0.14,"pct_min":0.86,"pct_max":1}
+  ],
+  "flagLifeInsurance_categories" :[
+    {"name":"0","pct":0.78,"pct_min":0,"pct_max":0.78},
+    {"name":"1","pct":0.22,"pct_min":0.78,"pct_max":1}
+  ],
+  "flagPersonalLoan_categories" :[
+    {"name":"0","pct":0.8,"pct_min":0,"pct_max":0.8},
+    {"name":"1","pct":0.2,"pct_min":0.8,"pct_max":1}
+  ],
+  "flagMortgage_categories" :[
+    {"name":"0","pct":0.9,"pct_min":0,"pct_max":0.9},
+    {"name":"1","pct":0.1,"pct_min":0.9,"pct_max":1}
+  ],
+  "flagHomeEquityLoan_categories" :[
+    {"name":"0","pct":0.99,"pct_min":0,"pct_max":0.99},
+    {"name":"1","pct":0.01,"pct_min":0.99,"pct_max":1}
+  ],
+  "flagCarLoan_categories" :[
+    {"name":"0","pct":0.75,"pct_min":0,"pct_max":0.75},
+    {"name":"1","pct":0.25,"pct_min":0.75,"pct_max":1}
+  ],
+  "startdate_flagCarLoanpreCampaign":[2010,1,1],
+  "startdate_flagCarLoanpostCampaign":[2017,1,1],
+  "flagLoan_categories" :[
+    {"name":"0","pct":0.94,"pct_min":0,"pct_max":0.94},
+    {"name":"1","pct":0.06,"pct_min":0.94,"pct_max":1}
+  ],
+  "Random_totalActiveProducts":[4,6],
+  "Random_totalReferrals":[0.89,1.33],
+  "Random_satisfaction":[7.28,10.92],
+  "Random_churnScore":[0.08,0.12],
+  "flagOnlineBanking_categories" :[
+    {"name":"0","pct":0.03,"pct_min":0,"pct_max":0.03},
+    {"name":"1","pct":0.97,"pct_min":0.03,"pct_max":1}
+  ],
+  "flagOnlineBillPayment_categories" :[
+    {"name":"0","pct":0.25,"pct_min":0,"pct_max":0.25},
+    {"name":"1","pct":0.75,"pct_min":0.25,"pct_max":1}
+  ],
+  "flagMobilePayment_categories" :[
+    {"name":"0","pct":0.89,"pct_min":0,"pct_max":0.89},
+    {"name":"1","pct":0.11,"pct_min":0.89,"pct_max":1}
+  ],
+  "flagReloadablePrepaidCards_categories" :[
+    {"name":"0","pct":0.8,"pct_min":0,"pct_max":0.8},
+    {"name":"1","pct":0.2,"pct_min":0.8,"pct_max":1}
+  ],
+  "Random_totalAssets":[21513,35855],
+  "Random_affNightLife":[0,10],
+  "Random_affSport":[0,40],
+  "Random_affHealthFitness":[0,40],
+  "Random_affOutdoor":[40,80],
+  "Random_affLuxuryShopper":[0,20],
+  "Random_affMovie":[70,100],
+  "Random_affPetLovers":[25,75],
+  "Random_affFastFood":[40,80],
+  "Random_affValueShopper":[80,100],
+  "Random_affTechnophiles":[0,40],
+  "Random_affGreenLiving":[25,75],
+  "Random_affMusic":[20,80],
+  "Random_affFoodies":[0,100],
+  "Random_affCooking":[0,100],
+  "Random_affShutterbugs":[0,100],
+  "Random_affSavvyParents":[0,100],
+  "Random_affDIY":[0,100],
+  "Random_affAuto":[0,100],
+  "Random_affFashionistas":[0,100],
+  "Random_affBeautyMavens":[0,100],
+  "Random_affHomeDecor":[0,100],
+  "Random_affPolitical":[0,100],
+  "Random_affAvidInvestor":[0,100],
+  "Random_affThrillSeeker":[0,100],
+  "Random_affBargainHunter":[0,100],
+  "Random_affTravelBuff":[0,100],
+  "Random_affLuxuryTravel":[0,100],
+  "Random_affFamilyVacation":[0,100],
+  "Random_affBeachTravel":[0,100],
+  "Random_affWinterTravel":[0,100],
+  "Random_affNewsJunky":[0,100],
+  "Random_affArtTheater":[0,100],
+  "Random_affGamer":[0,100],
+  "Random_affTV":[0,100],
+  "flagContactAbilityLandline_categories" :[
+    {"name":"0","pct":0.00,"pct_min":0,"pct_max":1.00},
+    {"name":"1","pct":1.00,"pct_min":1.00,"pct_max":1}
+  ],
+  "flagContactAbilityMobileCall_categories" :[
+    {"name":"0","pct":0.50,"pct_min":0,"pct_max":0.50},
+    {"name":"1","pct":1.00,"pct_min":0.50,"pct_max":1}
+  ],
+  "flagContactAbilityEmail_categories" :[
+    {"name":"0","pct":0.33,"pct_min":0,"pct_max":0.33},
+    {"name":"1","pct":0.67,"pct_min":0.33,"pct_max":1}
+  ],
+  "flagContactAbilityMobileTxt_categories" :[
+    {"name":"0","pct":1.00,"pct_min":0,"pct_max":1.00},
+    {"name":"1","pct":0.00,"pct_min":1,"pct_max":1}
+  ],
+  "flagContactAbilityDirectMail_categories" :[
+    {"name":"0","pct":0,"pct_min":0,"pct_max":0},
+    {"name":"1","pct":1.00,"pct_min":0,"pct_max":1}
+  ],
+  "flagContactAbilityInternet_categories" :[
+    {"name":"0","pct":1.00,"pct_min":0,"pct_max":1.00},
+    {"name":"1","pct":0.00,"pct_min":1,"pct_max":1}
+  ],
+  "flagContactAbilityTwitter_categories" :[
+    {"name":"0","pct":1.00,"pct_min":0,"pct_max":1.00},
+    {"name":"1","pct":0.00,"pct_min":1,"pct_max":1}
+  ],
+  "flagContactAbilityFaceBook_categories" :[
+    {"name":"0","pct":1.00,"pct_min":0,"pct_max":1.00},
+    {"name":"1","pct":0.00,"pct_min":1,"pct_max":1}
+  ],
+  "flagContactAbilityLinkedIn_categories" :[
+    {"name":"0","pct":1.00,"pct_min":0,"pct_max":1.00},
+    {"name":"1","pct":0.00,"pct_min":1,"pct_max":1}
+  ],
+  "contactLandlineActive_categories" :[
+    {"name":"0","pct":0.33,"pct_min":0,"pct_max":0.33},
+    {"name":"1","pct":0.67,"pct_min":0.33,"pct_max":1}
+  ],
+  "contactMobileActive_categories" :[
+    {"name":"0","pct":0.50,"pct_min":0,"pct_max":0.50},
+    {"name":"1","pct":0.50,"pct_min":0.50,"pct_max":1}
+  ],
+  "contactDirectMailActive_categories" :[
+    {"name":"0","pct":0.05,"pct_min":0,"pct_max":0.05},
+    {"name":"1","pct":0.95,"pct_min":0.05,"pct_max":1}
+  ],
+  "contactEmailActive_categories" :[
+    {"name":"0","pct":0.33,"pct_min":0,"pct_max":0.33},
+    {"name":"1","pct":0.67,"pct_min":0.33,"pct_max":1}
+  ],
+  "contactTwitterActive_categories" :[
+    {"name":"0","pct":1.00,"pct_min":0,"pct_max":1.00},
+    {"name":"1","pct":0.00,"pct_min":1.00,"pct_max":1}
+  ],
+  "contactFacebookActive_categories" :[
+    {"name":"0","pct":1.00,"pct_min":0,"pct_max":1.00},
+    {"name":"1","pct":0.00,"pct_min":1.00,"pct_max":1}
+  ],
+  "contactLinkedinActive_categories" :[
+    {"name":"0","pct":1.00,"pct_min":0,"pct_max":1.00},
+    {"name":"1","pct":0.00,"pct_min":1.00,"pct_max":1}
+  ],
+  "contactInternetChatActive_categories" :[
+    {"name":"0","pct":1.00,"pct_min":0,"pct_max":1.00},
+    {"name":"1","pct":0.00,"pct_min":1.00,"pct_max":1}
+  ],
+  "flagOptOut_categories" :[
+    {"name":"0","pct":0.85,"pct_min":0,"pct_max":0.85},
+    {"name":"1","pct":0.15,"pct_min":0.85,"pct_max":1}
+  ],
+  "flagOptIn_categories" :[
+    {"name":"0","pct":0.05,"pct_min":0,"pct_max":0.15},
+    {"name":"1","pct":0.85,"pct_min":0.15,"pct_max":1}
+  ],
+  "flagDoNotCall_categories" :[
+    {"name":"0","pct":0.85,"pct_min":0,"pct_max":0.85},
+    {"name":"1","pct":0.15,"pct_min":0.85,"pct_max":1}
+  ],
+  "flag3rdPartyOptOut_categories" :[
+    {"name":"0","pct":0.85,"pct_min":0,"pct_max":0.85},
+    {"name":"1","pct":0.15,"pct_min":0.85,"pct_max":1}
+  ],
+  "flag3rdPartyOptIn_categories" :[
+    {"name":"0","pct":0.85,"pct_min":0,"pct_max":0.85},
+    {"name":"1","pct":0.15,"pct_min":0.85,"pct_max":1}
+  ],
+  "preferredChannel_categories" :[
+    {"name":"Branch",     "pct":0.30,"pct_min":0.00,"pct_max":0.30},
+    {"name":"Mobile App", "pct":0.23,"pct_min":0.30,"pct_max":0.53},
+    {"name":"Call",       "pct":0.20,"pct_min":0.53,"pct_max":0.73},
+    {"name":"Web",        "pct":0.16,"pct_min":0.73,"pct_max":0.89},
+    {"name":"Email",      "pct":0.08,"pct_min":0.89,"pct_max":0.97},
+    {"name":"Online Chat","pct":0.03,"pct_min":0.97,"pct_max":1.00}
+  ],
+  "preferredCommunicationDevice_categories" :[
+    {"name":"Phone",     "pct":0.20,"pct_min":0.00,"pct_max":0.20},
+    {"name":"Tablet",    "pct":0.25,"pct_min":0.20,"pct_max":0.45},
+    {"name":"Desktop",   "pct":0.30,"pct_min":0.45,"pct_max":0.75},
+    {"name":"Atm",       "pct":0.25,"pct_min":0.75,"pct_max":1.00}
+  ],
+  "preferredContactChannel_categories" :[
+    {"name":"Call",     "pct":0.34,"pct_min":0.00,"pct_max":0.34},
+    {"name":"Email",    "pct":0.37,"pct_min":0.34,"pct_max":0.71},
+    {"name":"Sms",      "pct":0.13,"pct_min":0.71,"pct_max":0.84},
+    {"name":"Facebook", "pct":0.13,"pct_min":0.84,"pct_max":0.97},
+    {"name":"Twitter",  "pct":0.03,"pct_min":0.97,"pct_max":1.00}
+  ],
+  "preferredContactDevice_categories" :[
+    {"name":"Phone",     "pct":0.28,"pct_min":0.00,"pct_max":0.28},
+    {"name":"Tablet",    "pct":0.32,"pct_min":0.28,"pct_max":0.60},
+    {"name":"Desktop",   "pct":0.22,"pct_min":0.60,"pct_max":0.82},
+    {"name":"Atm",       "pct":0.18,"pct_min":0.82,"pct_max":1.00}
+  ],
+  "preferredInboundChannel_categories" :[
+    {"name":"Call",     "pct":0.26,"pct_min":0.00,"pct_max":0.26},
+    {"name":"Email",    "pct":0.31,"pct_min":0.26,"pct_max":0.57},
+    {"name":"Sms",      "pct":0.13,"pct_min":0.57,"pct_max":0.70},
+    {"name":"Facebook", "pct":0.21,"pct_min":0.70,"pct_max":0.91},
+    {"name":"Twitter",  "pct":0.09,"pct_min":0.91,"pct_max":1.00}
+  ],
+  "location_categories" :[
+    {"name":"Home",     "pct":0.50,"pct_min":0.00,"pct_max":0.50},
+    {"name":"Work",     "pct":0.20,"pct_min":0.50,"pct_max":0.70},
+    {"name":"Elsewhere","pct":0.30,"pct_min":0.70,"pct_max":1.00}
+  ],
+  "time_categories" :[
+    {"name":"Morning","pct":0.20,"pct_min":0.00,"pct_max":0.20},
+    {"name":"Day",    "pct":0.50,"pct_min":0.20,"pct_max":0.70},
+    {"name":"Evening","pct":0.20,"pct_min":0.70,"pct_max":0.90},
+    {"name":"Night",  "pct":0.10,"pct_min":0.90,"pct_max":1.00}
+  ],
+  "awareBrand_categories" :[
+    {"name":"0","pct":0.12,"pct_min":0.00,"pct_max":0.12},
+    {"name":"1","pct":0.88,"pct_min":0.12,"pct_max":1.00}
+  ],
+  "interested_categories" :[
+    {"name":"0","pct":0.29,"pct_min":0.00,"pct_max":0.29},
+    {"name":"1","pct":0.71,"pct_min":0.29,"pct_max":1.00}
+  ],
+  "considering_categories" :[
+    {"name":"0","pct":0.75,"pct_min":0.00,"pct_max":0.75},
+    {"name":"1","pct":0.25,"pct_min":0.75,"pct_max":1.00}
+  ],
+  "purchased_categories" :[
+    {"name":"0","pct":0.88,"pct_min":0.00,"pct_max":0.88},
+    {"name":"1","pct":0.12,"pct_min":0.88,"pct_max":1.00}
+  ],
+  "chairman_categories" :[
+    {"name":"0","pct":0.97,"pct_min":0.00,"pct_max":0.97},
+    {"name":"1","pct":0.03,"pct_min":0.97,"pct_max":1.00}
+  ],
+  "boardman_categories" :[
+    {"name":"0","pct":0.92,"pct_min":0.00,"pct_max":0.92},
+    {"name":"1","pct":0.08,"pct_min":0.92,"pct_max":1.00}
+  ],
+  "firstjob_categories" :[
+    {"name":"0","pct":0.97,"pct_min":0.00,"pct_max":0.97},
+    {"name":"1","pct":0.03,"pct_min":0.97,"pct_max":1.00}
+  ],
+  "jobhunting_categories" :[
+    {"name":"0","pct":0.98,"pct_min":0.00,"pct_max":0.98},
+    {"name":"1","pct":0.02,"pct_min":0.98,"pct_max":1.00}
+  ],
+  "leavingnest_categories" :[
+    {"name":"0","pct":0.97,"pct_min":0.00,"pct_max":0.97},
+    {"name":"1","pct":0.03,"pct_min":0.97,"pct_max":1.00}
+  ],
+  "nbrtimesmoved_categories" :[
+    {"name":"0","pct":0.06,"pct_min":0.00,"pct_max":0.06},
+    {"name":"1","pct":0.16,"pct_min":0.06,"pct_max":0.22},
+    {"name":"2","pct":0.31,"pct_min":0.22,"pct_max":0.53},
+    {"name":"3","pct":0.08,"pct_min":0.53,"pct_max":0.61},
+    {"name":"4","pct":0.28,"pct_min":0.61,"pct_max":0.90},
+    {"name":"5","pct":0.10,"pct_min":0.90,"pct_max":1.00}
+  ],
+  "recentretirement_categories" :[
+    {"name":"0","pct":0.62,"pct_min":0.00,"pct_max":0.62},
+    {"name":"1","pct":0.38,"pct_min":0.62,"pct_max":1.00}
+  ],
+  "residencecountrybirth_categories" :[
+    {"name":"0","pct":0.33,"pct_min":0.00,"pct_max":0.33},
+    {"name":"1","pct":0.67,"pct_min":0.33,"pct_max":1.00}
+  ],
+  "onlineBuyMoment_categories" :[
+    {"name":"Morning","pct":0.31,"pct_min":0.00,"pct_max":0.31},
+    {"name":"Day",    "pct":0.40,"pct_min":0.31,"pct_max":0.71},
+    {"name":"Evening","pct":0.21,"pct_min":0.71,"pct_max":0.92},
+    {"name":"Night",  "pct":0.08,"pct_min":0.92,"pct_max":1.00}
+  ],
+  "att2Competition_categories" :[
+    {"name":"0","pct":0.06,"pct_min":0.00,"pct_max":0.06},
+    {"name":"1","pct":0.11,"pct_min":0.06,"pct_max":0.17},
+    {"name":"2","pct":0.19,"pct_min":0.17,"pct_max":0.37},
+    {"name":"3","pct":0.16,"pct_min":0.37,"pct_max":0.52},
+    {"name":"4","pct":0.16,"pct_min":0.52,"pct_max":0.68},
+    {"name":"5","pct":0.10,"pct_min":0.68,"pct_max":0.78},
+    {"name":"6","pct":0.08,"pct_min":0.78,"pct_max":0.86},
+    {"name":"7","pct":0.06,"pct_min":0.86,"pct_max":0.92},
+    {"name":"8","pct":0.03,"pct_min":0.92,"pct_max":0.95},
+    {"name":"9","pct":0.03,"pct_min":0.95,"pct_max":0.98},
+    {"name":"10","pct":0.02,"pct_min":0.98,"pct_max":1.00}
+  ],
+  "competitivePricing_categories" :[
+    {"name":"0","pct":0.09,"pct_min":0.00,"pct_max":0.09},
+    {"name":"1","pct":0.04,"pct_min":0.09,"pct_max":0.13},
+    {"name":"2","pct":0.15,"pct_min":0.13,"pct_max":0.28},
+    {"name":"3","pct":0.13,"pct_min":0.28,"pct_max":0.41},
+    {"name":"4","pct":0.06,"pct_min":0.41,"pct_max":0.47},
+    {"name":"5","pct":0.03,"pct_min":0.47,"pct_max":0.50},
+    {"name":"6","pct":0.02,"pct_min":0.50,"pct_max":0.52},
+    {"name":"7","pct":0.09,"pct_min":0.52,"pct_max":0.62},
+    {"name":"8","pct":0.14,"pct_min":0.62,"pct_max":0.75},
+    {"name":"9","pct":0.13,"pct_min":0.75,"pct_max":0.89},
+    {"name":"10","pct":0.11,"pct_min":0.89,"pct_max":1.00}
+  ],
+  "locationWork_categories" :[
+    {"name":"New York",    "pct":0.20,"pct_min":0.00,"pct_max":0.20},
+    {"name":"New Jersey",  "pct":0.25,"pct_min":0.20,"pct_max":0.45},
+    {"name":"Boston",      "pct":0.35,"pct_min":0.45,"pct_max":0.80},
+    {"name":"Trenton",     "pct":0.20,"pct_min":0.80,"pct_max":1.00}
+  ],
+  "onlineBuyDevice_categories" :[
+    {"name":"phone",  "pct":0.12,"pct_min":0.00,"pct_max":0.12},
+    {"name":"tablet", "pct":0.35,"pct_min":0.12,"pct_max":0.47},
+    {"name":"desktop","pct":0.45,"pct_min":0.47,"pct_max":0.92},
+    {"name":"atm",    "pct":0.08,"pct_min":0.92,"pct_max":1.00}
+  ],
+  "consumptionDevice_categories" :[
+    {"name":"phone",   "pct":0.27,"pct_min":0.00,"pct_max":0.27},
+    {"name":"tablet",  "pct":0.33,"pct_min":0.27,"pct_max":0.60},
+    {"name":"desktop", "pct":0.29,"pct_min":0.60,"pct_max":0.89},
+    {"name":"atm",     "pct":0.11,"pct_min":0.89,"pct_max":1.00}
+  ],
+  "consumptionLocation_categories" :[
+    {"name":"Home",     "pct":0.65,"pct_min":0.00,"pct_max":0.65},
+    {"name":"Work",     "pct":0.05,"pct_min":0.65,"pct_max":0.70},
+    {"name":"Elsewhere","pct":0.30,"pct_min":0.70,"pct_max":1.00}
+ ],
+  "onlineBuyLocation_categories" :[
+    {"name":"Amazon",      "pct":0.30,"pct_min":0.00,"pct_max":0.30},
+    {"name":"Zalando",     "pct":0.30,"pct_min":0.30,"pct_max":0.60},
+    {"name":"AliExpress",  "pct":0.20,"pct_min":0.60,"pct_max":0.80},
+    {"name":"Letbuyit.com","pct":0.20,"pct_min":0.80,"pct_max":1.00}
+  ],
+  "hasMobileApp": [
+    {"name" : "0","pct" : 0.45,"pct_min":0.00,"pct_max":0.45},
+    {"name" : "1","pct" : 0.55,"pct_min":0.45,"pct_max":1.00}
+  ],
+  "regMobileApp": [
+    {"name" : "0","pct" : 0.25,"pct_min":0.00,"pct_max":0.25},
+    {"name" : "1","pct" : 0.75,"pct_min":0.25,"pct_max":1.00}
+  ],
+  "jobSector_categories" :[
+    {"name":"Agriculture, Forestry, And Fishing",                                  "pct":0.13,"pct_min":0.00,"pct_max":0.13},
+    {"name":"Mining",                                                              "pct":0.13,"pct_min":0.13,"pct_max":0.25},
+    {"name":"Construction",                                                        "pct":0.08,"pct_min":0.25,"pct_max":0.33},
+    {"name":"Manufacturing",                                                       "pct":0.08,"pct_min":0.33,"pct_max":0.42},
+    {"name":"Transportation, Communications, Electric, Gas, And Sanitary Services","pct":0.13,"pct_min":0.42,"pct_max":0.54},
+    {"name":"Wholesale Trade",                                                     "pct":0.13,"pct_min":0.54,"pct_max":0.67},
+    {"name":"Retail Trade",                                                        "pct":0.08,"pct_min":0.67,"pct_max":0.75},
+    {"name":"Finance, Insurance, And Real Estate",                                 "pct":0.08,"pct_min":0.75,"pct_max":0.83},
+    {"name":"Services",                                                            "pct":0.08,"pct_min":0.83,"pct_max":0.92},
+    {"name":"Public administration",                                               "pct":0.08,"pct_min":0.92,"pct_max":1.00}
+  ],
+  "mainNationality_categories" :[
+    {"name":"American",  "pct":0.63,"pct_min":0.00,"pct_max":0.63},
+    {"name":"British",   "pct":0.28,"pct_min":0.63,"pct_max":0.91},
+    {"name":"Canadian",  "pct":0.09,"pct_min":0.91,"pct_max":1.00}
+  ],
+  "mainLanguage_categories" :[
+    {"name":"english",  "pct":1.00,"pct_min":0.00,"pct_max":1.00}
+  ],
+  "flagEmployed_categories": [
+  {"name" : "0","pct" : 0.58,"pct_min":0.00,"pct_max":0.58},
+  {"name" : "1","pct" : 0.42,"pct_min":0.58,"pct_max":1.00}
+  ],
+  "socialClassInd_categories": [
+  {"name" : "upper",        "pct" : 0.15,"pct_min":0.00,"pct_max":0.15},
+  {"name" : "middle class", "pct" : 0.58,"pct_min":0.15,"pct_max":0.73},
+  {"name" : "working class","pct" : 0.21,"pct_min":0.73,"pct_max":0.94},
+  {"name" : "lower class",  "pct" : 0.06,"pct_min":0.94,"pct_max":1.00}
+  ],
+  "cohort_categories": [
+  {"name" : "purchase2012", "pct" : 0.28,"pct_min":0.00,"pct_max":0.28},
+  {"name" : "purchase2013", "pct" : 0.20,"pct_min":0.28,"pct_max":0.48},
+  {"name" : "purchase2014", "pct" : 0.21,"pct_min":0.48,"pct_max":0.69},
+  {"name" : "purchase2015", "pct" : 0.31,"pct_min":0.69,"pct_max":1.00}
+  ],
+  "residenceType_categories": [
+  {"name" : "detached single-unit housing",  "pct" : 0.28,"pct_min":0.00,"pct_max":0.28},
+  {"name" : "semi-detached dwellings",       "pct" : 0.20,"pct_min":0.28,"pct_max":0.48},
+  {"name" : "attached single-unit housing",  "pct" : 0.19,"pct_min":0.48,"pct_max":0.67},
+  {"name" : "multi-unit housing",            "pct" : 0.18,"pct_min":0.67,"pct_max":0.85},
+  {"name" : "Movable dwellings",             "pct" : 0.15,"pct_min":0.85,"pct_max":1.00}
+  ],
+  "activityLevel_categories": [
+  {"name" : "active", "pct" : 0.48,"pct_min":0.00,"pct_max":0.48},
+  {"name" : "mute",   "pct" : 0.12,"pct_min":0.48,"pct_max":0.60},
+  {"name" : "dormant","pct" : 0.40,"pct_min":0.60,"pct_max":1.00}
+  ],
+  "desContactFreq_categories": [
+  {"name" : "0",  "pct" : 0.04,"pct_min":0.00,"pct_max":0.04},
+  {"name" : "1",  "pct" : 0.12,"pct_min":0.04,"pct_max":0.16},
+  {"name" : "2",  "pct" : 0.40,"pct_min":0.16,"pct_max":0.56},
+  {"name" : "3",  "pct" : 0.30,"pct_min":0.56,"pct_max":0.86},
+  {"name" : "4",  "pct" : 0.08,"pct_min":0.86,"pct_max":0.94},
+  {"name" : "5",  "pct" : 0.06,"pct_min":0.94,"pct_max":1.00}
+  ],
+  "desContactTiming_categories" :[
+    {"name":"Morning","pct":0.19,"pct_min":0.00,"pct_max":0.19},
+    {"name":"Day",    "pct":0.49,"pct_min":0.19,"pct_max":0.68},
+    {"name":"Evening","pct":0.31,"pct_min":0.68,"pct_max":0.99},
+    {"name":"Night",  "pct":0.01,"pct_min":0.99,"pct_max":1.00}
+  ],
+  "contactChannelVariety_categories": [
+  {"name" : "1",  "pct" : 0.44,"pct_min":0.00,"pct_max":0.44},
+  {"name" : "2",  "pct" : 0.46,"pct_min":0.44,"pct_max":0.90},
+  {"name" : "3",  "pct" : 0.10,"pct_min":0.90,"pct_max":1.00}
+  ],
+  "Random_totalRecRevenue":[14241.7,190.051],
+  "Random_totalNonRecRevenue":[13116.7,142.094]
+  ,
+  "proportionShareOfWallet_categories": [
+    {"name" : "0-25",  "pct" : 0.25,"pct_min":0.00,"pct_max":0.25},
+    {"name" : "26-50", "pct" : 0.25,"pct_min":0.25,"pct_max":0.50},
+    {"name" : "51-75", "pct" : 0.25,"pct_min":0.50,"pct_max":0.75},
+    {"name" : "76-100","pct" : 0.25,"pct_min":0.75,"pct_max":1.00}
+  ],
+  "flagSelfEmployed_categories": [
+    {"name" : "0","pct" : 0.90,"pct_min":0.00,"pct_max":0.90},
+    {"name" : "1","pct" : 0.10,"pct_min":0.90,"pct_max":1.00}
+  ],
+  "currentLocationTracking_categories": [
+    {"name" : "0","pct" : 0.90,"pct_min":0.00,"pct_max":0.90},
+    {"name" : "1","pct" : 0.10,"pct_min":0.90,"pct_max":1.00}
+  ],
+  "oldModel_categories": [
+    {"name" : "0-1%"   ,"pct" : 0.0083,"pct_min":0.0000,"pct_max":0.0083},
+    {"name" : "1-2%"   ,"pct" : 0.0167,"pct_min":0.0083,"pct_max":0.0250},
+    {"name" : "2-3%"   ,"pct" : 0.0250,"pct_min":0.0250,"pct_max":0.0500},
+    {"name" : "3-4%"   ,"pct" : 0.1167,"pct_min":0.0500,"pct_max":0.1667},
+    {"name" : "4-5%"   ,"pct" : 0.2500,"pct_min":0.1667,"pct_max":0.4167},
+    {"name" : "5-6%"   ,"pct" : 0.1667,"pct_min":0.4167,"pct_max":0.5833},
+    {"name" : "6-7%"   ,"pct" : 0.0833,"pct_min":0.5833,"pct_max":0.6667},
+    {"name" : "7-8%"   ,"pct" : 0.0833,"pct_min":0.6667,"pct_max":0.7500},
+    {"name" : "8-9%"   ,"pct" : 0.0792,"pct_min":0.7500,"pct_max":0.8292},
+    {"name" : "9-10%"  ,"pct" : 0.0792,"pct_min":0.8292,"pct_max":0.9083},
+    {"name" : "10-15%" ,"pct" : 0.0417,"pct_min":0.9083,"pct_max":0.9500},
+    {"name" : "15-20%" ,"pct" : 0.0167,"pct_min":0.9500,"pct_max":0.9667},
+    {"name" : "20-30%" ,"pct" : 0.0125,"pct_min":0.9667,"pct_max":0.9792},
+    {"name" : "30-40%" ,"pct" : 0.0083,"pct_min":0.9792,"pct_max":0.9875},
+    {"name" : "40-50%" ,"pct" : 0.0063,"pct_min":0.9875,"pct_max":0.9938},
+    {"name" : "50-60%" ,"pct" : 0.0042,"pct_min":0.9938,"pct_max":0.9979},
+    {"name" : "60-70%" ,"pct" : 0.0021,"pct_min":0.9979,"pct_max":1.0000},
+    {"name" : "70-80%" ,"pct" : 0.0000,"pct_min":1.0000,"pct_max":1.0000},
+    {"name" : "80-90%" ,"pct" : 0.0000,"pct_min":1.0000,"pct_max":1.0000},
+    {"name" : "90-100%","pct" : 0.0000,"pct_min":1.0000,"pct_max":1.0000}
+  ],
+  "newModel_categories": [
+    {"name" : "0-1%"   ,"pct" : 0.0083,"pct_min":0.0000,"pct_max":0.0083},
+    {"name" : "1-2%"   ,"pct" : 0.0167,"pct_min":0.0083,"pct_max":0.0250},
+    {"name" : "2-3%"   ,"pct" : 0.0250,"pct_min":0.0250,"pct_max":0.0500},
+    {"name" : "3-4%"   ,"pct" : 0.0833,"pct_min":0.0500,"pct_max":0.1332},
+    {"name" : "4-5%"   ,"pct" : 0.2082,"pct_min":0.1332,"pct_max":0.3414},
+    {"name" : "5-6%"   ,"pct" : 0.1749,"pct_min":0.3414,"pct_max":0.5162},
+    {"name" : "6-7%"   ,"pct" : 0.0916,"pct_min":0.5162,"pct_max":0.6078},
+    {"name" : "7-8%"   ,"pct" : 0.0916,"pct_min":0.6078,"pct_max":0.6994},
+    {"name" : "8-9%"   ,"pct" : 0.0833,"pct_min":0.6994,"pct_max":0.7827},
+    {"name" : "9-10%"  ,"pct" : 0.0833,"pct_min":0.7827,"pct_max":0.8659},
+    {"name" : "10-15%" ,"pct" : 0.0583,"pct_min":0.8659,"pct_max":0.9242},
+    {"name" : "15-20%" ,"pct" : 0.0333,"pct_min":0.9242,"pct_max":0.9575},
+    {"name" : "20-30%" ,"pct" : 0.0167,"pct_min":0.9575,"pct_max":0.9742},
+    {"name" : "30-40%" ,"pct" : 0.0100,"pct_min":0.9742,"pct_max":0.9842},
+    {"name" : "40-50%" ,"pct" : 0.0067,"pct_min":0.9842,"pct_max":0.9908},
+    {"name" : "50-60%" ,"pct" : 0.0050,"pct_min":0.9908,"pct_max":0.9958},
+    {"name" : "60-70%" ,"pct" : 0.0025,"pct_min":0.9958,"pct_max":0.9983},
+    {"name" : "70-80%" ,"pct" : 0.0008,"pct_min":0.9983,"pct_max":0.9992},
+    {"name" : "80-90%" ,"pct" : 0.0008,"pct_min":0.9992,"pct_max":1.0000},
+    {"name" : "90-100%","pct" : 0.0000,"pct_min":1.0000,"pct_max":1.0000}
+  ],
+  "postCampaign_categories": [
+    {"name" : "No Banner"                   ,"pct" : 0.5975    ,"pct_min":0.0000,"pct_max":0.5975,
+      "displays":0,
+      "clicks" :[
+        {"name":"0"                          ,"pct" : 1.0000    ,"pct_min":0.0000,"pct_max":1.0000},
+        {"name":"1"                          ,"pct" : 0.0000    ,"pct_min":1.0000,"pct_max":1.0000}],
+      "sales" :[
+        {"name":"0"                          ,"pct" : 0.9879    ,"pct_min":0.0000,"pct_max":0.9879},
+        {"name":"1"                          ,"pct" : 0.0121    ,"pct_min":0.9879,"pct_max":1.0000}],
+      "sales_channel" :[
+        {"name":"web"                        ,"pct" : 0.0000    ,"pct_min":0.0000,"pct_max":0.0000},
+        {"name":"call center"                ,"pct" : 0.4444    ,"pct_min":0.0000,"pct_max":0.4444},
+        {"name":"branch"                     ,"pct" : 0.5556    ,"pct_min":0.4444,"pct_max":1.0000}],
+      "simulations_sale":[
+        {"name":"0"                          ,"pct" : 1.0000    ,"pct_min":0.0000,"pct_max":1.0000},
+        {"name":"1"                          ,"pct" : 0.0000    ,"pct_min":1.0000,"pct_max":1.0000}],
+      "simulations_nosale":[
+        {"name":"0"                          ,"pct" : 1.0000    ,"pct_min":0.0000,"pct_max":1.0000},
+        {"name":"1"                          ,"pct" : 0.0000    ,"pct_min":1.0000,"pct_max":1.0000}]
+    },
+    {"name" : "No Banner (control group)"   ,"pct" : 0.2000    ,"pct_min":0.5975,"pct_max":0.7975,
+      "displays":0,
+      "clicks" :[
+        {"name":"0"                          ,"pct" : 1.0000    ,"pct_min":0.0000,"pct_max":1.0000},
+        {"name":"1"                          ,"pct" : 0.0000    ,"pct_min":1.0000,"pct_max":1.0000}],
+      "sales" :[
+        {"name":"0"                          ,"pct" : 0.9880    ,"pct_min":0.0000,"pct_max":0.9880},
+        {"name":"1"                          ,"pct" : 0.0120    ,"pct_min":0.9880,"pct_max":1.0000}],
+      "sales_channel" :[
+        {"name":"web"                        ,"pct" : 0.3333    ,"pct_min":0.0000,"pct_max":0.3333},
+        {"name":"call center"                ,"pct" : 0.3333    ,"pct_min":0.3333,"pct_max":0.6667},
+        {"name":"branch"                     ,"pct" : 0.3333    ,"pct_min":0.6667,"pct_max":1.0000}],
+      "simulations_sale":[
+        {"name":"0"                          ,"pct" : 0.9890    ,"pct_min":0.0000,"pct_max":0.9890},
+        {"name":"1"                          ,"pct" : 0.0110    ,"pct_min":0.9890,"pct_max":1.0000}],
+      "simulations_nosale":[
+        {"name":"0"                          ,"pct" : 0.9670    ,"pct_min":0.0000,"pct_max":0.9670},
+        {"name":"1"                          ,"pct" : 0.0330    ,"pct_min":0.9670,"pct_max":1.0000}]
+    },
+    {"name" : "Banner A"                    ,"pct" : 0.01155   ,"pct_min":0.7975,"pct_max":0.8091,
+      "displays":4,
+      "clicks" :[
+        {"name":"0"                          ,"pct" : 0.2000    ,"pct_min":0.0000,"pct_max":0.2000},
+        {"name":"1"                          ,"pct" : 0.8000    ,"pct_min":0.2000,"pct_max":1.0000}],
+      "sales" :[
+        {"name":"0"                          ,"pct" : 0.9359    ,"pct_min":0.0000,"pct_max":0.9359},
+        {"name":"1"                          ,"pct" : 0.0641    ,"pct_min":0.9359,"pct_max":1.0000}],
+      "sales_channel" :[
+        {"name":"web"                        ,"pct" : 0.1892    ,"pct_min":0.0000,"pct_max":0.1892},
+        {"name":"call center"                ,"pct" : 0.8108    ,"pct_min":0.1892,"pct_max":1.0000},
+        {"name":"branch"                     ,"pct" : 0.0000    ,"pct_min":1.0000,"pct_max":1.0000}],
+      "simulations_sale":[
+        {"name":"0"                          ,"pct" : 0.9667    ,"pct_min":0.0000,"pct_max":0.9667},
+        {"name":"1"                          ,"pct" : 0.0333    ,"pct_min":0.9667,"pct_max":1.0000}],
+      "simulations_nosale":[
+        {"name":"0"                          ,"pct" : 0.9000    ,"pct_min":0.0000,"pct_max":1.0000},
+        {"name":"1"                          ,"pct" : 0.1000    ,"pct_min":1.0000,"pct_max":1.0000}]
+    },
+    {"name" : "Banner B (&A)"               ,"pct" : 0.01155   ,"pct_min":0.8091,"pct_max":0.8206,
+      "displays":4,
+      "clicks" :[
+        {"name":"0"                          ,"pct" : 0.2000    ,"pct_min":0.0000,"pct_max":0.2000},
+        {"name":"1"                          ,"pct" : 0.8000    ,"pct_min":0.2000,"pct_max":1.0000}],
+      "sales" :[
+        {"name":"0"                          ,"pct" : 0.8736    ,"pct_min":0.0000,"pct_max":0.8736},
+        {"name":"1"                          ,"pct" : 0.1264    ,"pct_min":0.8736,"pct_max":1.0000}],
+      "sales_channel" :[
+        {"name":"web"                        ,"pct" : 0.0959    ,"pct_min":0.0000,"pct_max":0.0959},
+        {"name":"call center"                ,"pct" : 0.8904    ,"pct_min":0.0959,"pct_max":0.9863},
+        {"name":"branch"                     ,"pct" : 0.0137    ,"pct_min":0.9863,"pct_max":1.0000}],
+      "simulations_sale":[
+        {"name":"0"                          ,"pct" : 0.9667    ,"pct_min":0.0000,"pct_max":0.9667},
+        {"name":"1"                          ,"pct" : 0.0333    ,"pct_min":0.9667,"pct_max":1.0000}],
+      "simulations_nosale":[
+        {"name":"0"                          ,"pct" : 0.9000    ,"pct_min":0.0000,"pct_max":0.9000},
+        {"name":"1"                          ,"pct" : 0.1000    ,"pct_min":0.9000,"pct_max":1.0000}]
+    },
+    {"name" : "Banner C (A)"                ,"pct" : 0.006705  ,"pct_min":0.8206,"pct_max":0.8273,
+      "displays":4,
+      "clicks" :[
+        {"name":"0"                          ,"pct" : 0.0813    ,"pct_min":0.0000,"pct_max":0.0813},
+        {"name":"1"                          ,"pct" : 0.9187    ,"pct_min":0.0813,"pct_max":1.0000}],
+      "sales" :[
+        {"name":"0"                          ,"pct" : 0.9612    ,"pct_min":0.0000,"pct_max":0.9612},
+        {"name":"1"                          ,"pct" : 0.0388    ,"pct_min":0.9612,"pct_max":1.0000}],
+      "sales_channel" :[
+        {"name":"web"                        ,"pct" : 0.5385    ,"pct_min":0.0000,"pct_max":0.5385},
+        {"name":"call center"                ,"pct" : 0.2308    ,"pct_min":0.5385,"pct_max":0.7692},
+        {"name":"branch"                     ,"pct" : 0.2308    ,"pct_min":0.7692,"pct_max":1.0000}],
+      "simulations_sale":[
+        {"name":"0"                          ,"pct" : 0.9426    ,"pct_min":0.0000,"pct_max":0.9426},
+        {"name":"1"                          ,"pct" : 0.0574    ,"pct_min":0.9426,"pct_max":1.0000}],
+      "simulations_nosale":[
+        {"name":"0"                          ,"pct" : 0.8277    ,"pct_min":0.0000,"pct_max":0.8277},
+        {"name":"1"                          ,"pct" : 0.1723    ,"pct_min":0.8277,"pct_max":1.0000}]
+    },
+    {"name" : "Banner C (A) & A"            ,"pct" : 0.005635  ,"pct_min":0.8273,"pct_max":0.8329,
+      "displays":4,
+      "clicks" :[
+        {"name":"0"                          ,"pct" : 0.0630    ,"pct_min":0.0000,"pct_max":0.0630},
+        {"name":"1"                          ,"pct" : 0.9370    ,"pct_min":0.0630,"pct_max":1.0000}],
+      "sales" :[
+        {"name":"0"                          ,"pct" : 0.9610    ,"pct_min":0.0000,"pct_max":0.9610},
+        {"name":"1"                          ,"pct" : 0.0390    ,"pct_min":0.9610,"pct_max":1.0000}],
+      "sales_channel" :[
+        {"name":"web"                        ,"pct" : 0.5455    ,"pct_min":0.0000,"pct_max":0.5455},
+        {"name":"call center"                ,"pct" : 0.1818    ,"pct_min":0.5455,"pct_max":0.7273},
+        {"name":"branch"                     ,"pct" : 0.2727    ,"pct_min":0.7273,"pct_max":1.0000}],
+      "simulations_sale":[
+        {"name":"0"                          ,"pct" : 0.9414    ,"pct_min":0.0000,"pct_max":0.9414},
+        {"name":"1"                          ,"pct" : 0.0586    ,"pct_min":0.9414,"pct_max":1.0000}],
+      "simulations_nosale":[
+        {"name":"0"                          ,"pct" : 0.8243    ,"pct_min":0.0000,"pct_max":0.8243},
+        {"name":"1"                          ,"pct" : 0.1757    ,"pct_min":0.8243,"pct_max":1.0000}]
+    },
+    {"name" : "Banner C (B)"                ,"pct" : 0.005215  ,"pct_min":0.8329,"pct_max":0.8382,
+      "displays":4,
+      "clicks" :[
+        {"name":"0"                          ,"pct" : 0.2291    ,"pct_min":0.0000,"pct_max":0.2291},
+        {"name":"1"                          ,"pct" : 0.7709    ,"pct_min":0.2291,"pct_max":1.0000}],
+      "sales" :[
+        {"name":"0"                          ,"pct" : 0.9732    ,"pct_min":0.0000,"pct_max":0.9732},
+        {"name":"1"                          ,"pct" : 0.0268    ,"pct_min":0.9732,"pct_max":1.0000}],
+      "sales_channel" :[
+        {"name":"web"                        ,"pct" : 0.5714    ,"pct_min":0.0000,"pct_max":0.5714},
+        {"name":"call center"                ,"pct" : 0.1429    ,"pct_min":0.5714,"pct_max":0.7143},
+        {"name":"branch"                     ,"pct" : 0.2857    ,"pct_min":0.7143,"pct_max":1.0000}],
+      "simulations_sale":[
+        {"name":"0"                          ,"pct" : 0.9578    ,"pct_min":0.0000,"pct_max":0.9578},
+        {"name":"1"                          ,"pct" : 0.0422    ,"pct_min":0.9578,"pct_max":1.0000}],
+      "simulations_nosale":[
+        {"name":"0"                          ,"pct" : 0.8734    ,"pct_min":0.0000,"pct_max":0.8734},
+        {"name":"1"                          ,"pct" : 0.1266    ,"pct_min":0.8734,"pct_max":1.0000}]
+    },
+    {"name" : "Banner C(B) & A"             ,"pct" : 0.006595  ,"pct_min":0.8382,"pct_max":0.8448,
+      "displays":4,
+      "clicks" :[
+        {"name":"0"                          ,"pct" : 0.2418    ,"pct_min":0.0000,"pct_max":0.2418},
+        {"name":"1"                          ,"pct" : 0.7582    ,"pct_min":0.2418,"pct_max":1.0000}],
+      "sales" :[
+        {"name":"0"                          ,"pct" : 0.9757    ,"pct_min":0.0000,"pct_max":0.9757},
+        {"name":"1"                          ,"pct" : 0.0243    ,"pct_min":0.9757,"pct_max":1.0000}],
+      "sales_channel" :[
+        {"name":"web"                        ,"pct" : 0.6250    ,"pct_min":0.0000,"pct_max":0.6250},
+        {"name":"call center"                ,"pct" : 0.2500    ,"pct_min":0.6250,"pct_max":0.8750},
+        {"name":"branch"                     ,"pct" : 0.1250    ,"pct_min":0.8750,"pct_max":1.0000}],
+      "simulations_sale":[
+        {"name":"0"                          ,"pct" : 0.9583    ,"pct_min":0.0000,"pct_max":0.9583},
+        {"name":"1"                          ,"pct" : 0.0417    ,"pct_min":0.9583,"pct_max":1.0000}],
+      "simulations_nosale":[
+        {"name":"0"                          ,"pct" : 0.8749    ,"pct_min":0.0000,"pct_max":0.9749},
+        {"name":"1"                          ,"pct" : 0.1251    ,"pct_min":0.9749,"pct_max":1.0000}]
+    },
+    {"name" : "Banner D"                    ,"pct" : 0.007425  ,"pct_min":0.8448,"pct_max":0.8522,
+      "displays":4,
+      "clicks" :[
+        {"name":"0"                          ,"pct" : 0.2000    ,"pct_min":0.0000,"pct_max":0.2000},
+        {"name":"1"                          ,"pct" : 0.8000    ,"pct_min":0.2000,"pct_max":1.0000}],
+      "sales" :[
+        {"name":"0"                          ,"pct" : 0.9138    ,"pct_min":0.0000,"pct_max":0.9138},
+        {"name":"1"                          ,"pct" : 0.0862    ,"pct_min":0.9138,"pct_max":1.0000}],
+      "sales_channel" :[
+        {"name":"web"                        ,"pct" : 0.3438    ,"pct_min":0.0000,"pct_max":0.3438},
+        {"name":"call center"                ,"pct" : 0.1250    ,"pct_min":0.3438,"pct_max":0.4688},
+        {"name":"branch"                     ,"pct" : 0.5313    ,"pct_min":0.4688,"pct_max":1.0000}],
+      "simulations_sale":[
+        {"name":"0"                          ,"pct" : 0.9333    ,"pct_min":0.0000,"pct_max":0.9333},
+        {"name":"1"                          ,"pct" : 0.0667    ,"pct_min":0.9333,"pct_max":1.0000}],
+      "simulations_nosale":[
+        {"name":"0"                          ,"pct" : 0.8000    ,"pct_min":0.0000,"pct_max":0.8000},
+        {"name":"1"                          ,"pct" : 0.2000    ,"pct_min":0.8000,"pct_max":1.0000}]
+    },
+    {"name" : "Banner D & A"                ,"pct" : 0.00945   ,"pct_min":0.8522,"pct_max":0.8616,
+      "displays":4,
+      "clicks" :[
+        {"name":"0"                          ,"pct" : 0.2000    ,"pct_min":0.0000,"pct_max":0.2000},
+        {"name":"1"                          ,"pct" : 0.8000    ,"pct_min":0.2000,"pct_max":1.0000}],
+      "sales" :[
+        {"name":"0"                          ,"pct" : 0.9132    ,"pct_min":0.0000,"pct_max":0.9132},
+        {"name":"1"                          ,"pct" : 0.0868    ,"pct_min":0.9132,"pct_max":1.0000}],
+      "sales_channel" :[
+        {"name":"web"                        ,"pct" : 0.3415    ,"pct_min":0.0000,"pct_max":0.3415},
+        {"name":"call center"                ,"pct" : 0.1220    ,"pct_min":0.3415,"pct_max":0.4634},
+        {"name":"branch"                     ,"pct" : 0.5336    ,"pct_min":0.4634,"pct_max":1.0000}],
+      "simulations_sale":[
+        {"name":"0"                          ,"pct" : 0.9333    ,"pct_min":0.0000,"pct_max":0.9333},
+        {"name":"1"                          ,"pct" : 0.0667    ,"pct_min":0.9333,"pct_max":1.0000}],
+      "simulations_nosale":[
+        {"name":"0"                          ,"pct" : 0.8000    ,"pct_min":0.0000,"pct_max":0.8000},
+        {"name":"1"                          ,"pct" : 0.2000    ,"pct_min":0.8000,"pct_max":1.0000}]
+    },
+    {"name" : "Banner E"                    ,"pct" : 0.01155   ,"pct_min":0.8616,"pct_max":0.8732,
+      "displays":4,
+      "clicks" :[
+        {"name":"0"                          ,"pct" : 0.2000    ,"pct_min":0.0000,"pct_max":0.2000},
+        {"name":"1"                          ,"pct" : 0.8000    ,"pct_min":0.2000,"pct_max":1.0000}],
+      "sales" :[
+        {"name":"0"                          ,"pct" : 0.9515    ,"pct_min":0.0000,"pct_max":0.9515},
+        {"name":"1"                          ,"pct" : 0.0485    ,"pct_min":0.9515,"pct_max":1.0000}],
+      "sales_channel" :[
+        {"name":"web"                        ,"pct" : 0.7500    ,"pct_min":0.0000,"pct_max":0.7500},
+        {"name":"call center"                ,"pct" : 0.2143    ,"pct_min":0.7500,"pct_max":0.9643},
+        {"name":"branch"                     ,"pct" : 0.0357    ,"pct_min":0.9643,"pct_max":1.0000}],
+      "simulations_sale":[
+        {"name":"0"                          ,"pct" : 0.9000    ,"pct_min":0.0000,"pct_max":0.9000},
+        {"name":"1"                          ,"pct" : 0.1000    ,"pct_min":0.9000,"pct_max":1.0000}],
+      "simulations_nosale":[
+        {"name":"0"                          ,"pct" : 0.7000    ,"pct_min":0.0000,"pct_max":0.7000},
+        {"name":"1"                          ,"pct" : 0.3000    ,"pct_min":0.7000,"pct_max":1.0000}]
+    },
+    {"name" : "Banner E & A"                ,"pct" : 0.0154    ,"pct_min":0.8732,"pct_max":0.8886,
+      "displays":4,
+      "clicks" :[
+        {"name":"0"                          ,"pct" : 0.2000    ,"pct_min":0.0000,"pct_max":0.2000},
+        {"name":"1"                          ,"pct" : 0.8000    ,"pct_min":0.2000,"pct_max":1.0000}],
+      "sales" :[
+        {"name":"0"                          ,"pct" : 0.9532    ,"pct_min":0.0000,"pct_max":0.9532},
+        {"name":"1"                          ,"pct" : 0.0468    ,"pct_min":0.9532,"pct_max":1.0000}],
+      "sales_channel" :[
+        {"name":"web"                        ,"pct" : 0.7778    ,"pct_min":0.0000,"pct_max":0.7778},
+        {"name":"call center"                ,"pct" : 0.1944    ,"pct_min":0.7778,"pct_max":0.9722},
+        {"name":"branch"                     ,"pct" : 0.0278    ,"pct_min":0.9722,"pct_max":1.0000}],
+      "simulations_sale":[
+        {"name":"0"                          ,"pct" : 0.9000    ,"pct_min":0.0000,"pct_max":0.9000},
+        {"name":"1"                          ,"pct" : 0.1000    ,"pct_min":0.9000,"pct_max":1.0000}],
+      "simulations_nosale":[
+        {"name":"0"                          ,"pct" : 0.7000    ,"pct_min":0.0000,"pct_max":0.7000},
+        {"name":"1"                          ,"pct" : 0.3000    ,"pct_min":0.7000,"pct_max":1.0000}]
+    },
+    {"name" : "Banner F"                    ,"pct" : 0.007425  ,"pct_min":0.8886,"pct_max":0.8960,
+      "displays":4,
+      "clicks" :[
+        {"name":"0"                          ,"pct" : 0.2000    ,"pct_min":0.0000,"pct_max":0.2000},
+        {"name":"1"                          ,"pct" : 0.8000    ,"pct_min":0.2000,"pct_max":1.0000}],
+      "sales" :[
+        {"name":"0"                          ,"pct" : 0.8923    ,"pct_min":0.0000,"pct_max":0.8923},
+        {"name":"1"                          ,"pct" : 0.1077    ,"pct_min":0.8923,"pct_max":1.0000}],
+      "sales_channel" :[
+        {"name":"web"                        ,"pct" : 0.2750    ,"pct_min":0.0000,"pct_max":0.2750},
+        {"name":"call center"                ,"pct" : 0.2000    ,"pct_min":0.2750,"pct_max":0.4750},
+        {"name":"branch"                     ,"pct" : 0.5250    ,"pct_min":0.4750,"pct_max":1.0000}],
+      "simulations_sale":[
+        {"name":"0"                          ,"pct" : 0.9333    ,"pct_min":0.0000,"pct_max":0.9333},
+        {"name":"1"                          ,"pct" : 0.0667    ,"pct_min":0.9333,"pct_max":1.0000}],
+      "simulations_nosale":[
+        {"name":"0"                          ,"pct" : 0.8000    ,"pct_min":0.0000,"pct_max":0.8000},
+        {"name":"1"                          ,"pct" : 0.2000    ,"pct_min":0.8000,"pct_max":1.0000}]
+    },
+    {"name" : "Banner F & A"                ,"pct" : 0.01215   ,"pct_min":0.8960,"pct_max":0.9082,
+      "displays":4,
+      "clicks" :[
+        {"name":"0"                          ,"pct" : 0.2000    ,"pct_min":0.0000,"pct_max":0.2000},
+        {"name":"1"                          ,"pct" : 0.8000    ,"pct_min":0.2000,"pct_max":1.0000}],
+      "sales" :[
+        {"name":"0"                          ,"pct" : 0.9029    ,"pct_min":0.0000,"pct_max":0.9029},
+        {"name":"1"                          ,"pct" : 0.0971    ,"pct_min":0.9029,"pct_max":1.0000}],
+      "sales_channel" :[
+        {"name":"web"                        ,"pct" : 0.3051    ,"pct_min":0.0000,"pct_max":0.3051},
+        {"name":"call center"                ,"pct" : 0.2034    ,"pct_min":0.3051,"pct_max":0.5085},
+        {"name":"branch"                     ,"pct" : 0.4915    ,"pct_min":0.5085,"pct_max":1.0000}],
+      "simulations_sale":[
+        {"name":"0"                          ,"pct" : 0.9333    ,"pct_min":0.0000,"pct_max":0.9333},
+        {"name":"1"                          ,"pct" : 0.0667    ,"pct_min":0.9333,"pct_max":1.0000}],
+      "simulations_nosale":[
+        {"name":"0"                          ,"pct" : 0.8000    ,"pct_min":0.0000,"pct_max":0.8000},
+        {"name":"1"                          ,"pct" : 0.2000    ,"pct_min":0.8000,"pct_max":1.0000}]
+    },
+    {"name" : "Banner G"                    ,"pct" : 0.0000    ,"pct_min":0.9082,"pct_max":0.9082,
+      "displays":4,
+      "clicks" :[
+        {"name":"0"                          ,"pct" : 1.0000    ,"pct_min":0.0000,"pct_max":1.0000},
+        {"name":"1"                          ,"pct" : 0.0000    ,"pct_min":1.0000,"pct_max":1.0000}],
+      "sales" :[
+        {"name":"0"                          ,"pct" : 1.0000    ,"pct_min":0.0000,"pct_max":1.0000},
+        {"name":"1"                          ,"pct" : 0.0000    ,"pct_min":1.0000,"pct_max":1.0000}],
+      "sales_channel" :[
+        {"name":"web"                        ,"pct" : 0.9879    ,"pct_min":0.0000,"pct_max":0.9879},
+        {"name":"call center"                ,"pct" : 0.0121    ,"pct_min":0.9879,"pct_max":1.0000},
+        {"name":"branch"                     ,"pct" : 0.0121    ,"pct_min":0.9879,"pct_max":1.0000}],
+      "simulations_sale":[
+        {"name":"0"                          ,"pct" : 1.0000    ,"pct_min":0.0000,"pct_max":1.0000},
+        {"name":"1"                          ,"pct" : 0.0000    ,"pct_min":1.0000,"pct_max":1.0000}],
+      "simulations_nosale":[
+        {"name":"0"                          ,"pct" : 1.0000    ,"pct_min":0.0000,"pct_max":1.0000},
+        {"name":"1"                          ,"pct" : 0.0000    ,"pct_min":1.0000,"pct_max":1.0000}]
+    },
+    {"name" : "Banner G & C(A)"             ,"pct" : 0.03795   ,"pct_min":0.9082,"pct_max":0.9461,
+      "displays":4,
+      "clicks" :[
+        {"name":"0"                          ,"pct" : 0.2000    ,"pct_min":0.0000,"pct_max":0.2000},
+        {"name":"1"                          ,"pct" : 0.8000    ,"pct_min":0.2000,"pct_max":1.0000}],
+      "sales" :[
+        {"name":"0"                          ,"pct" : 0.9747    ,"pct_min":0.0000,"pct_max":0.9747},
+        {"name":"1"                          ,"pct" : 0.0253    ,"pct_min":0.9747,"pct_max":1.0000}],
+      "sales_channel" :[
+        {"name":"web"                        ,"pct" : 0.9583    ,"pct_min":0.0000,"pct_max":0.9583},
+        {"name":"call center"                ,"pct" : 0.0208    ,"pct_min":0.9583,"pct_max":0.9792},
+        {"name":"branch"                     ,"pct" : 0.0208    ,"pct_min":0.9792,"pct_max":1.0000}],
+      "simulations_sale":[
+        {"name":"0"                          ,"pct" : 0.9333    ,"pct_min":0.0000,"pct_max":0.9333},
+        {"name":"1"                          ,"pct" : 0.0667    ,"pct_min":0.9333,"pct_max":1.0000}],
+      "simulations_nosale":[
+        {"name":"0"                          ,"pct" : 0.8000    ,"pct_min":0.0000,"pct_max":0.8000},
+        {"name":"1"                          ,"pct" : 0.2000    ,"pct_min":0.8000,"pct_max":1.0000}]
+    },
+    {"name" : "Banner G & C(A)& A"          ,"pct" : 0.0077    ,"pct_min":0.9461,"pct_max":0.9538,
+      "displays":4,
+      "clicks" :[
+        {"name":"0"                          ,"pct" : 0.2000    ,"pct_min":0.0000,"pct_max":0.2000},
+        {"name":"1"                          ,"pct" : 0.8000    ,"pct_min":0.2000,"pct_max":1.0000}],
+      "sales" :[
+        {"name":"0"                          ,"pct" : 0.9532    ,"pct_min":0.0000,"pct_max":0.9532},
+        {"name":"1"                          ,"pct" : 0.0468    ,"pct_min":0.9532,"pct_max":1.0000}],
+      "sales_channel" :[
+        {"name":"web"                        ,"pct" : 0.7778    ,"pct_min":0.0000,"pct_max":0.7778},
+        {"name":"call center"                ,"pct" : 0.0556    ,"pct_min":0.7778,"pct_max":0.8333},
+        {"name":"branch"                     ,"pct" : 0.1667    ,"pct_min":0.8333,"pct_max":1.0000}],
+      "simulations_sale":[
+        {"name":"0"                          ,"pct" : 0.9000    ,"pct_min":0.0000,"pct_max":0.9000},
+        {"name":"1"                          ,"pct" : 0.1000    ,"pct_min":0.9000,"pct_max":1.0000}],
+      "simulations_nosale":[
+        {"name":"0"                          ,"pct" : 0.7000    ,"pct_min":0.0000,"pct_max":0.7000},
+        {"name":"1"                          ,"pct" : 0.3000    ,"pct_min":0.7000,"pct_max":1.0000}]
+    },
+    {"name" : "Banner G & C(B)"             ,"pct" : 0.03795   ,"pct_min":0.9538,"pct_max":0.9918,
+      "displays":4,
+      "clicks" :[
+        {"name":"0"                          ,"pct" : 0.2000    ,"pct_min":0.0000,"pct_max":0.2000},
+        {"name":"1"                          ,"pct" : 0.8000    ,"pct_min":0.2000,"pct_max":1.0000}],
+      "sales" :[
+        {"name":"0"                          ,"pct" : 0.9742    ,"pct_min":0.0000,"pct_max":0.9742},
+        {"name":"1"                          ,"pct" : 0.0258    ,"pct_min":0.9742,"pct_max":1.0000}],
+      "sales_channel" :[
+        {"name":"web"                        ,"pct" : 0.9388    ,"pct_min":0.0000,"pct_max":0.9388},
+        {"name":"call center"                ,"pct" : 0.0204    ,"pct_min":0.9388,"pct_max":0.9592},
+        {"name":"branch"                     ,"pct" : 0.0408    ,"pct_min":0.9592,"pct_max":1.0000}],
+      "simulations_sale":[
+        {"name":"0"                          ,"pct" : 0.9337    ,"pct_min":0.0000,"pct_max":0.9337},
+        {"name":"1"                          ,"pct" : 0.0667    ,"pct_min":0.9337,"pct_max":1.0000}],
+      "simulations_nosale":[
+        {"name":"0"                          ,"pct" : 0.8000    ,"pct_min":0.0000,"pct_max":0.8000},
+        {"name":"1"                          ,"pct" : 0.2000    ,"pct_min":0.8000,"pct_max":1.0000}]
+    },
+    {"name" : "Banner G & C(B) & A"         ,"pct" : 0.00825   ,"pct_min":0.9918,"pct_max":1.0000,
+      "displays":4,
+      "clicks" :[
+        {"name":"0"                          ,"pct" : 0.2000    ,"pct_min":0.0000,"pct_max":0.2000},
+        {"name":"1"                          ,"pct" : 0.8000    ,"pct_min":0.2000,"pct_max":1.0000}],
+      "sales" :[
+        {"name":"0"                          ,"pct" : 0.9588    ,"pct_min":0.0000,"pct_max":0.9588},
+        {"name":"1"                          ,"pct" : 0.0412    ,"pct_min":0.9588,"pct_max":1.0000}],
+      "sales_channel" :[
+        {"name":"web"                        ,"pct" : 0.8824    ,"pct_min":0.0000,"pct_max":0.8824},
+        {"name":"call center"                ,"pct" : 0.0588    ,"pct_min":0.8824,"pct_max":0.9412},
+        {"name":"branch"                     ,"pct" : 0.0588    ,"pct_min":0.9412,"pct_max":1.0000}],
+      "simulations_sale":[
+        {"name":"0"                          ,"pct" : 0.9000    ,"pct_min":0.0000,"pct_max":0.9000},
+        {"name":"1"                          ,"pct" : 0.1000    ,"pct_min":0.9000,"pct_max":1.0000}],
+      "simulations_nosale":[
+        {"name":"0"                          ,"pct" : 0.7000    ,"pct_min":0.0000,"pct_max":0.7000},
+        {"name":"1"                          ,"pct" : 0.3000    ,"pct_min":0.7000,"pct_max":1.0000}]
+    }
+  ],
+  "flagDebtCollection_categories" :[
+    {"name":"0","pct":0.90,"pct_min":0,"pct_max":0.90},
+    {"name":"1","pct":0.10,"pct_min":0.90,"pct_max":1}
+  ]
+}

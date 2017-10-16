@@ -1,0 +1,9 @@
+{
+  "name" : "Upcoming Reviews",
+  "description" : "Customers who did not have a review within their branch since a year",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "recencyBranchVisit > 365"
+}

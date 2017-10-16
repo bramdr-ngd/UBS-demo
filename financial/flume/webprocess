@@ -1,0 +1,147 @@
+# agent config: webprocess
+
+
+# agent
+webprocess.sources = avrosource
+webprocess.channels = webvisitchannel bannerchannel
+webprocess.sinks = webvisitsink bannersink
+ 
+webprocess.sources.avrosource.type = avro
+webprocess.sources.avrosource.port = 44445
+webprocess.sources.avrosource.bind = localhost
+webprocess.sources.avrosource.channels = webvisitchannel bannerchannel
+ 
+# interceptors
+webprocess.sources.avrosource.interceptors = utsdefaults logging
+ 
+# utsdefaults sets common webheaders (user agent, os)
+webprocess.sources.avrosource.interceptors.utsdefaults.type = com.ngdata.uts.flume.interceptor.defaults.UtsDefaultsInterceptor$Builder
+webprocess.sources.avrosource.interceptors.logging.type = com.ngdata.demo.flume.LoggingInterceptor$Builder
+
+#interceptor multiplexing
+webprocess.sources.avrosource.selector.type = multiplexing
+webprocess.sources.avrosource.selector.header = interaction.type
+webprocess.sources.avrosource.selector.mapping.ngdata.lily.web = webvisitchannel
+webprocess.sources.avrosource.selector.mapping.ngdata.lily.banner = bannerchannel
+
+# file channel for web visits
+webprocess.channels.webvisitchannel.type = memory
+webprocess.channels.webvisitchannel.capacity = 50000
+webprocess.channels.webvisitchannel.transactionCapacity = 5000
+webprocess.channels.webvisitchannel.keep-alive=0
+ 
+# Lily Sink for webvisits
+webprocess.sinks.webvisitsink.type = com.ngdata.lily.flume.sink.LilyInteractionStoreSink
+webprocess.sinks.webvisitsink.tenantName = default
+webprocess.sinks.webvisitsink.mapExternalIds = false
+webprocess.sinks.webvisitsink.sendToSpeedLayer = true
+webprocess.sinks.webvisitsink.sendToPreferencerSpeedLayer = false
+webprocess.sinks.webvisitsink.disableMasterCreationSpeedLayer = false
+webprocess.sinks.webvisitsink.lily.interaction.kite.uri=repo:hdfs:/lily/interactions
+# Number of different Avro files to open. The higher, the more the files will be created on HDFS (cfr. also
+# rollCronSchedule). With many disks/servers this might make a difference (but is subject to evaluation).
+# Only makes sense to put larger than 1 when itxIngestThreadCount is larger than 1.
+webprocess.sinks.webvisitsink.concurrencyLevel = 2
+# Rolls Avro files every 5 minutes: for production deployments, use rather 30 minutes or so to avoid too many
+# small Avro files being created.
+webprocess.sinks.webvisitsink.rollCronSchedule = 0 0/30 * * * ?
+# Number of threads that will concurrently webprocess a bath of events within the sink. Only expected to make
+# a difference when one or more of augmentation/speed/mapExternalIds are enabled, thus when external systems
+# are called. Otherwise, it is just avro file appending, in which case it depends on the value of
+# concurrencyLevel whether it might give an advantage.
+webprocess.sinks.webvisitsink.itxIngestThreadCount = 2
+webprocess.sinks.webvisitsink.channel = webvisitchannel
+webprocess.sinks.webvisitsink.hostname = localhost
+webprocess.sinks.webvisitsink.port = 2181
+webprocess.sinks.webvisitsink.tenantName = default
+webprocess.sinks.webvisitsink.batch-size = 1000
+webprocess.sinks.webvisitsink.fields.accept-encoding = acceptEncoding
+webprocess.sinks.webvisitsink.fields.accept-language = acceptLanguage
+webprocess.sinks.webvisitsink.fields.cache-control = cacheControl
+webprocess.sinks.webvisitsink.fields.FINGERPRINT = fingerprint
+webprocess.sinks.webvisitsink.fields.host = host
+webprocess.sinks.webvisitsink.fields.OPERATING_SYSTEM = operatingSystem
+webprocess.sinks.webvisitsink.fields.user-agent = userAgent
+webprocess.sinks.webvisitsink.fields.USER_AGENT_FAMILY = userAgentFamily
+webprocess.sinks.webvisitsink.fields.USER_AGENT_TYPE = userAgentType
+webprocess.sinks.webvisitsink.fields.uts_page_referrer = pageReferrer
+webprocess.sinks.webvisitsink.fields.parent_uts_page_referrer = parentPageReferrer
+webprocess.sinks.webvisitsink.fields.uts_page_url = pageUrl
+webprocess.sinks.webvisitsink.fields.uts_screen_resolution = screenResolution
+webprocess.sinks.webvisitsink.fields.uts_vea = vea
+webprocess.sinks.webvisitsink.fields.uts_veb = veb
+webprocess.sinks.webvisitsink.fields.timestamp = timestamp
+webprocess.sinks.webvisitsink.fields.channel = channel
+webprocess.sinks.webvisitsink.fields.goal = goal
+webprocess.sinks.webvisitsink.fields.subgoal = subgoal
+webprocess.sinks.webvisitsink.fields.lilyId = customerCRMId
+webprocess.sinks.webvisitsink.fields.uts_veb = customerCookieId
+webprocess.sinks.webvisitsink.fields.sessionId = sessionId
+webprocess.sinks.webvisitsink.fields.currentPageId = currentPageId
+webprocess.sinks.webvisitsink.fields.previousPageId = previousPageId
+webprocess.sinks.webvisitsink.fields.simulationType = simulationType
+webprocess.sinks.webvisitsink.fields.simulationLoanAmount = simulationLoanAmount
+webprocess.sinks.webvisitsink.fields.simulationDownPayment = simulationDownPayment
+webprocess.sinks.webvisitsink.fields.simulationMonthlyPayment = simulationMonthlyPayment
+webprocess.sinks.webvisitsink.fields.simulationRate = simulationPaymentRate
+webprocess.sinks.webvisitsink.fields.simulationDuration = simulationDuration
+webprocess.sinks.webvisitsink.fields.simulationTradeInValue = simulationTradeInValue
+webprocess.sinks.webvisitsink.fields.simulationCashRebate = simulationCashRebate
+
+
+# file channel for basket itx
+webprocess.channels.bannerchannel.type = memory
+webprocess.channels.bannerchannel.capacity = 50000
+webprocess.channels.bannerchannel.transactionCapacity = 5000
+webprocess.channels.bannerchannel.keep-alive=0
+
+
+# Lily Sink for banners
+webprocess.sinks.bannersink.type = com.ngdata.lily.flume.sink.LilyInteractionStoreSink
+webprocess.sinks.bannersink.tenantName = default
+webprocess.sinks.bannersink.mapExternalIds = false
+webprocess.sinks.bannersink.sendToSpeedLayer = true
+webprocess.sinks.bannersink.sendToPreferencerSpeedLayer = false
+webprocess.sinks.bannersink.disableMasterCreationSpeedLayer = false
+webprocess.sinks.bannersink.lily.interaction.kite.uri=repo:hdfs:/lily/interactions
+# Number of different Avro files to open. The higher, the more the files will be created on HDFS (cfr. also
+# rollCronSchedule). With many disks/servers this might make a difference (but is subject to evaluation).
+# Only makes sense to put larger than 1 when itxIngestThreadCount is larger than 1.
+webprocess.sinks.bannersink.concurrencyLevel = 5
+# Rolls Avro files every 5 minutes: for production deployments, use rather 30 minutes or so to avoid too many
+# small Avro files being created.
+webprocess.sinks.bannersink.rollCronSchedule = 0 0/30 * * * ?
+# Number of threads that will concurrently webprocess a bath of events within the sink. Only expected to make
+# a difference when one or more of augmentation/speed/mapExternalIds are enabled, thus when external systems
+# are called. Otherwise, it is just avro file appending, in which case it depends on the value of
+# concurrencyLevel whether it might give an advantage.
+webprocess.sinks.bannersink.itxIngestThreadCount = 5
+webprocess.sinks.bannersink.channel = bannerchannel
+webprocess.sinks.bannersink.hostname = localhost
+webprocess.sinks.bannersink.port = 2181
+webprocess.sinks.bannersink.tenantName = default
+webprocess.sinks.bannersink.batch-size = 1000
+webprocess.sinks.bannersink.fields.accept-encoding = acceptEncoding
+webprocess.sinks.bannersink.fields.accept-language = acceptLanguage
+webprocess.sinks.bannersink.fields.cache-control = cacheControl
+webprocess.sinks.bannersink.fields.FINGERPRINT = fingerprint
+webprocess.sinks.bannersink.fields.host = host
+webprocess.sinks.bannersink.fields.OPERATING_SYSTEM = operatingSystem
+webprocess.sinks.bannersink.fields.user-agent = userAgent
+webprocess.sinks.bannersink.fields.USER_AGENT_FAMILY = userAgentFamily
+webprocess.sinks.bannersink.fields.USER_AGENT_TYPE = userAgentType
+webprocess.sinks.bannersink.fields.uts_page_referrer = pageReferrer
+webprocess.sinks.bannersink.fields.uts_page_url = pageUrl
+webprocess.sinks.bannersink.fields.uts_screen_resolution = screenResolution
+webprocess.sinks.bannersink.fields.uts_veb = veb
+webprocess.sinks.bannersink.fields.timestamp = timestamp
+webprocess.sinks.bannersink.fields.channel = channel
+webprocess.sinks.bannersink.fields.goal = goal
+webprocess.sinks.bannersink.fields.subgoal = subgoal
+webprocess.sinks.bannersink.fields.lilyId = customerCRMId
+webprocess.sinks.bannersink.fields.uts_veb = customerCookieId
+webprocess.sinks.bannersink.fields.sessionId = sessionId
+webprocess.sinks.bannersink.fields.currentPageId = currentPageId
+webprocess.sinks.bannersink.fields.previousPageId = previousPageId
+webprocess.sinks.bannersink.fields.bannerId = bannerId
+webprocess.sinks.bannersink.fields.action = action

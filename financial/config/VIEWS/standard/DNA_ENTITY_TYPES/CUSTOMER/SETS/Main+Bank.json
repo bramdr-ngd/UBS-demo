@@ -1,0 +1,9 @@
+{
+  "name" : "Main Bank",
+  "description" : "Customer who fulfill the definition of Main Bank (monthly income, savings account, 1 other product)",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "flagPFSP = 1"
+}

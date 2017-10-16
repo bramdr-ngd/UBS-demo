@@ -1,0 +1,10 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "USER:admin"
+  } ],
+  "attributes" : { },
+  "description" : "Car Loan Opportunities",
+  "dnaVariables" : [ "affAuto", "diffCashWithdrawalIncomePerMonth", "age", "lastLoanSimulationPerHour", "propensityCarLoanModel", "eligibleForCarLoanOffer", "numberPageVisitsCarLoanToday", "lastLoginTimeWebString", "recencyLastLoginTimeWeb", "numberCarLoanSimulations", "numberCarLoanSimulationsToday", "maxCarLoanSimulationAmountToday", "lastLoanSimulationAmountTodayByType", "lastCarLoanSimulationAmountToday", "lastCarLoanSimulationTimeString", "recencyCarLoanSimulation" ],
+  "name" : "Car Loan Opportunities"
+}

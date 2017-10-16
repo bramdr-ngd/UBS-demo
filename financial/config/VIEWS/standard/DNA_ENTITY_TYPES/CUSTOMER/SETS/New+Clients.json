@@ -1,0 +1,9 @@
+{
+  "name" : "New Clients",
+  "description" : "Customers who became clients in the last 30 days",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "flagNewClient = 1"
+}

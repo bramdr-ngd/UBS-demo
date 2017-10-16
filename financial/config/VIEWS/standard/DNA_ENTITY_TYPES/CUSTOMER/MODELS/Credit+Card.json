@@ -1,0 +1,59 @@
+{
+  "type" : "PMML",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "description" : "Propensity for cross selling credit card, using short-term and long-term predictors",
+  "inputs" : [ {
+    "defaultValue" : null,
+    "expr" : "age",
+    "pmmlField" : "age"
+  }, {
+    "defaultValue" : null,
+    "expr" : "totalCreditPurchaseAmountPer60Days",
+    "pmmlField" : "totalCreditPurchaseAmountPer60Days"
+  }, {
+    "defaultValue" : null,
+    "expr" : "totalCreditPurchasesPer60Days",
+    "pmmlField" : "totalCreditPurchasesPer60Days"
+  }, {
+    "defaultValue" : null,
+    "expr" : "totalMobileAppPurchasesPerPrev60Days",
+    "pmmlField" : "totalMobileAppPurchasesPerPrev60Days"
+  }, {
+    "defaultValue" : null,
+    "expr" : "totalWebPurchasesPer60Days",
+    "pmmlField" : "totalWebPurchasesPer60Days"
+  }, {
+    "defaultValue" : null,
+    "expr" : "segnr",
+    "pmmlField" : "segnr"
+  }, {
+    "defaultValue" : null,
+    "expr" : "totalActiveProducts",
+    "pmmlField" : "totalActiveProducts"
+  }, {
+    "defaultValue" : null,
+    "expr" : "balanceMoneyTransactionsPer60Days",
+    "pmmlField" : "balanceMoneyTransactionsPer60Days"
+  }, {
+    "defaultValue" : null,
+    "expr" : "totalAccountConsultationsPer60Days",
+    "pmmlField" : "totalAccountConsultationsPer60Days"
+  }, {
+    "defaultValue" : null,
+    "expr" : "totalDebitPurchasesPer90Days",
+    "pmmlField" : "totalDebitPurchasesPer90Days"
+  } ],
+  "name" : "Credit Card",
+  "outputs" : [ {
+    "dnaVariableName" : "propensityCreditCardCrossSell",
+    "groupName" : null,
+    "pmmlField" : "Probability_1"
+  } ],
+  "pmmlId" : "2ed66764bed28a0135e2640fd7d54ce9d4cf7a653d1ef907feb2ef324b4107c4",
+  "pmmlModelName" : null,
+  "setSelection" : [ "All Profiles" ],
+  "attributes" : { }
+}

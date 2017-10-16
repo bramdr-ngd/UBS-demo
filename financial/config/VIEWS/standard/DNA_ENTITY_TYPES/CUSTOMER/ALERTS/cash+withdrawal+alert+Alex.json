@@ -1,0 +1,19 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "USER:alexv"
+  } ],
+  "alertType" : "DNA_ENTITY",
+  "alwaysFireOnActive" : true,
+  "conditions" : "(dna.cashWithdrawalAmountLast > 600)",
+  "description" : "cash withdrawal alert Alex",
+  "enabled" : true,
+  "entityId" : "-2730061662723522731",
+  "metricName" : "cashWithdrawalAmountLast",
+  "name" : "cash withdrawal alert Alex",
+  "notificationParameters" : {
+    "rulesengine.trigger" : "false"
+  },
+  "attributes" : { },
+  "structuredConditions" : null
+}

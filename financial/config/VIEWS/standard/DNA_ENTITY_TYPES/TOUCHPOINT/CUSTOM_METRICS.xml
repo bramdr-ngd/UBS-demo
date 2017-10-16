@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dna xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:noNamespaceSchemaLocation="http://www.ngdata.com/lily/xsd/dna_1_0.xsd">
+  <interactionFilters>
+      <interactionFilter name="contact_made"
+                         expr="itx.typeName=='ngdata.lily.touchpoint' &amp;&amp; itx.goal == 'contact' "/>
+  </interactionFilters>
+  <variables>
+      <itxAggregate name="customerId" on="contact_made">
+         <operation>last</operation>
+         <expr>itx.customerDnaEntityId</expr>
+         <type value="long"/>
+      </itxAggregate>
+      <itxAggregate name="goal" on="contact_made">
+         <operation>last</operation>
+         <expr>itx.goal</expr>
+         <type value="string"/>
+      </itxAggregate>
+      <itxAggregate name="reason" on="contact_made">
+         <operation>last</operation>
+         <expr>itx.reason</expr>
+         <type value="string"/>
+      </itxAggregate>
+      <itxAggregate name="subgoal" on="contact_made">
+         <operation>last</operation>
+         <expr>itx.subgoal</expr>
+         <type value="string"/>
+      </itxAggregate>
+  </variables>
+</dna>

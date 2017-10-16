@@ -1,0 +1,9 @@
+{
+  "name" : "Upcoming 1 Year Anniversary",
+  "description" : "Customers who are a client with the bank for 1 year next week",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "recencyFirstProductByWeek = 51"
+}

@@ -1,0 +1,8 @@
+[
+  {"segnr":1, "pct":0.075,  "pct_min":0,      "pct_max":0.075},
+  {"segnr":2, "pct":0.1375, "pct_min":0.075,  "pct_max":0.2125},
+  {"segnr":3, "pct":0.15,   "pct_min":0.2125, "pct_max":0.3625},
+  {"segnr":5, "pct":0.275,  "pct_min":0.3625, "pct_max":0.6375},
+  {"segnr":6, "pct":0.1875, "pct_min":0.6375, "pct_max":0.825},
+  {"segnr":7, "pct":0.175,  "pct_min":0.825,  "pct_max":1}
+]

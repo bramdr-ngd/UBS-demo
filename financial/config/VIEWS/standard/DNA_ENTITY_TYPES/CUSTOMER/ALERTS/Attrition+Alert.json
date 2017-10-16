@@ -1,0 +1,19 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "alertType" : "SET_MEMBER",
+  "alwaysFireOnActive" : true,
+  "conditions" : "(dna.scoreChurnAmp > 0.9)",
+  "description" : "Attrition Alert",
+  "enabled" : true,
+  "metricName" : "scoreChurnAmp",
+  "name" : "Attrition Alert",
+  "notificationParameters" : {
+    "rulesengine.trigger" : "true"
+  },
+  "setReference" : "customer_all",
+  "attributes" : { },
+  "structuredConditions" : null
+}

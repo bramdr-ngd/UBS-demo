@@ -1,0 +1,34 @@
+{
+  "name" : "Loyalty Valuable Alex",
+  "description" : "Loyalty Valuable Alex",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "USER:alexv"
+  } ],
+  "dnaEntityFilter" : {
+    "type" : "SET_FILTER",
+    "name" : "Elites"
+  },
+  "timeSeriesExpression" : "df.executionTime",
+  "metricReferenceTimeExpression" : "addDays(df.executionTime,-30)",
+  "filterReferenceTimeExpression" : "df.executionTime",
+  "variables" : [ {
+    "dnaVariableName" : "scoreLoyalty"
+  }, {
+    "dnaVariableName" : "scoreLoyalty01"
+  }, {
+    "dnaVariableName" : "flagActive",
+    "timeOffset" : "P30D"
+  } ],
+  "outputFormat" : {
+    "type" : "csv",
+    "separator" : "|",
+    "quoteChar" : "\u0000",
+    "escapeChar" : "\"",
+    "includeHeaders" : true
+  },
+  "groupedValueMode" : "COLUMN_EXPLOSION",
+  "groupedValueLimit" : 100,
+  "exportOriginalSourceIds" : true,
+  "referenceTimeSamplingEnabled" : true
+}

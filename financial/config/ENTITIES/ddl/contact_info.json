@@ -1,0 +1,291 @@
+{
+  "columns" : [ {
+    "jdbcType" : "BIGINT",
+    "maxLength" : null,
+    "name" : "customer_id",
+    "nullable" : true,
+    "type" : "long"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "customer_role",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "DATE",
+    "maxLength" : null,
+    "name" : "creation_date",
+    "nullable" : true,
+    "type" : "date"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "contact_type",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "contact_type_class",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "contact_value",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "BOOLEAN",
+    "maxLength" : null,
+    "name" : "\"ACTIVE\"",
+    "nullable" : true,
+    "type" : "boolean"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "address_street_name",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "address_line1",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "address_line2",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "address_zipcode",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "address_city",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "address_state",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "address_country",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "contexts",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "brand",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "source",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "BOOLEAN",
+    "maxLength" : null,
+    "name" : "customer_provided_flag",
+    "nullable" : true,
+    "type" : "boolean"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "company_nbr",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "company_tax_nbr",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "company_sector",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "BOOLEAN",
+    "maxLength" : null,
+    "name" : "gen_permission_flag",
+    "nullable" : true,
+    "type" : "boolean"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "spec_permissionscope_incl",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "spec_permissionscope_excl",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "primary_language",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "BOOLEAN",
+    "maxLength" : null,
+    "name" : "not_call_flag",
+    "nullable" : true,
+    "type" : "boolean"
+  }, {
+    "jdbcType" : "BOOLEAN",
+    "maxLength" : null,
+    "name" : "not_mail_flag",
+    "nullable" : true,
+    "type" : "boolean"
+  }, {
+    "jdbcType" : "BOOLEAN",
+    "maxLength" : null,
+    "name" : "not_email_flag",
+    "nullable" : true,
+    "type" : "boolean"
+  }, {
+    "jdbcType" : "BOOLEAN",
+    "maxLength" : null,
+    "name" : "gen_3rdparty_opt_in",
+    "nullable" : true,
+    "type" : "boolean"
+  }, {
+    "jdbcType" : "BOOLEAN",
+    "maxLength" : null,
+    "name" : "gen_3rdparty_opt_out",
+    "nullable" : true,
+    "type" : "boolean"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "spec_3rdpartyscope_incl",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "spec_3rdpartyscope_excl",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "preferred_channel",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "BOOLEAN",
+    "maxLength" : null,
+    "name" : "gen_abiility",
+    "nullable" : true,
+    "type" : "boolean"
+  }, {
+    "jdbcType" : "DATE",
+    "maxLength" : null,
+    "name" : "gen_ability_validfrom",
+    "nullable" : true,
+    "type" : "date"
+  }, {
+    "jdbcType" : "DATE",
+    "maxLength" : null,
+    "name" : "gen_ability_validto",
+    "nullable" : true,
+    "type" : "date"
+  }, {
+    "jdbcType" : "BOOLEAN",
+    "maxLength" : null,
+    "name" : "spec_ability",
+    "nullable" : true,
+    "type" : "boolean"
+  }, {
+    "jdbcType" : "DATE",
+    "maxLength" : null,
+    "name" : "spec_ability_validfrom",
+    "nullable" : true,
+    "type" : "date"
+  }, {
+    "jdbcType" : "DATE",
+    "maxLength" : null,
+    "name" : "spec_ability_validto",
+    "nullable" : true,
+    "type" : "date"
+  }, {
+    "jdbcType" : "BOOLEAN",
+    "maxLength" : null,
+    "name" : "gen_3rdparty_ability",
+    "nullable" : true,
+    "type" : "boolean"
+  }, {
+    "jdbcType" : "DATE",
+    "maxLength" : null,
+    "name" : "gen_3rdparty_ability_validfrom",
+    "nullable" : true,
+    "type" : "date"
+  }, {
+    "jdbcType" : "DATE",
+    "maxLength" : null,
+    "name" : "gen_3rdparty_ability_validto",
+    "nullable" : true,
+    "type" : "date"
+  }, {
+    "jdbcType" : "BOOLEAN",
+    "maxLength" : null,
+    "name" : "spec_3rdparty_ability",
+    "nullable" : true,
+    "type" : "boolean"
+  }, {
+    "jdbcType" : "DATE",
+    "maxLength" : null,
+    "name" : "spec_3rdparty_ability_validfrom",
+    "nullable" : true,
+    "type" : "date"
+  }, {
+    "jdbcType" : "DATE",
+    "maxLength" : null,
+    "name" : "spec_3rdparty_ability_validto",
+    "nullable" : true,
+    "type" : "date"
+  } ],
+  "multiTenant" : true,
+  "name" : "contact_info",
+  "primaryKey" : {
+    "columns" : [ {
+      "jdbcType" : "CHAR",
+      "maxLength" : 1,
+      "name" : "tenant_id",
+      "nullable" : false,
+      "type" : null
+    }, {
+      "jdbcType" : "VARCHAR",
+      "maxLength" : null,
+      "name" : "contact_id",
+      "nullable" : false,
+      "type" : "string"
+    } ]
+  },
+  "saltBuckets" : 1
+}

@@ -1,0 +1,10 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "attributes" : { },
+  "description" : "Inbound Banner",
+  "dnaVariables" : [ "lastCarLoanSimulationTimeString", "recencyCarLoanSimulation", "lastAtmWithdrawal", "lastLoanSimulationPerHour", "numberLoanSimulations", "numberPageVisits", "numberPageVisitsByCategory", "numberPageVisitsCarLoan", "numberPageVisitsToday", "numberPageVisitsByCategoryToday", "numberPageVisitsCarLoanToday", "numberLoanSimulationsByType", "numberCarLoanSimulations", "maxLoanSimulationAmountTodayByType", "maxCarLoanSimulationAmountToday" ],
+  "name" : "Inbound Banner"
+}

@@ -1,0 +1,9 @@
+{
+  "name" : "Alex churn set",
+  "description" : "churn prone set",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "USER:alexv"
+  } ],
+  "conditions" : "(dna.scoreChurnAmp > 0.9)"
+}

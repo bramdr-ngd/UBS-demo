@@ -1,0 +1,55 @@
+{
+  "type" : "PMML",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "description" : "Investment Account Cross Sell Model, using short-term and long-term predictors",
+  "inputs" : [ {
+    "defaultValue" : null,
+    "expr" : "age",
+    "pmmlField" : "age"
+  }, {
+    "defaultValue" : null,
+    "expr" : "segnr",
+    "pmmlField" : "segnr"
+  }, {
+    "defaultValue" : null,
+    "expr" : "totalActiveProducts",
+    "pmmlField" : "totalActiveProducts"
+  }, {
+    "defaultValue" : null,
+    "expr" : "totalActiveDeposits",
+    "pmmlField" : "totalActiveDeposits"
+  }, {
+    "defaultValue" : null,
+    "expr" : "shareOfWalletSize",
+    "pmmlField" : "shareOfWalletSize"
+  }, {
+    "defaultValue" : null,
+    "expr" : "totalActiveLoans",
+    "pmmlField" : "totalActiveLoans"
+  }, {
+    "defaultValue" : null,
+    "expr" : "flagLandlord",
+    "pmmlField" : "flagLandlord"
+  }, {
+    "defaultValue" : null,
+    "expr" : "totalAccountTransactions",
+    "pmmlField" : "totalAccountTransactions"
+  }, {
+    "defaultValue" : null,
+    "expr" : "totalCashWithdrawalPer60Days",
+    "pmmlField" : "totalCashWithdrawalPer60Days"
+  } ],
+  "name" : "Investment Account Cross Sell Model",
+  "outputs" : [ {
+    "dnaVariableName" : "propensityInvestmentAccount",
+    "groupName" : null,
+    "pmmlField" : "Probability_1"
+  } ],
+  "pmmlId" : "dd39197397f5a330b34a01d8565e404338ac2ac51e5fae5705bcfe90e4580a55",
+  "pmmlModelName" : null,
+  "setSelection" : [ "All Profiles" ],
+  "attributes" : { }
+}

@@ -1,0 +1,10 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "attributes" : { },
+  "description" : "Metrics important to profile a customer's day-to-day banking.",
+  "dnaVariables" : [ "totalDebitPurchasesPer7Days", "totalDebitPurchasesPer30Days", "totalCreditPurchasesPer7Days", "totalCreditPurchasesPer30Days", "totalAccountConsultationsPer7Days", "totalAccountConsultationsPer30Days", "totalAccountTransactionsPer7Days", "totalAccountTransactionsPer30Days", "totalCashWithdrawalPer7Days", "totalCashWithdrawalPer30Days", "totalCashWithdrawalAmountPer7Days", "totalCashWithdrawalAmountPer30Days", "totalDebitPurchaseAmountPer7Days", "totalDebitPurchaseAmountPer30Days", "totalCreditPurchaseAmountPer7Days", "totalCreditPurchaseAmountPer30Days" ],
+  "name" : "Day-to-Day Banking"
+}

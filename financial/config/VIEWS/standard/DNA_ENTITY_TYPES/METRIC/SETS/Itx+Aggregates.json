@@ -1,0 +1,9 @@
+{
+  "name" : "Itx Aggregates",
+  "description" : "Itx Aggregates",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "metricType='INTERACTION_AGGREGATE'"
+}

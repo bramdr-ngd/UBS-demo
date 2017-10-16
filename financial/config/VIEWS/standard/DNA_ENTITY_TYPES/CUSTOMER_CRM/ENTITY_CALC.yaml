@@ -1,0 +1,457 @@
+tables:
+    - name: CUSTOMER_CRM
+      properties:
+            columnFamily: 0
+            tableName: CUSTOMER_CRM
+            inputBuilder: com.ngdata.lily.funnel.PhoenixRecordInputBuilder
+      fields:
+          - TENANT_ID: { keyField: true, keySalted: true, type: char }
+          - ID: { keyField: true, keySalted: true, type: long }
+          - AFF_ART_THEATER: { type: double }
+          - CONTACT_DIRECT_MAIL_ACTIVE: { type: double }
+          - LIFESTAGE: { type: string }
+          - PREF_CONTACT_DEVICE: { type: string }
+          - SHARE_OF_WALLET_SIZE: { type: double }
+          - AFF_FASHIONISTAS: { type: double }
+          - AGE_CATEGORY: { type: string }
+          - FLAG_CONTACT_ABILITY_TWITTER: { type: double }
+          - PURCHASED: { type: double }
+          - MAIN_NATIONALITY: { type: string }
+          - FLAG_CONTACT_ABILITY_INTERNET: { type: double }
+          - AFF_AUTO: { type: double }
+          - STREET_ADDRESS: { type: string }
+          - SHARE_OF_WALLET: { type: double }
+          - ONLINE_BUY_MOMENT: { type: string }
+          - MASTER_ID: { type: long }
+          - FLAG_CONTACT_ABILITY_MOBILE_TXT: { type: double }
+          - INTERESTED: { type: double }
+          - PREFERRED_CHANNEL: { type: string }
+          - LOCATION_WORK: { type: string }
+          - CITY_POPULATION: { type: long }
+          - CONSUMPTION_DEVICE: { type: string }
+          - PREF_INBOUND_TIMING: { type: string }
+          - SOCIAL_CLASS_IND: { type: string }
+          - FLAG_LANDLORD: { type: double }
+          - CITY_DENSITY: { type: double }
+          - LAST_NAME: { type: string }
+          - AFF_MUSIC: { type: double }
+          - AFF_TECHNOPHILES: { type: double }
+          - MONTHLY_INCOME_REAL: { type: double }
+          - SHARE_OF_WALLET_HOLDINGS: { type: double }
+          - EDUCATION: { type: string }
+          - ACTIVITY_LEVEL: { type: string }
+          - PREFERRED_DEVICE_BY_LOCATION: { type: string }
+          - FLAG_FIRST_PROF_JOB: { type: double }
+          - AFF_WINTER_TRAVEL: { type: double }
+          - FLAG_HOUSE_OWNER: { type: double }
+          - AFF_FOODIES: { type: double }
+          - PREF_INBOUND_CHANNEL: { type: string }
+          - ORIGINAL_SOURCE_ID: { type: string }
+          - PREF_INBOUND_LOCATION: { type: string }
+          - ONLINE_BUY_DEVICE: { type: string }
+          - ATT_2_COMPETITION: { type: double }
+          - FLAG_LEAVING_NEST: { type: double }
+          - EMAIL_ADDRESS: { type: string }
+          - ONLINE_BUY_LOCATION: { type: string }
+          - CONSUMPTION_LOCATION: { type: string }
+          - FLAG_HOME_TENANT: { type: double }
+          - MARITAL_STATUS: { type: string }
+          - PRIMARY_LANGUAGE: { type: string }
+          - CONTACT_EMAIL_ACTIVE: { type: double }
+          - RES_COUNTRY: { type: string }
+          - AFF_NIGHT_LIFE: { type: double }
+          - FLAG_CONTACT_ABILITY_DIRECT_MAIL: { type: double }
+          - FLAG_DO_NOT_CALL: { type: double }
+          - NBR_PROPERTIES_OWNED: { type: integer }
+          - FLAG_OPT_OUT: { type: double }
+          - AFF_COOKING: { type: double }
+          - SEGMENT: { type: string }
+          - FLAG_EMPLOYED: { type: double }
+          - PREFERRED_CHANNEL_BY_TIME_OF_DAY: { type: string }
+          - AGE: { type: integer }
+          - OCCUPATION: { type: string }
+          - FLAG_CONTACT_ABILITY_MOBILE_CALL: { type: double }
+          - CONTACT_LINKEDIN_ACTIVE: { type: double }
+          - PREFERRED_DEVICE: { type: string }
+          - AFF_LUXURY_TRAVEL: { type: double }
+          - FLAG_ONLINE_BILL_PAYMENT: { type: double }
+          - RES_CITY: { type: string }
+          - FLAG_CONTACT_ABILITY_LINKED_IN: { type: double }
+          - AFF_BEAUTY_MAVENS: { type: double }
+          - AFF_THRILL_SEEKER: { type: double }
+          - TOTAL_ASSETS: { type: double }
+          - FLAG_3_RD_PARTY_OPT_IN: { type: double }
+          - FLAG_ONLINE_BANKING: { type: double }
+          - CONTACT_INTERNET_CHAT_ACTIVE: { type: double }
+          - PHONE_NUMBER: { type: string }
+          - DES_CONTACT_FREQ: { type: integer }
+          - CONTACT_MOBILE_ACTIVE: { type: double }
+          - RESIDENCE_TYPE: { type: string }
+          - MIDDLE_NAME: { type: string }
+          - AFF_SHUTTERBUGS: { type: double }
+          - FLAG_RESIDENCE_COUNTRY_BIRTH: { type: double }
+          - FLAG_3_RD_PARTY_OPT_OUT: { type: double }
+          - RFM_SEGMENT: { type: string }
+          - AFF_DIY: { type: double }
+          - SEGNR: { type: string }
+          - FLAG_OPT_IN: { type: double }
+          - PREF_CONTACT_CHANNEL: { type: string }
+          - AFF_VALUE_SHOPPER: { type: double }
+          - TOTAL_NON_REC_REVENUE: { type: double }
+          - AFF_NEWS_JUNKY: { type: double }
+          - FLAG_CHAIRMAN_ROLES: { type: double }
+          - PRESENT_VALUE_SEGMENT: { type: string }
+          - TOTAL_BANK_PRODUCTS: { type: integer }
+          - AFF_BEACH_TRAVEL: { type: double }
+          - AFF_FAMILY_VACATION: { type: double }
+          - CONTACT_CHANNEL_VARIETY: { type: integer }
+          - CONSIDERING: { type: double }
+          - FLAG_WEALTHY_REGION: { type: double }
+          - GENDER: { type: string }
+          - CONTACT_TWITTER_ACTIVE: { type: double }
+          - FLAG_RETIRED: { type: double }
+          - FLAG_PFSP: { type: double }
+          - PSYCLE_SEGMENT: { type: string }
+          - PREFERRED_CHANNEL_BY_LOCATION: { type: string }
+          - COMPETITIVE_PRICING: { type: double }
+          - CONTACT_LANDLINE_ACTIVE: { type: double }
+          - AFF_AVID_INVESTOR: { type: double }
+          - AFF_SAVVY_PARENTS: { type: double }
+          - FLAG_CONTACT_ABILITY_FACE_BOOK: { type: double }
+          - AFF_HEALTH_FITNESS: { type: double }
+          - PROPORTION_SHARE_OF_WALLET: { type: double }
+          - FLAG_RECENT_RETIREMENT: { type: double }
+          - MONTHLY_INCOME: { type: string }
+          - JOB_SECTOR: { type: string }
+          - FLAG_CONTACT_ABILITY_EMAIL: { type: double }
+          - AFF_POLITICAL: { type: double }
+          - AFF_MOVIE: { type: double }
+          - FLAG_CONTACT_ABILITY_LANDLINE: { type: double }
+          - AFF_LUXURY_SHOPPER: { type: double }
+          - AFF_GREEN_LIVING: { type: double }
+          - SATISFACTION: { type: double }
+          - AFF_TV: { type: double }
+          - TITLE: { type: string }
+          - FLAG_BOARD_ROLES: { type: double }
+          - AFF_TRAVEL_BUFF: { type: double }
+          - EXCLUDE_FROM_MASTER: { type: boolean }
+          - ZIPCODE: { type: string }
+          - CONTACT_FACEBOOK_ACTIVE: { type: double }
+          - AFF_HOME_DECOR: { type: double }
+          - FLAG_RELOADABLE_PREPAID_CARDS: { type: double }
+          - NBR_CHILDREN: { type: integer }
+          - AFF_FAST_FOOD: { type: double }
+          - AFF_OUTDOOR: { type: double }
+          - DES_CONTACT_TIMING: { type: string }
+          - TOTAL_REC_REVENUE: { type: double }
+          - AFF_GAMER: { type: double }
+          - COHORT: { type: string }
+          - FLAG_JOB_HUNTING: { type: double }
+          - PREFERRED_DEVICE_BY_TIME_OF_DAY: { type: string }
+          - STATE: { type: string }
+          - AFF_BARGAIN_HUNTER: { type: double }
+          - FLAG_STUDENT: { type: double }
+          - FLAG_VALUE_PROPERTY: { type: double }
+          - FIRST_NAME: { type: string }
+          - AFF_PET_LOVERS: { type: double }
+          - NBR_TIMES_MOVED: { type: integer }
+          - AWARE_BRAND: { type: double }
+          - AFF_SPORT: { type: double }
+          - FLAG_MOBILE_PAYMENT: { type: double }
+    - name: CONTACT_INFO
+      properties:
+            columnFamily: 0
+            tableName: CONTACT_INFO
+            inputBuilder: com.ngdata.lily.funnel.PhoenixRecordInputBuilder
+      fields:
+          - TENANT_ID: { keyField: true, keySalted: true, type: char }
+          - CONTACT_ID: { keyField: true, keySalted: true, type: string }
+          - CUSTOMER_ID: { type: long }
+          - CUSTOMER_ROLE: { type: string }
+          - CREATION_DATE: { type: date }
+          - CONTACT_TYPE: { type: string }
+          - CONTACT_TYPE_CLASS: { type: string }
+          - CONTACT_VALUE: { type: string }
+          - ACTIVE: { type: boolean }
+          - ADDRESS_STREET_NAME: { type: string }
+          - ADDRESS_LINE1: { type: string }
+          - ADDRESS_LINE2: { type: string }
+          - ADDRESS_ZIPCODE: { type: string }
+          - ADDRESS_CITY: { type: string }
+          - ADDRESS_STATE: { type: string }
+          - ADDRESS_COUNTRY: { type: string }
+          - CONTEXTS: { type: string }
+          - BRAND: { type: string }
+          - SOURCE: { type: string }
+          - CUSTOMER_PROVIDED_FLAG: { type: boolean }
+          - COMPANY_NBR: { type: string }
+          - COMPANY_TAX_NBR: { type: string }
+          - COMPANY_SECTOR: { type: string }
+          - GEN_PERMISSION_FLAG: { type: boolean }
+          - SPEC_PERMISSIONSCOPE_INCL: { type: string }
+          - SPEC_PERMISSIONSCOPE_EXCL: { type: string }
+          - PRIMARY_LANGUAGE: { type: string }
+          - NOT_CALL_FLAG: { type: boolean }
+          - NOT_MAIL_FLAG: { type: boolean }
+          - NOT_EMAIL_FLAG: { type: boolean }
+          - GEN_3RDPARTY_OPT_IN: { type: boolean }
+          - GEN_3RDPARTY_OPT_OUT: { type: boolean }
+          - SPEC_3RDPARTYSCOPE_INCL: { type: string }
+          - SPEC_3RDPARTYSCOPE_EXCL: { type: string }
+          - PREFERRED_CHANNEL: { type: string }
+          - GEN_ABIILITY: { type: boolean }
+          - GEN_ABILITY_VALIDFROM: { type: date }
+          - GEN_ABILITY_VALIDTO: { type: date }
+          - SPEC_ABILITY: { type: boolean }
+          - SPEC_ABILITY_VALIDFROM: { type: date }
+          - SPEC_ABILITY_VALIDTO: { type: date }
+          - GEN_3RDPARTY_ABILITY: { type: boolean }
+          - GEN_3RDPARTY_ABILITY_VALIDFROM: { type: date }
+          - GEN_3RDPARTY_ABILITY_VALIDTO: { type: date }
+          - SPEC_3RDPARTY_ABILITY: { type: boolean }
+          - SPEC_3RDPARTY_ABILITY_VALIDFROM: { type: date }
+          - SPEC_3RDPARTY_ABILITY_VALIDTO: { type: date }
+    - name: ACCOUNT_ROLE
+      properties:
+            columnFamily: 0
+            tableName: ACCOUNT_ROLE
+            inputBuilder: com.ngdata.lily.funnel.PhoenixRecordInputBuilder
+      fields:
+          - TENANT_ID: { keyField: true, keySalted: true, type: char }
+          - ACCOUNT_ID: { keyField: true, keySalted: true, type: string }
+          - ROLE: { keyField: true, keySalted: true, type: string }
+          - CUSTOMER_ID: { type: long }
+    - name: CUSTOMER_PRODUCT
+      properties:
+            columnFamily: 0
+            tableName: CUSTOMER_PRODUCT
+            inputBuilder: com.ngdata.lily.funnel.PhoenixRecordInputBuilder
+      fields:
+          - TENANT_ID: { keyField: true, keySalted: true, type: char }
+          - CUSTOMER_PRODUCT_ID: { keyField: true, keySalted: true, type: string }
+          - CUSTOMER_ID: { type: long }
+          - OFFER_ID: { type: string }
+          - PRODUCT_BUNDLE_ID: { type: string }
+          - PROMO_FLAG: { type: boolean }
+          - NAME: { type: string }
+          - BRAND: { type: string }
+          - CATEGORY: { type: string }
+          - SUB_CATEGORY: { type: string }
+          - ACTIVE: { type: boolean }
+          - STATUS: { type: string }
+          - START_DATE: { type: date }
+          - END_DATE: { type: date }
+          - LIST_PRICE_VAT_INCLUSIVE: { type: double }
+          - DISCOUNT_FLAG: { type: boolean }
+          - DISCOUNT_PERCENTAGE: { type: double }
+          - DISCOUNT_PERCENTAGE_CAT: { type: integer }
+          - DISCOUNT_QTY: { type: integer }
+          - DISCOUNT_QTY_CAT: { type: integer }
+          - DISCOUNT_MONETARY: { type: double }
+          - ADDED_VALUE_FLAG: { type: boolean }
+          - VALUEADDED_UNRELATED_CAT: { type: string }
+          - VALUEADDED_MONETARY: { type: double }
+          - VALUEADDED_MONETARY_CAT: { type: string }
+          - PERIODICITY: { type: string }
+          - DISTRIBUTION_METHOD: { type: string }
+          - MEDIUM: { type: string }
+          - NBR_COPIES: { type: integer }
+          - FREESAMPLES_FLAG: { type: boolean }
+          - REGIONAL_EDITION_FLAG: { type: boolean }
+    - name: OFFER_LIST_OFFERS
+      properties:
+            columnFamily: 0
+            tableName: OFFER_LIST_OFFERS
+            inputBuilder: com.ngdata.lily.funnel.PhoenixRecordInputBuilder
+      fields:
+          - TENANT_ID: { keyField: true, keySalted: true, type: char }
+          - OFFER_LIST_ID: { keyField: true, keySalted: true, type: string }
+          - OFFER_ID: { keyField: true, keySalted: true, type: string }
+          - DUMMY_FIELD: { type: string }
+    - name: PRODUCT_BUNDLE_ROLE
+      properties:
+            columnFamily: 0
+            tableName: PRODUCT_BUNDLE_ROLE
+            inputBuilder: com.ngdata.lily.funnel.PhoenixRecordInputBuilder
+      fields:
+          - TENANT_ID: { keyField: true, keySalted: true, type: char }
+          - PRODUCT_BUNDLE_ID: { keyField: true, keySalted: true, type: string }
+          - CUSTOMER_ID: { keyField: true, keySalted: true, type: long }
+          - ROLE: { keyField: true, keySalted: true, type: string }
+    - name: OFFER_LIST
+      properties:
+            columnFamily: 0
+            tableName: OFFER_LIST
+            inputBuilder: com.ngdata.lily.funnel.PhoenixRecordInputBuilder
+      fields:
+          - TENANT_ID: { keyField: true, keySalted: true, type: char }
+          - OFFER_LIST_ID: { keyField: true, keySalted: true, type: string }
+          - CAMPAIGN_PHASE_ID: { type: string }
+          - OBJECTIVE: { type: string }
+          - OFFERLIST_ORDER: { type: integer }
+    - name: ACCOUNT
+      properties:
+            columnFamily: 0
+            tableName: ACCOUNT
+            inputBuilder: com.ngdata.lily.funnel.PhoenixRecordInputBuilder
+      fields:
+          - TENANT_ID: { keyField: true, keySalted: true, type: char }
+          - ACCOUNT_ID: { keyField: true, keySalted: true, type: string }
+          - CUSTOMER_PRODUCT_ID: { type: string }
+          - CUSTOMER_PRODUCT_BUNDLE_ID: { type: string }
+          - CATEGORY: { type: string }
+          - SUB_CATEGORY: { type: string }
+          - ACTIVE: { type: boolean }
+          - BALANCE: { type: double }
+    - name: CAMPAIGN_PHASE
+      properties:
+            columnFamily: 0
+            tableName: CAMPAIGN_PHASE
+            inputBuilder: com.ngdata.lily.funnel.PhoenixRecordInputBuilder
+      fields:
+          - TENANT_ID: { keyField: true, keySalted: true, type: char }
+          - CAMPAIGN_PHASE_ID: { keyField: true, keySalted: true, type: string }
+          - CAMPAIGN_ID: { type: string }
+          - OBJECTIVE: { type: string }
+          - PHASE_ORDER: { type: integer }
+    - name: CUSTOMER_PRODUCT_BUNDLE
+      properties:
+            columnFamily: 0
+            tableName: CUSTOMER_PRODUCT_BUNDLE
+            inputBuilder: com.ngdata.lily.funnel.PhoenixRecordInputBuilder
+      fields:
+          - TENANT_ID: { keyField: true, keySalted: true, type: char }
+          - PRODUCT_BUNDLE_ID: { keyField: true, keySalted: true, type: string }
+          - OFFER_ID: { type: string }
+          - NAME: { type: string }
+          - BRAND: { type: string }
+          - ACTIVE: { type: boolean }
+          - STATUS: { type: string }
+          - START_DATE: { type: date }
+          - END_DATE: { type: date }
+          - DURATION: { type: string }
+          - ORIGINAL_PAYMENT_METHOD: { type: string }
+          - MOTIVATION: { type: string }
+          - PROMO_FLAG: { type: boolean }
+          - CHANNEL_CATEGORY: { type: string }
+    - name: PRODUCT_OFFER
+      properties:
+            columnFamily: 0
+            tableName: PRODUCT_OFFER
+            inputBuilder: com.ngdata.lily.funnel.PhoenixRecordInputBuilder
+      fields:
+          - TENANT_ID: { keyField: true, keySalted: true, type: char }
+          - OFFER_ID: { keyField: true, keySalted: true, type: string }
+          - OFFER_TYPE_ID: { type: string }
+          - NAME: { type: string }
+          - OBJECTIVE: { type: string }
+          - RESTRICTION_TYPE: { type: string }
+          - RESTRICTION_VALUE: { type: string }
+          - DISPLAY_ORDER: { type: integer }
+          - BRAND: { type: string }
+          - CATEGORY: { type: string }
+          - SUB_CATEGORY: { type: string }
+          - PRODUCT_ID_LIST: { type: string }
+    - name: CAMPAIGN
+      properties:
+            columnFamily: 0
+            tableName: CAMPAIGN
+            inputBuilder: com.ngdata.lily.funnel.PhoenixRecordInputBuilder
+      fields:
+          - TENANT_ID: { keyField: true, keySalted: true, type: char }
+          - CAMPAIGN_ID: { keyField: true, keySalted: true, type: string }
+          - OBJECTIVE: { type: string }
+          - CATEGORY: { type: string }
+          - MULTICHANNEL_FLAG: { type: boolean }
+          - MULTI_APPROACH_FLAG: { type: boolean }
+          - MULTI_PHASE_FLAG: { type: boolean }
+          - NBRPHASES: { type: integer }
+dependencies:
+    - parent: CUSTOMER_CRM
+      child: CONTACT_INFO
+      parentFields:
+        - TENANT_ID
+        - ID
+      childFields:
+        - TENANT_ID
+        - CUSTOMER_ID
+    - parent: CUSTOMER_CRM
+      child: PRODUCT_BUNDLE_ROLE
+      parentFields:
+        - TENANT_ID
+        - ID
+      childFields:
+        - TENANT_ID
+        - CUSTOMER_ID
+    - parent: PRODUCT_BUNDLE_ROLE
+      child: CUSTOMER_PRODUCT_BUNDLE
+      parentFields:
+        - TENANT_ID
+        - PRODUCT_BUNDLE_ID
+      childFields:
+        - TENANT_ID
+        - PRODUCT_BUNDLE_ID
+    - parent: CUSTOMER_CRM
+      child: ACCOUNT_ROLE
+      parentFields:
+        - TENANT_ID
+        - ID
+      childFields:
+        - TENANT_ID
+        - CUSTOMER_ID
+    - parent: ACCOUNT_ROLE
+      child: ACCOUNT
+      parentFields:
+        - TENANT_ID
+        - ACCOUNT_ID
+      childFields:
+        - TENANT_ID
+        - ACCOUNT_ID
+    - parent: CUSTOMER_CRM
+      child: CUSTOMER_PRODUCT
+      parentFields:
+        - TENANT_ID
+        - ID
+      childFields:
+        - TENANT_ID
+        - CUSTOMER_ID
+    - parent: CUSTOMER_PRODUCT
+      child: PRODUCT_OFFER
+      parentFields:
+        - TENANT_ID
+        - OFFER_ID
+      childFields:
+        - TENANT_ID
+        - OFFER_ID
+    - parent: PRODUCT_OFFER
+      child: OFFER_LIST_OFFERS
+      parentFields:
+        - TENANT_ID
+        - OFFER_ID
+      childFields:
+        - TENANT_ID
+        - OFFER_ID
+    - parent: OFFER_LIST_OFFERS
+      child: OFFER_LIST
+      parentFields:
+        - TENANT_ID
+        - OFFER_LIST_ID
+      childFields:
+        - TENANT_ID
+        - OFFER_LIST_ID
+    - parent: OFFER_LIST
+      child: CAMPAIGN_PHASE
+      parentFields:
+        - TENANT_ID
+        - CAMPAIGN_PHASE_ID
+      childFields:
+        - TENANT_ID
+        - CAMPAIGN_PHASE_ID
+    - parent: CAMPAIGN_PHASE
+      child: CAMPAIGN
+      parentFields:
+        - TENANT_ID
+        - CAMPAIGN_ID
+      childFields:
+        - TENANT_ID
+        - CAMPAIGN_ID

@@ -1,0 +1,9 @@
+{
+  "name" : "Zipcode Brooklyn",
+  "description" : "Zipcode Brooklyn",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "USER:cindyv"
+  } ],
+  "conditions" : "(dna.zipcode = '11231')"
+}

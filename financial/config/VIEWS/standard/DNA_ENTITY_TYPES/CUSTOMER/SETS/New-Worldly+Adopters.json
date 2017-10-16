@@ -1,0 +1,9 @@
+{
+  "name" : "New-Worldly Adopters",
+  "description" : "Younger singles/couples/families",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "flagNewWorldlyAdoptersMember = 1"
+}

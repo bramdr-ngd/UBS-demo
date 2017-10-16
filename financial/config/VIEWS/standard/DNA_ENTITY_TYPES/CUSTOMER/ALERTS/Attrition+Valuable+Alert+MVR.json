@@ -1,0 +1,19 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "USER:michaelvr"
+  } ],
+  "alertType" : "SET_MEMBER",
+  "alwaysFireOnActive" : false,
+  "conditions" : "(dna.scoreChurnAmp > 0.85)",
+  "description" : "Attrition Valuable Alert MVR",
+  "enabled" : true,
+  "metricName" : "scoreChurnAmp",
+  "name" : "Attrition Valuable Alert MVR",
+  "notificationParameters" : {
+    "rulesengine.trigger" : "true"
+  },
+  "setReference" : "Elites",
+  "attributes" : { },
+  "structuredConditions" : null
+}

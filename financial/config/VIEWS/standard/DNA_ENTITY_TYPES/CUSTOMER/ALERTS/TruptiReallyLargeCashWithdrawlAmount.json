@@ -1,0 +1,19 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "USER:truptip"
+  } ],
+  "alertType" : "DNA_ENTITY",
+  "alwaysFireOnActive" : true,
+  "conditions" : "(dna.CashWithdrawalAmountAnomaly > 600)",
+  "description" : "TruptiReallyLargeCashWithdrawlAmount",
+  "enabled" : true,
+  "entityId" : "-6996776967904161051",
+  "metricName" : "CashWithdrawalAmountAnomaly",
+  "name" : "TruptiReallyLargeCashWithdrawlAmount",
+  "notificationParameters" : {
+    "rulesengine.trigger" : "true"
+  },
+  "attributes" : { },
+  "structuredConditions" : null
+}

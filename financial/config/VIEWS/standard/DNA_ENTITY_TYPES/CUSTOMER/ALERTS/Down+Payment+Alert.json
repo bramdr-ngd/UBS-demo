@@ -1,0 +1,17 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "alertType" : "SET_MEMBER",
+  "alwaysFireOnActive" : false,
+  "conditions" : "lastLoanSimulationDownPaymentPerHour > 4999",
+  "description" : "Down payment alert",
+  "enabled" : true,
+  "metricName" : "lastLoanSimulationDownPaymentPerHour",
+  "name" : "Down Payment Alert",
+  "notificationParameters" : { },
+  "setReference" : "All Profiles",
+  "attributes" : { },
+  "structuredConditions" : null
+}

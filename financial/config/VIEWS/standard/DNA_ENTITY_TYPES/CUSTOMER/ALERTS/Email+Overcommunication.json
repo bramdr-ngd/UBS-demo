@@ -1,0 +1,17 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "alertType" : "SET_MEMBER",
+  "alwaysFireOnActive" : true,
+  "conditions" : "numberOfOutboundCommunications30DEmail > maxNumberOfOutboundCommunications30DEmail",
+  "description" : "Email overcommunication",
+  "enabled" : true,
+  "metricName" : "numberOfOutboundCommunications30DEmail",
+  "name" : "Email Overcommunication",
+  "notificationParameters" : { },
+  "setReference" : "All Profiles",
+  "attributes" : { },
+  "structuredConditions" : null
+}

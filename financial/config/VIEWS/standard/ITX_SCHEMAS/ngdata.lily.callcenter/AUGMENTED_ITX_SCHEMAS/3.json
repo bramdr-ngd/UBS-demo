@@ -1,0 +1,192 @@
+{
+  "type" : "record",
+  "name" : "callcenter",
+  "namespace" : "ngdata.lily",
+  "fields" : [ {
+    "name" : "timestamp",
+    "type" : "long",
+    "doc" : "When did this interaction happen, in Java milliseconds, at client side. For log-based interactions the channel-specific time stamp indicating the start of the interaction should be mapped to the generic timestamp."
+  }, {
+    "name" : "tenantId",
+    "type" : [ "null", "string" ],
+    "doc" : "The tenantId to which this interaction belongs to",
+    "default" : null
+  }, {
+    "name" : "timezone",
+    "type" : [ "null", "long" ],
+    "doc" : "The time zone at client side when the interaction happened.",
+    "default" : null
+  }, {
+    "name" : "amount",
+    "type" : [ "null", "double" ],
+    "doc" : "amount of the transaction",
+    "default" : null
+  }, {
+    "name" : "sequenceId",
+    "type" : [ "null", "string" ],
+    "doc" : "Sequence number of the interaction in a conversation",
+    "default" : null
+  }, {
+    "name" : "medium",
+    "type" : [ "null", "string" ],
+    "doc" : "The medium of the interaction (e.g. written, oral).",
+    "default" : null
+  }, {
+    "name" : "channel",
+    "type" : [ "null", "string" ],
+    "doc" : "Channel that captured the interaction (UTS, CALL, EMAIL, PAYMENT_SYSTEM, ...)",
+    "default" : null
+  }, {
+    "name" : "source",
+    "type" : [ "null", "string" ],
+    "doc" : "Specific source the interaction stems from (e.g. messagent for channel email)",
+    "default" : null
+  }, {
+    "name" : "goal",
+    "type" : "string",
+    "doc" : "Main goal (goal) of the interaction (complaint, ...)"
+  }, {
+    "name" : "subgoal",
+    "type" : "string",
+    "doc" : "More specific goal (subgoal) of the interaction (product complaint, ...)"
+  }, {
+    "name" : "reason",
+    "type" : [ "null", "string" ],
+    "doc" : "Interaction reason that further clarifies the sub goal (e.g. sub goal= product complaint, reason: malfunctioning of product)",
+    "default" : null
+  }, {
+    "name" : "brand",
+    "type" : [ "null", "string" ],
+    "doc" : "Brand of the item the interaction is associated to.",
+    "default" : null
+  }, {
+    "name" : "inboundFlag",
+    "type" : [ "null", "boolean" ],
+    "doc" : "The interaction is customer initiated (inbound)",
+    "default" : null
+  }, {
+    "name" : "successFlag",
+    "type" : [ "null", "boolean" ],
+    "doc" : "A successful interaction.",
+    "default" : null
+  }, {
+    "name" : "failureReason",
+    "type" : [ "null", "string" ],
+    "doc" : "Reason the interaction failed.",
+    "default" : null
+  }, {
+    "name" : "device",
+    "type" : [ "null", "string" ],
+    "doc" : "Device used by the customer for the interaction: pc, laptop, smartphone, tablet, mobile phone but not smartphone, fixed line, tablet",
+    "default" : null
+  }, {
+    "name" : "geocoordinates",
+    "type" : [ "null", "string" ],
+    "doc" : "Location of customer at the time of the interaction using geocordinates",
+    "default" : null
+  }, {
+    "name" : "latitude",
+    "type" : [ "null", "string" ],
+    "doc" : "Latitude of location of customer at time of the interaction",
+    "default" : null
+  }, {
+    "name" : "longitude",
+    "type" : [ "null", "string" ],
+    "doc" : "Longitude of location of customer at time of the interaction",
+    "default" : null
+  }, {
+    "name" : "callId",
+    "type" : [ "null", "long" ],
+    "doc" : "Registered ID for the call/contact",
+    "default" : null
+  }, {
+    "name" : "customerId",
+    "type" : [ "null", "string" ],
+    "doc" : "Id of the customer. This is a nullable ExternalID.",
+    "default" : null,
+    "lilySourceId" : "true",
+    "lilyDnaEntityType" : "customer_CRM"
+  }, {
+    "name" : "customerPriority",
+    "type" : [ "null", "long" ],
+    "doc" : "Priority score for customer used by most call centers to prioritize calls.",
+    "default" : null
+  }, {
+    "name" : "callPriority",
+    "type" : [ "null", "long" ],
+    "doc" : "Priority score for a customer's specific inbound call. The callPriority defines the call response routing.",
+    "default" : null
+  }, {
+    "name" : "phoneNumberId",
+    "type" : [ "null", "string" ],
+    "doc" : "Phone number used by the customer or contact. This is a non-nullable ExternalId",
+    "default" : null
+  }, {
+    "name" : "abandonnedFlag",
+    "type" : [ "null", "boolean" ],
+    "doc" : "The call was abandonned prematurely",
+    "default" : null
+  }, {
+    "name" : "waitingTime",
+    "type" : [ "null", "long" ],
+    "doc" : "Total time between initiation of the call and first response",
+    "default" : null
+  }, {
+    "name" : "handlingTime",
+    "type" : [ "null", "long" ],
+    "doc" : "Total time spent handling this call",
+    "default" : null
+  }, {
+    "name" : "csatScore",
+    "type" : [ "null", "long" ],
+    "doc" : "Customer satisfaction feedback",
+    "default" : null
+  }, {
+    "name" : "fcrFlag",
+    "type" : [ "null", "boolean" ],
+    "doc" : "First call resolution flag",
+    "default" : null
+  }, {
+    "name" : "callStatus",
+    "type" : [ "null", "string" ],
+    "doc" : "status of the call at the end of the interaction",
+    "default" : null
+  }, {
+    "name" : "offPeak",
+    "type" : [ "null", "boolean" ],
+    "doc" : "The call was handled during an off-peak period",
+    "default" : null
+  }, {
+    "name" : "serviceLevel",
+    "type" : [ "null", "string" ],
+    "doc" : "Service level the customer is entitled to",
+    "default" : null
+  }, {
+    "name" : "memo",
+    "type" : [ "null", "string" ],
+    "doc" : "Description field for deposits",
+    "default" : null
+  }, {
+    "name" : "accountType",
+    "type" : [ "null", "string" ],
+    "doc" : "Description field for account type",
+    "default" : null
+  }, {
+    "name" : "offerType",
+    "type" : [ "null", "string" ],
+    "doc" : "Description field for offer type",
+    "default" : null
+  }, {
+    "name" : "customerDnaEntityId",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "customerDnaEntityType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "customerResolvedOriginalSourceId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ]
+}

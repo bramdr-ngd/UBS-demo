@@ -1,0 +1,93 @@
+{
+  "columns" : [ {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "offer_id",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "name",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "brand",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "BOOLEAN",
+    "maxLength" : null,
+    "name" : "\"ACTIVE\"",
+    "nullable" : true,
+    "type" : "boolean"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "status",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "DATE",
+    "maxLength" : null,
+    "name" : "start_date",
+    "nullable" : true,
+    "type" : "date"
+  }, {
+    "jdbcType" : "DATE",
+    "maxLength" : null,
+    "name" : "end_date",
+    "nullable" : true,
+    "type" : "date"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "duration",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "original_payment_method",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "motivation",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "BOOLEAN",
+    "maxLength" : null,
+    "name" : "promo_flag",
+    "nullable" : true,
+    "type" : "boolean"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "channel_category",
+    "nullable" : true,
+    "type" : "string"
+  } ],
+  "multiTenant" : true,
+  "name" : "customer_product_bundle",
+  "primaryKey" : {
+    "columns" : [ {
+      "jdbcType" : "CHAR",
+      "maxLength" : 1,
+      "name" : "tenant_id",
+      "nullable" : false,
+      "type" : null
+    }, {
+      "jdbcType" : "VARCHAR",
+      "maxLength" : null,
+      "name" : "product_bundle_id",
+      "nullable" : false,
+      "type" : "string"
+    } ]
+  },
+  "saltBuckets" : 1
+}

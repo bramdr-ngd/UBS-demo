@@ -1,0 +1,55 @@
+{
+  "type" : "PMML",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "description" : "Propensity to buy a car loan, using short-term and long-term predictors",
+  "inputs" : [ {
+    "defaultValue" : null,
+    "expr" : "segment",
+    "pmmlField" : "segment"
+  }, {
+    "defaultValue" : null,
+    "expr" : "totalAssets",
+    "pmmlField" : "totalAssets"
+  }, {
+    "defaultValue" : null,
+    "expr" : "totalCashWithdrawalPer120Days",
+    "pmmlField" : "totalCashWithdrawalPer120Days"
+  }, {
+    "defaultValue" : null,
+    "expr" : "flagCreditCard",
+    "pmmlField" : "flagCreditCard"
+  }, {
+    "defaultValue" : null,
+    "expr" : "gender",
+    "pmmlField" : "gender"
+  }, {
+    "defaultValue" : null,
+    "expr" : "ageCategory",
+    "pmmlField" : "ageCategory"
+  }, {
+    "defaultValue" : null,
+    "expr" : "totalCreditPurchasesPer120Days",
+    "pmmlField" : "totalCreditPurchasesPer120Days"
+  }, {
+    "defaultValue" : null,
+    "expr" : "numberPageVisitsCarLoan",
+    "pmmlField" : "numberPageVisitsCarLoan"
+  }, {
+    "defaultValue" : null,
+    "expr" : "numberCarLoanSimulations",
+    "pmmlField" : "numberCarLoanSimulations"
+  } ],
+  "name" : "Car Loan",
+  "outputs" : [ {
+    "dnaVariableName" : "propensityCarLoanModel",
+    "groupName" : null,
+    "pmmlField" : "Probability_1"
+  } ],
+  "pmmlId" : "1056e508bd8478e323d4b40439caa6dca61a64459d4b6a6de00d9cc04205f0c5",
+  "pmmlModelName" : "CarLoanModel",
+  "setSelection" : [ "All Profiles" ],
+  "attributes" : { }
+}

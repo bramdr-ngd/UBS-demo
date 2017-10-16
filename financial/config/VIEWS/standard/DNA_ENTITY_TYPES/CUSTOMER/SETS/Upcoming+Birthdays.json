@@ -1,0 +1,9 @@
+{
+  "name" : "Upcoming Birthdays",
+  "description" : "Customers whose birthday occurs in the coming week",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "birthdayNextWeek = 1"
+}

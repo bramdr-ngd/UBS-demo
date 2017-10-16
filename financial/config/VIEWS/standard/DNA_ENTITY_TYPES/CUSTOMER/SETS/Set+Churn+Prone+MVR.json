@@ -1,0 +1,9 @@
+{
+  "name" : "Set Churn Prone MVR",
+  "description" : "Set Churn Prone MVR",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "USER:michaelvr"
+  } ],
+  "conditions" : "(dna.scoreChurnAmp > 0.9)"
+}

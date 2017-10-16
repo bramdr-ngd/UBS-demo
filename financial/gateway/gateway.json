@@ -1,0 +1,16 @@
+{
+	"variables": [{
+		"name": "numberLoanSimulations",
+		"originalName": "numberLoanSimulations"
+	}, {
+		"name": "firstName",
+		"originalName": "firstName"
+	}, {
+		"name": "lastName",
+		"originalName": "lastName"
+	}, {
+		"name": "crmId",
+		"originalName": "crmId"
+	}],
+	"allowedSourceTypes": ["CUSTOMER_CRM","CUSTOMER_COOKIE"]
+}

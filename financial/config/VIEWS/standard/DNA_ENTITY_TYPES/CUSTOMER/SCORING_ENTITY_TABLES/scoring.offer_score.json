@@ -1,0 +1,493 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "id" : null,
+  "description" : null,
+  "name" : "scoring.offer_score",
+  "table" : {
+    "type" : {
+      "kind" : "TABLE",
+      "fields" : [ {
+        "name" : "id",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "long"
+        }
+      }, {
+        "name" : "offer_name",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "description",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "offer_type",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "offer_sub_type",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "offereligibility",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      },
+      {
+        "name" : "offerpriority",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "valid_locations",
+        "dataType" : {
+          "kind" : "ARRAY",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "valid_channels",
+        "dataType" : {
+          "kind" : "ARRAY",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "valid_identifications",
+        "dataType" : {
+          "kind" : "ARRAY",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "valid_journey_stages",
+        "dataType" : {
+          "kind" : "ARRAY",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "valid_products",
+        "dataType" : {
+          "kind" : "ARRAY",
+          "scalarType" : "string"
+        }
+      },
+       {
+               "name" : "valid_devices",
+               "dataType" : {
+                 "kind" : "ARRAY",
+                 "scalarType" : "string"
+               }
+             },
+             {
+                     "name" : "valid_from_time",
+                     "dataType" : {
+                       "kind" : "SCALAR",
+                       "scalarType" : "datetime"
+                     }
+                   },
+                                {
+                                        "name" : "valid_until_time",
+                                        "dataType" : {
+                                          "kind" : "SCALAR",
+                                          "scalarType" : "datetime"
+                                        }
+                                      },
+                                                   {
+                                                           "name" : "valid_from_date",
+                                                           "dataType" : {
+                                                             "kind" : "SCALAR",
+                                                             "scalarType" : "date"
+                                                           }
+                                                         },
+                                                                      {
+                                                                              "name" : "valid_until_date",
+                                                                              "dataType" : {
+                                                                                "kind" : "SCALAR",
+                                                                                "scalarType" : "date"
+                                                                              }
+                                                                            },
+
+             {
+              "name" : "offerproductpropensity",
+              "dataType" : {
+                "kind" : "SCALAR",
+                "scalarType" : "string"
+              }
+            },
+
+       {
+               "name" : "offerprodmodelerror",
+               "dataType" : {
+                 "kind" : "SCALAR",
+                 "scalarType" : "double"
+               }
+             },
+        {
+                      "name" : "maxnbrproductsshow",
+                      "dataType" : {
+                        "kind" : "SCALAR",
+                        "scalarType" : "int"
+                      }
+                    },
+                            {
+                                          "name" : "minnbrproductsshow",
+                                          "dataType" : {
+                                            "kind" : "SCALAR",
+                                            "scalarType" : "int"
+                                          }
+                                        },
+
+                              {
+                                      "name" : "avgproductpropensity",
+                                      "dataType" : {
+                                        "kind" : "SCALAR",
+                                        "scalarType" : "string"
+                                      }
+                                    },
+{
+        "name" : "maxproductpropensity",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      },
+ {
+         "name" : "maxproductpriority",
+         "dataType" : {
+           "kind" : "SCALAR",
+           "scalarType" : "string"
+         }
+       },
+              {
+                      "name" : "avgprodmodelerror",
+                      "dataType" : {
+                        "kind" : "SCALAR",
+                        "scalarType" : "string"
+                      }
+                    },
+              {
+                      "name" : "indepofferpropensity",
+                      "dataType" : {
+                        "kind" : "SCALAR",
+                        "scalarType" : "string"
+                      }
+                    },
+              {
+                      "name" : "offermodelerror",
+                      "dataType" : {
+                        "kind" : "SCALAR",
+                        "scalarType" : "double"
+                      }
+              },
+              {
+                                    "name" : "prodofferpropensity",
+                                    "dataType" : {
+                                      "kind" : "SCALAR",
+                                      "scalarType" : "string"
+                                    }
+                                  },
+              {
+                                    "name" : "prodoffermodelerror",
+                                    "dataType" : {
+                                      "kind" : "SCALAR",
+                                      "scalarType" : "double"
+                                    }
+                            },
+                                          {
+                                                                "name" : "weighteddepofferprodprop",
+                                                                "dataType" : {
+                                                                  "kind" : "SCALAR",
+                                                                  "scalarType" : "string"
+                                                                }
+                                                        },
+                                                                      {
+                                                                                            "name" : "weightedindepofferprodprop",
+                                                                                            "dataType" : {
+                                                                                              "kind" : "SCALAR",
+                                                                                              "scalarType" : "string"
+                                                                                            }
+                                                                                    },
+
+
+        {
+                              "name" : "overallofferproductpropensity",
+                              "dataType" : {
+                                "kind" : "SCALAR",
+                                "scalarType" : "string"
+                              }
+                            },
+
+                {
+                                      "name" : "offerformpropensity",
+                                      "dataType" : {
+                                        "kind" : "SCALAR",
+                                        "scalarType" : "string"
+                                      }
+                                    },
+
+                                                {
+                                                                      "name" : "offerformmodelerror",
+                                                                      "dataType" : {
+                                                                        "kind" : "SCALAR",
+                                                                        "scalarType" : "double"
+                                                                      }
+                                                                    },
+
+       {
+               "name" : "valid_actionforms",
+               "dataType" : {
+                 "kind" : "ARRAY",
+                 "scalarType" : "string"
+               }
+             },
+                    {
+                            "name" : "validactionforms",
+                            "dataType" : {
+                              "kind" : "SCALAR",
+                              "scalarType" : "string"
+                            }
+                          },
+                      {
+                                            "name" : "avgactionformpropensity",
+                                            "dataType" : {
+                                              "kind" : "SCALAR",
+                                              "scalarType" : "string"
+                                            }
+                                          },
+                                          {
+                                                  "name" : "maxactionformpropensity",
+                                                  "dataType" : {
+                                                    "kind" : "SCALAR",
+                                                    "scalarType" : "string"
+                                                  }
+                                                },
+                                                              {
+                                                                      "name" : "bestactionform",
+                                                                      "dataType" : {
+                                                                        "kind" : "SCALAR",
+                                                                        "scalarType" : "string"
+                                                                      }
+                                                                    },
+                                                                                                              {
+                                                                                                                      "name" : "actionformofferpropensity",
+                                                                                                                      "dataType" : {
+                                                                                                                        "kind" : "SCALAR",
+                                                                                                                        "scalarType" : "string"
+                                                                                                                      }
+                                                                                                                    },
+
+                                                                                                                            {
+                                                                                                                                    "name" : "actionformoffermodelerror",
+                                                                                                                                    "dataType" : {
+                                                                                                                                      "kind" : "SCALAR",
+                                                                                                                                      "scalarType" : "double"
+                                                                                                                                    }
+                                                                                                                                  },
+                                                               {
+                                                                       "name" : "bestactionformmodelerror",
+                                                                       "dataType" : {
+                                                                         "kind" : "SCALAR",
+                                                                         "scalarType" : "string"
+                                                                       }
+                                                                     },
+                                                                                                                             {
+                                                                                                                                     "name" : "avgactionformmodelerror",
+                                                                                                                                     "dataType" : {
+                                                                                                                                       "kind" : "SCALAR",
+                                                                                                                                       "scalarType" : "string"
+                                                                                                                                     }
+                                                                                                                                   },
+
+{
+                                                                       "name" : "weighteddepofferformprop",
+                                                                       "dataType" : {
+                                                                         "kind" : "SCALAR",
+                                                                         "scalarType" : "string"
+                                                                       }
+                                                                     }
+                                                                     ,
+                                                                     {
+                                                                                                                                            "name" : "weightedindepofferformprop",
+                                                                                                                                            "dataType" : {
+                                                                                                                                              "kind" : "SCALAR",
+                                                                                                                                              "scalarType" : "string"
+                                                                                                                                            }
+                                                                                                                                          }
+                                                                                                                                          ,
+                                                               {
+                                                                       "name" : "overallofferactionformpropensity",
+                                                                       "dataType" : {
+                                                                         "kind" : "SCALAR",
+                                                                         "scalarType" : "string"
+                                                                       }
+                                                                     }
+                                                                     ,
+                                                                           {
+                                                                                    "name" : "offerpropensity",
+                                                                                    "dataType" : {
+                                                                                      "kind" : "SCALAR",
+                                                                                      "scalarType" : "string"
+                                                                                    }
+                                                                                  },
+                                                                                  {
+                                                                                                "name" : "offerscore",
+                                                                                                "dataType" : {
+                                                                                                  "kind" : "SCALAR",
+                                                                                                  "scalarType" : "string"
+                                                                                                }
+                                                                                              },
+                                                                                   {
+                                                                                    "name" : "nboscore",
+                                                                                    "dataType" : {
+                                                                                      "kind" : "SCALAR",
+                                                                                      "scalarType" : "string"
+                                                                                    }
+                                                                                  },
+
+                                                                                                                                                                     {
+                                                                                                                                                                      "name" : "string_name_personal_parameter1",
+                                                                                                                                                                      "dataType" : {
+                                                                                                                                                                        "kind" : "SCALAR",
+                                                                                                                                                                        "scalarType" : "string"
+                                                                                                                                                                      }
+                                                                                                                                                                    },
+                                                                                                                                                                                 {
+                                                                                                                                                                                                                                      "name" : "string_personal_parameter1",
+                                                                                                                                                                                                                                      "dataType" : {
+                                                                                                                                                                                                                                        "kind" : "SCALAR",
+                                                                                                                                                                                                                                        "scalarType" : "string"
+                                                                                                                                                                                                                                      }
+                                                                                                                                                                                                                                    },
+      {
+                                                                                                                                                                       "name" : "double_name_personal_parameter1",
+                                                                                                                                                                       "dataType" : {
+                                                                                                                                                                         "kind" : "SCALAR",
+                                                                                                                                                                         "scalarType" : "string"
+                                                                                                                                                                       }
+                                                                                                                                                                     },
+                                                                                                                                                                                  {
+                                                                                                                                                                                                                                       "name" : "double_personal_parameter1",
+                                                                                                                                                                                                                                       "dataType" : {
+                                                                                                                                                                                                                                         "kind" : "SCALAR",
+                                                                                                                                                                                                                                         "scalarType" : "string"
+                                                                                                                                                                                                                                       }
+                                                                                                                                                                                                                                     }
+ ,
+
+                                                                                                                                                                      {
+                                                                                                                                                                       "name" : "string_name_personal_parameter2",
+                                                                                                                                                                       "dataType" : {
+                                                                                                                                                                         "kind" : "SCALAR",
+                                                                                                                                                                         "scalarType" : "string"
+                                                                                                                                                                       }
+                                                                                                                                                                     },
+                                                                                                                                                                                  {
+                                                                                                                                                                                                                                       "name" : "string_personal_parameter2",
+                                                                                                                                                                                                                                       "dataType" : {
+                                                                                                                                                                                                                                         "kind" : "SCALAR",
+                                                                                                                                                                                                                                         "scalarType" : "string"
+                                                                                                                                                                                                                                       }
+                                                                                                                                                                                                                                     },
+ {
+                                                                                                                                                                                                                                       "name" : "offercopy",
+                                                                                                                                                                                                                                       "dataType" : {
+                                                                                                                                                                                                                                         "kind" : "SCALAR",
+                                                                                                                                                                                                                                         "scalarType" : "string"
+                                                                                                                                                                                                                                       }
+                                                                                                                                                                                                                                     },
+
+ {
+                                                                                                                                                                                                                                        "name" : "offerprodeligibility",
+                                                                                                                                                                                                                                        "dataType" : {
+                                                                                                                                                                                                                                          "kind" : "SCALAR",
+                                                                                                                                                                                                                                          "scalarType" : "string"
+                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                      }
+
+
+       ],
+      "primaryKey" : [ "id" ]
+    },
+    "rows" : [ {
+      "id" : "1",
+      "valid_journey_stages" : [ "Consideration" ],
+      "valid_locations":[ "car loan overview page","car loan simulation page" ],
+      "valid_identifications": [ "authenticated", "identified" ],
+      "valid_products": [ "1", "2" ],
+      "valid_until_time": "2019-03-12T04:05:06.007Z",
+       "offereligibility": "switch(dna.flagExistingCustomer=1 and ifNull(dna.flagDebtCollection,0)=0 and dna.fake_flagTransactionBanking=1 and dna.profitabilityPercentile>0.5 and dna.offerProdEligibility[offers_id=entity.id]=1,1,0)",
+       "string_name_personal_parameter1": "First Name",
+       "string_personal_parameter1": "dna.firstName",
+        "double_name_personal_parameter1": "Personal Discount",
+        "double_personal_parameter1": "switch(dna.profitabilityPercentile>0.05 and dna.profitabilityPercentile<0.65,0.25,dna.profitabilityPercentile>0.65 and dna.profitabilityPercentile<0.80, 0.50,dna.profitabilityPercentile>0.80,0.75)",
+        "string_name_personal_parameter2": "Checking Account Name",
+        "string_personal_parameter2": "dna.lastProductNameByCategory[category='Checking Account']",
+        "offercopy": "concat('Hi ', dna.offerStrPersonalParameter1[offers_id=entity.id], ', save an extra ', dna.offerDblPersonalParameter1[offers_id=entity.id], '% off the car loan rate if you apply by ', switch(month(toDate(entity.valid_until_time))=1,'January', month(toDate(entity.valid_until_time))=2,'February', month(toDate(entity.valid_until_time))=3,'March',month(toDate(entity.valid_until_time))=4,'April', month(toDate(entity.valid_until_time))=5,'May',month(toDate(entity.valid_until_time))=6,'June', month(toDate(entity.valid_until_time))=7,'July',month(toDate(entity.valid_until_time))=8,'August',month(toDate(entity.valid_until_time))=9,'September',month(toDate(entity.valid_until_time))=10,'October',month(toDate(entity.valid_until_time))=11,'November',month(toDate(entity.valid_until_time))=12,'December'),' ', dayOfMonth(toDate(entity.valid_until_time)), ' ', year(toDate(entity.valid_until_time)), ' and make loan payments automatically from your ', dna.offerStrPersonalParameter2[offers_id=entity.id], 'checkings account.')",
+                                        "minnbrproductsshow": 1,
+        "maxnbrproductsshow": 2,
+        "offerprodeligibility":"switch(sum(get(filter(dna.productEligibility, contains(entity.valid_products, cast(r.products_id,'string') ) ) , 'value'))>= entity.minnbrproductsshow, 1, 0)",
+        "offerproductpropensity": "random()",
+        "offerprodmodelerror": 0.05,
+        "avgproductpropensity": "avg(selectColumn(filter(dna.productPropensity, contains(cast(selectColumn(filter(dna.productEligibility, contains(entity.valid_products, cast(r.products_id, 'string'))),'products_id'),'array{string}'), cast(r.products_id,'string'))), 'value'))",
+        "maxproductpropensity":"max(selectColumn(filter(dna.productPropensity, contains(cast(selectColumn(filter(dna.productEligibility, contains(entity.valid_products, cast(r.products_id, 'string'))),'products_id'),'array{string}'), cast(r.products_id,'string'))), 'value'))",
+        "maxproductpriority": "max(selectColumn(filter(dna.productPriority, contains(cast(selectColumn(filter(dna.productEligibility, contains(entity.valid_products, cast(r.products_id, 'string'))),'products_id'),'array{string}'), cast(r.products_id,'string'))), 'value'))",
+        "avgprodmodelerror":  "avg(selectColumn(filter(dna.prodModelError, contains(cast(selectColumn(filter(dna.productEligibility, contains(entity.valid_products, cast(r.products_id, 'string'))),'products_id'),'array{string}'), cast(r.products_id,'string'))), 'value'))",
+        "indepofferpropensity": "random()",
+        "offermodelerror": 0.03,
+        "prodofferpropensity": "random()",
+        "prodoffermodelerror": 0.04,
+"weighteddepofferprodprop": "((1-ifNull(entity.offerprodmodelerror,0.0))*ifNull(dna.offerProductPropensity[offers_id=entity.id],0.0))",
+        "weightedindepofferprodprop": "((((1-ifNull(entity.prodoffermodelerror,0.0)) * ifNull(dna.prodOfferPropensity[offers_id=entity.id],0.0)) * ((1-ifNull(entity.offermodelerror,0.0)) * ifNull(dna.indepOfferPropensity[offers_id=entity.id],0.0)))/ifNull(((1-ifNull(dna.avgProdModelError[offers_id=entity.id],0.0)) * ifNull(dna.avgProductPropensity[offers_id=entity.id],0.0)),1.0) )",
+        "overallofferproductpropensity": "( dna.weightedDepOfferProdProp[offers_id=entity.id] + dna.weightedIndepOfferProdProp[offers_id=entity.id])/switch(isNull(dna.weightedDepOfferProdProp)=false and isNull(dna.weightedIndepOfferProdProp)=false, 2.0,1.0)",
+
+        "offerformpropensity": "random()",
+        "offerformmodelerror": 0.05,
+        "valid_actionforms":["1", "2","3" ],
+        "avgactionformpropensity": "avg(selectColumn(filter(dna.actionFormPropensity, contains(cast(selectColumn(filter(dna.actionFormEligibility, contains(entity.valid_actionforms, cast(r.forms_id, 'string'))),'forms_id'),'array{string}'), cast(r.forms_id,'string'))), 'value'))",
+        "maxactionformpropensity": "max(selectColumn(filter(dna.actionFormPropensity, contains(cast(selectColumn(filter(dna.actionFormEligibility, contains(entity.valid_actionforms, cast(r.forms_id, 'string'))),'forms_id'),'array{string}'), cast(r.forms_id,'string'))), 'value'))",
+        "bestactionform": "get(top(filter(dna.actionFormPropensity, contains(cast(selectColumn(filter(dna.actionFormEligibility, contains(entity.valid_actionforms, cast(r.forms_id, 'string'))),'forms_id'),'array{string}'), cast(r.forms_id,'string')))),'forms_id')",
+        "actionformofferpropensity": "random()",
+        "actionformoffermodelerror": 0.02,
+        "avgactionformmodelerror": "avg(selectColumn(filter(dna.actionFormModelError, contains(cast(selectColumn(filter(dna.actionFormEligibility, contains(entity.valid_actionforms, cast(r.forms_id, 'string'))),'forms_id'),'array{string}'), cast(r.forms_id,'string'))), 'value'))",
+        "weighteddepofferformprop": "((1-ifNull(entity.offerformmodelerror,0.0))*ifNull(dna.offerFormPropensity[offers_id=entity.id],0.0))",
+        "weightedindepofferformprop": "((((1-ifNull(entity.actionformoffermodelerror,0.0)) * ifNull(dna.actionFormOfferPropensity[offers_id=entity.id],0.0)) * ((1-ifNull(entity.offermodelerror,0.0)) * ifNull(dna.indepOfferPropensity[offers_id=entity.id],0.0)))/ifNull(((1-ifNull(dna.avgActionFormModelError[offers_id=entity.id],0.0)) * ifNull(dna.maxActionFormPropensity[offers_id=entity.id],0.0)),1.0) )",
+         "overallofferactionformpropensity": "( dna.weightedDepOfferFormProp[offers_id=entity.id] + dna.weightedIndepOfferFormProp[offers_id=entity.id])/switch(isNull(dna.weightedDepOfferFormProp)=false and isNull(dna.weightedIndepOfferFormProp)=false, 2.0,1.0)"
+
+    },
+    {
+      "id" : "2",
+      "valid_journey_stages" : [ "Consideration" ],
+       "valid_locations":[ "car loan overview page","car loan simulation page" ],
+                      "double_name_personal_parameter1": "Personal Discount Rate",
+                      "double_personal_parameter1": "switch(dna.profitabilityPercentile>0.05 and dna.profitabilityPercentile<0.65,0.25,dna.profitabilityPercentile>0.65 and dna.profitabilityPercentile<0.80, 0.50,dna.profitabilityPercentile>0.80,0.75)"
+    },
+    {
+      "id" : "3",
+       "valid_journey_stages" : [ "Consideration" ],
+        "valid_locations":[ "car loan overview page","car loan simulation page" ],
+                        "double_name_personal_parameter1": "Personal Discount Rate",
+                        "double_personal_parameter1": "switch(dna.profitabilityPercentile>0.05 and dna.profitabilityPercentile<0.65,0.25,dna.profitabilityPercentile>0.65 and dna.profitabilityPercentile<0.80, 0.50,dna.profitabilityPercentile>0.80,0.75)"
+
+    },
+     {
+      "id" : "4",
+      "valid_journey_stages" : [ "Consideration" ],
+       "valid_locations":[ "car loan overview page","car loan simulation page" ],
+                       "double_name_personal_parameter1": "Personal Discount Rate",
+                       "double_personal_parameter1": "switch(dna.profitabilityPercentile>0.05 and dna.profitabilityPercentile<0.65,0.25,dna.profitabilityPercentile>0.65 and dna.profitabilityPercentile<0.80, 0.50,dna.profitabilityPercentile>0.80,0.75)"
+    } ]
+  },
+  "attributes" : { }
+}

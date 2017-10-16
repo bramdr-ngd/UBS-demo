@@ -1,0 +1,9 @@
+{
+  "name" : "Safety Seekers",
+  "description" : "Singles/Single parents",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "flagSafetySeekersMember = 1"
+}

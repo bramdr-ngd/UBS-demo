@@ -1,0 +1,44 @@
+{
+  "name" : "Brunos data frame",
+  "description" : "Brunos data frame",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "USER:brunod"
+  } ],
+  "dnaEntityFilter" : {
+    "type" : "CONDITIONS_FILTER",
+    "conditions" : "isMemberOf(\"Elites\")"
+  },
+  "timeSeriesExpression" : "timeSeriesBetween(date('2017-01-01'),date('2017-01-31'),'P1D')",
+  "metricReferenceTimeExpression" : "df.sampleTime",
+  "filterReferenceTimeExpression" : "df.sampleTime",
+  "variables" : [ {
+    "dnaVariableName" : "likes"
+  }, {
+    "dnaVariableName" : "negativeTweets"
+  }, {
+    "dnaVariableName" : "positiveTweets"
+  }, {
+    "dnaVariableName" : "totalComplaints"
+  }, {
+    "dnaVariableName" : "totalSupportCalls"
+  }, {
+    "dnaVariableName" : "totalComplaints",
+    "timeOffset" : "P7D"
+  }, {
+    "dnaVariableName" : "contactFrequencyByChannel"
+  }, {
+    "dnaVariableName" : "totalActiveBondsBySubCategory"
+  } ],
+  "outputFormat" : {
+    "type" : "csv",
+    "separator" : "|",
+    "quoteChar" : "\u0000",
+    "escapeChar" : "\"",
+    "includeHeaders" : true
+  },
+  "groupedValueMode" : "COLUMN_EXPLOSION",
+  "groupedValueLimit" : 100,
+  "exportOriginalSourceIds" : true,
+  "referenceTimeSamplingEnabled" : false
+}

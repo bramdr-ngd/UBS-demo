@@ -1,0 +1,9 @@
+{
+  "name" : "Eligible Existing Car Loan Customers",
+  "description" : "Existing customers eligible for a new car loan",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "flagExistingCustomer=1 AND productEligibility[products_id=1]=1"
+}

@@ -1,0 +1,10 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "USER:michaelvr"
+  } ],
+  "attributes" : { },
+  "description" : "MVR Engagement View",
+  "dnaVariables" : [ "likes", "positiveTweets", "totalComplaints", "totalSupportCalls" ],
+  "name" : "MVR Engagement View"
+}

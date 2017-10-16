@@ -1,0 +1,56 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "description" : "Dataframe to predict a customer's loyalty",
+  "dnaEntityFilter" : {
+    "name" : "All Profiles",
+    "type" : "SET_FILTER"
+  },
+  "exportOriginalSourceIds" : true,
+  "filterReferenceTimeExpression" : "addDays(df.executionTime,-30)",
+  "groupedValueLimit" : 100,
+  "groupedValueMode" : "COLUMN_EXPLOSION",
+  "metricReferenceTimeExpression" : "df.executionTime",
+  "name" : "Loyalty",
+  "outputFormat" : {
+    "escapeChar" : "\"",
+    "includeHeaders" : false,
+    "quoteChar" : "\u0000",
+    "separator" : "|",
+    "type" : "csv"
+  },
+  "referenceTimeSamplingEnabled" : true,
+  "timeSeriesExpression" : "df.executionTime",
+  "variables" : [ {
+    "dnaVariableName" : "flagActive"
+  }, {
+    "dnaVariableName" : "likes",
+    "timeOffset" : "-P30D"
+  }, {
+    "dnaVariableName" : "positiveTweets",
+    "timeOffset" : "-P30D"
+  }, {
+    "dnaVariableName" : "segment",
+    "timeOffset" : "-P30D"
+  }, {
+    "dnaVariableName" : "proportionShareOfWallet",
+    "timeOffset" : "-P30D"
+  }, {
+    "dnaVariableName" : "shares",
+    "timeOffset" : "-P30D"
+  }, {
+    "dnaVariableName" : "totalActiveProducts",
+    "timeOffset" : "-P30D"
+  }, {
+    "dnaVariableName" : "totalBankProducts",
+    "timeOffset" : "-P30D"
+  }, {
+    "dnaVariableName" : "totalComplaintsPer180Days",
+    "timeOffset" : "-P30D"
+  }, {
+    "dnaVariableName" : "totalPortfolioAdjustmentsPer120Days",
+    "timeOffset" : "-P30D"
+  } ]
+}

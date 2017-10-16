@@ -1,0 +1,250 @@
+{
+  "type" : "record",
+  "name" : "branch",
+  "namespace" : "ngdata.lily",
+  "fields" : [ {
+    "name" : "timestamp",
+    "type" : "long",
+    "doc" : "When did this interaction happen, in Java milliseconds, at client side. For log-based interactions the channel-specific time stamp indicating the start of the interaction should be mapped to the generic timestamp."
+  }, {
+    "name" : "tenantId",
+    "type" : [ "null", "string" ],
+    "doc" : "The tenantId to which this interaction belongs to",
+    "default" : null
+  }, {
+    "name" : "customerId",
+    "type" : [ "null", "string" ],
+    "doc" : "ID of the CRM customer . This is a nullable ExternalID",
+    "default" : null,
+    "lilySourceId" : "true",
+    "lilyDnaEntityType" : "customer_CRM"
+  }, {
+    "name" : "cardType",
+    "type" : [ "null", "string" ],
+    "doc" : "Type of the card used",
+    "default" : null
+  }, {
+    "name" : "amount",
+    "type" : [ "null", "double" ],
+    "doc" : "amount of the transaction",
+    "default" : null
+  }, {
+    "name" : "timezone",
+    "type" : [ "null", "long" ],
+    "doc" : "The time zone at client side when the interaction happened.",
+    "default" : null
+  }, {
+    "name" : "sequenceId",
+    "type" : [ "null", "string" ],
+    "doc" : "Sequence number of the interaction in a conversation",
+    "default" : null
+  }, {
+    "name" : "medium",
+    "type" : [ "null", "string" ],
+    "doc" : "The medium of the interaction (e.g. written, oral).",
+    "default" : null
+  }, {
+    "name" : "channel",
+    "type" : [ "null", "string" ],
+    "doc" : "Channel that captured the interaction (UTS, CALL, EMAIL, PAYMENT_SYSTEM, ...)",
+    "default" : null
+  }, {
+    "name" : "source",
+    "type" : [ "null", "string" ],
+    "doc" : "Specific source the interaction stems from (e.g. messagent for channel email)",
+    "default" : null
+  }, {
+    "name" : "goal",
+    "type" : "string",
+    "doc" : "Main goal (goal) of the interaction (complaint, ...)"
+  }, {
+    "name" : "subgoal",
+    "type" : "string",
+    "doc" : "More specific goal (subgoal) of the interaction (product complaint, ...)"
+  }, {
+    "name" : "reason",
+    "type" : [ "null", "string" ],
+    "doc" : "Interaction reason that further clarifies the sub goal (e.g. sub goal= product complaint, reason: malfunctioning of product)",
+    "default" : null
+  }, {
+    "name" : "brand",
+    "type" : [ "null", "string" ],
+    "doc" : "Brand of the item the interaction is associated to.",
+    "default" : null
+  }, {
+    "name" : "inboundFlag",
+    "type" : [ "null", "boolean" ],
+    "doc" : "The interaction is customer initiated (inbound)",
+    "default" : null
+  }, {
+    "name" : "successFlag",
+    "type" : [ "null", "boolean" ],
+    "doc" : "A successful interaction.",
+    "default" : null
+  }, {
+    "name" : "failureReason",
+    "type" : [ "null", "string" ],
+    "doc" : "Reason the interaction failed.",
+    "default" : null
+  }, {
+    "name" : "device",
+    "type" : [ "null", "string" ],
+    "doc" : "Device used by the customer for the interaction: pc, laptop, smartphone, tablet, mobile phone but not smartphone, fixed line, tablet",
+    "default" : null
+  }, {
+    "name" : "geocoordinates",
+    "type" : [ "null", "string" ],
+    "doc" : "Location of customer at the time of the interaction using geocordinates",
+    "default" : null
+  }, {
+    "name" : "latitude",
+    "type" : [ "null", "string" ],
+    "doc" : "Latitude of location of customer at time of the interaction",
+    "default" : null
+  }, {
+    "name" : "longitude",
+    "type" : [ "null", "string" ],
+    "doc" : "Longitude of location of customer at time of the interaction",
+    "default" : null
+  }, {
+    "name" : "transactionId",
+    "type" : [ "null", "long" ],
+    "doc" : "Unique identifier for the branch interaction.",
+    "default" : null
+  }, {
+    "name" : "userId",
+    "type" : [ "null", "string" ],
+    "doc" : "Unique identifier for the user of the branch. This is a non-nullable External Id.",
+    "default" : null
+  }, {
+    "name" : "IMEI",
+    "type" : [ "null", "string" ],
+    "doc" : "IMEI number: handset identification.",
+    "default" : null
+  }, {
+    "name" : "branchId",
+    "type" : [ "null", "long" ],
+    "doc" : "Unique identifier for the branch.",
+    "default" : null
+  }, {
+    "name" : "customerPriority",
+    "type" : [ "null", "long" ],
+    "doc" : "Priority score for customer used to prioritize branch response.",
+    "default" : null
+  }, {
+    "name" : "branchPriority",
+    "type" : [ "null", "long" ],
+    "doc" : "Priority score for a customer's specific inbound branch request. The branchPriority defines the branch request response handling.",
+    "default" : null
+  }, {
+    "name" : "branchName",
+    "type" : [ "null", "string" ],
+    "doc" : "Name of branch",
+    "default" : null
+  }, {
+    "name" : "branchBrand",
+    "type" : [ "null", "string" ],
+    "doc" : "Brand of branch",
+    "default" : null
+  }, {
+    "name" : "branchOutlet",
+    "type" : [ "null", "string" ],
+    "doc" : "Name of the branch Outlet.",
+    "default" : null
+  }, {
+    "name" : "umbrellaBrand",
+    "type" : [ "null", "string" ],
+    "doc" : "Name of the branch umbrella brand if applicable.",
+    "default" : null
+  }, {
+    "name" : "branchAddress",
+    "type" : [ "null", "string" ],
+    "doc" : "Address of the branch",
+    "default" : null
+  }, {
+    "name" : "firstNameReceiver",
+    "type" : [ "null", "string" ],
+    "doc" : "First name of cashier or sales person the customer interacts with.",
+    "default" : null
+  }, {
+    "name" : "lastNameReceiver",
+    "type" : [ "null", "string" ],
+    "doc" : "Last name of cashier or sales person the customer interacts with.",
+    "default" : null
+  }, {
+    "name" : "traineeFlag",
+    "type" : [ "null", "boolean" ],
+    "doc" : "The cashier or sales person is a trainee.",
+    "default" : null
+  }, {
+    "name" : "multiPartyFlag",
+    "type" : [ "null", "boolean" ],
+    "doc" : "Branch communications including more than two parties (employees or customers).",
+    "default" : null
+  }, {
+    "name" : "multiEmployeeFlag",
+    "type" : [ "null", "boolean" ],
+    "doc" : "Branch communications including more than one employee.",
+    "default" : null
+  }, {
+    "name" : "recordedFlag",
+    "type" : [ "null", "boolean" ],
+    "doc" : "The branch communication has been recorded.",
+    "default" : null
+  }, {
+    "name" : "salesVolume",
+    "type" : [ "null", "double" ],
+    "doc" : "Total number of products and/or services purchased.",
+    "default" : null
+  }, {
+    "name" : "totalRevenueVatIncl",
+    "type" : [ "null", "double" ],
+    "doc" : "Total amount of the transaction including VAT (total revenue).",
+    "default" : null
+  }, {
+    "name" : "totalRevenueVatExcl",
+    "type" : [ "null", "double" ],
+    "doc" : "Total amount of the transaction excluding VAT.",
+    "default" : null
+  }, {
+    "name" : "discountFlag",
+    "type" : [ "null", "boolean" ],
+    "doc" : "A branch interaction in which the user receives a discount.",
+    "default" : null
+  }, {
+    "name" : "totalDiscountAmount",
+    "type" : [ "null", "double" ],
+    "doc" : "Total amount of discount including VAT.",
+    "default" : null
+  }, {
+    "name" : "currency",
+    "type" : [ "null", "string" ],
+    "doc" : "Currency used to express monetary amounts.",
+    "default" : null
+  }, {
+    "name" : "conversationDuration",
+    "type" : [ "null", "long" ],
+    "doc" : "Duration of branch conversation",
+    "default" : null
+  }, {
+    "name" : "csatScore",
+    "type" : [ "null", "long" ],
+    "doc" : "Customer satisfaction feedback",
+    "default" : null
+  }, {
+    "name" : "memo",
+    "type" : [ "null", "string" ],
+    "doc" : "Description field for deposits",
+    "default" : null
+  }, {
+    "name" : "accountType",
+    "type" : [ "null", "string" ],
+    "doc" : "Description field for account type",
+    "default" : null
+  }, {
+    "name" : "offerType",
+    "type" : [ "null", "string" ],
+    "doc" : "Description field for offer type",
+    "default" : null
+  } ]
+}

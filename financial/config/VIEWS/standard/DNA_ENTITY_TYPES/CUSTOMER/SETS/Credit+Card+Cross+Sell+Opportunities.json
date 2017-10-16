@@ -1,0 +1,9 @@
+{
+  "name" : "Credit Card Cross Sell Opportunities",
+  "description" : "Customers with a credit card with a high propensity for cross sell",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "propensityCreditCardCrossSell > 0.5"
+}

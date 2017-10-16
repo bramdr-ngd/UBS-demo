@@ -1,0 +1,17 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "alertType" : "SET_MEMBER",
+  "alwaysFireOnActive" : false,
+  "conditions" : "propensityCarLoanModel > 0.6 AND eligibleForCarLoanOffer = 1",
+  "description" : "Alert for customers eligible for a car loan offer and with a propensity to buy > 0,6",
+  "enabled" : true,
+  "metricName" : "propensityCarLoanModel",
+  "name" : "Car Loan Offer Alert",
+  "notificationParameters" : { },
+  "setReference" : "All Profiles",
+  "attributes" : { },
+  "structuredConditions" : null
+}

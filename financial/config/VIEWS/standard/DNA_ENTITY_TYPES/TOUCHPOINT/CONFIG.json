@@ -1,0 +1,7 @@
+{
+  "anonymous" : false,
+  "dnaEntityType" : "TOUCHPOINT",
+  "mastersEnabled" : false,
+  "priority" : null,
+  "sourceIdAlgorithm" : "MURMUR3"
+}

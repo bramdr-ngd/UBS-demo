@@ -1,0 +1,17 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "alertType" : "SET_MEMBER",
+  "alwaysFireOnActive" : false,
+  "conditions" : "giveCarLoanReduction > 0",
+  "description" : "Alert for customers to give a car loan offer discount to",
+  "enabled" : true,
+  "metricName" : "giveCarLoanReduction",
+  "name" : "Car Loan Discount Alert",
+  "notificationParameters" : { },
+  "setReference" : "All Profiles",
+  "attributes" : { },
+  "structuredConditions" : null
+}

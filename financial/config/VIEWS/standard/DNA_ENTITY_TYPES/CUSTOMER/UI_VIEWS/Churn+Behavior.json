@@ -1,0 +1,10 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "attributes" : { },
+  "description" : "Churn Behavior",
+  "dnaVariables" : [ "scoreChurn", "totalBankBalance", "scoreChurnAmp", "totalDebitPurchasesPer60Days", "totalCreditPurchasesPer60Days", "totalDebitPurchaseAmountPer60Days", "totalCreditPurchaseAmountPer60Days", "totalAccountTransactionsPer7Days", "pChangeCashWithdrawalOver60Days", "totalWebActivitiesPer60Days", "totalMobileAppConsultationsPer60Days", "totalComplaintsPer180Days", "totalBankProducts", "totalActiveProducts", "negativeTweets" ],
+  "name" : "Churn Behavior"
+}

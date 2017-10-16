@@ -1,0 +1,9 @@
+{
+  "name" : "Self-Sufficients",
+  "description" : "Retired singles and couples",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "flagSelfSufficientsMember = 1"
+}

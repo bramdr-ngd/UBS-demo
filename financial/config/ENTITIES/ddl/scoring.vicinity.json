@@ -1,0 +1,20 @@
+{
+  "columns" : [ {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "distance",
+    "nullable" : true,
+    "type" : "string"
+  } ],
+  "multiTenant" : false,
+  "name" : "scoring.vicinity",
+  "primaryKey" : {
+    "columns" : [ {
+      "jdbcType" : "VARCHAR",
+      "maxLength" : null,
+      "name" : "id",
+      "nullable" : false,
+      "type" : "string"
+    } ]
+  }
+}

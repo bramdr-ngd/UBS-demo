@@ -1,0 +1,9 @@
+{
+  "name" : "Traditionalists",
+  "description" : "Diverse households",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "flagTraditionalistsMember = 1"
+}

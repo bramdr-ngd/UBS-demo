@@ -1,0 +1,67 @@
+{
+  "type" : "record",
+  "name" : "LocationUpdate",
+  "namespace" : "ngdata.lily",
+  "fields" : [ {
+    "name" : "timestamp",
+    "type" : "long",
+    "doc" : "When did this interaction happen, in Java milliseconds, at client side. For log-based interactions the channel-specific time stamp indicating the start of the interaction should be mapped to the generic timestamp."
+  }, {
+    "name" : "tenantId",
+    "type" : [ "null", "string" ],
+    "doc" : "The tenantId to which this interaction belongs to",
+    "default" : null
+  }, {
+    "name" : "timezone",
+    "type" : [ "null", "long" ],
+    "doc" : "The time zone at client side when the interaction happened.",
+    "default" : null
+  }, {
+    "name" : "device",
+    "type" : [ "null", "string" ],
+    "doc" : "Device used by the customer for the interaction: pc, laptop, smartphone, tablet, mobile phone but not smartphone, fixed line, tablet",
+    "default" : null
+  }, {
+    "name" : "channel",
+    "type" : "string",
+    "doc" : "Channel that captured the interaction (UTS, CALL, EMAIL, PAYMENT_SYSTEM, ...)",
+    "default" : "mobile"
+  }, {
+    "name" : "goal",
+    "type" : "string",
+    "doc" : "Main goal (goal) of the interaction (complaint, ...)",
+    "default" : "location"
+  }, {
+    "name" : "subgoal",
+    "type" : "string",
+    "doc" : "More specific goal (subgoal) of the interaction (product complaint, ...)",
+    "default" : "location"
+  }, {
+    "name" : "geocoordinates",
+    "type" : [ "null", "string" ],
+    "doc" : "Location of customer at the time of the interaction using geocordinates",
+    "default" : null
+  }, {
+    "name" : "locationname",
+    "type" : [ "null", "string" ],
+    "doc" : "Location of customer at the time of the interaction",
+    "default" : null
+  }, {
+    "name" : "latitude",
+    "type" : [ "null", "double" ],
+    "doc" : "Latitude of location of customer at time of the interaction",
+    "default" : null
+  }, {
+    "name" : "longitude",
+    "type" : [ "null", "double" ],
+    "doc" : "Longitude of location of customer at time of the interaction",
+    "default" : null
+  }, {
+    "name" : "customerCRMId",
+    "type" : [ "null", "string" ],
+    "doc" : "ID of the CRM customer . This is a nullable ExternalID",
+    "default" : null,
+    "lilySourceId" : "true",
+    "lilyDnaEntityType" : "customer_CRM"
+  } ]
+}

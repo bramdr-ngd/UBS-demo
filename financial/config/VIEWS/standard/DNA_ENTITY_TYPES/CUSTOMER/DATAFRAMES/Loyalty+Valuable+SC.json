@@ -1,0 +1,36 @@
+{
+  "name" : "Loyalty Valuable SC",
+  "description" : "Loyalty",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "USER:sebastienc"
+  } ],
+  "dnaEntityFilter" : {
+    "type" : "CONDITIONS_FILTER",
+    "conditions" : "isMemberOf(\"Elites\")"
+  },
+  "timeSeriesExpression" : "addDays(df.executionTime,-30)",
+  "metricReferenceTimeExpression" : "df.sampleTime",
+  "filterReferenceTimeExpression" : "df.sampleTime",
+  "variables" : [ {
+    "dnaVariableName" : "flagActive",
+    "timeOffset" : "P30D"
+  }, {
+    "dnaVariableName" : "scoreLoyalty"
+  }, {
+    "dnaVariableName" : "scoreLoyalty01"
+  }, {
+    "dnaVariableName" : "totalActiveSavingsAccountsBySubCategory"
+  } ],
+  "outputFormat" : {
+    "type" : "csv",
+    "separator" : "|",
+    "quoteChar" : "\u0000",
+    "escapeChar" : "\"",
+    "includeHeaders" : true
+  },
+  "groupedValueMode" : "COLUMN_EXPLOSION",
+  "groupedValueLimit" : 100,
+  "exportOriginalSourceIds" : true,
+  "referenceTimeSamplingEnabled" : true
+}

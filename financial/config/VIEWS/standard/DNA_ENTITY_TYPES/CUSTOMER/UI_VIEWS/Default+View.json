@@ -1,0 +1,10 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "attributes" : { },
+  "description" : "Default View",
+  "dnaVariables" : [ "monthlyIncomeReal", "age", "proportionShareOfWallet", "shareOfWalletSize", "totalComplaintsPer180Days", "totalActiveProducts", "totalDebitPurchasesPer120Days", "totalCreditPurchasesPer120Days", "totalCashWithdrawalPer120Days", "totalCashWithdrawalAmountPer120Days", "totalDebitPurchaseAmountPer120Days", "totalCreditPurchaseAmountPer120Days", "affNightLife", "affFastFood", "affOutdoor", "affLuxuryShopper" ],
+  "name" : "Default View"
+}

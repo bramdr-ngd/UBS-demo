@@ -1,0 +1,14 @@
+#!/bin/bash
+
+{{target.ansible.dir}}/scripts/data-generate-customers.py -n 50000 -o /disk1/current/ -m {{target.ansible.dir}}/scripts/data-generate-model/
+{{target.ansible.dir}}/scripts/data-generate-products.py  -o /disk1/current/ -m {{target.ansible.dir}}/scripts/data-generate-model -c /disk1/current/CrmDataToFilter.csv
+{{target.ansible.dir}}/scripts/data-generate-account.py  -o /disk1/current/ -m {{target.ansible.dir}}/scripts/data-generate-model -c /disk1/current/EntityDataAll.csv
+{{target.ansible.dir}}/scripts/data-generate-account_role.py  -o /disk1/current/ -m {{target.ansible.dir}}/scripts/data-generate-model -c /disk1/current/EntityDataAll.csv
+{{target.ansible.dir}}/scripts/data-generate-itx.py -n 6 -o /disk1/current -m {{target.ansible.dir}}/scripts/data-generate-model/
+
+{{target.ansible.dir}}/scripts/data-load-customers.sh   /disk1/current/CrmDataToLoad.csv
+{{target.ansible.dir}}/scripts/data-load-products.sh /disk1/current/EntityDataToLoad.csv
+{{target.ansible.dir}}/scripts/data-load-account.sh  /disk1/current/AccountData.csv
+{{target.ansible.dir}}/scripts/data-load-account_role.sh /disk1/current/AccountRoleData.csv
+
+{{target.ansible.dir}}/scripts/data-reload-itx.sh /disk1/current

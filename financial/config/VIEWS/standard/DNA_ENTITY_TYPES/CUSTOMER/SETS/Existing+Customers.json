@@ -1,0 +1,9 @@
+{
+  "name" : "Existing Customers",
+  "description" : "Customers who are an existing customer: alive and have at least one product",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "flagExistingCustomer = 1"
+}

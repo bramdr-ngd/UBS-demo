@@ -1,0 +1,33 @@
+{
+  "columns" : [ ],
+  "multiTenant" : true,
+  "name" : "product_bundle_role",
+  "primaryKey" : {
+    "columns" : [ {
+      "jdbcType" : "CHAR",
+      "maxLength" : 1,
+      "name" : "tenant_id",
+      "nullable" : false,
+      "type" : null
+    }, {
+      "jdbcType" : "VARCHAR",
+      "maxLength" : null,
+      "name" : "product_bundle_id",
+      "nullable" : false,
+      "type" : "string"
+    }, {
+      "jdbcType" : "BIGINT",
+      "maxLength" : null,
+      "name" : "customer_id",
+      "nullable" : false,
+      "type" : "long"
+    }, {
+      "jdbcType" : "VARCHAR",
+      "maxLength" : null,
+      "name" : "role",
+      "nullable" : false,
+      "type" : "string"
+    } ]
+  },
+  "saltBuckets" : 1
+}

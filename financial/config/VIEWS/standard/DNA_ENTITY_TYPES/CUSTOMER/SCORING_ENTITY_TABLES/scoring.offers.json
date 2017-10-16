@@ -1,0 +1,78 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "id" : null,
+  "description" : null,
+  "name" : "scoring.offers",
+  "table" : {
+    "type" : {
+      "kind" : "TABLE",
+      "fields" : [ {
+        "name" : "id",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "long"
+        }
+      }, {
+        "name" : "offer",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "description",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "offercategory",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "offerexpression",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      } ],
+      "primaryKey" : [ "id" ]
+    },
+    "rows" : [ {
+      "id" : "1",
+      "offer" : "Default offer",
+      "description" : "Default offer to make if customer is unidentified.",
+      "offercategory" : "Sales",
+      "offerexpression" : "0.01"
+    }, {
+      "id" : "2",
+      "offer" : "New Car loan offer",
+      "description" : "New car loan offer.",
+      "offercategory" : "Sales",
+      "offerexpression" : "(floor((dna.eligibleForCarLoanOffer * dna.propensityCarLoanModel)*100)/100)"
+    }, {
+      "id" : "3",
+      "offer" : "Low Interest Credit card offer",
+      "description" : "Offer for a new low interest credit card.",
+      "offercategory" : "Sales",
+      "offerexpression" : "(floor((dna.eligibleForCreditCardCrossSell * dna.propensityCreditCardCrossSell)*100)/100)"
+    }, {
+      "id" : "4",
+      "offer" : "New mutual fund offer",
+      "description" : "Offer for a new mutual fund.",
+      "offercategory" : "Sales",
+      "offerexpression" : "(floor((dna.eligibleForInvestmentAccount * dna.propensityInvestmentAccount)*100)/100)"
+    }, {
+      "id" : "5",
+      "offer" : "Loyalty offer",
+      "description" : "Loyalty offer.",
+      "offercategory" : "Relational",
+      "offerexpression" : "(floor((dna.scoreLoyalty/100)*100)/100)"
+    } ]
+  },
+  "attributes" : { }
+}

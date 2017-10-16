@@ -1,0 +1,19 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "USER:ganeshr"
+  } ],
+  "alertType" : "SET_MEMBER",
+  "alwaysFireOnActive" : false,
+  "conditions" : "(dna.scoreChurnAmp > 0.85)",
+  "description" : "TestMe Alert-2-GK",
+  "enabled" : true,
+  "metricName" : "scoreChurnAmp",
+  "name" : "TestMe Alert-2-GK",
+  "notificationParameters" : {
+    "rulesengine.trigger" : "true"
+  },
+  "setReference" : "Elites",
+  "attributes" : { },
+  "structuredConditions" : null
+}

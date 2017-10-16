@@ -1,0 +1,9 @@
+{
+  "name" : "Professional Banking",
+  "description" : "Customers who have (partially) independent activities",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "flagSelfEmployed = 1"
+}

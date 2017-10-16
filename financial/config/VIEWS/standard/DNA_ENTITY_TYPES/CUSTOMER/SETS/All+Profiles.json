@@ -1,0 +1,9 @@
+{
+  "name" : "All Profiles",
+  "description" : "All Profiles",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "1=1"
+}

@@ -1,0 +1,17 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "alertType" : "SET_MEMBER",
+  "alwaysFireOnActive" : false,
+  "conditions" : "daysBetweenMobileAppReg > 30 AND regMobileApp!=1",
+  "description" : "Customer has downloaded mobile but has not yet created his profile",
+  "enabled" : true,
+  "metricName" : "daysBetweenMobileAppReg",
+  "name" : "Dormant App Alert",
+  "notificationParameters" : { },
+  "setReference" : "All Profiles",
+  "attributes" : { },
+  "structuredConditions" : null
+}

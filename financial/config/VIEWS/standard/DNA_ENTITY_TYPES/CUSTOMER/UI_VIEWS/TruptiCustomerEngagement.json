@@ -1,0 +1,10 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "attributes" : { },
+  "description" : "TruptiCustomerEngagement",
+  "dnaVariables" : [ "negativeTweets" ],
+  "name" : "TruptiCustomerEngagement"
+}

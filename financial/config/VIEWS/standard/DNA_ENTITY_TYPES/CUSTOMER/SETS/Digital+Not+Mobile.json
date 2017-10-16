@@ -1,0 +1,9 @@
+{
+  "name" : "Digital Not Mobile",
+  "description" : "Customers who use digital services, have a mobile, yet do not use mobile services",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "(contactMobileActive = 1 AND hasMobileApp = 1) OR (hasMobileApp = 1 and regMobileApp = 0)"
+}

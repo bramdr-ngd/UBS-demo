@@ -1,0 +1,31 @@
+{
+  "name" : "testbd",
+  "description" : "testbd",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "USER:brunod"
+  } ],
+  "dnaEntityFilter" : {
+    "type" : "SET_FILTER",
+    "name" : "customer_all"
+  },
+  "timeSeriesExpression" : "dna.downloadDateMobileApp",
+  "metricReferenceTimeExpression" : "df.sampleTime",
+  "filterReferenceTimeExpression" : "df.sampleTime",
+  "variables" : [ {
+    "dnaVariableName" : "NBOsXLExclusiveOffer"
+  }, {
+    "dnaVariableName" : "NBOsXLGoodValueOffer"
+  } ],
+  "outputFormat" : {
+    "type" : "csv",
+    "separator" : "|",
+    "quoteChar" : "\u0000",
+    "escapeChar" : "\"",
+    "includeHeaders" : false
+  },
+  "groupedValueMode" : "COLUMN_EXPLOSION",
+  "groupedValueLimit" : 100,
+  "exportOriginalSourceIds" : true,
+  "referenceTimeSamplingEnabled" : true
+}

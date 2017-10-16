@@ -1,0 +1,19 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "USER:sebastienc"
+  } ],
+  "alertType" : "SET_MEMBER",
+  "alwaysFireOnActive" : false,
+  "conditions" : "(dna.cashWithdrawalAmountLast > 600)",
+  "description" : "really large cash amount SC",
+  "enabled" : true,
+  "metricName" : "cashWithdrawalAmountLast",
+  "name" : "really large cash amount SC",
+  "notificationParameters" : {
+    "rulesengine.trigger" : "true"
+  },
+  "setReference" : "customer_all",
+  "attributes" : { },
+  "structuredConditions" : null
+}

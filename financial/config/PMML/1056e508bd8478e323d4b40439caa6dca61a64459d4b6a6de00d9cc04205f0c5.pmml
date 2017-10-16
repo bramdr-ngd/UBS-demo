@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<PMML version="4.2" xmlns="http://www.dmg.org/PMML-4_2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_2 http://www.dmg.org/v4-2/pmml-4-2.xsd">
+ <Header copyright="Copyright (c) 2016 llvergey" description="Generalized Linear Regression Model">
+  <Extension name="user" value="llvergey" extender="Rattle/PMML"/>
+  <Application name="Rattle/PMML" version="1.4"/>
+  <Timestamp>2016-11-28 10:40:26</Timestamp>
+ </Header>
+ <DataDictionary numberOfFields="8">
+  <DataField name="targetInit" optype="categorical" dataType="string">
+   <Value value="0"/>
+   <Value value="1"/>
+  </DataField>
+  <DataField name="segment" optype="categorical" dataType="string">
+   <Value value="Elites"/>
+   <Value value="New World Adopters"/>
+   <Value value="Safety Seekers"/>
+   <Value value="Self-Sufficients"/>
+   <Value value="Traditionalists"/>
+   <Value value="Upwardly Mobiles"/>
+  </DataField>
+  <DataField name="totalAssets" optype="continuous" dataType="double"/>
+  <DataField name="totalCashWithdrawalPer120Days" optype="continuous" dataType="double"/>
+  <DataField name="flagCreditCard" optype="continuous" dataType="double"/>
+  <DataField name="gender" optype="categorical" dataType="string">
+   <Value value="female"/>
+   <Value value="male"/>
+  </DataField>
+  <DataField name="ageCategory" optype="categorical" dataType="string">
+   <Value value="18-34"/>
+   <Value value="35-49"/>
+   <Value value="50 or older"/>
+  </DataField>
+  <DataField name="totalCreditPurchasesPer120Days" optype="continuous" dataType="double"/>
+  <DataField name="numberPageVisitsCarLoan" optype="continuous" dataType="double"/>
+  <DataField name="numberCarLoanSimulations" optype="continuous" dataType="double"/>
+ </DataDictionary>
+ <GeneralRegressionModel modelName="CarLoanModel" modelType="generalizedLinear" functionName="classification" algorithmName="glm" distribution="binomial" linkFunction="logit">
+  <MiningSchema>
+   <MiningField name="targetInit" usageType="predicted"/>
+   <MiningField name="segment" usageType="active"/>
+   <MiningField name="totalAssets" usageType="active"/>
+   <MiningField name="totalCashWithdrawalPer120Days" usageType="active"/>
+   <MiningField name="flagCreditCard" usageType="active"/>
+   <MiningField name="gender" usageType="active"/>
+   <MiningField name="ageCategory" usageType="active"/>
+   <MiningField name="totalCreditPurchasesPer120Days" usageType="active"/>
+   <MiningField name="numberPageVisitsCarLoan" usageType="active"/>
+   <MiningField name="numberCarLoanSimulations" usageType="active"/>
+  </MiningSchema>
+  <Output>
+   <OutputField name="Probability_1" targetField="targetInit" feature="probability" value="1"/>
+  </Output>
+  <ParameterList>
+   <Parameter name="p0" label="(Intercept)"/>
+   <Parameter name="p1" label="segmentNew World Adopters"/>
+   <Parameter name="p2" label="segmentSafety Seekers"/>
+   <Parameter name="p3" label="segmentSelf-Sufficients"/>
+   <Parameter name="p4" label="segmentTraditionalists"/>
+   <Parameter name="p5" label="segmentUpwardly Mobiles"/>
+   <Parameter name="p6" label="totalAssets"/>
+   <Parameter name="p7" label="totalCashWithdrawalPer120Days"/>
+   <Parameter name="p8" label="flagCreditCard"/>
+   <Parameter name="p9" label="gendermale"/>
+   <Parameter name="p10" label="ageCategory35-49"/>
+   <Parameter name="p11" label="ageCategory50 or older"/>
+   <Parameter name="p12" label="totalCreditPurchasesPer120Days"/>
+   <Parameter name="p13" label="numberPageVisitsCarLoan"/>
+   <Parameter name="p14" label="numberCarLoanSimulations"/>
+  </ParameterList>
+  <FactorList>
+   <Predictor name="segment"/>
+   <Predictor name="gender"/>
+   <Predictor name="ageCategory"/>
+  </FactorList>
+  <CovariateList>
+   <Predictor name="totalAssets"/>
+   <Predictor name="totalCashWithdrawalPer120Days"/>
+   <Predictor name="flagCreditCard"/>
+   <Predictor name="totalCreditPurchasesPer120Days"/>
+   <Predictor name="numberPageVisitsCarLoan"/>
+   <Predictor name="numberCarLoanSimulations"/>
+  </CovariateList>
+  <PPMatrix>
+   <PPCell value="New World Adopters" predictorName="segment" parameterName="p1"/>
+   <PPCell value="Safety Seekers" predictorName="segment" parameterName="p2"/>
+   <PPCell value="Self-Sufficients" predictorName="segment" parameterName="p3"/>
+   <PPCell value="Traditionalists" predictorName="segment" parameterName="p4"/>
+   <PPCell value="Upwardly Mobiles" predictorName="segment" parameterName="p5"/>
+   <PPCell value="1" predictorName="totalAssets" parameterName="p6"/>
+   <PPCell value="1" predictorName="totalCashWithdrawalPer120Days" parameterName="p7"/>
+   <PPCell value="1" predictorName="flagCreditCard" parameterName="p8"/>
+   <PPCell value="male" predictorName="gender" parameterName="p9"/>
+   <PPCell value="35-49" predictorName="ageCategory" parameterName="p10"/>
+   <PPCell value="50 or older" predictorName="ageCategory" parameterName="p11"/>
+   <PPCell value="1" predictorName="totalCreditPurchasesPer120Days" parameterName="p12"/>
+   <PPCell value="1" predictorName="numberPageVisitsCarLoan" parameterName="p13"/>
+   <PPCell value="1" predictorName="numberCarLoanSimulations" parameterName="p14"/>
+  </PPMatrix>
+  <ParamMatrix>
+   <PCell targetCategory="1" parameterName="p0" df="1" beta="-2.67761098803569"/>
+   <PCell targetCategory="1" parameterName="p1" df="1" beta="-0.0452803666664011"/>
+   <PCell targetCategory="1" parameterName="p2" df="1" beta="0.0395761078603969"/>
+   <PCell targetCategory="1" parameterName="p3" df="1" beta="0.0629716869216468"/>
+   <PCell targetCategory="1" parameterName="p4" df="1" beta="0.0597546421947364"/>
+   <PCell targetCategory="1" parameterName="p5" df="1" beta="1.20177224195227"/>
+   <PCell targetCategory="1" parameterName="p6" df="1" beta="-0.000000228930648245062"/>
+   <PCell targetCategory="1" parameterName="p7" df="1" beta="0.00284093366956746"/>
+   <PCell targetCategory="1" parameterName="p8" df="1" beta="1.79415708410917"/>
+   <PCell targetCategory="1" parameterName="p9" df="1" beta="0.402174572345508"/>
+   <PCell targetCategory="1" parameterName="p10" df="1" beta="0.633866392466199"/>
+   <PCell targetCategory="1" parameterName="p11" df="1" beta="-0.642745196013215"/>
+   <PCell targetCategory="1" parameterName="p12" df="1" beta="-0.00125290025582069"/>
+   <PCell targetCategory="1" parameterName="p13" df="1" beta="0.152709606903558"/>
+   <PCell targetCategory="1" parameterName="p14" df="1" beta="0.172709606903558"/>
+  </ParamMatrix>
+ </GeneralRegressionModel>
+</PMML>

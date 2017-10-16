@@ -1,0 +1,290 @@
+{
+  "type" : "record",
+  "name" : "mobileapp",
+  "namespace" : "ngdata.lily",
+  "fields" : [ {
+    "name" : "timestamp",
+    "type" : "long",
+    "doc" : "When did this interaction happen, in Java milliseconds, at client side. For log-based interactions the channel-specific time stamp indicating the start of the interaction should be mapped to the generic timestamp."
+  }, {
+    "name" : "tenantId",
+    "type" : [ "null", "string" ],
+    "doc" : "The tenantId to which this interaction belongs to",
+    "default" : null
+  }, {
+    "name" : "timezone",
+    "type" : [ "null", "long" ],
+    "doc" : "The time zone at client side when the interaction happened.",
+    "default" : null
+  }, {
+    "name" : "amount",
+    "type" : [ "null", "double" ],
+    "doc" : "amount of the transaction",
+    "default" : null
+  }, {
+    "name" : "sequenceId",
+    "type" : [ "null", "string" ],
+    "doc" : "Sequence number of the interaction in a conversation",
+    "default" : null
+  }, {
+    "name" : "medium",
+    "type" : [ "null", "string" ],
+    "doc" : "The medium of the interaction (e.g. written, oral).",
+    "default" : null
+  }, {
+    "name" : "channel",
+    "type" : [ "null", "string" ],
+    "doc" : "Channel that captured the interaction (UTS, CALL, EMAIL, PAYMENT_SYSTEM, ...)",
+    "default" : null
+  }, {
+    "name" : "source",
+    "type" : [ "null", "string" ],
+    "doc" : "Specific source the interaction stems from (e.g. messagent for channel email)",
+    "default" : null
+  }, {
+    "name" : "goal",
+    "type" : "string",
+    "doc" : "Main goal (goal) of the interaction (complaint, ...)"
+  }, {
+    "name" : "subgoal",
+    "type" : "string",
+    "doc" : "More specific goal (subgoal) of the interaction (product complaint, ...)"
+  }, {
+    "name" : "reason",
+    "type" : [ "null", "string" ],
+    "doc" : "Interaction reason that further clarifies the sub goal (e.g. sub goal= product complaint, reason: malfunctioning of product)",
+    "default" : null
+  }, {
+    "name" : "brand",
+    "type" : [ "null", "string" ],
+    "doc" : "Brand of the item the interaction is associated to.",
+    "default" : null
+  }, {
+    "name" : "inboundFlag",
+    "type" : [ "null", "boolean" ],
+    "doc" : "The interaction is customer initiated (inbound)",
+    "default" : null
+  }, {
+    "name" : "successFlag",
+    "type" : [ "null", "boolean" ],
+    "doc" : "A successful interaction.",
+    "default" : null
+  }, {
+    "name" : "failureReason",
+    "type" : [ "null", "string" ],
+    "doc" : "Reason the interaction failed.",
+    "default" : null
+  }, {
+    "name" : "device",
+    "type" : [ "null", "string" ],
+    "doc" : "Device used by the customer for the interaction: pc, laptop, smartphone, tablet, mobile phone but not smartphone, fixed line, tablet",
+    "default" : null
+  }, {
+    "name" : "geocoordinates",
+    "type" : [ "null", "string" ],
+    "doc" : "Location of customer at the time of the interaction using geocordinates",
+    "default" : null
+  }, {
+    "name" : "latitude",
+    "type" : [ "null", "string" ],
+    "doc" : "Latitude of location of customer at time of the interaction",
+    "default" : null
+  }, {
+    "name" : "longitude",
+    "type" : [ "null", "string" ],
+    "doc" : "Longitude of location of customer at time of the interaction",
+    "default" : null
+  }, {
+    "name" : "communicationId",
+    "type" : [ "null", "long" ],
+    "doc" : "Unique identifier for the mobile app interaction.",
+    "default" : null
+  }, {
+    "name" : "userId",
+    "type" : [ "null", "string" ],
+    "doc" : "Unique identifier for the user of the web site. This is a non-nullable External Id.",
+    "default" : null
+  }, {
+    "name" : "loginId",
+    "type" : [ "null", "string" ],
+    "doc" : "Unique login for the user of the mobile app. This is a nullable External Id.",
+    "default" : null
+  }, {
+    "name" : "subscriberId",
+    "type" : [ "null", "string" ],
+    "doc" : "Number identifying the subscriber. Nullable ExternalID.",
+    "default" : null
+  }, {
+    "name" : "customerId",
+    "type" : [ "null", "string" ],
+    "doc" : "Number identifying the customer that is involved in the mobile app interaction. Nullable ExternalID.",
+    "default" : null,
+    "lilySourceId" : "true",
+    "lilyDnaEntityType" : "customer_CRM"
+  }, {
+    "name" : "applicationName",
+    "type" : [ "null", "string" ],
+    "doc" : "Name of mobile application",
+    "default" : null
+  }, {
+    "name" : "mobileAppVersion",
+    "type" : [ "null", "string" ],
+    "doc" : "Mobile application version",
+    "default" : null
+  }, {
+    "name" : "applicationProvider",
+    "type" : [ "null", "string" ],
+    "doc" : "Name of mobile application developer company",
+    "default" : null
+  }, {
+    "name" : "applicationCategory",
+    "type" : [ "null", "string" ],
+    "doc" : "Category the application belongs too",
+    "default" : null
+  }, {
+    "name" : "userNickName",
+    "type" : [ "null", "string" ],
+    "doc" : "Application user nick name",
+    "default" : null
+  }, {
+    "name" : "userNameAccount",
+    "type" : [ "null", "string" ],
+    "doc" : "User name of the mobile app user.",
+    "default" : null
+  }, {
+    "name" : "androidFlag",
+    "type" : [ "null", "boolean" ],
+    "doc" : "A mobile application developed for Android",
+    "default" : null
+  }, {
+    "name" : "iosFlag",
+    "type" : [ "null", "boolean" ],
+    "doc" : "A mobile application developed for IoS.",
+    "default" : null
+  }, {
+    "name" : "appType",
+    "type" : [ "null", "string" ],
+    "doc" : "Application is free or paid.",
+    "default" : null
+  }, {
+    "name" : "priceVatIncl",
+    "type" : [ "null", "double" ],
+    "doc" : "Application or in-app purchase sales price VAT included",
+    "default" : null
+  }, {
+    "name" : "priceVatExcl",
+    "type" : [ "null", "double" ],
+    "doc" : "Application or in-app purchase sales price VAT excluded",
+    "default" : null
+  }, {
+    "name" : "currency",
+    "type" : [ "null", "string" ],
+    "doc" : "Currency used to make the application or in-app purchase",
+    "default" : null
+  }, {
+    "name" : "duration",
+    "type" : [ "null", "long" ],
+    "doc" : "Duration of mobile app interaction.",
+    "default" : null
+  }, {
+    "name" : "pageUrl",
+    "type" : [ "null", "string" ],
+    "doc" : "Page url filled in by the API client",
+    "default" : null
+  }, {
+    "name" : "screenResolution",
+    "type" : [ "null", "string" ],
+    "doc" : "The resolution of the screen of the user's device.",
+    "default" : null
+  }, {
+    "name" : "contentCategory",
+    "type" : [ "null", "string" ],
+    "doc" : "A unique identifier for the content category on the visited app page.",
+    "default" : null
+  }, {
+    "name" : "contentSubcategory",
+    "type" : [ "null", "string" ],
+    "doc" : "A unique identifier for the content subcategory on the visited mobile app page.",
+    "default" : null
+  }, {
+    "name" : "contentDatatype",
+    "type" : [ "null", "string" ],
+    "doc" : "The content on the mobile app page click is text, audio, video, image, spatial,etc.",
+    "default" : null
+  }, {
+    "name" : "contentId",
+    "type" : [ "null", "long" ],
+    "doc" : "A unique identifier for the content on the visited mobile app page. Filled in as extra parameter by the mobile app user logging system.",
+    "default" : null
+  }, {
+    "name" : "tags",
+    "type" : [ "null", "string" ],
+    "doc" : "Tags attached to the visited mobile app content.",
+    "default" : null
+  }, {
+    "name" : "userGeneratedContentFlag",
+    "type" : [ "null", "boolean" ],
+    "doc" : "Mobile app content is user-generated.",
+    "default" : null
+  }, {
+    "name" : "helpPageFlag",
+    "type" : [ "null", "boolean" ],
+    "doc" : "Mobile app content that is related to getting help.",
+    "default" : null
+  }, {
+    "name" : "payedUserOnlyContentFlag",
+    "type" : [ "null", "boolean" ],
+    "doc" : "Mobile app content that is only available to users who upgraded to the payed version of the mobile app.",
+    "default" : null
+  }, {
+    "name" : "registeredOnlyContentFlag",
+    "type" : [ "null", "boolean" ],
+    "doc" : "Mobile app content that is only available to users who are logged in, but who are not necessarily paying customers.",
+    "default" : null
+  }, {
+    "name" : "exceptionFlag",
+    "type" : [ "null", "boolean" ],
+    "doc" : "The mobile app generates an exception.",
+    "default" : null
+  }, {
+    "name" : "errorFlag",
+    "type" : [ "null", "boolean" ],
+    "doc" : "The mobile app generates an error.",
+    "default" : null
+  }, {
+    "name" : "viewSettingsFlags",
+    "type" : [ "null", "boolean" ],
+    "doc" : "The user visits the settings page ",
+    "default" : null
+  }, {
+    "name" : "registerAppFlag",
+    "type" : [ "null", "boolean" ],
+    "doc" : "The user visits the mobile app registration page.",
+    "default" : null
+  }, {
+    "name" : "feedbackAppFlag",
+    "type" : [ "null", "boolean" ],
+    "doc" : "The user visits the mobile app feedback page.",
+    "default" : null
+  }, {
+    "name" : "contactAppFlag",
+    "type" : [ "null", "boolean" ],
+    "doc" : "The user visits the mobile app contact page.",
+    "default" : null
+  }, {
+    "name" : "memo",
+    "type" : [ "null", "string" ],
+    "doc" : "Description field for deposits",
+    "default" : null
+  }, {
+    "name" : "accountType",
+    "type" : [ "null", "string" ],
+    "doc" : "Description field for account type",
+    "default" : null
+  }, {
+    "name" : "offerType",
+    "type" : [ "null", "string" ],
+    "doc" : "Description field for offer type",
+    "default" : null
+  } ]
+}

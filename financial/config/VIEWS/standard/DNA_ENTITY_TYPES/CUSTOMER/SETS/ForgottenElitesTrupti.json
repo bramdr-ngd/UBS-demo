@@ -1,0 +1,9 @@
+{
+  "name" : "ForgottenElitesTrupti",
+  "description" : "ForgottenElitesTrupti",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "USER:truptip"
+  } ],
+  "conditions" : " (flagElitesMember = 1) AND NOT  ((affLuxuryShopper >= 89.1000000004) AND (affLuxuryShopper < 99.0000000004)) "
+}

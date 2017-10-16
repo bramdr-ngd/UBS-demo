@@ -1,0 +1,9 @@
+{
+  "name" : "ProxyElitesTrupti",
+  "description" : "ProxyElitesTrupti",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "USER:truptip"
+  } ],
+  "conditions" : "(affLuxuryShopper >= 89.1000000004) AND (affLuxuryShopper < 99.0000000004)"
+}

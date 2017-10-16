@@ -1,0 +1,9 @@
+{
+  "name" : "Upwardly Mobiles",
+  "description" : "Youngsters to middle aged without kids",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "flagUpwardlyMobilesMember = 1"
+}

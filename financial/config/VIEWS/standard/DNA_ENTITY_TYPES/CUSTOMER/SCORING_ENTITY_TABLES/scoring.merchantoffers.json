@@ -1,0 +1,95 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "id" : null,
+  "description" : null,
+  "name" : "scoring.merchantoffers",
+  "table" : {
+    "type" : {
+      "kind" : "TABLE",
+      "fields" : [ {
+        "name" : "id",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "long"
+        }
+      }, {
+        "name" : "merchant",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "offer",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "description",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "discounttype",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "offerexpression",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      } ],
+      "primaryKey" : [ "id" ]
+    },
+    "rows" : [ {
+      "id" : "1",
+      "merchant" : "Default",
+      "offer" : "5% off on next purchase",
+      "description" : "5% off on next purchase as default offer for anonymous customer",
+      "discounttype" : "Percentage price discount",
+      "offerexpression" : "1"
+    }, {
+      "id" : "2",
+      "merchant" : "Paris XL",
+      "offer" : "$10 off purchase at Paris XL",
+      "description" : "$10 off on any purchase at Paris XL",
+      "offerexpression" : "dna.propParisXL * dna.eligibleParisXL"
+    }, {
+      "id" : "3",
+      "merchant" : "McDonalds",
+      "offer" : "5% off McDonalds menu",
+      "description" : "5% off on buying a McDonalds menu",
+      "discounttype" : "Percentage price discount",
+      "offerexpression" : "dna.eligibleMcDonalds * dna.propMcDo"
+    }, {
+      "id" : "4",
+      "merchant" : "SportHouse",
+      "offer" : "Spend $50 save $5 at SportHouse",
+      "description" : "$5 discount on any purchase of at least $50 at SportHouse",
+      "discounttype" : "Dollar price discount conditional on amount spent",
+      "offerexpression" : "dna.eligibleSportHouse * dna.propSportHouse"
+    }, {
+      "id" : "5",
+      "merchant" : "Ralph Lauren",
+      "offer" : "Spend $150 save $25 at Ralph Lauren",
+      "description" : "$25 discount on any purchase of at least $150 at Ralph Lauren",
+      "discounttype" : "Dollar price discount conditional on amount spent",
+      "offerexpression" : "dna.eligibleRalphLauren * dna.propRalphLauren"
+    }, {
+      "id" : "6",
+      "merchant" : "Yves Saint Laurent",
+      "offer" : "Spend $200 save 5% at Ralph Lauren",
+      "description" : "5% discount on any purchase of at least $200 at Yves Saint Laurent",
+      "discounttype" : "Percentage price discount conditional on amount spent",
+      "offerexpression" : "dna.eligibleYSL * dna.propYSL"
+    } ]
+  },
+  "attributes" : { }
+}

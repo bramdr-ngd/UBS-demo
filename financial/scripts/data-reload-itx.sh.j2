@@ -1,0 +1,13 @@
+#!/bin/bash
+set -e;
+
+[[ -z "$1" ]] && echo "Usage: data-load-itx.sh /path/to_files_to_load_without_trailing_slash" && exit 1;
+[[ $1 =~ .*/$ ]] && echo "Usage: data-load-itx.sh /path/to_files_to_load_without_trailing_slash" && exit 1;
+
+{{target.ansible.dir}}/scripts/data-clean-itx.sh;
+{{target.ansible.dir}}/scripts/data-load-itx.sh $1;
+{{target.ansible.dir}}/scripts/data-batch-calc.sh -f;
+
+lily coprocessor-admin vcecache --dna-entity-type customer --truncate
+sleep 10
+lily coprocessor-admin vcecache --dna-entity-type customer --init

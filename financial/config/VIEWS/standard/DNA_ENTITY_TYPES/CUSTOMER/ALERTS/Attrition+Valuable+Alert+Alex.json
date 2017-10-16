@@ -1,0 +1,19 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "USER:alexv"
+  } ],
+  "alertType" : "SET_MEMBER",
+  "alwaysFireOnActive" : false,
+  "conditions" : "(dna.scoreChurnAmp > 0.85)",
+  "description" : "Attrition Valuable Alert Alex",
+  "enabled" : true,
+  "metricName" : "scoreChurnAmp",
+  "name" : "Attrition Valuable Alert Alex",
+  "notificationParameters" : {
+    "rulesengine.trigger" : "false"
+  },
+  "setReference" : "Elites",
+  "attributes" : { },
+  "structuredConditions" : null
+}

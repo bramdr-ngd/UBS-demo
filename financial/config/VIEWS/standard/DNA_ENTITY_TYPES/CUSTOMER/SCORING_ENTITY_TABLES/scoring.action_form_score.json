@@ -1,0 +1,228 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "id" : null,
+  "description" : null,
+  "name" : "scoring.action_form_score",
+  "table" : {
+    "type" : {
+      "kind" : "TABLE",
+      "fields" : [ {
+        "name" : "id",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "long"
+        }
+      }, {
+        "name" : "action_form_name",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "description",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      },
+       {
+                     "name" : "font",
+                     "dataType" : {
+                       "kind" : "SCALAR",
+                       "scalarType" : "string"
+                     }
+                   },
+                   {
+                           "name" : "font_style",
+                           "dataType" : {
+                             "kind" : "SCALAR",
+                             "scalarType" : "string"
+                           }
+                         },
+                                  {
+                                                                                    "name" : "color_scheme",
+                                                                                    "dataType" : {
+                                                                                      "kind" : "SCALAR",
+                                                                                      "scalarType" : "string"
+                                                                                    }
+                                                                                  },
+          {
+                                               "name" : "inclusion_criteria",
+                                               "dataType" : {
+                                                 "kind" : "SCALAR",
+                                                 "scalarType" : "string"
+                                               }
+                                             },
+       {
+                                            "name" : "exclusion_criteria",
+                                            "dataType" : {
+                                              "kind" : "SCALAR",
+                                              "scalarType" : "string"
+                                            }
+                                          },
+       {
+        "name" : "actionformeligibility",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "actionformpropensity",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      },
+            {
+                                       "name" : "actionformmodelerror",
+                                       "dataType" : {
+                                         "kind" : "SCALAR",
+                                         "scalarType" : "string"
+                                       }
+                                     },
+       {
+        "name" : "valid_channels",
+        "dataType" : {
+          "kind" : "ARRAY",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "valid_action_types",
+        "dataType" : {
+          "kind" : "ARRAY",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "valid_action_sub_types",
+        "dataType" : {
+          "kind" : "ARRAY",
+          "scalarType" : "string"
+        }
+      },
+       {
+              "name" : "valid_action_sub_sub_types",
+              "dataType" : {
+                "kind" : "ARRAY",
+                "scalarType" : "string"
+              }
+            },
+                   {
+                           "name" : "valid_orientation",
+                           "dataType" : {
+                             "kind" : "SCALAR",
+                             "scalarType" : "string"
+                           }
+                         },
+                                            {
+                                                    "name" : "valid_artwork_formats",
+                                                    "dataType" : {
+                                                      "kind" : "ARRAY",
+                                                      "scalarType" : "string"
+                                                    }
+                                                  },
+       {
+               "name" : "valid_devices",
+               "dataType" : {
+                 "kind" : "ARRAY",
+                 "scalarType" : "string"
+               }
+             },
+             {
+                     "name" : "valid_from_time",
+                     "dataType" : {
+                       "kind" : "SCALAR",
+                       "scalarType" : "datetime"
+                     }
+                   },
+                   {
+                                                           "name" : "valid_until_time",
+                                                           "dataType" : {
+                                                             "kind" : "SCALAR",
+                                                             "scalarType" : "datetime"
+                                                           }
+                                                         } ],
+      "primaryKey" : [ "id" ]
+    },
+    "rows" : [ {
+      "id" : "1",
+      "action_form_name" : "funky digital landscape banner template",
+      "description" : "A template that can be used for digital banner in landscape with funky creative style",
+      "actionformeligibility": "switch(dna.flagExistingCustomer=1,1,0)",
+      "actionformpropensity": "random()",
+      "valid_channels" : [ "web","mobile" ],
+       "valid_action_types" : [ "banner" ],
+       "valid_action_sub_types" : [ "product banner","general banner" ],
+       "valid_action_sub_sub_types" : [ "static banner","animated banner" ],
+       "valid_orientation": "horizontal",
+       "valid_artwork_formats":["jpeg","svg"],
+       "valid_from_time" : "2012-02-03T04:05:06.007Z",
+     "valid_until_time" : "2019-03-12T04:05:06.007Z",
+     "font":"switch(dna.ageCategory='18-34',16.0, dna.ageCategory='35-49', 20.0, dna.ageCategory='50 or older', 24.0)",
+     "font_style":"switch(dna.ageCategory='18-34','Chalkboard', dna.ageCategory='35-49', 'Calibri', dna.ageCategory='50 or older', 'Abadi MT Condensed Extra Bold')",
+     "color_scheme":"switch(dna.ageCategory='18-34','fun and professional', dna.ageCategory='35-49', 'modern and clean', dna.ageCategory='50 or older', 'luxurious and modern')",
+     "actionformmodelerror": 0.03
+    },
+    {
+      "id" : "2",
+            "action_form_name" : "formal digital landscape banner template",
+            "description" : "A template that can be used for digital banner in landscape with formal creative style",
+            "actionformeligibility": "switch(dna.flagExistingCustomer=1,1,0)",
+            "actionformpropensity": "random()",
+            "valid_channels" : [ "web","mobile" ],
+             "valid_action_types" : [ "banner" ],
+             "valid_action_sub_types" : [ "product banner","general banner" ],
+             "valid_action_sub_sub_types" : [ "static banner","animated banner" ],
+             "valid_orientation": "horizontal",
+             "valid_artwork_formats":["jpeg","svg"],
+             "valid_from_time" : "2012-02-03T04:05:06.007Z",
+           "valid_until_time" : "2019-03-12T04:05:06.007Z",
+                "font":"switch(dna.ageCategory='18-34',12.0, dna.ageCategory='35-49', 14.0, dna.ageCategory='50 or older', 16.0)",
+                "font_style":"switch(dna.ageCategory='18-34','Chalkboard SE', dna.ageCategory='35-49', 'Calibri Light', dna.ageCategory='50 or older', 'Abadi MT Condensed Light')",
+                "color_scheme":"switch(dna.ageCategory='18-34','fun and professional', dna.ageCategory='35-49', 'modern and sophisticated', dna.ageCategory='50 or older', 'luxurious and warm')",
+                "actionformmodelerror": 0.02
+
+
+    }, {
+      "id" : "3",
+            "action_form_name" : "savon digital landscape banner template",
+            "description" : "A template that can be used for digital banner in landscape with savon creative style",
+            "actionformeligibility": "switch(dna.flagExistingCustomer=1,1,0)",
+            "actionformpropensity": "random()",
+            "valid_channels" : [ "web","mobile" ],
+             "valid_action_types" : [ "banner" ],
+             "valid_action_sub_types" : [ "product banner","general banner" ],
+             "valid_action_sub_sub_types" : [ "static banner","animated banner" ],
+             "valid_orientation": "horizontal",
+             "valid_artwork_formats":["jpeg","svg"],
+             "valid_from_time" : "2012-02-03T04:05:06.007Z",
+           "valid_until_time" : "2019-03-12T04:05:06.007Z",
+                           "font":"switch(dna.ageCategory='18-34',13.0, dna.ageCategory='35-49', 15.0, dna.ageCategory='50 or older', 18.0)",
+                           "font_style":"switch(dna.ageCategory='18-34','Chalkboard', dna.ageCategory='35-49', 'Calibri Light', dna.ageCategory='50 or older', 'Abadi MT Condensed')",
+                           "color_scheme":"switch(dna.ageCategory='18-34','cheerful and sleek', dna.ageCategory='35-49', 'elegant and sophisticated', dna.ageCategory='50 or older', 'warm tones')",
+           "actionformmodelerror": 0.04
+    },
+     {
+      "id" : "4",
+            "action_form_name" : "informal digital landscape banner template",
+            "description" : "A template that can be used for digital banner in landscape with informal creative style",
+             "actionformeligibility": "switch(dna.flagExistingCustomer=1,1,0)",
+             "actionformpropensity": "random()",
+            "valid_channels" : [ "web","mobile" ],
+             "valid_action_types" : [ "banner" ],
+             "valid_action_sub_types" : [ "product banner","general banner" ],
+             "valid_action_sub_sub_types" : [ "static banner","animated banner" ],
+             "valid_orientation": "horizontal",
+             "valid_artwork_formats":["jpeg","svg"],
+             "valid_from_time" : "2012-02-03T04:05:06.007Z",
+           "valid_until_time" : "2019-03-12T04:05:06.007Z",
+                           "font":"switch(dna.ageCategory='18-34',10.0, dna.ageCategory='35-49', 12.0, dna.ageCategory='50 or older', 14.0)",
+                           "font_style":"switch(dna.ageCategory='18-34','Century Gothic', dna.ageCategory='35-49', 'Calisto MT', dna.ageCategory='50 or older', 'Al Bayan')",
+                           "color_scheme":"switch(dna.ageCategory='18-34','muted and minimal', dna.ageCategory='35-49', 'art history inspired', dna.ageCategory='50 or older', 'warm and bold')",
+                           "actionformmodelerror": 0.05
+    } ]
+  },
+  "attributes" : { }
+}

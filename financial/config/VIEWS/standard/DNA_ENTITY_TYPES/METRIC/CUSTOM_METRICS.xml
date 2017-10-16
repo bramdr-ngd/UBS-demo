@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dna xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:noNamespaceSchemaLocation="http://www.ngdata.com/lily/xsd/dna_1_0.xsd">
+  <interactionFilters>
+      <interactionFilter name="generic" expr="itx.goal == 'diagnostics' &amp;&amp; itx.subgoal == 'performance'"/>
+  </interactionFilters>
+  <variables>
+      <field name="entityType">
+         <type value="string"/>
+         <attributes>
+            <attribute name="identityKit">2</attribute>
+            <attribute name="description">Entity type of metric</attribute>
+            <attribute name="label">entityType</attribute>
+            <attribute name="category">Metrics</attribute>
+            <attribute name="subcategory">Metrics</attribute>
+         </attributes>
+         <acl>
+            <aclEntry subject="everyone" owner="true"/>
+         </acl>
+      </field>
+      <itxAggregate name="errorCount" on="generic">
+         <operation>sum</operation>
+         <expr>itx.errorCount &gt; 0 ? 1 :0</expr>
+         <aggregationWindow>1 day</aggregationWindow>
+         <aggregationGranularity>day</aggregationGranularity>
+         <type value="double"/>
+         <defaultSamplingFrequency>1 week</defaultSamplingFrequency>
+         <defaultQueryWindow>3 months</defaultQueryWindow>
+         <setOperation>average</setOperation>
+         <enableVelocityMetrics>true</enableVelocityMetrics>
+         <defaultValue>0.0</defaultValue>
+         <attributes>
+            <attribute name="DNAid">x.xx.xx.x</attribute>
+            <attribute name="rangeMax">500</attribute>
+            <attribute name="nature">negative</attribute>
+            <attribute name="rangeMin">0</attribute>
+            <attribute name="longlabel">Nbr of errors</attribute>
+            <attribute name="description">Nbr of errors</attribute>
+            <attribute name="label">Nbr of errors</attribute>
+            <attribute name="category">Itxmetrics</attribute>
+            <attribute name="subcategory">Intensity</attribute>
+         </attributes>
+      </itxAggregate>
+      <field name="fileName">
+         <type value="string"/>
+         <attributes>
+            <attribute name="identityKit">2</attribute>
+            <attribute name="description">Filename containing metric</attribute>
+            <attribute name="label">fileName</attribute>
+            <attribute name="category">Metrics</attribute>
+            <attribute name="subcategory">Metrics</attribute>
+         </attributes>
+         <acl>
+            <aclEntry subject="everyone" owner="true"/>
+         </acl>
+      </field>
+      <itxAggregate name="meanGroupsPerValue" on="generic">
+         <operation>sum</operation>
+         <expr>itx.meanGroupsPerValue</expr>
+         <aggregationWindow>1 day</aggregationWindow>
+         <aggregationGranularity>day</aggregationGranularity>
+         <type value="double"/>
+         <defaultSamplingFrequency>1 week</defaultSamplingFrequency>
+         <defaultQueryWindow>3 months</defaultQueryWindow>
+         <setOperation>average</setOperation>
+         <enableVelocityMetrics>true</enableVelocityMetrics>
+         <defaultValue>0.0</defaultValue>
+         <attributes>
+            <attribute name="DNAid">x.xx.xx.x</attribute>
+            <attribute name="rangeMax">500</attribute>
+            <attribute name="nature">negative</attribute>
+            <attribute name="rangeMin">0</attribute>
+            <attribute name="longlabel">meanGroupsPerValue</attribute>
+            <attribute name="description">meanGroupsPerValue
+        </attribute>
+            <attribute name="label">meanGroupsPerValue</attribute>
+            <attribute name="category">Itxmetrics</attribute>
+            <attribute name="subcategory">Intensity</attribute>
+         </attributes>
+      </itxAggregate>
+      <field name="metricBreaked">
+         <type value="int"/>
+         <setOperation>average</setOperation>
+         <enableVelocityMetrics>true</enableVelocityMetrics>
+         <attributes>
+            <attribute name="rangeMax">1</attribute>
+            <attribute name="rangeMin">0</attribute>
+            <attribute name="description">metricBreaked</attribute>
+            <attribute name="label">metricBreaked</attribute>
+            <attribute name="category">Metrics</attribute>
+            <attribute name="subcategory">Metrics</attribute>
+         </attributes>
+         <acl>
+            <aclEntry subject="everyone" owner="true"/>
+         </acl>
+      </field>
+      <field name="metricCategory">
+         <type value="string"/>
+         <attributes>
+            <attribute name="identityKit">6</attribute>
+            <attribute name="description">Metric Category</attribute>
+            <attribute name="label">metricCategory</attribute>
+            <attribute name="category">Metrics</attribute>
+            <attribute name="subcategory">Metrics</attribute>
+         </attributes>
+         <acl>
+            <aclEntry subject="everyone" owner="true"/>
+         </acl>
+      </field>
+      <field name="metricDescription">
+         <type value="string"/>
+         <attributes>
+            <attribute name="identityKit">8</attribute>
+            <attribute name="description">Metric Description</attribute>
+            <attribute name="label">metricDescription</attribute>
+            <attribute name="category">Metrics</attribute>
+            <attribute name="subcategory">Metrics</attribute>
+         </attributes>
+         <acl>
+            <aclEntry subject="everyone" owner="true"/>
+         </acl>
+      </field>
+      <field name="metricLabel">
+         <type value="string"/>
+         <attributes>
+            <attribute name="identityKit">5</attribute>
+            <attribute name="description">Metric Label</attribute>
+            <attribute name="index">true</attribute>
+            <attribute name="label">metricLabel</attribute>
+            <attribute name="category">Metrics</attribute>
+            <attribute name="subcategory">Metrics</attribute>
+         </attributes>
+         <acl>
+            <aclEntry subject="everyone" owner="true"/>
+         </acl>
+      </field>
+      <field name="metricName">
+         <type value="string"/>
+         <attributes>
+            <attribute name="identityKit">5</attribute>
+            <attribute name="description">Metric Name</attribute>
+            <attribute name="index">true</attribute>
+            <attribute name="label">metricName</attribute>
+            <attribute name="category">Metrics</attribute>
+            <attribute name="subcategory">Metrics</attribute>
+         </attributes>
+         <acl>
+            <aclEntry subject="everyone" owner="true"/>
+         </acl>
+      </field>
+      <field name="metricSubcategory">
+         <type value="string"/>
+         <attributes>
+            <attribute name="identityKit">7</attribute>
+            <attribute name="description">Metric Subcategory</attribute>
+            <attribute name="label">metricSubcategory</attribute>
+            <attribute name="category">Metrics</attribute>
+            <attribute name="subcategory">Metrics</attribute>
+         </attributes>
+         <acl>
+            <aclEntry subject="everyone" owner="true"/>
+         </acl>
+      </field>
+      <field name="metricType">
+         <type value="string"/>
+         <attributes>
+            <attribute name="identityKit">3</attribute>
+            <attribute name="description">Metric Type</attribute>
+            <attribute name="label">metricType</attribute>
+            <attribute name="category">Metrics</attribute>
+            <attribute name="subcategory">Metrics</attribute>
+         </attributes>
+         <acl>
+            <aclEntry subject="everyone" owner="true"/>
+         </acl>
+      </field>
+      <field name="metricValueType">
+         <type value="string"/>
+         <attributes>
+            <attribute name="identityKit">4</attribute>
+            <attribute name="description">Metric Value Type</attribute>
+            <attribute name="label">metricValueType</attribute>
+            <attribute name="category">Metrics</attribute>
+            <attribute name="subcategory">Metrics</attribute>
+         </attributes>
+         <acl>
+            <aclEntry subject="everyone" owner="true"/>
+         </acl>
+      </field>
+      <itxAggregate name="milliseconds" on="generic">
+         <operation>sum</operation>
+         <expr>itx.milliseconds</expr>
+         <aggregationWindow>1 day</aggregationWindow>
+         <aggregationGranularity>day</aggregationGranularity>
+         <type value="double"/>
+         <defaultSamplingFrequency>1 day</defaultSamplingFrequency>
+         <defaultQueryWindow>3 months</defaultQueryWindow>
+         <setOperation>average</setOperation>
+         <enableVelocityMetrics>true</enableVelocityMetrics>
+         <defaultValue>0.0</defaultValue>
+         <attributes>
+            <attribute name="DNAid">x.xx.xx.x</attribute>
+            <attribute name="rangeMax">500</attribute>
+            <attribute name="nature">negative</attribute>
+            <attribute name="rangeMin">0</attribute>
+            <attribute name="longlabel">Nbr of milliseconds needed to retrieve value</attribute>
+            <attribute name="description">Nbr of milliseconds needed to retrieve value
+        </attribute>
+            <attribute name="label">Nbr of milliseconds needed to retrieve value</attribute>
+            <attribute name="category">Itxmetrics</attribute>
+            <attribute name="subcategory">Intensity</attribute>
+         </attributes>
+      </itxAggregate>
+      <field name="seqNr">
+         <type value="int"/>
+         <setOperation>average</setOperation>
+         <enableVelocityMetrics>true</enableVelocityMetrics>
+         <attributes>
+            <attribute name="rangeMax"> 800</attribute>
+            <attribute name="rangeMin">1</attribute>
+            <attribute name="description">Sequential number</attribute>
+            <attribute name="label">seqNr</attribute>
+            <attribute name="category">Metrics</attribute>
+            <attribute name="subcategory">Metrics</attribute>
+         </attributes>
+         <acl>
+            <aclEntry subject="everyone" owner="true"/>
+         </acl>
+      </field>
+      <itxAggregate name="unknownCount" on="generic">
+         <operation>sum</operation>
+         <expr>itx.unknownCount &gt; 0 ? 1 :0</expr>
+         <aggregationWindow>1 day</aggregationWindow>
+         <aggregationGranularity>day</aggregationGranularity>
+         <type value="double"/>
+         <defaultSamplingFrequency>1 week</defaultSamplingFrequency>
+         <defaultQueryWindow>3 months</defaultQueryWindow>
+         <setOperation>average</setOperation>
+         <enableVelocityMetrics>true</enableVelocityMetrics>
+         <defaultValue>0.0</defaultValue>
+         <attributes>
+            <attribute name="DNAid">x.xx.xx.x</attribute>
+            <attribute name="rangeMax">500</attribute>
+            <attribute name="nature">negative</attribute>
+            <attribute name="rangeMin">0</attribute>
+            <attribute name="longlabel">Nbr of unknown</attribute>
+            <attribute name="description">Nbr of unknown
+        </attribute>
+            <attribute name="label">Nbr of unknown</attribute>
+            <attribute name="category">Itxmetrics</attribute>
+            <attribute name="subcategory">Intensity</attribute>
+         </attributes>
+      </itxAggregate>
+  </variables>
+</dna>

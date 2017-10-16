@@ -1,0 +1,9 @@
+{
+  "name" : "Entity Aggregates",
+  "description" : "Entity Aggregates",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "metricType='ENTITY_AGGREGATE'"
+}

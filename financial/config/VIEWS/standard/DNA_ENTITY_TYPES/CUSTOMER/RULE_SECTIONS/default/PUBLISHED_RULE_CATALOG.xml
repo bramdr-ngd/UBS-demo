@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="http://www.ngdata.com/lily/xsd/rules_1_0.xsd">
+   <contextParameters>
+      <param name="crmId" type="string"/>
+      <param name="actionType" type="string"/>
+      <param name="referrerPage" type="string"/>
+      <param name="nbaThreshold" type="double"/>
+      <param name="channel" type="string"/>
+      <param name="identificationLevel" type="string"/>
+      <param name="scoringIdFilter" type="array{long}"/>
+      <param name="topNActions" type="int"/>
+      <param name="location" type="string"/>
+      <param name="pageId" type="string"/>
+      <param name="device" type="string"/>
+     <param name="journeyStage" type="string"/>
+   </contextParameters>
+   <conflict-resolution-key>
+      <rule-param name="priorityWeight"/>
+   </conflict-resolution-key>
+   <group name="inbound banners">
+      <description>Do we need to show different banner to the customer?</description>
+      <priorityWeight>0</priorityWeight>
+      <group name="carLoanEligibility">
+         <description>Is customer eligible for a car loan?</description>
+         <priorityWeight>0</priorityWeight>
+         <if>dna.flagCarLoan = 0</if>
+         <group name="carLoanSignificant">
+            <description>Is customer looking for significant loan?</description>
+            <priorityWeight>0</priorityWeight>
+            <if>dna.lastCarLoanSimulationAmountToday &gt; 35000</if>
+            <rule name="carLoanSimulationBanner">
+               <description>Show car loan banner on the home page</description>
+               <priorityWeight>0</priorityWeight>
+               <if>ctx.pageId = 'index' AND dna.recencyCarLoanSimulation &lt; 5.0</if>
+               <action name="call customer"/>
+               <action name="show banner">
+                  <param name="metricName">'dna.lastCarLoanSimulationAmountToday'</param>
+                  <param name="bannerId">'CarLoan'</param>
+                  <param name="metricValue">dna.lastCarLoanSimulationAmountToday</param>
+               </action>
+            </rule>
+         </group>
+      </group>
+   </group>
+   <group name="sms offer">
+      <description>Do we need to send an sms to the customer?</description>
+      <priorityWeight>1</priorityWeight>
+      <group name="Customer Attrition Prevention">
+         <description>Trigger-based campaigns to prevent customer attrition</description>
+         <rule name="Send customer attrition prevention sms">
+            <description>Send a customer for whom the amplified churn score exceeds a threshold defined in the attrition alert an attrition prevention sms </description>
+            <if>ctx.alertName = 'Attrition Alert' and ctx.alertStatus</if>
+            <action name="send attrition sms">
+               <param name="message">concat(
+            'Hi ',
+            dna.firstName,
+            ' ',
+            dna.lastName,
+            ' , we would like to know how you feel about your recent customer experiences. May we call you?')</param>
+            </action>
+         </rule>
+      </group>
+      <group name="Car Loan Offer High Propensity making use of Alertdefinition">
+         <description>Will we send the customer an offer triggered by an alert?</description>
+         <priorityWeight>1</priorityWeight>
+         <rule name="Send offer SMS">
+            <priorityWeight>1</priorityWeight>
+            <if>ctx.alertName = 'Car Loan Offer Alert' and ctx.alertStatus</if>
+            <action name="send offer sms">
+               <param name="message">'Apply for a car loan at NGDATA Bank'</param>
+               <param name="subject">'Discover our competitive interest rates'</param>
+            </action>
+         </rule>
+      </group>
+      <group name="carLoanEligibilityVicinity">
+         <description>We need to send sms if in vicinity of New York or Boston</description>
+         <priorityWeight>1</priorityWeight>
+         <group name="In Vicinity of Offer">
+            <description>Is customer in vicinity of an offer ?</description>
+            <priorityWeight>1    </priorityWeight>
+            <if>ctx.alertName='Car Loan Vicinity Alert' and ctx.alertStatus</if>
+            <rule name="Eligible Top Offer">
+               <description>Send offer SMS when customer is in the area of a top scoring offer</description>
+               <priorityWeight>1</priorityWeight>
+               <if>get(top(dna.nextBestOffer,10),'value') &gt; 10</if>
+               <action name="send offer sms">
+                  <param name="message">concat(
+              'There is an offer for ',
+              get(top(rankedScores(dna.nextBestOffer, tables.scoring.offermerchant, 1,ctx.scoringIdFilter ,'merchant'),1,'merchant'),'merchant'),
+              ' in ',
+              get(top(rankedScores(dna.nextBestOffer, tables.scoring.offermerchant, 1,ctx.scoringIdFilter ,'location'),1,'location'),'location')
+              )</param>
+               </action>
+            </rule>
+         </group>
+      </group>
+   </group>
+   <group name="inbound NBA banners">
+      <description>Inbound banners for NBA</description>
+      <priorityWeight>1</priorityWeight>
+      <rule name="productBanner">
+         <description>Show product banner</description>
+         <priorityWeight>0</priorityWeight>
+         <if>size(
+           filter(
+           tables.scoring.action_score,
+           contains(r.valid_devices, ctx.device)
+           and contains(r.valid_locations, ctx.location)
+           and contains(r.valid_identifications, ctx.identificationLevel)
+           and contains(r.valid_journey_stages, ctx.journeyStage)
+           and r.action_type="banner"
+           and r.action_sub_type="product banner"
+           and r.valid_from_time &lt; now()
+           and now() &lt; r.valid_until_time
+           )
+           )
+           &gt; 1</if>
+         <action name="show product banner">
+           <param name="recommendedActions">
+             select(
+             addField(
+             addField(
+             addField(
+             top(
+             join(
+             filter(dna.nbaScore, r.value&gt;ifNull(ctx.nbaThreshold,0.0)),
+             filter(tables.scoring.action_score, r.action_type="banner" and r.action_sub_type="product banner" and contains(r.valid_locations, ctx.location) and contains(r.valid_devices, ctx.device) and contains(r.valid_channels, ctx.channel) and contains(r.valid_identifications, ctx.identificationLevel)
+             and contains(r.valid_journey_stages, ctx.journeyStage) and r.action_type="banner"
+             and r.action_sub_type="product banner"
+             and r.valid_from_time &lt; now()
+             and now() &lt; r.valid_until_time
+             )
+             ),
+             ifNull(ctx.topNActions, 1),'value'
+             ),
+             'action_id_parameter',
+             concat("action_id=", cast(r.id,'string'))
+             ),
+             'action_name_parameter',
+             concat("action_name=", r.action_name)
+             ),
+             'product_id_parameter',
+             concat("product_id=", r.valid_products)
+             ),
+             'action_id_parameter',
+             'action_name_parameter',
+             'product_id_parameter'
+             )
+           </param>
+         </action>
+      </rule>
+   </group>
+</rules>

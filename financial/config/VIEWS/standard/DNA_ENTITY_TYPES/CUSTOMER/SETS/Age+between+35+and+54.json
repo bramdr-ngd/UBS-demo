@@ -1,0 +1,9 @@
+{
+  "name" : "Age between 35 and 54",
+  "description" : "Customers between 35 and 54 years",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "age >= 35 and age <=54"
+}

@@ -1,0 +1,195 @@
+{
+  "columns" : [ {
+    "jdbcType" : "BIGINT",
+    "maxLength" : null,
+    "name" : "customer_id",
+    "nullable" : true,
+    "type" : "long"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "offer_id",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "product_bundle_id",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "BOOLEAN",
+    "maxLength" : null,
+    "name" : "promo_flag",
+    "nullable" : true,
+    "type" : "boolean"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "name",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "brand",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "category",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "sub_category",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "BOOLEAN",
+    "maxLength" : null,
+    "name" : "\"ACTIVE\"",
+    "nullable" : true,
+    "type" : "boolean"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "status",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "DATE",
+    "maxLength" : null,
+    "name" : "start_date",
+    "nullable" : true,
+    "type" : "date"
+  }, {
+    "jdbcType" : "DOUBLE",
+    "maxLength" : null,
+    "name" : "list_price_vat_inclusive",
+    "nullable" : true,
+    "type" : "double"
+  }, {
+    "jdbcType" : "BOOLEAN",
+    "maxLength" : null,
+    "name" : "discount_flag",
+    "nullable" : true,
+    "type" : "boolean"
+  }, {
+    "jdbcType" : "DOUBLE",
+    "maxLength" : null,
+    "name" : "discount_percentage",
+    "nullable" : true,
+    "type" : "double"
+  }, {
+    "jdbcType" : "INTEGER",
+    "maxLength" : null,
+    "name" : "discount_percentage_cat",
+    "nullable" : true,
+    "type" : "int"
+  }, {
+    "jdbcType" : "INTEGER",
+    "maxLength" : null,
+    "name" : "discount_qty",
+    "nullable" : true,
+    "type" : "int"
+  }, {
+    "jdbcType" : "INTEGER",
+    "maxLength" : null,
+    "name" : "discount_qty_cat",
+    "nullable" : true,
+    "type" : "int"
+  }, {
+    "jdbcType" : "DOUBLE",
+    "maxLength" : null,
+    "name" : "discount_monetary",
+    "nullable" : true,
+    "type" : "double"
+  }, {
+    "jdbcType" : "BOOLEAN",
+    "maxLength" : null,
+    "name" : "added_value_flag",
+    "nullable" : true,
+    "type" : "boolean"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "valueadded_unrelated_cat",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "DOUBLE",
+    "maxLength" : null,
+    "name" : "valueadded_monetary",
+    "nullable" : true,
+    "type" : "double"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "valueadded_monetary_cat",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "periodicity",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "distribution_method",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "VARCHAR",
+    "maxLength" : null,
+    "name" : "medium",
+    "nullable" : true,
+    "type" : "string"
+  }, {
+    "jdbcType" : "INTEGER",
+    "maxLength" : null,
+    "name" : "nbr_copies",
+    "nullable" : true,
+    "type" : "int"
+  }, {
+    "jdbcType" : "BOOLEAN",
+    "maxLength" : null,
+    "name" : "freesamples_flag",
+    "nullable" : true,
+    "type" : "boolean"
+  }, {
+    "jdbcType" : "BOOLEAN",
+    "maxLength" : null,
+    "name" : "regional_edition_flag",
+    "nullable" : true,
+    "type" : "boolean"
+  }, {
+    "jdbcType" : "DATE",
+    "maxLength" : null,
+    "name" : "end_date",
+    "nullable" : true,
+    "type" : "date"
+  } ],
+  "multiTenant" : true,
+  "name" : "customer_product",
+  "primaryKey" : {
+    "columns" : [ {
+      "jdbcType" : "CHAR",
+      "maxLength" : 1,
+      "name" : "tenant_id",
+      "nullable" : false,
+      "type" : null
+    }, {
+      "jdbcType" : "VARCHAR",
+      "maxLength" : null,
+      "name" : "customer_product_id",
+      "nullable" : false,
+      "type" : "string"
+    } ]
+  },
+  "saltBuckets" : 1
+}

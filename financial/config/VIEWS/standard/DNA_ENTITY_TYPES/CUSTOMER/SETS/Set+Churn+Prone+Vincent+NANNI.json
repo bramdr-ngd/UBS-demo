@@ -1,0 +1,9 @@
+{
+  "name" : "Set Churn Prone Vincent NANNI",
+  "description" : "Let's have some fun by creating a set",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "(dna.scoreChurnAmp > 0.9)"
+}

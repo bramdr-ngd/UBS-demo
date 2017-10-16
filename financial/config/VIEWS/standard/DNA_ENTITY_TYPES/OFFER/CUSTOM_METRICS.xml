@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dna xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:noNamespaceSchemaLocation="http://www.ngdata.com/lily/xsd/dna_1_0.xsd">
+  <variables>
+      <field name="banner_id">
+         <type value="long"/>
+      </field>
+      <field name="duration">
+         <type value="datetime"/>
+      </field>
+      <field name="name">
+         <type value="string"/>
+      </field>
+      <field name="offer_price">
+         <type value="double"/>
+      </field>
+  </variables>
+</dna>

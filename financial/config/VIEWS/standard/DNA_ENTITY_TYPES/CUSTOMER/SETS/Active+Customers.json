@@ -1,0 +1,9 @@
+{
+  "name" : "Active Customers",
+  "description" : "Customers with any active product",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "flagActive = 1"
+}

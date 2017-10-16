@@ -1,0 +1,31 @@
+# agent config: webintake
+
+
+# Agent
+webintake.sources = utssource
+webintake.sinks = avrosink
+webintake.channels = webintakechannel
+
+# UTS http source
+webintake.sources.utssource.type = com.ngdata.uts.flume.source.AlwaysOkHTTPSource
+webintake.sources.utssource.port = 8081
+webintake.sources.utssource.bind = localhost
+webintake.sources.utssource.handler = com.ngdata.lily.flume.source.LilyHttpSourceHandler
+webintake.sources.utssource.channels = webintakechannel
+webintake.sources.utssource.interceptors = timestamp logging
+webintake.sources.utssource.interceptors.timestamp.type = timestamp
+webintake.sources.utssource.interceptors.logging.type = com.ngdata.demo.flume.LoggingInterceptor$Builder
+
+# File Buffer sinks
+# avrosink
+webintake.sinks.avrosink.type = avro
+webintake.sinks.avrosink.hostname = localhost
+webintake.sinks.avrosink.port = 44445
+webintake.sinks.avrosink.channel = webintakechannel
+webintake.sinks.avrosink.batch-size = 1
+
+# Mem channel
+webintake.channels.webintakechannel.type = memory
+webintake.channels.webintakechannel.capacity = 50000
+webintake.channels.webintakechannel.transactionCapacity = 5000
+webintake.channels.webintakechannel.keep-alive=0

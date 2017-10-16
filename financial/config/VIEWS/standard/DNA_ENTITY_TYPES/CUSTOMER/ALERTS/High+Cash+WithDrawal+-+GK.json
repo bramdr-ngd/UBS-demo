@@ -1,0 +1,19 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "USER:ganeshr"
+  } ],
+  "alertType" : "SET_MEMBER",
+  "alwaysFireOnActive" : false,
+  "conditions" : "(dna.cashWithdrawalAmountLast > 600)",
+  "description" : "High Cash WithDrawal - GK",
+  "enabled" : true,
+  "metricName" : "cashWithdrawalAmountLast",
+  "name" : "High Cash WithDrawal - GK",
+  "notificationParameters" : {
+    "rulesengine.trigger" : "false"
+  },
+  "setReference" : "customer_all",
+  "attributes" : { },
+  "structuredConditions" : null
+}

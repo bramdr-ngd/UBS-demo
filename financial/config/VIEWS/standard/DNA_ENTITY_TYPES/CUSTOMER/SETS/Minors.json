@@ -1,0 +1,9 @@
+{
+  "name" : "Minors",
+  "description" : "Customers under the age of majority (below 21)",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "age < 21"
+}

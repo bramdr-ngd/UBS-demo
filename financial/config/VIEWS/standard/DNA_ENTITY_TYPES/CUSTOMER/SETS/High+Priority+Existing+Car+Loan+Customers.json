@@ -1,0 +1,9 @@
+{
+  "name" : "High Priority Existing Car Loan Customers",
+  "description" : "Existing customers having a high car loan priority",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "flagExistingCustomer=1 AND productPriority[products_id=1]>829"
+}

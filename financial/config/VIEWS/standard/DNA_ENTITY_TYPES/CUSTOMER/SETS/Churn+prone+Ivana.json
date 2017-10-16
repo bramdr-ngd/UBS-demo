@@ -1,0 +1,9 @@
+{
+  "name" : "Churn prone Ivana",
+  "description" : "Churn prone",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "USER:ivanan"
+  } ],
+  "conditions" : "(dna.scoreChurnAmp > 0.9)"
+}

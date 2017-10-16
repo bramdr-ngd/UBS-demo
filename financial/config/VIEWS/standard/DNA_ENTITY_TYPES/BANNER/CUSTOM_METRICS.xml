@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dna xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:noNamespaceSchemaLocation="http://www.ngdata.com/lily/xsd/dna_1_0.xsd">
+  <interactionFilters>
+      <interactionFilter name="banner_clicked" expr=" (itx.banner_clicked == '1') "/>
+      <interactionFilter name="banner_shown" expr=" (itx.banner_shown == '1' ) "/>
+  </interactionFilters>
+  <variables>
+      <itxAggregate name="amountClicked" on="banner_clicked">
+         <operation>sum</operation>
+         <expr>1</expr>
+         <type value="long"/>
+      </itxAggregate>
+      <itxAggregate name="amountShown" on="banner_shown">
+         <operation>sum</operation>
+         <expr>1</expr>
+         <type value="long"/>
+      </itxAggregate>
+      <field name="bannerName">
+         <type value="string"/>
+         <attributes>
+            <attribute name="index">true</attribute>
+         </attributes>
+      </field>
+      <field name="productId">
+         <type value="long"/>
+      </field>
+  </variables>
+</dna>

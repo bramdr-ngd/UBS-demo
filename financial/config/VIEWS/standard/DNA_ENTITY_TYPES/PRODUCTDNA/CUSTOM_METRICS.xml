@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dna xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:noNamespaceSchemaLocation="http://www.ngdata.com/lily/xsd/dna_1_0.xsd">
+  <interactionFilters>
+      <interactionFilter name="applications_made" expr="itx.goal == 'apply for new account' "/>
+      <interactionFilter name="catch_all"
+                         expr="itx.typeName=='ngdata.lily.consultAccount' || itx.typeName=='ngdata.lily.customerExperience' || itx.typeName=='ngdata.lily.executePaymentTransaction' || itx.typeName=='ngdata.lily.makePurchase' || itx.typeName=='ngdata.lily.managePersonalFinances' || itx.typeName=='ngdata.lily.portfolioManagement' || itx.typeName=='ngdata.lily.simulation' "/>
+      <interactionFilter name="content_viewed" expr="itx.goal == 'consume content'"/>
+      <interactionFilter name="info_requested"
+                         expr="itx.goal == 'support' || itx.subgoal == 'request information'"/>
+  </interactionFilters>
+  <groups>
+      <group name="channel">
+         <valueType>string</valueType>
+         <expr for="catch_all">itx.channelDnaEntityId</expr>
+      </group>
+  </groups>
+  <variables>
+      <field name="Price">
+         <type value="double"/>
+      </field>
+      <field name="description">
+         <type value="string"/>
+      </field>
+      <itxAggregate name="numberOfApplications" on="applications_made">
+         <operation>sum</operation>
+         <expr>1</expr>
+         <aggregationWindow>3 weeks</aggregationWindow>
+         <type value="long"/>
+         <defaultQueryWindow>1 day</defaultQueryWindow>
+         <attributes>
+            <attribute name="label">Amount of requested Information</attribute>
+         </attributes>
+      </itxAggregate>
+      <itxAggregate name="numberOfContentConsumed" on="content_viewed">
+         <operation>sum</operation>
+         <expr>1</expr>
+         <aggregationWindow>3 weeks</aggregationWindow>
+         <type value="long"/>
+         <defaultQueryWindow>1 day</defaultQueryWindow>
+         <attributes>
+            <attribute name="label">Amount of Content Consuming interactions</attribute>
+         </attributes>
+      </itxAggregate>
+      <itxAggregate name="numberOfRequestedInfo" on="info_requested">
+         <operation>sum</operation>
+         <expr>1</expr>
+         <aggregationWindow>3 weeks</aggregationWindow>
+         <type value="long"/>
+         <defaultQueryWindow>1 day</defaultQueryWindow>
+         <attributes>
+            <attribute name="label">Amount of requested Information</attribute>
+         </attributes>
+      </itxAggregate>
+      <itxAggregate name="totalInteractionsOnProductPerChannel" on="catch_all">
+         <operation>sum</operation>
+         <expr>1</expr>
+         <type value="long" groups="channel"/>
+      </itxAggregate>
+      <formula name="trendScore">
+         <expr>numberOfContentConsumed * 0.2 + numberOfRequestedInfo * 0.5 + numberOfApplications</expr>
+         <type value="double"/>
+      </formula>
+  </variables>
+</dna>

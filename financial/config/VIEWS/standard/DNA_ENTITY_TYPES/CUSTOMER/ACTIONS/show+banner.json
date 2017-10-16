@@ -1,0 +1,39 @@
+{
+  "name" : "show banner",
+  "description" : null,
+  "scenario" : "RESPONSE",
+  "outputSystem" : "browser",
+  "parameters" : [ {
+    "name" : "actionType",
+    "type" : {
+      "kind" : "SCALAR",
+      "scalarType" : "STRING"
+    },
+    "expression" : "'REPLACE_BANNER'",
+    "mandatory" : false
+  }, {
+    "name" : "bannerId",
+    "type" : {
+      "kind" : "SCALAR",
+      "scalarType" : "STRING"
+    },
+    "expression" : "'default'",
+    "mandatory" : false
+  }, {
+    "name" : "metricName",
+    "type" : {
+      "kind" : "SCALAR",
+      "scalarType" : "STRING"
+    },
+    "expression" : "''",
+    "mandatory" : false
+  }, {
+    "name" : "metricValue",
+    "type" : {
+      "kind" : "SCALAR",
+      "scalarType" : "STRING"
+    },
+    "expression" : "''",
+    "mandatory" : false
+  } ]
+}

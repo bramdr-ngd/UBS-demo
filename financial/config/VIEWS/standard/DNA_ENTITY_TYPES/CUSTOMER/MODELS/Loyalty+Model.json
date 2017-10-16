@@ -1,0 +1,63 @@
+{
+  "type" : "PMML",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "description" : "Loyalty model, using short-term and long-term predictors",
+  "inputs" : [ {
+    "defaultValue" : null,
+    "expr" : "segment",
+    "pmmlField" : "segment"
+  }, {
+    "defaultValue" : null,
+    "expr" : "totalBankProducts",
+    "pmmlField" : "totalBankProducts"
+  }, {
+    "defaultValue" : null,
+    "expr" : "totalComplaintsPer180Days",
+    "pmmlField" : "totalComplaintsPer180Days"
+  }, {
+    "defaultValue" : null,
+    "expr" : "totalPortfolioAdjustmentsPer120Days",
+    "pmmlField" : "totalPortfolioAdjustmentsPer120Days"
+  }, {
+    "defaultValue" : null,
+    "expr" : "flagActive",
+    "pmmlField" : "flagActive"
+  }, {
+    "defaultValue" : null,
+    "expr" : "totalActiveProducts",
+    "pmmlField" : "totalActiveProducts"
+  }, {
+    "defaultValue" : null,
+    "expr" : "shareOfWallet",
+    "pmmlField" : "shareOfWallet"
+  }, {
+    "defaultValue" : null,
+    "expr" : "likes",
+    "pmmlField" : "likes"
+  }, {
+    "defaultValue" : null,
+    "expr" : "positiveTweets",
+    "pmmlField" : "positiveTweets"
+  }, {
+    "defaultValue" : null,
+    "expr" : "shares",
+    "pmmlField" : "shares"
+  } ],
+  "name" : "Loyalty Model",
+  "outputs" : [ {
+    "dnaVariableName" : "scoreLoyalty01",
+    "groupName" : null,
+    "pmmlField" : "Predicted_targetInit"
+  }, {
+    "dnaVariableName" : "scoreLoyalty",
+    "groupName" : null,
+    "pmmlField" : "Predicted_Final"
+  } ],
+  "pmmlId" : "9bbdf7302f3a6ee07ef1f6203af10a54b688eb7f2b6295c5d19b7e984a2af4d1",
+  "pmmlModelName" : "LoyaltyModel",
+  "setSelection" : [ "All Profiles" ],
+  "attributes" : { }
+}

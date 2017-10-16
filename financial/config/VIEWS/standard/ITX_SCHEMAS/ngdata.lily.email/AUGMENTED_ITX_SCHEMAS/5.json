@@ -1,0 +1,232 @@
+{
+  "type" : "record",
+  "name" : "email",
+  "namespace" : "ngdata.lily",
+  "fields" : [ {
+    "name" : "timestamp",
+    "type" : "long",
+    "doc" : "When did this interaction happen, in Java milliseconds, at client side. For log-based interactions the channel-specific time stamp indicating the start of the interaction should be mapped to the generic timestamp."
+  }, {
+    "name" : "tenantId",
+    "type" : [ "null", "string" ],
+    "doc" : "The tenantId to which this interaction belongs to",
+    "default" : null
+  }, {
+    "name" : "customerId",
+    "type" : [ "null", "string" ],
+    "doc" : "ID of the CRM customer . This is a nullable ExternalID",
+    "default" : null,
+    "lilySourceId" : "true",
+    "lilyDnaEntityType" : "customer_CRM"
+  }, {
+    "name" : "amount",
+    "type" : [ "null", "double" ],
+    "doc" : "amount of the transaction",
+    "default" : null
+  }, {
+    "name" : "timezone",
+    "type" : [ "null", "long" ],
+    "doc" : "The time zone at client side when the interaction happened.",
+    "default" : null
+  }, {
+    "name" : "sequenceId",
+    "type" : [ "null", "string" ],
+    "doc" : "Sequence number of the interaction in a conversation",
+    "default" : null
+  }, {
+    "name" : "medium",
+    "type" : [ "null", "string" ],
+    "doc" : "The medium of the interaction (e.g. written, oral).",
+    "default" : null
+  }, {
+    "name" : "channel",
+    "type" : [ "null", "string" ],
+    "doc" : "Channel that captured the interaction (UTS, CALL, EMAIL, PAYMENT_SYSTEM, ...)",
+    "default" : null
+  }, {
+    "name" : "source",
+    "type" : [ "null", "string" ],
+    "doc" : "Specific source the interaction stems from (e.g. messagent for channel email)",
+    "default" : null
+  }, {
+    "name" : "goal",
+    "type" : "string",
+    "doc" : "Main goal (goal) of the interaction (complaint, ...)"
+  }, {
+    "name" : "subgoal",
+    "type" : "string",
+    "doc" : "More specific goal (subgoal) of the interaction (product complaint, ...)"
+  }, {
+    "name" : "reason",
+    "type" : [ "null", "string" ],
+    "doc" : "Interaction reason that further clarifies the sub goal (e.g. sub goal= product complaint, reason: malfunctioning of product)",
+    "default" : null
+  }, {
+    "name" : "brand",
+    "type" : [ "null", "string" ],
+    "doc" : "Brand of the item the interaction is associated to.",
+    "default" : null
+  }, {
+    "name" : "inboundFlag",
+    "type" : [ "null", "boolean" ],
+    "doc" : "The interaction is customer initiated (inbound)",
+    "default" : null
+  }, {
+    "name" : "successFlag",
+    "type" : [ "null", "boolean" ],
+    "doc" : "A successful interaction.",
+    "default" : null
+  }, {
+    "name" : "failureReason",
+    "type" : [ "null", "string" ],
+    "doc" : "Reason the interaction failed.",
+    "default" : null
+  }, {
+    "name" : "device",
+    "type" : [ "null", "string" ],
+    "doc" : "Device used by the customer for the interaction: pc, laptop, smartphone, tablet, mobile phone but not smartphone, fixed line, tablet",
+    "default" : null
+  }, {
+    "name" : "geocoordinates",
+    "type" : [ "null", "string" ],
+    "doc" : "Location of customer at the time of the interaction using geocordinates",
+    "default" : null
+  }, {
+    "name" : "latitude",
+    "type" : [ "null", "string" ],
+    "doc" : "Latitude of location of customer at time of the interaction",
+    "default" : null
+  }, {
+    "name" : "longitude",
+    "type" : [ "null", "string" ],
+    "doc" : "Longitude of location of customer at time of the interaction",
+    "default" : null
+  }, {
+    "name" : "emailId",
+    "type" : [ "null", "string" ],
+    "doc" : "Unique identifier for the email interaction.",
+    "default" : null
+  }, {
+    "name" : "sender",
+    "type" : [ "null", "string" ],
+    "doc" : "Address of the sender",
+    "default" : null
+  }, {
+    "name" : "customerPriority",
+    "type" : [ "null", "long" ],
+    "doc" : "Priority score for customer used to prioritize email response.",
+    "default" : null
+  }, {
+    "name" : "emailPriority",
+    "type" : [ "null", "long" ],
+    "doc" : "Priority score for a customer's specific inbound email. The emailPriority defines the email response handling.",
+    "default" : null
+  }, {
+    "name" : "mimeVersion",
+    "type" : [ "null", "string" ],
+    "doc" : "MIME version for email message that is MIME-formatted",
+    "default" : null
+  }, {
+    "name" : "contentType",
+    "type" : [ "null", "string" ],
+    "doc" : "Internet media type of the message content",
+    "default" : null
+  }, {
+    "name" : "customerEmailAddress",
+    "type" : [ "null", "string" ],
+    "doc" : "Email address of the customer. This is a non-nullable ExternalId",
+    "default" : null
+  }, {
+    "name" : "fromEmail",
+    "type" : [ "null", "string" ],
+    "doc" : "Standard email field: Authors or persons taking responsibility for the message.",
+    "default" : null
+  }, {
+    "name" : "emailPath",
+    "type" : [ "null", "string" ],
+    "doc" : "list of MTAs passed",
+    "default" : null
+  }, {
+    "name" : "to",
+    "type" : [ "null", "string" ],
+    "doc" : "Primary recipients",
+    "default" : null
+  }, {
+    "name" : "cc",
+    "type" : [ "null", "string" ],
+    "doc" : "Secondary, informational recipients",
+    "default" : null
+  }, {
+    "name" : "bcc",
+    "type" : [ "null", "string" ],
+    "doc" : "Recipients not to be disclosed to other recipients",
+    "default" : null
+  }, {
+    "name" : "replyTo",
+    "type" : [ "null", "string" ],
+    "doc" : "Address the sender wants replies to go",
+    "default" : null
+  }, {
+    "name" : "subject",
+    "type" : [ "null", "string" ],
+    "doc" : "Title of the message",
+    "default" : null
+  }, {
+    "name" : "importance",
+    "type" : [ "null", "string" ],
+    "doc" : "Importance of the message: (high, normal, low)",
+    "default" : null
+  }, {
+    "name" : "sensitivity",
+    "type" : [ "null", "string" ],
+    "doc" : "Sensitivity of the message: (personal, private, company confidential)",
+    "default" : null
+  }, {
+    "name" : "size",
+    "type" : [ "null", "long" ],
+    "doc" : "Size in bytes of the message text",
+    "default" : null
+  }, {
+    "name" : "mainLanguage",
+    "type" : [ "null", "string" ],
+    "doc" : "Main language of the email communication.",
+    "default" : null
+  }, {
+    "name" : "multiLanguageFlag",
+    "type" : [ "null", "boolean" ],
+    "doc" : "Email communication using multiple languages.",
+    "default" : null
+  }, {
+    "name" : "multipleLanguages",
+    "type" : [ "null", "string" ],
+    "doc" : "List of multiple languages used in email",
+    "default" : null
+  }, {
+    "name" : "memo",
+    "type" : [ "null", "string" ],
+    "doc" : "Description field for deposits",
+    "default" : null
+  }, {
+    "name" : "accountType",
+    "type" : [ "null", "string" ],
+    "doc" : "Description field for account type",
+    "default" : null
+  }, {
+    "name" : "offerType",
+    "type" : [ "null", "string" ],
+    "doc" : "Description field for offer type",
+    "default" : null
+  }, {
+    "name" : "customerDnaEntityId",
+    "type" : [ "null", "long" ],
+    "default" : null
+  }, {
+    "name" : "customerDnaEntityType",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "customerResolvedOriginalSourceId",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ]
+}

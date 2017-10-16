@@ -1,0 +1,9 @@
+{
+  "name" : "Car Loan Landing Page Visited",
+  "description" : "Customers with any active product",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "(dna.flagActive = 1)"
+}

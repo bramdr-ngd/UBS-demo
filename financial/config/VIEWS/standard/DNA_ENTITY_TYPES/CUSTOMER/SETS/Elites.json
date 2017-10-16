@@ -1,0 +1,9 @@
+{
+  "name" : "Elites",
+  "description" : "Older suburban couples",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "flagElitesMember = 1"
+}

@@ -1,0 +1,210 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "id" : null,
+  "description" : null,
+  "name" : "scoring.action_score",
+  "table" : {
+    "type" : {
+      "kind" : "TABLE",
+      "fields" : [ {
+        "name" : "id",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "long"
+        }
+      }, {
+        "name" : "action_name",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "description",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "action_type",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "action_sub_type",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      },
+       {
+               "name" : "action_sub_sub_type",
+               "dataType" : {
+                 "kind" : "SCALAR",
+                 "scalarType" : "string"
+               }
+             },
+      {
+        "name" : "actioneligibility",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "actionpropensity",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "actionpriority",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "valid_locations",
+        "dataType" : {
+          "kind" : "ARRAY",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "valid_channels",
+        "dataType" : {
+          "kind" : "ARRAY",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "valid_identifications",
+        "dataType" : {
+          "kind" : "ARRAY",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "valid_journey_stages",
+        "dataType" : {
+          "kind" : "ARRAY",
+          "scalarType" : "string"
+        }
+      }, {
+        "name" : "valid_products",
+        "dataType" : {
+          "kind" : "ARRAY",
+          "scalarType" : "string"
+        }
+      },
+       {
+               "name" : "valid_devices",
+               "dataType" : {
+                 "kind" : "ARRAY",
+                 "scalarType" : "string"
+               }
+             },
+             {
+                     "name" : "valid_from_time",
+                     "dataType" : {
+                       "kind" : "SCALAR",
+                       "scalarType" : "datetime"
+                     }
+                   },
+                   {
+                                                           "name" : "valid_until_time",
+                                                           "dataType" : {
+                                                             "kind" : "SCALAR",
+                                                             "scalarType" : "datetime"
+                                                           }
+                                                         },
+       {
+        "name" : "nbascore",
+        "dataType" : {
+          "kind" : "SCALAR",
+          "scalarType" : "string"
+        }
+      } ],
+      "primaryKey" : [ "id" ]
+    },
+    "rows" : [ {
+      "id" : "1",
+      "action_name" : "awareness car loan product banner known users",
+      "description" : "A product banner to be shown to customers in the awareness phase for product category car loans and who are identified and on the home page",
+      "action_type" : "banner",
+      "action_sub_type" : "product banner",
+      "action_sub_sub_type" : "static banner",
+      "actioneligibility" : "dna.flagExistingCustomer",
+      "actionpropensity" : "min(dna.propensityCarLoanModel+(randomInt(1,100)/100.0),1)",
+      "actionpriority" : "dna.carvalue",
+      "valid_locations" : [ "homePage" ],
+      "valid_channels" : [ "web" ],
+      "valid_identifications" : [ "identified" ],
+      "valid_journey_stages" : [ "Awareness" ],
+      "valid_products" : [ "1", "2" ],
+      "valid_devices" : ["laptop"],
+      "valid_from_time" : "2012-02-03T04:05:06.007Z",
+     "valid_until_time" : "2019-03-12T04:05:06.007Z",
+      "nbascore" : "dna.actionEligibility[actions_id=entity.id] * dna.actionPropensity[actions_id=entity.id]"
+    },
+    {
+      "id" : "2",
+      "action_name" : "Awareness home loan SMS known users",
+      "description" : "An sms for home loans for known customers in the awareness phase",
+      "action_type" : "sms",
+      "action_sub_type" : "product sms",
+            "action_sub_sub_type" : "static banner",
+      "actioneligibility" : "dna.flagExistingCustomer",
+      "actionpropensity" : "min((dna.propensityCarLoanModel+(randomInt(1,100)/100.0)*2),1)",
+      "actionpriority" : "dna.carvalue",
+      "valid_locations" : [ "(long: 3.7174 E, lat:51.0543 N)", "(long:3.2242400 E,lat: 51.2089200 N)" ],
+      "valid_channels" : [ "sms" ],
+      "valid_identifications" : [ "authenticated", "identified" ],
+      "valid_journey_stages" : [ "Awareness" ],
+      "valid_products" : [ "4", "5", "6" ],
+       "valid_devices" : ["smartphone"],
+             "valid_from_time" : "2017-02-03T04:05:06.007Z",
+            "valid_until_time" : "2017-12-03T04:05:06.007Z",
+      "nbascore" : "dna.actionEligibility[actions_id=entity.id] * dna.actionPropensity[actions_id=entity.id]"
+    }, {
+      "id" : "3",
+      "action_name" : "fake awareness car loan product banner known customers",
+      "description" : "A fake product banner to be shown to customers in the awareness phase for product category car loans and who are identified and on the home page",
+      "action_type" : "banner",
+      "action_sub_type" : "product banner",
+            "action_sub_sub_type" : "static banner",
+      "actioneligibility" : "dna.flagExistingCustomer",
+      "actionpropensity" : "min((dna.propensityCarLoanModel+(randomInt(1,100)/100.0))*3,1)",
+      "actionpriority" : "dna.carvalue",
+       "valid_locations" : [ "homePage" ,"car loan overview page"],
+      "valid_channels" : [ "web", "mobile" ],
+      "valid_identifications" : [ "identified" ],
+      "valid_journey_stages" : [ "Awareness" ],
+      "valid_products" : [ "1", "2" ],
+       "valid_devices" : ["ipad", "laptop"],
+             "valid_from_time" : "2017-02-03T04:05:06.007Z",
+            "valid_until_time" : "2019-12-03T04:05:06.007Z",
+      "nbascore" : "dna.actionEligibility[actions_id=entity.id] * dna.actionPropensity[actions_id=entity.id]"
+    },
+     {
+      "id" : "4",
+      "action_name" : "real fake awareness car loan product banner known customers",
+      "description" : "A real fake product banner to be shown to customers in the awareness phase for product category car loans and who are identified and on the home page",
+      "action_type" : "banner",
+      "action_sub_type" : "product banner",
+            "action_sub_sub_type" : "static banner",
+      "actioneligibility" : "dna.flagExistingCustomer",
+      "actionpropensity" : "min((dna.propensityCarLoanModel+(randomInt(1,100)/100.0))*4,1)",
+      "actionpriority" : "dna.carvalue",
+      "valid_locations" : [ "car loan overview page","car loan simulation page" ],
+      "valid_channels" : [ "web", "mobile" ],
+      "valid_identifications" : [ "identified" ],
+      "valid_journey_stages" : [ "awareness" ],
+      "valid_products" : [ "1", "2" ],
+       "valid_devices" : ["laptop"],
+       "valid_from_time" : "2017-02-03T04:05:06.007Z",
+       "valid_until_time" : "2017-09-03T04:05:06.007Z",
+      "nbascore" : "dna.actionEligibility[actions_id=entity.id] * dna.actionPropensity[actions_id=entity.id]"
+    } ]
+  },
+  "attributes" : { }
+}

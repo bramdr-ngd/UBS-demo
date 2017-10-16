@@ -1,0 +1,7 @@
+{
+  "anonymous" : false,
+  "dnaEntityType" : "CUSTOMER_UTS",
+  "mastersEnabled" : false,
+  "priority" : 30,
+  "sourceIdAlgorithm" : "PARSE"
+}

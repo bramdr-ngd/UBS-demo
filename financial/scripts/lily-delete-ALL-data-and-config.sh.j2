@@ -1,0 +1,89 @@
+#!/usr/bin/env bash
+set -e
+
+cm_hostname="{{manager_host}}"
+zk_hostname="{{groups['zookeeper-server'] | join(",") }}"
+cdh_username="{{manager_user}}"
+cdh_password="{{manager_password}}"
+cluster_name="{{manager_cluster_name}}"
+solr_hostname="{{groups['solr-server'][0]}}"
+
+[ -n "$cm_hostname" ] || ( echo "Could not determine CM hostname" && exit 1)
+[ -n "$solr_hostname" ] || ( echo "Could not determine SOLR hostname" && exit 1)
+[ -n "$zk_hostname" ] || ( echo "Could not determine ZK hostname" && exit 1)
+[ -n "$cdh_username" ] || ( echo "Please configure a CDH username" && exit 1)
+[ -n "$cdh_password" ] || ( echo "Please configure a CDH password" && exit 1)
+[ -n "$cluster_name" ] || ( echo "Provide the CDH cluster name" && exit 1)
+
+echo "Beware! Are you sure you want to erase all data and configuration from this cluster?"
+read -p "Type ERASE if you want to continue: "
+if [[ ! $REPLY == "ERASE" ]]
+then
+    echo "Aborted."
+    exit 1
+fi
+
+echo "=== Remove DNA entities ==="
+lily dna-entity-type-list 2> /dev/null | grep '^ - ' | cut -d '-' -f 2 | while read dna; do
+  if [ "${dna%_SET}" == "${dna}" ]; then
+    lily dna-drop-table --dna-entity-type $dna
+    lily dna-entity-type-delete --dna-entity-type $dna 2> /dev/null ||: #nevermind
+    echo "Dropped DNA entity ${dna}"
+  fi
+done
+
+
+echo "=== Remove other entities ==="
+hbase shell << EOF
+import org.apache.hadoop.hbase.client.HBaseAdmin
+import org.apache.hadoop.hbase.client.replication.ReplicationAdmin
+import org.apache.hadoop.hbase.HBaseConfiguration
+
+conf = HBaseConfiguration.new
+hbaseAdmin = HBaseAdmin.new(conf)
+repAdmin = ReplicationAdmin.new(conf)
+
+unless hbaseAdmin.listTables().nil?
+    hbaseAdmin.listTables().each do |table|
+        hbaseAdmin.disable_table(table.name) if !hbaseAdmin.table_disabled?(table.name)
+        hbaseAdmin.delete_table(table.name)
+        puts "Deleted hbase table #{table.nameAsString}"
+    end
+end
+EOF
+
+
+echo "=== Remove interactions ==="
+lily fs -rm -r -f -skipTrash /lily/interactions
+lily script {{target.ansible.dir}}/scripts/clearVCE.groovy;
+
+echo "=== Remove indexed data ==="
+curl -s "http://$solr_hostname:8983/solr/zookeeper?detail=true&path=%2Fcollections" | jq .tree[0].children[].data.title | cut -d '"' -f 2 | while read collection; do
+  curl -s "http://$solr_hostname:8983/solr/$collection/update?commit=true" -H "Content-Type:text/xml" --data-binary '<delete><query>*:*</query></delete>' -o /dev/null
+done
+
+
+echo "=== Remove zookeeper config  ==="
+zookeeper-client -server $zk_hostname rmr /ngdata/lily/models/*
+zookeeper-client -server $zk_hostname rmr /ngdata/lily/process/*
+zookeeper-client -server $zk_hostname rmr /ngdata/lily/dataframes/*
+zookeeper-client -server $zk_hostname rmr /ngdata/lily/itxrepo/*
+zookeeper-client -server $zk_hostname rmr /ngdata/lily/tenants/*
+zookeeper-client -server $zk_hostname rmr /ngdata/lily/dna/*
+zookeeper-client -server $zk_hostname rmr /ngdata/lily/alerts/*
+zookeeper-client -server $zk_hostname rmr /ngdata/lily/sets/*
+zookeeper-client -server $zk_hostname rmr /ngdata/lily/batchdefinition/*
+
+
+echo "=== Restart HBASE  ==="
+#commandId=$(curl -X POST -u "$cdh_username:$cdh_password" -s "http://$cm_hostname:7180/api/v5/clusters/$cluster_name/services/HBASEService/commands/restart" | jq .id)
+
+#status_restarting="true"
+#while [ "$status_restarting" == "true" ]; do
+#  status_restarting=$(curl -X GET -u "$cdh_username:$cdh_password" -s "http://$cm_hostname:7180/api/v5/clusters/$cluster_name/services/HBASEService/commands" | jq ".items | map(select(.id == $commandId)) | has(0)")
+#  echo "Waiting for hbase restart to complete (id=$commandId)..."
+#  sleep 5
+#done
+echo "Manually restart HBase after stopping FLUMEService, Hive, KS_INDEXERService, Lily_Enterprise; restart services afterwards"
+echo "Also verify that the zookeeper nodes are gone"
+echo "Don't forget to clean de ansible schema caching folders if you want to fully redeploy!!!"

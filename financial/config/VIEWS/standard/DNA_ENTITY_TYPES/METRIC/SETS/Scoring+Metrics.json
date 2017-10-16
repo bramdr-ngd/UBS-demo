@@ -1,0 +1,9 @@
+{
+  "name" : "Scoring Metrics",
+  "description" : "Scoring",
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "EVERYONE"
+  } ],
+  "conditions" : "metricType='SCORING'"
+}

@@ -1,0 +1,10 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "USER:alexv"
+  } ],
+  "attributes" : { },
+  "description" : "customer engagement view",
+  "dnaVariables" : [ "likes", "negativeTweets", "positiveTweets", "totalComplaints", "totalComplaintsByAggregationWindow", "totalComplaintsPer180Days", "totalComplaintsPer30Days", "totalComplaintsPer5Mins", "totalComplaintsPer90Days", "totalComplaintsPerMonth", "totalSupportCalls" ],
+  "name" : "Alex"
+}
