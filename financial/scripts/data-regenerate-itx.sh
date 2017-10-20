@@ -12,3 +12,4 @@ rm -f $1/ItxData_*.{csv,hdr}
 # generate new interactions
 echo 'generate new itx files'
 ./data-generate-itx.py -n 6 -o $1 -m ./data-generate-model --no-progress;
+./data-generate-itx-DemoPersona.py -o $1 --no-progress;

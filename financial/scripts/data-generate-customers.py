@@ -1050,7 +1050,7 @@ def write_header_to_filter(file_to_filter):
     file_to_filter.write('flagRetirementAccount;flagLifeInsurance;flagPersonalLoan;flagMortgage;flagHomeEquityLoan;')
     file_to_filter.write('flagCarLoan;startdate_flagCarLoan;flagLoan;totalActiveProducts;')
     file_to_filter.write('totalReferrals;satisfaction;scoreChurn;flagOnlineBanking;flagOnlineBillPayment;flagMobilePayment;flagReloadablePrepaidCards;')
-    file_to_filter.write('totalAssets;totalRecRevenue;totalNonRecRevenue;flagDebCollection;')
+    file_to_filter.write('totalAssets;totalRecRevenue;totalNonRecRevenue;flagDebtCollection;')
     file_to_filter.write('affNightLife;affSport;affHealthFitness;affOutdoor;affLuxuryShopper;affMovie;affPetLovers;affFastFood;affValueShopper;affTechnophiles;affGreenLiving;affMusic;')
     file_to_filter.write('affFoodies;affCooking;affShutterbugs;affSavvyParents;affDIY;affAuto;affFashionistas;affBeautyMavens;affHomeDecor;affPolitical;affAvidInvestor;affThrillSeeker;')
     file_to_filter.write('affBargainHunter;affTravelBuff;affLuxuryTravel;affFamilyVacation;affBeachTravel;affWinterTravel;affNewsJunky;affArtTheater;affGamer;affTV;')
