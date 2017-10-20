@@ -13,7 +13,7 @@
   "notificationParameters" : {
     "rulesengine.trigger" : "true"
   },
-  "setReference" : "customer_all",
+  "setReference" : "All+Profiles",
   "attributes" : { },
   "structuredConditions" : null
 }
