@@ -1,9 +1,0 @@
-{
-  "name" : "femaleNightLife",
-  "description" : "femaleNightLife",
-  "acl" : [ {
-    "owner" : true,
-    "subject" : "USER:thomasvs"
-  } ],
-  "conditions" : "((dna.gender = 'female') AND (dna.affNightLife >= 0) AND (dna.affNightLife < 9.900000000000002))"
-}

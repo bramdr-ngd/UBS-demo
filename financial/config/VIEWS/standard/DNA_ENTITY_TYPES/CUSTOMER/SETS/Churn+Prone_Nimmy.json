@@ -1,9 +1,0 @@
-{
-  "name" : "Churn Prone_Nimmy",
-  "description" : "Churn Prone_Nimmy",
-  "acl" : [ {
-    "owner" : true,
-    "subject" : "USER:nimmyj"
-  } ],
-  "conditions" : "(dna.scoreChurnAmp > 0.9)"
-}

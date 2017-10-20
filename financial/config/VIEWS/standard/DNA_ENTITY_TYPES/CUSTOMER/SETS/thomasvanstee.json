@@ -1,9 +1,0 @@
-{
-  "name" : "thomasvanstee",
-  "description" : "thomasvanstee",
-  "acl" : [ {
-    "owner" : true,
-    "subject" : "USER:thomasvs"
-  } ],
-  "conditions" : "(dna.scoreChurnAmp > 0.9)"
-}

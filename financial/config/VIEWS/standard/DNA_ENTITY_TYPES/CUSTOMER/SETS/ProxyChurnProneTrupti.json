@@ -1,9 +1,0 @@
-{
-  "name" : "ProxyChurnProneTrupti",
-  "description" : "TruptiProxyChurnProne",
-  "acl" : [ {
-    "owner" : true,
-    "subject" : "USER:truptip"
-  } ],
-  "conditions" : "((dna.totalWebActivitiesPer60Days >= 0) AND (dna.totalWebActivitiesPer60Days < 10))"
-}
