@@ -5,7 +5,7 @@ set -e;
 [[ $1 =~ .*/$ ]] && echo "Usage: data-load-itx.sh /path/to_files_to_load_without_trailing_slash" && exit 1;
 
 ./data-clean-itx.sh;
-#!./data-regenerate-itx.sh $1;
+./data-regenerate-itx.sh $1;
 ./data-load-itx.sh $1;
 ./data-batch-calc.sh -f;
 
