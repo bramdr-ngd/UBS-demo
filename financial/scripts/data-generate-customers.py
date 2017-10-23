@@ -53,6 +53,8 @@ def pick_age_category(i, segment):
     age_category=pick_random_pct_min_max(segment["age_categories"])
     if (i == 22639):
         age_category["name"] = "35-49"
+    if (i == 3346):
+        age_category["name"] = "50 or older"
     return age_category
 #    return pick_random_pct_min_max(segment["age_categories"])
 
@@ -60,6 +62,8 @@ def pick_age(i, age_category):
     age=r.randint(age_category["random_age"][0], age_category["random_age"][1])
     if (i == 22639):
         age = 46
+    if (i == 3346):
+        age = 57
     return age
 #    return r.randint(age_category["random_age"][0], age_category["random_age"][1])
 
