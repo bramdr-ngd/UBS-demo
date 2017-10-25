@@ -28,7 +28,7 @@
             <description>Is customer looking for significant loan?</description>
             <priorityWeight>0</priorityWeight>
             <if>dna.lastCarLoanSimulationAmountToday &gt; 35000</if>
-            <rule name="carLoanSimulationBanner">
+            <rule name="Car Loan Simulation Banner">
                <description>Show car loan banner on the home page</description>
                <priorityWeight>0</priorityWeight>
                <if>ctx.pageId = 'index' AND dna.recencyCarLoanSimulation &lt; 5.0</if>

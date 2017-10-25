@@ -1,3 +1,4 @@
+#!This script is not used
 #!/bin/bash
 
 ./data-generate-customers.py -n 50000 -o /disk1/current/ -m ./data-generate-model/

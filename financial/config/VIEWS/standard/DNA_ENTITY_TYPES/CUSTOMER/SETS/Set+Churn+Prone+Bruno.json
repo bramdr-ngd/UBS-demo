@@ -1,9 +1,0 @@
-{
-  "name" : "Set Churn Prone Bruno",
-  "description" : "Set Churn Prone Bruno 20170914",
-  "acl" : [ {
-    "owner" : true,
-    "subject" : "USER:brunod"
-  } ],
-  "conditions" : "(dna.scoreChurnAmp > 0.9)"
-}

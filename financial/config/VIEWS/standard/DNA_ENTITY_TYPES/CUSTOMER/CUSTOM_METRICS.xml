@@ -4034,9 +4034,9 @@
             <attribute name="rangeMax">1</attribute>
             <attribute name="nature">positive</attribute>
             <attribute name="rangeMin">0</attribute>
-            <attribute name="longlabel">Traditionalists Set Member Flag</attribute>
+            <attribute name="longlabel">Traditionalists</attribute>
             <attribute name="description">Traditionalists set member flag</attribute>
-            <attribute name="label">Traditionalists Set Member Flag</attribute>
+            <attribute name="label">Traditionalists</attribute>
             <attribute name="timeLine">false</attribute>
             <attribute name="category">Socio Demo</attribute>
             <attribute name="subcategory">Property</attribute>
@@ -4347,9 +4347,9 @@
          <defaultValue>0</defaultValue>
          <attributes>
             <attribute name="DNAid">x.xx.xx</attribute>
-            <attribute name="longlabel">Itx Count for last 7 days</attribute>
-            <attribute name="description">Itx count for last 7 days to monitor environment</attribute>
-            <attribute name="label">Itx Count for last 7 days</attribute>
+            <attribute name="longlabel">Interaction Count over last 7 days</attribute>
+            <attribute name="description">Interaction count over last 7 days to monitor environment</attribute>
+            <attribute name="label">Interaction Count over last 7 days</attribute>
             <attribute name="timeLine">true</attribute>
             <attribute name="category">Behavior</attribute>
             <attribute name="subcategory">Intensity</attribute>
@@ -5975,10 +5975,10 @@
             <attribute name="rangeMax">100</attribute>
             <attribute name="nature">positive</attribute>
             <attribute name="rangeMin">-100</attribute>
-            <attribute name="longlabel">PercentChange Account Consultations over 30 days</attribute>
+            <attribute name="longlabel">Percentage Change Account Consultations over 30 days</attribute>
             <attribute name="description">Percentage change in total number of account consultations last 30 days versus 30
           days before</attribute>
-            <attribute name="label">PercentChange Account Consultations over 30days</attribute>
+            <attribute name="label">Percentage Change Account Consultations over 30days</attribute>
             <attribute name="category">Behavior</attribute>
             <attribute name="subcategory">Frequency</attribute>
          </attributes>
@@ -7450,7 +7450,7 @@
             <attribute name="rangeMin">0</attribute>
             <attribute name="longlabel">Yves Saint Laurent Propensity Score</attribute>
             <attribute name="description">Customer's propensity score for Yves Saint Laurent products </attribute>
-            <attribute name="label">YSL Propensity Score</attribute>
+            <attribute name="label">Yves Saint Laurent Propensity Score</attribute>
             <attribute name="timeLine">true</attribute>
             <attribute name="category">Response</attribute>
             <attribute name="subcategory">Offers</attribute>

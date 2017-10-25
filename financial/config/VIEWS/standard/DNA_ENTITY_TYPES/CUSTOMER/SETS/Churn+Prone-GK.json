@@ -1,9 +1,0 @@
-{
-  "name" : "Churn Prone-GK",
-  "description" : "Churn Prone-GK",
-  "acl" : [ {
-    "owner" : true,
-    "subject" : "USER:ganeshr"
-  } ],
-  "conditions" : "(dna.scoreChurnAmp > 0.9)"
-}

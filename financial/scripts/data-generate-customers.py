@@ -53,6 +53,8 @@ def pick_age_category(i, segment):
     age_category=pick_random_pct_min_max(segment["age_categories"])
     if (i == 22639):
         age_category["name"] = "35-49"
+    if (i == 3346):
+        age_category["name"] = "50 or older"
     return age_category
 #    return pick_random_pct_min_max(segment["age_categories"])
 
@@ -60,6 +62,8 @@ def pick_age(i, age_category):
     age=r.randint(age_category["random_age"][0], age_category["random_age"][1])
     if (i == 22639):
         age = 46
+    if (i == 3346):
+        age = 57
     return age
 #    return r.randint(age_category["random_age"][0], age_category["random_age"][1])
 
@@ -1050,7 +1054,7 @@ def write_header_to_filter(file_to_filter):
     file_to_filter.write('flagRetirementAccount;flagLifeInsurance;flagPersonalLoan;flagMortgage;flagHomeEquityLoan;')
     file_to_filter.write('flagCarLoan;startdate_flagCarLoan;flagLoan;totalActiveProducts;')
     file_to_filter.write('totalReferrals;satisfaction;scoreChurn;flagOnlineBanking;flagOnlineBillPayment;flagMobilePayment;flagReloadablePrepaidCards;')
-    file_to_filter.write('totalAssets;totalRecRevenue;totalNonRecRevenue;flagDebCollection;')
+    file_to_filter.write('totalAssets;totalRecRevenue;totalNonRecRevenue;flagDebtCollection;')
     file_to_filter.write('affNightLife;affSport;affHealthFitness;affOutdoor;affLuxuryShopper;affMovie;affPetLovers;affFastFood;affValueShopper;affTechnophiles;affGreenLiving;affMusic;')
     file_to_filter.write('affFoodies;affCooking;affShutterbugs;affSavvyParents;affDIY;affAuto;affFashionistas;affBeautyMavens;affHomeDecor;affPolitical;affAvidInvestor;affThrillSeeker;')
     file_to_filter.write('affBargainHunter;affTravelBuff;affLuxuryTravel;affFamilyVacation;affBeachTravel;affWinterTravel;affNewsJunky;affArtTheater;affGamer;affTV;')

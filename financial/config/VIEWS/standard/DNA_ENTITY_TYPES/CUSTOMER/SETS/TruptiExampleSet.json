@@ -1,9 +1,0 @@
-{
-  "name" : "TruptiExampleSet",
-  "description" : "TruptiExampleSet",
-  "acl" : [ {
-    "owner" : true,
-    "subject" : "EVERYONE"
-  } ],
-  "conditions" : "(dna.scoreChurnAmp > 0.9)"
-}
