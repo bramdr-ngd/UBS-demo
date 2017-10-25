@@ -5975,7 +5975,7 @@
             <attribute name="rangeMax">100</attribute>
             <attribute name="nature">positive</attribute>
             <attribute name="rangeMin">-100</attribute>
-            <attribute name="longlabel">nPercentage Change Account Consultations over 30 days</attribute>
+            <attribute name="longlabel">Percentage Change Account Consultations over 30 days</attribute>
             <attribute name="description">Percentage change in total number of account consultations last 30 days versus 30
           days before</attribute>
             <attribute name="label">Percentage Change Account Consultations over 30days</attribute>
