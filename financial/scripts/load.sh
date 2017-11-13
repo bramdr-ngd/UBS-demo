@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ./data-generate-customers.py -n 50000 -o /disk1/current/ -m ./data-generate-model/
-./data-generate-productsv2.py -o /disk1/current/ -m ./data-generate-model -c /disk1/current/CrmDataToFilter.csv
+./data-generate-products.py -o /disk1/current/ -m ./data-generate-model -c /disk1/current/CrmDataToFilter.csv
 ./data-generate-account.py -o /disk1/current/ -m ./data-generate-model -c /disk1/current/EntityDataAll.csv
 ./data-generate-account_role.py  -o /disk1/current/ -m ./data-generate-model -c /disk1/current/EntityDataAll.csv 
 ./data-generate-itx.py -n 6 -o /disk1/current -m ./data-generate-model/
