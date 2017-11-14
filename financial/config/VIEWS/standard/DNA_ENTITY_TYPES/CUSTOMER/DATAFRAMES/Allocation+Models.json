@@ -1,6 +1,6 @@
 {
-  "name" : "Allocation+Models",
-  "description" : "Allocation+Models",
+  "name" : "Allocation Models",
+  "description" : "Allocation Models",
   "acl" : [ {
     "owner" : true,
     "subject" : "EVERYONE"
