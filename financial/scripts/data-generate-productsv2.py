@@ -162,8 +162,10 @@ def main():
     ]
 
     file_out_ent =open(output_file("EntityDataAll.csv"), 'w')
-    file_out_enth =open(output_file("EntityDataAll.hdr"), 'w')
-    file_out_enth.write('customer_product_id;customer_id;name;VALUE;START_DATE;END_DATE;CATEGORY;SUB_CATEGORY;ACTIVE;MARGIN;RATE;CREDIT;FLAG_LOANPAYMENT;FLAG_TRANSACTIONPAYMENT\n')
+#    file_out_enth =open(output_file("EntityDataAll.hdr"), 'w')
+#    file_out_enth.write('customer_product_id;customer_id;name;VALUE;START_DATE;END_DATE;CATEGORY;SUB_CATEGORY;ACTIVE;MARGIN;RATE;CREDIT;FLAG_LOANPAYMENT;FLAG_TRANSACTIONPAYMENT\n')
+    file_out_ent.write('ENTITY_ID;ID;PRODUCT;VALUE;START_DATE;END_DATE;TYPE;SUBTYPE;ACTIVE;MARGIN;RATE;CREDIT;FLAG_LOANPAYMENT;FLAG_TRANSACTIONPAYMENT\n')
+
 
     file_out_enthd =open(output_file("EntityDataToLoad.hdr"), 'w')
     file_out_enthd.write('ENTITY_ID;ID;PRODUCT;START;END;TYPE;SUBTYPE;ACTIF;FLAG_LOANPAYMENT;FLAG_TRANSACTIONPAYMENT\n')

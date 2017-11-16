@@ -43,13 +43,13 @@ entity_df = pd.read_csv(c_file, sep=';')
 def main():
 
     file_out_accr =open(output_file("AccountRoleData.csv"), 'w')
-    #file_out_accr.write('ID;ACCOUNT_ID;ROLE;START_DATE;END_DATE;\n')
+    #file_out_accrhd.write('ID;ACCOUNT_ID;ROLE\n')
 
     file_out_accrhd =open(output_file("AccountRoleData.hdr"), 'w')
-    file_out_accrhd.write('CUSTOMER_ID;ACCOUNT_ID;ROLE\n')
+    file_out_accrhd.write('ID;ACCOUNT_ID;ROLE\n')
 
     file_out_accr2 =open(output_file("AccountRoleDataAll.csv"), 'w')
-    file_out_accr2.write('CUSTOMER_ID;ACCOUNT_ID;ROLE\n')
+    file_out_accr2.write('ID;ACCOUNT_ID;ROLE\n')
 
     idnr=0
     pb = Bar('Generating', max=len(entity_df), fill='=', suffix='%(percent)d%%')
@@ -61,8 +61,8 @@ def main():
            role='primary account holder'
         else :
            role='joint account holder'
-        startdate= entity_df.ix[id-1,'START']
-        enddate= entity_df.ix[id-1,'END']
+#        startdate= entity_df.ix[id-1,'START']
+#        enddate= entity_df.ix[id-1,'END']
         file_out_accr.write('%s;%s;%s\n' %(idnr,accountid,role))
         file_out_accr2.write('%s;%s;%s\n' %(idnr,accountid,role))
 
