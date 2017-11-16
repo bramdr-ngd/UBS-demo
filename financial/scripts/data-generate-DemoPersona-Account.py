@@ -1,4 +1,4 @@
-__author__ = 'yvesl'
+#!/usr/bin/python
 import os
 import argparse
 
