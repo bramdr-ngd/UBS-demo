@@ -59,13 +59,13 @@ def main():
         sub_category= entity_df.ix[id-1,'SUBTYPE']
         if sub_category != sub_category :
             sub_category=''
-        if entity_df.ix[id-1,'WAARDE'] != 0 :
-            balance = entity_df.ix[id-1,'WAARDE']
+        if entity_df.ix[id-1,'VALUE'] != 0 :
+            balance = entity_df.ix[id-1,'VALUE']
         else :
             balance = ''
         if balance != balance :
             balance=''
-        active= entity_df.ix[id-1,'ACTIF']
+        active= entity_df.ix[id-1,'ACTIVE']
 
         file_out_acc.write('%s;%s;%s;%s;%s\n' %(accountid,category,sub_category,balance,active))
         file_out_acc2.write('%s;%s;%s;%s;%s\n' %(accountid,category,sub_category,balance,active))

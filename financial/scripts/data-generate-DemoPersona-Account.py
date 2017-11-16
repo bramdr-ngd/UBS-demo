@@ -27,7 +27,7 @@ file_hdr.write(headers)
 
 def main_crm():
     for i in range(1, 15):
-        text_file = open(output_file('EntityDataAll.csv'), "r")
+        text_file = open(output_file('EntityDataToLoad.csv'), "r")
         #ENTITY_ID;ID;PRODUCT;WAARDE;START;END;TYPE;SUBTYPE;ACTIF;
         lines = text_file.readlines()
 

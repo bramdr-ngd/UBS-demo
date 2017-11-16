@@ -15,17 +15,17 @@ def output_file(file_name):
     return o_folder + "/" + file_name
 
 # Outputfile
-file_out=open(output_file("DemoPersonaEntityDataAll.csv"), 'w')
+file_out=open(output_file("DemoPersonaEntityDataToLoad.csv"), 'w')
 
 # Create header
-headers = open(output_file('EntityDataAll.hdr'), "r").readlines()[0]
-file_hdr=open(output_file("DemoPersonaEntityDataAll.hdr"), 'w')
+headers = open(output_file('EntityDataToLoad.hdr'), "r").readlines()[0]
+file_hdr=open(output_file("DemoPersonaEntityDataToLoad.hdr"), 'w')
 file_hdr.write(headers)
 
 def main_crm():
     for i in range(1, 15):
-#        text_file = open(output_file('EntityDataToLoad.csv'), "r")
-        text_file = open(output_file('EntityDataAll.csv'), "r")
+        text_file = open(output_file('EntityDataToLoad.csv'), "r")
+#        text_file = open(output_file('EntityDataAll.csv'), "r")
         lines = text_file.readlines()
 
         for line in lines:
