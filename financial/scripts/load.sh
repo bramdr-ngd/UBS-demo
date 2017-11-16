@@ -12,14 +12,14 @@
 ./data-generate-DemoPersona-AccountRole.py -o /disk1/current/
 ./data-generate-itx-DemoPersona.py -o /disk1/current
 
-./data-load-customers.sh /disk1/current/CrmDataToLoad.csv
-./data-load-products.sh /disk1/current/EntityDataToLoad.csv
-./data-load-account.sh /disk1/current/AccountData.csv
-./data-load-account_role.sh /disk1/current/AccountRoleData.csv
+#./data-load-customers.sh /disk1/current/CrmDataToLoad.csv
+#./data-load-products.sh /disk1/current/EntityDataToLoad.csv
+#./data-load-account.sh /disk1/current/AccountData.csv
+#./data-load-account_role.sh /disk1/current/AccountRoleData.csv
 
-./data-load-customers.sh /disk1/current/DemoPersonaDataToLoad.csv
-./data-load-products.sh /disk1/current/DemoPersonaEntityDataAll.csv
-./data-load-account.sh /disk1/current/DemoPersonaAccountData.csv
-./data-load-account_role.sh /disk1/current/DemoPersonaAccountRoleData.csv
+#./data-load-customers.sh /disk1/current/DemoPersonaDataToLoad.csv
+#./data-load-products.sh /disk1/current/DemoPersonaEntityDataAll.csv
+#./data-load-account.sh /disk1/current/DemoPersonaAccountData.csv
+#./data-load-account_role.sh /disk1/current/DemoPersonaAccountRoleData.csv
 
-./data-reload-itx.sh /disk1/current
+#./data-reload-itx.sh /disk1/current
