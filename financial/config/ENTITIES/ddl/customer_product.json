@@ -173,6 +173,18 @@
     "name" : "end_date",
     "nullable" : true,
     "type" : "date"
+  }, {
+    "jdbcType" : "integer",
+    "maxLength" : null,
+    "name" : "flag_loanpayment",
+    "nullable" : true,
+    "type" : "integer"
+  }, {
+    "jdbcType" : "integer",
+    "maxLength" : null,
+    "name" : "flag_transactionpayment",
+    "nullable" : true,
+    "type" : "integer"
   } ],
   "multiTenant" : true,
   "name" : "customer_product",
