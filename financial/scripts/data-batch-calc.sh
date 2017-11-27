@@ -59,7 +59,7 @@ lily master-batch-update-factual --dna-entity-type customer
 
 echo '=== SETS ==='
 lily set-membership-calc --dna-entity-type customer ${START_DATE}
-lily dna-set-batch-calc --dna-entity-type customer ${START_DATE}
+lily dna-set-batch-calc -Dlily.dna.set.calculation.parallelism=9 --dna-entity-type customer ${START_DATE}
 
 echo '=== VIEWS ==='
 lily itx-view-batch-calc --dna-entity-type=customer ${FULL_REBUILD}
