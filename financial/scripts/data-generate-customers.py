@@ -906,7 +906,9 @@ def pick_flagSelfEmployed(i, segment,flagEmployed):
 
 def pick_currentLocationTracking(i, segment):
     currentLocation= pick_random_pct_min_max(segment["currentLocationTracking_categories"])
-    if (i == 3346 |i == 22639 ):
+    if (i == 3346 ):
+        currentLocation["name"]="1"
+    if (i == 22639 ):
         currentLocation["name"]="1"
     return currentLocation
 
