@@ -1,0 +1,10 @@
+{
+  "acl" : [ {
+    "owner" : true,
+    "subject" : "GROUP:application_admin"
+  } ],
+  "attributes" : { },
+  "description" : null,
+  "dnaVariables" : [ "lifestage", "flagLeavingNest",  "affValueShopper",  "shareOfWalletSize",  "age", "numberPageVisitsRealEstate", "numberPageVisitsInheritancePlanning" , "affinityRealEstate" , "affinityTechInvesting"],
+  "name" : "ubs"
+}
