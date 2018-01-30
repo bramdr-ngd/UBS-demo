@@ -13485,593 +13485,612 @@
 
 
 
-    <!-- UBS specific metrics for rosas -->
-    <!-- metric value is dependent of phase in customer journey -->
-    <!-- lead visits UBS website, fills in contact data -->
-    <formula name="numberPageVisitsW">
-        <type value="double"/>
-        <expr language="lel">
-            switch(
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-18T15:30:00.000Z"), 33.0 ,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-10T15:30:00.000Z"), 24.0 ,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-06T15:30:00.000Z"), 18.0 ,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-11-01T15:30:00.000Z"), 9.0
-            )
-        </expr>
-        <attributes>
-            <attribute name="label">Number of Page Visits</attribute>
-            <attribute name="category">Wealth I</attribute>
-            <attribute name="rangeMax">10</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
-    <formula name="numberPageVisitsWealthManagement">
-        <type value="double"/>
-        <expr language="lel">
-            switch(
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-18T15:30:00.000Z"), 9.0 ,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-10T15:30:00.000Z"), 8.0,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-06T15:30:00.000Z"), 8.0,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-11-01T15:30:00.000Z"), 3.0
-            )
-        </expr>
-        <attributes>
-            <attribute name="label">Number of Page Visits for Wealth Management</attribute>
-            <attribute name="category">Wealth I</attribute>
-            <attribute name="rangeMax">10</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
-    <formula name="numberPageVisitsAssetManagement">
-        <type value="double"/>
-        <expr language="lel">
-            switch(
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-10T15:30:00.000Z"), 14.0,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-06T15:30:00.000Z"), 12.0,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-11-01T15:30:00.000Z"), 7.0
-            )
-        </expr>
-        <attributes>
-            <attribute name="label">Number of Page Visits for Asset Management</attribute>
-            <attribute name="category">Wealth I</attribute>
-            <attribute name="rangeMax">10</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
-    <formula name="numberPageVisitsInvestmentBanking">
-        <type value="double"/>
-        <expr language="lel">
-            switch(
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-18T15:30:00.000Z"), 18.0,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-10T15:30:00.000Z"), 12.0,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-06T15:30:00.000Z"), 8.0,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-11-01T15:30:00.000Z"), 5.0
-            )
-        </expr>
-        <attributes>
-            <attribute name="label">Number of Page Visits for Investment Banking</attribute>
-            <attribute name="category">Wealth I</attribute>
-            <attribute name="rangeMax">20</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
-    <formula name="numberBannerShown">
-        <type value="double"/>
-        <expr language="lel">
-            switch(
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-18T15:30:00.000Z"), 25.0 ,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-06T15:30:00.000Z"), 8.0,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-11-01T15:30:00.000Z"), 0.0
-            )
-        </expr>
-        <attributes>
-            <attribute name="label">Number of Banners Shown - event invite</attribute>
-            <attribute name="category">Wealth I</attribute>
-            <attribute name="rangeMax">20</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
-    <formula name="numberBannerViewed">
-        <type value="double"/>
-        <expr language="lel">
-            switch(
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-10T15:30:00.000Z"), 4.0,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-06T15:30:00.000Z"), 2.0,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-11-01T15:30:00.000Z"), 1.0
-            )
-        </expr>
-        <attributes>
-            <attribute name="label">Number of Banners Viewed - event invite</attribute>
-            <attribute name="category">Wealth I</attribute>
-            <attribute name="rangeMax">7</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
-    <formula name="numberBannerClicked">
-        <type value="double"/>
-        <expr language="lel">
-            switch(
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-10T15:30:00.000Z"), 2.0,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-06T15:30:00.000Z"), 1.0,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-11-01T15:30:00.000Z"), 1.0
-            )
-        </expr>
-        <attributes>
-            <attribute name="label">Number of Banners Clicked - event invite</attribute>
-            <attribute name="category">Wealth I</attribute>
-            <attribute name="rangeMax">10</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
-    <!-- event metrics -->
-    <formula name="numberEventsSubscribed">
-        <type value="double"/>
-        <expr language="lel">
-            switch(
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-10T15:30:00.000Z"), 2.0,
-            ctx.referenceTime &gt;
-            parseDateTimeISO("2017-12-06T15:30:00.000Z"), 1.0,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-11-01T15:30:00.000Z"), 1.0
-            )
-        </expr>
-        <attributes>
-            <attribute name="label">Number of Events - subscribed</attribute>
-            <attribute name="category">Wealth I</attribute>
-            <attribute name="rangeMax">3</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
-    <!-- event metrics -->
-    <formula name="numberEventsAttended">
-        <type value="double"/>
-        <expr language="lel">
-            switch(
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-10T15:30:00.000Z"), 2.0,
-            ctx.referenceTime &gt;
-            parseDateTimeISO("2017-12-06T15:30:00.000Z"), 1.0,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-11-01T15:30:00.000Z"), 1.0
-            )
-        </expr>
-        <attributes>
-            <attribute name="label">Number of Events - attended</attribute>
-            <attribute name="category">Wealth I</attribute>
-            <attribute name="rangeMax">3</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
+        <!-- UBS specific metrics for rosas -->
+        <!-- metric value is dependent of phase in customer journey -->
+        <!-- lead visits UBS website, fills in contact data -->
+        <formula name="numberPageVisitsW">
+            <type value="double"/>
+            <expr language="lel">
+                switch(
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-18T15:30:00.000Z"), 33.0 ,
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-10T15:30:00.000Z"), 24.0 ,
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-06T15:30:00.000Z"), 18.0 ,
+                ctx.referenceTime &gt; parseDateTimeISO("2017-12-01T15:30:00.000Z"), 9.0
+                )
+            </expr>
+            <attributes>
+                <attribute name="label">Number of Page Visits</attribute>
+                <attribute name="category">Wealth I</attribute>
+                <attribute name="rangeMax">10</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
+        <formula name="numberPageVisitsWealthManagement">
+            <type value="double"/>
+            <expr language="lel">
+                switch(
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-18T15:30:00.000Z"), 9.0 ,
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-10T15:30:00.000Z"), 8.0,
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-06T15:30:00.000Z"), 8.0,
+                ctx.referenceTime &gt; parseDateTimeISO("2017-12-01T15:30:00.000Z"), 3.0
+                )
+            </expr>
+            <attributes>
+                <attribute name="label">Number of Page Visits for Wealth Management</attribute>
+                <attribute name="category">Wealth I</attribute>
+                <attribute name="rangeMax">10</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
+        <formula name="numberPageVisitsAssetManagement">
+            <type value="double"/>
+            <expr language="lel">
+                switch(
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-10T15:30:00.000Z"), 14.0,
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-06T15:30:00.000Z"), 12.0,
+                ctx.referenceTime &gt; parseDateTimeISO("2017-12-01T15:30:00.000Z"), 7.0
+                )
+            </expr>
+            <attributes>
+                <attribute name="label">Number of Page Visits for Asset Management</attribute>
+                <attribute name="category">Wealth I</attribute>
+                <attribute name="rangeMax">10</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
+        <formula name="numberPageVisitsInvestmentBanking">
+            <type value="double"/>
+            <expr language="lel">
+                switch(
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-18T15:30:00.000Z"), 18.0,
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-10T15:30:00.000Z"), 12.0,
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-06T15:30:00.000Z"), 8.0,
+                ctx.referenceTime &gt; parseDateTimeISO("2017-12-01T15:30:00.000Z"), 5.0
+                )
+            </expr>
+            <attributes>
+                <attribute name="label">Number of Page Visits for Investment Banking</attribute>
+                <attribute name="category">Wealth I</attribute>
+                <attribute name="rangeMax">20</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
+        <formula name="numberBannerShown">
+            <type value="double"/>
+            <expr language="lel">
+                switch(
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-18T15:30:00.000Z"), 25.0 ,
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-06T15:30:00.000Z"), 8.0,
+                ctx.referenceTime &gt; parseDateTimeISO("2017-12-01T15:30:00.000Z"), 0.0
+                )
+            </expr>
+            <attributes>
+                <attribute name="label">Number of Banners Shown - event invite</attribute>
+                <attribute name="category">Wealth I</attribute>
+                <attribute name="rangeMax">20</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
+        <formula name="numberBannerViewed">
+            <type value="double"/>
+            <expr language="lel">
+                switch(
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-10T15:30:00.000Z"), 4.0,
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-06T15:30:00.000Z"), 2.0,
+                ctx.referenceTime &gt; parseDateTimeISO("2017-12-01T15:30:00.000Z"), 1.0
+                )
+            </expr>
+            <attributes>
+                <attribute name="label">Number of Banners Viewed - event invite</attribute>
+                <attribute name="category">Wealth I</attribute>
+                <attribute name="rangeMax">7</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
+        <formula name="numberBannerClicked">
+            <type value="double"/>
+            <expr language="lel">
+                switch(
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-10T15:30:00.000Z"), 2.0,
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-06T15:30:00.000Z"), 1.0,
+                ctx.referenceTime &gt; parseDateTimeISO("2017-12-01T15:30:00.000Z"), 1.0
+                )
+            </expr>
+            <attributes>
+                <attribute name="label">Number of Banners Clicked - event invite</attribute>
+                <attribute name="category">Wealth I</attribute>
+                <attribute name="rangeMax">10</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
+        <!-- event metrics -->
+        <formula name="numberEventsSubscribed">
+            <type value="double"/>
+            <expr language="lel">
+                switch(
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-10T15:30:00.000Z"), 2.0,
+                ctx.referenceTime &gt;
+                parseDateTimeISO("2018-01-06T15:30:00.000Z"), 1.0,
+                ctx.referenceTime &gt; parseDateTimeISO("2017-12-01T15:30:00.000Z"), 1.0
+                )
+            </expr>
+            <attributes>
+                <attribute name="label">Number of Events - subscribed</attribute>
+                <attribute name="category">Wealth I</attribute>
+                <attribute name="rangeMax">3</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
+        <!-- event metrics -->
+        <formula name="numberEventsAttended">
+            <type value="double"/>
+            <expr language="lel">
+                switch(
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-10T15:30:00.000Z"), 2.0,
+                ctx.referenceTime &gt;
+                parseDateTimeISO("2018-01-06T15:30:00.000Z"), 1.0,
+                ctx.referenceTime &gt; parseDateTimeISO("2017-12-01T15:30:00.000Z"), 1.0
+                )
+            </expr>
+            <attributes>
+                <attribute name="label">Number of Events - attended</attribute>
+                <attribute name="category">Wealth I</attribute>
+                <attribute name="rangeMax">3</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
 
-    <formula name="webChannelPreference">
-        <type value="double"/>
-        <expr language="lel">
-            switch(
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-18T15:30:00.000Z"), 0.7 ,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-14T15:30:00.000Z"), 0.7 ,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-06T15:30:00.000Z"), 0.7
+        <formula name="webChannelPreference">
+            <type value="double"/>
+            <expr language="lel">
+                switch(
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-18T15:30:00.000Z"), 0.7 ,
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-14T15:30:00.000Z"), 0.7 ,
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-06T15:30:00.000Z"), 0.7
 
-            )
-        </expr>
-        <attributes>
-            <attribute name="label">Web Channel Preference</attribute>
-            <attribute name="category">Wealth I</attribute>
-            <attribute name="rangeMax">1</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
+                )
+            </expr>
+            <attributes>
+                <attribute name="label">Web Channel Preference</attribute>
+                <attribute name="category">Wealth I</attribute>
+                <attribute name="rangeMax">1</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
 
-    <formula name="agentChannelPreference">
-        <type value="double"/>
-        <expr language="lel">
-            switch(
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-18T15:30:00.000Z"), 0.9 ,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-14T15:30:00.000Z"), 0.8 ,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-06T15:30:00.000Z"), 0.0 ,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-11-01T15:30:00.000Z"), 0.0
-            )
-        </expr>
-        <attributes>
-            <attribute name="label">Agent Channel Preference</attribute>
-            <attribute name="category">Wealth I</attribute>
-            <attribute name="rangeMax">1</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
+        <formula name="agentChannelPreference">
+            <type value="double"/>
+            <expr language="lel">
+                switch(
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-18T15:30:00.000Z"), 0.9 ,
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-14T15:30:00.000Z"), 0.8 ,
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-06T15:30:00.000Z"), 0.0 ,
+                ctx.referenceTime &gt; parseDateTimeISO("2017-12-01T15:30:00.000Z"), 0.0
+                )
+            </expr>
+            <attributes>
+                <attribute name="label">Agent Channel Preference</attribute>
+                <attribute name="category">Wealth I</attribute>
+                <attribute name="rangeMax">1</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
 
-    <formula name="directChannelPreference">
-        <type value="double"/>
-        <expr language="lel">
-            switch(
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-18T15:30:00.000Z"), 0.1 ,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-14T15:30:00.000Z"), 0.0 ,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-06T15:30:00.000Z"), 0.0 ,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-11-01T15:30:00.000Z"), 0.0
-            )
-        </expr>
-        <attributes>
-            <attribute name="label">Direct Mail Channel Preference</attribute>
-            <attribute name="category">Wealth I</attribute>
-            <attribute name="rangeMax">1</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
+        <formula name="directChannelPreference">
+            <type value="double"/>
+            <expr language="lel">
+                switch(
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-18T15:30:00.000Z"), 0.1 ,
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-14T15:30:00.000Z"), 0.0 ,
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-06T15:30:00.000Z"), 0.0 ,
+                ctx.referenceTime &gt; parseDateTimeISO("2017-12-01T15:30:00.000Z"), 0.0
+                )
+            </expr>
+            <attributes>
+                <attribute name="label">Direct Mail Channel Preference</attribute>
+                <attribute name="category">Wealth I</attribute>
+                <attribute name="rangeMax">1</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
 
-    <formula name="smsChannelPreference">
-        <type value="double"/>
-        <expr language="lel">
-            switch(
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-18T15:30:00.000Z"), 0.75 ,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-14T15:30:00.000Z"), 0.0 ,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-06T15:30:00.000Z"), 0.0 ,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-11-01T15:30:00.000Z"), 0.0
-            )
-        </expr>
-        <attributes>
-            <attribute name="label">SMS Channel Preference</attribute>
-            <attribute name="category">Wealth I</attribute>
-            <attribute name="rangeMax">1</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
+        <formula name="smsChannelPreference">
+            <type value="double"/>
+            <expr language="lel">
+                switch(
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-18T15:30:00.000Z"), 0.75 ,
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-14T15:30:00.000Z"), 0.0 ,
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-06T15:30:00.000Z"), 0.0 ,
+                ctx.referenceTime &gt; parseDateTimeISO("2017-12-01T15:30:00.000Z"), 0.0
+                )
+            </expr>
+            <attributes>
+                <attribute name="label">SMS Channel Preference</attribute>
+                <attribute name="category">Wealth I</attribute>
+                <attribute name="rangeMax">1</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
 
-    <formula name="phoneNum">
-        <type value="string"/>
-        <expr language="lel">
-            switch(
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-18T15:30:00.000Z"), "+6590870956" ,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-14T15:30:00.000Z"), "+6590870956" ,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-06T15:30:00.000Z"), "+6590870956"
+        <formula name="phoneNum">
+            <type value="string"/>
+            <expr language="lel">
+                switch(
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-18T15:30:00.000Z"), "+6590870956" ,
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-14T15:30:00.000Z"), "+6590870956" ,
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-06T15:30:00.000Z"), "+6590870956"
 
-            )
-        </expr>
-        <attributes>
-            <attribute name="label">Phone Number</attribute>
-            <attribute name="category">Wealth I</attribute>
-        </attributes>
-    </formula>
+                )
+            </expr>
+            <attributes>
+                <attribute name="label">Phone Number</attribute>
+                <attribute name="category">Wealth I</attribute>
+            </attributes>
+        </formula>
 
-    <formula name="assAgent">
-        <type value="string"/>
-        <expr language="lel">
-            switch(
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-18T15:30:00.000Z"), "RM 3519" ,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-14T15:30:00.000Z"), "RM 3519" ,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-06T15:30:00.000Z"), ""
+        <formula name="assAgent">
+            <type value="string"/>
+            <expr language="lel">
+                switch(
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-18T15:30:00.000Z"), "RM 3519" ,
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-14T15:30:00.000Z"), "RM 3519" ,
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-06T15:30:00.000Z"), ""
 
-            )
-        </expr>
-        <attributes>
-            <attribute name="label">Assigned Agent</attribute>
-            <attribute name="category">Wealth I</attribute>
-        </attributes>
-    </formula>
+                )
+            </expr>
+            <attributes>
+                <attribute name="label">Assigned Agent</attribute>
+                <attribute name="category">Wealth I</attribute>
+            </attributes>
+        </formula>
 
-    <formula name="CallsassAgent">
-        <type value="int"/>
-        <expr language="lel">
-            switch(
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-18T15:30:00.000Z"), 5 ,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-14T15:30:00.000Z"), 2 ,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-10T15:30:00.000Z"), 1
+        <formula name="CallsassAgent">
+            <type value="int"/>
+            <expr language="lel">
+                switch(
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-18T15:30:00.000Z"), 5 ,
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-14T15:30:00.000Z"), 2 ,
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-10T15:30:00.000Z"), 1
 
-            )
-        </expr>
-        <attributes>
-            <attribute name="label">Number of Attempted Calls by Agent</attribute>
-            <attribute name="category">Wealth I</attribute>
-            <attribute name="rangeMax">6</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
+                )
+            </expr>
+            <attributes>
+                <attribute name="label">Number of Attempted Calls by Agent</attribute>
+                <attribute name="category">Wealth I</attribute>
+                <attribute name="rangeMax">6</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
 
-    <formula name="CallsIniassAgent">
-        <type value="int"/>
-        <expr language="lel">
-            switch(
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-18T15:30:00.000Z"), 4 ,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-14T15:30:00.000Z"), 1 ,
-            ctx.referenceTime &gt; parseDateTimeISO("2017-12-10T15:30:00.000Z"), 0
+        <formula name="CallsIniassAgent">
+            <type value="int"/>
+            <expr language="lel">
+                switch(
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-18T15:30:00.000Z"), 4 ,
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-14T15:30:00.000Z"), 1 ,
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-10T15:30:00.000Z"), 0
 
-            )
-        </expr>
-        <attributes>
-            <attribute name="label">Number of Initiated Calls by Agent</attribute>
-            <attribute name="category">Wealth I</attribute>
-            <attribute name="rangeMax">5</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
+                )
+            </expr>
+            <attributes>
+                <attribute name="label">Number of Initiated Calls by Agent!</attribute>
+                <attribute name="category">Wealth I</attribute>
+                <attribute name="rangeMax">5</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
 
-    <!-- Rosas 2: 3rd party data -->
-    <formula name="interestSportscar">
-        <type value="double"/>
-        <expr language="lel">
-            0.97
-        </expr>
-        <attributes>
-            <attribute name="label">Interest in Sports cars</attribute>
-            <attribute name="category">Wealth II</attribute>
-            <attribute name="rangeMax">1</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
-    <formula name="interestTennis">
-        <type value="double"/>
-        <expr language="lel">
-            0.43
-        </expr>
-        <attributes>
-            <attribute name="label">Interest in Tennis</attribute>
-            <attribute name="category">Wealth II</attribute>
-            <attribute name="rangeMax">1</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
+        <formula name="daysUntilNextExpiry">
+            <type value="int"/>
+            <expr language="lel">
+                switch(
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-18T15:30:00.000Z"), 29 ,
+                ctx.referenceTime &gt; parseDateTimeISO("2018-01-14T15:30:00.000Z"), 365
+                )
+            </expr>
+            <attributes>
+                <attribute name="label">Days until Next Product Expiry</attribute>
+                <attribute name="category">Wealth I</attribute>
+                <attribute name="rangeMax">5</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
 
-    <formula name="interestSoccer">
-        <type value="double"/>
-        <expr language="lel">
-            0.09
-        </expr>
-        <attributes>
-            <attribute name="label">Interest in Soccer</attribute>
-            <attribute name="category">Wealth II</attribute>
-            <attribute name="rangeMax">1</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
+        <!-- Rosas 2: 3rd party data -->
+        <formula name="interestSportscar">
+            <type value="double"/>
+            <expr language="lel">
+                0.97
+            </expr>
+            <attributes>
+                <attribute name="label">Interest in Sports cars</attribute>
+                <attribute name="category">Wealth II</attribute>
+                <attribute name="rangeMax">1</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
+        <formula name="interestTennis">
+            <type value="double"/>
+            <expr language="lel">
+                0.43
+            </expr>
+            <attributes>
+                <attribute name="label">Interest in Tennis</attribute>
+                <attribute name="category">Wealth II</attribute>
+                <attribute name="rangeMax">1</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
 
-    <formula name="interestGolf">
-        <type value="double"/>
-        <expr language="lel">
-            0.03
-        </expr>
-        <attributes>
-            <attribute name="label">Interest in Golf</attribute>
-            <attribute name="category">Wealth II</attribute>
-            <attribute name="rangeMax">1</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
+        <formula name="interestSoccer">
+            <type value="double"/>
+            <expr language="lel">
+                0.09
+            </expr>
+            <attributes>
+                <attribute name="label">Interest in Soccer</attribute>
+                <attribute name="category">Wealth II</attribute>
+                <attribute name="rangeMax">1</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
 
-    <formula name="interestPaintings">
-        <type value="double"/>
-        <expr language="lel">
-            0.34
-        </expr>
-        <attributes>
-            <attribute name="label">Interest in Paintings</attribute>
-            <attribute name="category">Wealth II</attribute>
-            <attribute name="rangeMax">1</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
+        <formula name="interestGolf">
+            <type value="double"/>
+            <expr language="lel">
+                0.03
+            </expr>
+            <attributes>
+                <attribute name="label">Interest in Golf</attribute>
+                <attribute name="category">Wealth II</attribute>
+                <attribute name="rangeMax">1</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
 
-    <formula name="interestArt">
-        <type value="double"/>
-        <expr language="lel">
-            0.39
-        </expr>
-        <attributes>
-            <attribute name="label">Interest in Art</attribute>
-            <attribute name="category">Wealth II</attribute>
-            <attribute name="rangeMax">1</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
+        <formula name="interestPaintings">
+            <type value="double"/>
+            <expr language="lel">
+                0.34
+            </expr>
+            <attributes>
+                <attribute name="label">Interest in Paintings</attribute>
+                <attribute name="category">Wealth II</attribute>
+                <attribute name="rangeMax">1</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
 
-    <formula name="interestMusical">
-        <type value="double"/>
-        <expr language="lel">
-            0.49
-        </expr>
-        <attributes>
-            <attribute name="label">Interest in Musical</attribute>
-            <attribute name="category">Wealth II</attribute>
-            <attribute name="rangeMax">1</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
+        <formula name="interestArt">
+            <type value="double"/>
+            <expr language="lel">
+                0.39
+            </expr>
+            <attributes>
+                <attribute name="label">Interest in Art</attribute>
+                <attribute name="category">Wealth II</attribute>
+                <attribute name="rangeMax">1</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
 
-    <formula name="interestOpera">
-        <type value="double"/>
-        <expr language="lel">
-            0.68
-        </expr>
-        <attributes>
-            <attribute name="label">Interest in Opera</attribute>
-            <attribute name="category">Wealth II</attribute>
-            <attribute name="rangeMax">1</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
+        <formula name="interestMusical">
+            <type value="double"/>
+            <expr language="lel">
+                0.49
+            </expr>
+            <attributes>
+                <attribute name="label">Interest in Musical</attribute>
+                <attribute name="category">Wealth II</attribute>
+                <attribute name="rangeMax">1</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
 
-    <formula name="interestInvestments">
-        <type value="double"/>
-        <expr language="lel">
-            0.89
-        </expr>
-        <attributes>
-            <attribute name="label">Interest in Investments</attribute>
-            <attribute name="category">Wealth II</attribute>
-            <attribute name="rangeMax">1</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
+        <formula name="interestOpera">
+            <type value="double"/>
+            <expr language="lel">
+                0.68
+            </expr>
+            <attributes>
+                <attribute name="label">Interest in Opera</attribute>
+                <attribute name="category">Wealth II</attribute>
+                <attribute name="rangeMax">1</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
 
-    <formula name="interestBanking">
-        <type value="double"/>
-        <expr language="lel">
-            0.32
-        </expr>
-        <attributes>
-            <attribute name="label">Interest in Banking</attribute>
-            <attribute name="category">Wealth II</attribute>
-            <attribute name="rangeMax">1</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
+        <formula name="interestInvestments">
+            <type value="double"/>
+            <expr language="lel">
+                0.89
+            </expr>
+            <attributes>
+                <attribute name="label">Interest in Investments</attribute>
+                <attribute name="category">Wealth II</attribute>
+                <attribute name="rangeMax">1</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
 
-    <formula name="interestNews">
-        <type value="double"/>
-        <expr language="lel">
-            0.49
-        </expr>
-        <attributes>
-            <attribute name="label">Interest in News</attribute>
-            <attribute name="category">Wealth II</attribute>
-            <attribute name="rangeMax">1</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
+        <formula name="interestBanking">
+            <type value="double"/>
+            <expr language="lel">
+                0.32
+            </expr>
+            <attributes>
+                <attribute name="label">Interest in Banking</attribute>
+                <attribute name="category">Wealth II</attribute>
+                <attribute name="rangeMax">1</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
 
-    <formula name="interestHealth">
-        <type value="double"/>
-        <expr language="lel">
-            0.50
-        </expr>
-        <attributes>
-            <attribute name="label">Interest in Health</attribute>
-            <attribute name="category">Wealth II</attribute>
-            <attribute name="rangeMax">1</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
-    <formula name="interestRealestate">
-        <type value="double"/>
-        <expr language="lel">
-            0.28
-        </expr>
-        <attributes>
-            <attribute name="label">Interest in Real Estate</attribute>
-            <attribute name="category">Wealth II</attribute>
-            <attribute name="rangeMax">1</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
 
-    <formula name="onlineActivityIndicator">
-        <type value="double"/>
-        <expr language="lel">
-            0.30
-        </expr>
-        <attributes>
-            <attribute name="label">Online Activity Indicator</attribute>
-            <attribute name="category">Wealth II</attribute>
-            <attribute name="rangeMax">1</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
 
-    <formula name="likelihoodToSellA">
-        <type value="double"/>
-        <expr language="lel">
-            0.46
-        </expr>
-        <attributes>
-            <attribute name="label">Agent 3519: Likelihood to sell Asset Management</attribute>
-            <attribute name="category">Wealth III</attribute>
-            <attribute name="rangeMax">1</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
-    <formula name="likelihoodToSellIB">
-        <type value="double"/>
-        <expr language="lel">
-            0.94
-        </expr>
-        <attributes>
-            <attribute name="label">Agent 3519: Likelihood to sell Investment Banking</attribute>
-            <attribute name="category">Wealth III</attribute>
-            <attribute name="rangeMax">1</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
+        <formula name="interestNews">
+            <type value="double"/>
+            <expr language="lel">
+                0.49
+            </expr>
+            <attributes>
+                <attribute name="label">Interest in News</attribute>
+                <attribute name="category">Wealth II</attribute>
+                <attribute name="rangeMax">1</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
 
-    <formula name="likelihoodToSellWM">
-        <type value="double"/>
-        <expr language="lel">
-            0.30
-        </expr>
-        <attributes>
-            <attribute name="label">Agent 3519: Likelihood to sell Wealth Management </attribute>
-            <attribute name="category">Wealth III</attribute>
-            <attribute name="rangeMax">1</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
+        <formula name="interestHealth">
+            <type value="double"/>
+            <expr language="lel">
+                0.50
+            </expr>
+            <attributes>
+                <attribute name="label">Interest in Health</attribute>
+                <attribute name="category">Wealth II</attribute>
+                <attribute name="rangeMax">1</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
+        <formula name="interestRealestate">
+            <type value="double"/>
+            <expr language="lel">
+                0.28
+            </expr>
+            <attributes>
+                <attribute name="label">Interest in Real Estate</attribute>
+                <attribute name="category">Wealth II</attribute>
+                <attribute name="rangeMax">1</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
 
-    <formula name="likelihoodToSellTVCB">
-        <type value="double"/>
-        <expr language="lel">
-            0.45
-        </expr>
-        <attributes>
-            <attribute name="label">Agent 3519: Likelihood to sell Total Value Client Base </attribute>
-            <attribute name="category">Wealth III</attribute>
-            <attribute name="rangeMax">1</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
+        <formula name="onlineActivityIndicator">
+            <type value="double"/>
+            <expr language="lel">
+                0.30
+            </expr>
+            <attributes>
+                <attribute name="label">Online Activity Indicator</attribute>
+                <attribute name="category">Wealth II</attribute>
+                <attribute name="rangeMax">1</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
 
-    <formula name="numberOfClients">
-        <type value="double"/>
-        <expr language="lel">
-            15
-        </expr>
-        <attributes>
-            <attribute name="label">Agent 3519: Number of Clients </attribute>
-            <attribute name="category">Wealth III</attribute>
-            <attribute name="rangeMax">20</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
+        <formula name="likelihoodToSellA">
+            <type value="double"/>
+            <expr language="lel">
+                0.46
+            </expr>
+            <attributes>
+                <attribute name="label">Agent 3519: Likelihood to sell Asset Management</attribute>
+                <attribute name="category">Wealth III</attribute>
+                <attribute name="rangeMax">1</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
+        <formula name="likelihoodToSellIB">
+            <type value="double"/>
+            <expr language="lel">
+                0.94
+            </expr>
+            <attributes>
+                <attribute name="label">Agent 3519: Likelihood to sell Investment Banking</attribute>
+                <attribute name="category">Wealth III</attribute>
+                <attribute name="rangeMax">1</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
 
-    <formula name="existingClientCallss">
-        <type value="double"/>
-        <expr language="lel">
-            15
-        </expr>
-        <attributes>
-            <attribute name="label">Agent 3519: Number of Clients </attribute>
-            <attribute name="category">Wealth III</attribute>
-            <attribute name="rangeMax">20</attribute>
-            <attribute name="nature">positive</attribute>
-            <attribute name="rangeMin">0</attribute>
-        </attributes>
-    </formula>
+        <formula name="likelihoodToSellWM">
+            <type value="double"/>
+            <expr language="lel">
+                0.30
+            </expr>
+            <attributes>
+                <attribute name="label">Agent 3519: Likelihood to sell Wealth Management </attribute>
+                <attribute name="category">Wealth III</attribute>
+                <attribute name="rangeMax">1</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
+
+        <formula name="likelihoodToSellTVCB">
+            <type value="double"/>
+            <expr language="lel">
+                0.45
+            </expr>
+            <attributes>
+                <attribute name="label">Agent 3519: Likelihood to sell Total Value Client Base </attribute>
+                <attribute name="category">Wealth III</attribute>
+                <attribute name="rangeMax">1</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
+
+        <formula name="numberOfClients">
+            <type value="double"/>
+            <expr language="lel">
+                15
+            </expr>
+            <attributes>
+                <attribute name="label">Agent 3519: Number of Clients </attribute>
+                <attribute name="category">Wealth III</attribute>
+                <attribute name="rangeMax">20</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
+
+        <formula name="existingClientCallss">
+            <type value="double"/>
+            <expr language="lel">
+                15
+            </expr>
+            <attributes>
+                <attribute name="label">Agent 3519: Number of Clients </attribute>
+                <attribute name="category">Wealth III</attribute>
+                <attribute name="rangeMax">20</attribute>
+                <attribute name="nature">positive</attribute>
+                <attribute name="rangeMin">0</attribute>
+            </attributes>
+        </formula>
     </variables>
 
 </dna>
